@@ -5,59 +5,147 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const products = [
   {
     id: 1,
-    name: "Victorian Rose Tassel",
+    name: "Metallic Chain Tassel",
     category: "Tassel",
-    image: "/lovable-uploads/65e6e9e0-4108-42c6-ae93-a32021d3910d.png",
-    price: "$125.00 / each",
-    colorways: 8
+    image: "/lovable-uploads/b4e3a075-fd02-49b6-9d27-130b698464d2.png",
+    price: "$145.00 / each",
+    colorways: 5
   },
   {
     id: 2,
-    name: "Chateau Fringe",
-    category: "Fringe",
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3",
-    price: "$75.00 / yard",
-    colorways: 22
-  },
-  {
-    id: 3,
-    name: "Cosimo Braid",
-    category: "Braid",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3",
-    price: "$62.50 / yard",
-    colorways: 18
-  },
-  {
-    id: 4,
-    name: "Elegance Tassel",
+    name: "Jewel Glass Tassels",
     category: "Tassel",
-    image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3",
-    price: "$85.00 / each",
-    colorways: 14
-  },
-  {
-    id: 5,
-    name: "Metropolitan Cord",
-    category: "Cord",
-    image: "https://images.unsplash.com/photo-1618220242345-9cce69e3a73b?ixlib=rb-4.0.3",
-    price: "$48.00 / yard",
-    colorways: 26
-  },
-  {
-    id: 6,
-    name: "Couture Border",
-    category: "Border",
-    image: "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?ixlib=rb-4.0.3",
-    price: "$95.00 / yard",
+    image: "/lovable-uploads/5d5da0be-a4c0-4a04-8152-cf41cbd7dc6b.png",
+    price: "$165.00 / set",
     colorways: 12
   },
   {
+    id: 3,
+    name: "Royal Burgundy Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/dd9bfc00-0255-426c-9dc3-1f8c1e40df40.png",
+    price: "$185.00 / pair",
+    colorways: 8
+  },
+  {
+    id: 4,
+    name: "Classic White Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/28a2328b-ee15-4438-9f3a-afad54919bdc.png",
+    price: "$95.00 / each",
+    colorways: 6
+  },
+  {
+    id: 5,
+    name: "Beaded Grey Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/67323a28-410c-44b8-b4a4-c9b3f175483c.png",
+    price: "$125.00 / each",
+    colorways: 4
+  },
+  {
+    id: 6,
+    name: "Woven Knot Collection",
+    category: "Tassel",
+    image: "/lovable-uploads/baffb0b3-c9de-4a9a-9739-11bd5bbfe666.png",
+    price: "$165.00 / each",
+    colorways: 6
+  },
+  {
     id: 7,
-    name: "Artisan Braid",
-    category: "Braid",
-    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3",
-    price: "$72.00 / yard",
-    colorways: 20
+    name: "Classic White Trim",
+    category: "Trim",
+    image: "/lovable-uploads/1467f076-5bc0-4a6a-a6b4-8b23cdb903c0.png",
+    price: "$45.00 / yard",
+    colorways: 1
+  },
+  {
+    id: 8,
+    name: "Decorative Scroll Trim",
+    category: "Trim",
+    image: "/lovable-uploads/aabfc16c-9845-4952-8f22-8970eebc045a.png",
+    price: "$65.00 / yard",
+    colorways: 8
+  },
+  {
+    id: 9,
+    name: "Beige Silk Tassels",
+    category: "Tassel",
+    image: "/lovable-uploads/202a166e-3edd-4a30-978f-9674029cfcaa.png",
+    price: "$135.00 / pair",
+    colorways: 4
+  },
+  {
+    id: 10,
+    name: "Silver Silk Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/7990aac2-7198-4bf8-9818-9551e38785ae.png",
+    price: "$115.00 / each",
+    colorways: 3
+  },
+  {
+    id: 11,
+    name: "Luxury Drapery Set",
+    category: "Drapery",
+    image: "/lovable-uploads/849929ee-d6c1-4bea-94dc-649e96dee418.png",
+    price: "$1,250.00 / set",
+    colorways: 4
+  },
+  {
+    id: 12,
+    name: "Modern Tassel Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/1bc02ecc-6588-451d-a6de-5411f7bdcee0.png",
+    price: "$85.00 / each",
+    colorways: 6
+  },
+  {
+    id: 13,
+    name: "Pearl Drapery Holder",
+    category: "Tieback",
+    image: "/lovable-uploads/7050fb8c-3e98-4d49-aa5c-e03f8e59474e.png",
+    price: "$75.00 / each",
+    colorways: 2
+  },
+  {
+    id: 14,
+    name: "Crystal Beaded Fringe",
+    category: "Fringe",
+    image: "/lovable-uploads/aa1aa750-b187-45d1-8a8d-7fcf49e56574.png",
+    price: "$95.00 / yard",
+    colorways: 4
+  },
+  {
+    id: 15,
+    name: "Signature Pink Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/03ee33a7-3f59-4a56-aef6-1d2c6e8182ff.png",
+    price: "$155.00 / pair",
+    colorways: 8
+  },
+  {
+    id: 16,
+    name: "Gold Beaded Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/31d721e9-177c-4d5d-8e2b-2205f03f3a5c.png",
+    price: "$175.00 / each",
+    colorways: 3
+  },
+  {
+    id: 17,
+    name: "Royal Purple Decor",
+    category: "Drapery",
+    image: "/lovable-uploads/79692394-606a-41a3-b4f2-8a0624bd845b.png",
+    price: "$225.00 / panel",
+    colorways: 5
+  },
+  {
+    id: 18,
+    name: "Silver Silk Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/a3ae41e0-6860-4fea-8975-34572496d637.png",
+    price: "$95.00 / each",
+    colorways: 4
   }
 ];
 
