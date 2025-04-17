@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
@@ -6,6 +5,14 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const products = [
   {
     id: 1,
+    name: "Victorian Rose Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/65e6e9e0-4108-42c6-ae93-a32021d3910d.png",
+    price: "$125.00 / each",
+    colorways: 8
+  },
+  {
+    id: 2,
     name: "Chateau Fringe",
     category: "Fringe",
     image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3",
@@ -13,7 +20,7 @@ const products = [
     colorways: 22
   },
   {
-    id: 2,
+    id: 3,
     name: "Cosimo Braid",
     category: "Braid",
     image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3",
@@ -21,7 +28,7 @@ const products = [
     colorways: 18
   },
   {
-    id: 3,
+    id: 4,
     name: "Elegance Tassel",
     category: "Tassel",
     image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3",
@@ -29,7 +36,7 @@ const products = [
     colorways: 14
   },
   {
-    id: 4,
+    id: 5,
     name: "Metropolitan Cord",
     category: "Cord",
     image: "https://images.unsplash.com/photo-1618220242345-9cce69e3a73b?ixlib=rb-4.0.3",
@@ -37,7 +44,7 @@ const products = [
     colorways: 26
   },
   {
-    id: 5,
+    id: 6,
     name: "Couture Border",
     category: "Border",
     image: "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?ixlib=rb-4.0.3",
@@ -45,7 +52,7 @@ const products = [
     colorways: 12
   },
   {
-    id: 6,
+    id: 7,
     name: "Artisan Braid",
     category: "Braid",
     image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3",
