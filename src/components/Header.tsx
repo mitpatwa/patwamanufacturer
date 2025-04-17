@@ -46,7 +46,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-1">
             <Link to="/" className="inline-block">
-              <h1 className="text-2xl font-serif font-medium tracking-wider">SAMUEL & SONS</h1>
+              <h1 className="text-2xl font-serif font-medium tracking-wider">PATWA MANUFACTURER</h1>
             </Link>
           </div>
           
@@ -101,7 +101,7 @@ const Header = () => {
           </button>
           
           <Link to="/" className="inline-block">
-            <h1 className="text-xl font-serif font-medium tracking-wider">SAMUEL & SONS</h1>
+            <h1 className="text-xl font-serif font-medium tracking-wider">PATWA MANUFACTURER</h1>
           </Link>
           
           <div className="flex items-center space-x-4">

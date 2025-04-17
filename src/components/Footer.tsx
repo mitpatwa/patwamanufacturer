@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 
@@ -119,7 +118,7 @@ const Footer = () => {
         <div className="py-12 border-b border-sand-300 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="inline-block">
-              <h1 className="text-2xl font-serif font-medium tracking-wider">SAMUEL & SONS</h1>
+              <h1 className="text-2xl font-serif font-medium tracking-wider">PATWA MANUFACTURER</h1>
             </Link>
           </div>
           
@@ -139,7 +138,7 @@ const Footer = () => {
         
         {/* Lower Footer: Copyright and Legal */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Samuel & Sons. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Patwa Manufacturer. All rights reserved.</p>
           
           <div className="flex flex-wrap justify-center mt-4 md:mt-0 gap-x-6 gap-y-2">
             <Link to="#" className="hover:text-primary transition-colors duration-200">
