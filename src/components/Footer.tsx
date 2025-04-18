@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 
@@ -5,34 +6,30 @@ const Footer = () => {
   // Footer navigation items grouped by category
   const footerNavigation = {
     collections: [
-      { name: "Trimmings", href: "#" },
-      { name: "Borders", href: "#" },
-      { name: "Braids", href: "#" },
-      { name: "Cords", href: "#" },
-      { name: "Fringes", href: "#" },
-      { name: "Tassels", href: "#" },
-    ],
-    showrooms: [
-      { name: "New York", href: "#" },
-      { name: "London", href: "#" },
-      { name: "Paris", href: "#" },
-      { name: "Chicago", href: "#" },
-      { name: "Los Angeles", href: "#" },
-      { name: "Milan", href: "#" },
+      { name: "Tassels", href: "/collections/tassels" },
+      { name: "Fringes", href: "/collections/fringes" },
+      { name: "Cords & Braids", href: "/collections/cords-braids" },
+      { name: "Embellishments", href: "/collections/embellishments" },
+      { name: "Custom Creations", href: "/collections/custom-creations" },
     ],
     company: [
-      { name: "Our Story", href: "#" },
-      { name: "Sustainability", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Press", href: "#" },
-      { name: "Contact", href: "#" },
+      { name: "About Us", href: "/about" },
+      { name: "Craftsmanship", href: "/craftsmanship" },
+      { name: "Workshop", href: "/workshop" },
+      { name: "Sustainability", href: "/sustainability" },
+    ],
+    services: [
+      { name: "Custom Services", href: "/custom-services" },
+      { name: "Inquiry", href: "/inquiry" },
+      { name: "Trade Program", href: "/trade-program" },
+      { name: "Find a Designer", href: "/find-designer" },
     ],
     support: [
-      { name: "Trade Program", href: "#" },
-      { name: "Find a Designer", href: "#" },
-      { name: "FAQs", href: "#" },
-      { name: "Order Samples", href: "#" },
-      { name: "Returns & Exchanges", href: "#" },
+      { name: "FAQs", href: "/faqs" },
+      { name: "Order Samples", href: "/samples" },
+      { name: "Returns & Exchanges", href: "/returns" },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
     ],
   };
 
@@ -66,9 +63,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-serif text-lg font-medium mb-6">Showrooms</h3>
+            <h3 className="font-serif text-lg font-medium mb-6">Company</h3>
             <ul className="space-y-3">
-              {footerNavigation.showrooms.map((item) => (
+              {footerNavigation.company.map((item) => (
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
@@ -82,9 +79,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-serif text-lg font-medium mb-6">Company</h3>
+            <h3 className="font-serif text-lg font-medium mb-6">Services</h3>
             <ul className="space-y-3">
-              {footerNavigation.company.map((item) => (
+              {footerNavigation.services.map((item) => (
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
@@ -122,17 +119,34 @@ const Footer = () => {
             </Link>
           </div>
           
-          <div className="flex space-x-6">
-            {socialLinks.map((item) => (
-              <a 
-                key={item.name} 
-                href={item.href} 
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label={item.name}
-              >
-                <item.icon className="h-5 w-5" />
-              </a>
-            ))}
+          <div className="flex flex-col items-center md:items-end">
+            <div className="flex space-x-6 mb-4">
+              {socialLinks.map((item) => (
+                <a 
+                  key={item.name} 
+                  href={item.href} 
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  aria-label={item.name}
+                >
+                  <item.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+            <div className="newsletter-signup">
+              <form className="flex">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="px-4 py-2 border border-sand-300 bg-sand-100 focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+                <button 
+                  type="submit" 
+                  className="bg-primary text-primary-foreground px-4 py-2 hover:bg-accent transition-colors duration-200"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         
@@ -141,16 +155,16 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Patwa Manufacturer. All rights reserved.</p>
           
           <div className="flex flex-wrap justify-center mt-4 md:mt-0 gap-x-6 gap-y-2">
-            <Link to="#" className="hover:text-primary transition-colors duration-200">
+            <Link to="/privacy" className="hover:text-primary transition-colors duration-200">
               Privacy Policy
             </Link>
-            <Link to="#" className="hover:text-primary transition-colors duration-200">
+            <Link to="/terms" className="hover:text-primary transition-colors duration-200">
               Terms of Service
             </Link>
-            <Link to="#" className="hover:text-primary transition-colors duration-200">
+            <Link to="/accessibility" className="hover:text-primary transition-colors duration-200">
               Accessibility
             </Link>
-            <Link to="#" className="hover:text-primary transition-colors duration-200">
+            <Link to="/cookies" className="hover:text-primary transition-colors duration-200">
               Cookie Settings
             </Link>
           </div>

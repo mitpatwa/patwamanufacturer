@@ -29,13 +29,41 @@ const Header = () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  // Navigation items
+  // Updated navigation items based on the website structure
   const navItems = [
-    { name: "Collections", dropdown: "collections", items: ["Trimmings", "Borders", "Braids", "Cords", "Fringes", "Tassels"] },
-    { name: "Showrooms", dropdown: "showrooms", items: ["New York", "London", "Paris", "Chicago", "Los Angeles", "Milan"] },
-    { name: "Designers", dropdown: "designers", items: ["Find a Designer", "Trade Program", "Designer Resources"] },
-    { name: "Journal", dropdown: null, items: [] },
-    { name: "About", dropdown: "about", items: ["Our Story", "Sustainability", "Careers", "Contact"] },
+    { 
+      name: "Collections", 
+      dropdown: "collections", 
+      items: [
+        { name: "Tassels", link: "/collections/tassels" },
+        { name: "Fringes", link: "/collections/fringes" },
+        { name: "Cords & Braids", link: "/collections/cords-braids" },
+        { name: "Embellishments & Trims", link: "/collections/embellishments" },
+        { name: "Custom Creations", link: "/collections/custom-creations" }
+      ] 
+    },
+    { 
+      name: "Custom Services", 
+      dropdown: null, 
+      items: [],
+      link: "/custom-services"
+    },
+    { 
+      name: "Company", 
+      dropdown: "company", 
+      items: [
+        { name: "About Us", link: "/about" },
+        { name: "Craftsmanship", link: "/craftsmanship" },
+        { name: "Workshop", link: "/workshop" },
+        { name: "Sustainability", link: "/sustainability" }
+      ] 
+    },
+    { 
+      name: "Inquiry", 
+      dropdown: null, 
+      items: [],
+      link: "/inquiry"
+    },
   ];
 
   return (
@@ -55,23 +83,30 @@ const Header = () => {
             <ul className="flex items-center justify-center space-x-6">
               {navItems.map((item) => (
                 <li key={item.name} className="relative group">
-                  <button 
-                    className="font-medium hover-underline py-2 flex items-center space-x-1"
-                    onClick={() => item.dropdown && handleDropdownToggle(item.dropdown)}
-                  >
-                    <span>{item.name}</span>
-                    {item.dropdown && (
+                  {item.dropdown ? (
+                    <button 
+                      className="font-medium hover-underline py-2 flex items-center space-x-1"
+                      onClick={() => item.dropdown && handleDropdownToggle(item.dropdown)}
+                    >
+                      <span>{item.name}</span>
                       <ChevronDown className="h-4 w-4" />
-                    )}
-                  </button>
+                    </button>
+                  ) : (
+                    <Link 
+                      to={item.link || "#"} 
+                      className="font-medium hover-underline py-2"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                   
                   {item.dropdown && (
                     <div className={`absolute left-0 mt-2 w-48 bg-background border border-border shadow-md transition-all duration-300 ${activeDropdown === item.dropdown ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
                       <ul className="py-2">
                         {item.items.map((subItem) => (
-                          <li key={subItem}>
-                            <Link to="#" className="block px-4 py-2 hover:bg-secondary">
-                              {subItem}
+                          <li key={subItem.name}>
+                            <Link to={subItem.link} className="block px-4 py-2 hover:bg-secondary">
+                              {subItem.name}
                             </Link>
                           </li>
                         ))}
@@ -87,9 +122,6 @@ const Header = () => {
           <div className="flex-1 flex items-center justify-end space-x-6">
             <button className="text-primary hover:text-accent transition-colors">
               <Search className="h-5 w-5" />
-            </button>
-            <button className="text-primary hover:text-accent transition-colors">
-              <ShoppingBag className="h-5 w-5" />
             </button>
           </div>
         </div>
@@ -108,9 +140,6 @@ const Header = () => {
             <button className="text-primary">
               <Search className="h-5 w-5" />
             </button>
-            <button className="text-primary">
-              <ShoppingBag className="h-5 w-5" />
-            </button>
           </div>
         </div>
       </div>
@@ -122,28 +151,35 @@ const Header = () => {
             <ul className="space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <button 
-                    className="text-lg font-medium py-2 w-full text-left flex items-center justify-between"
-                    onClick={() => item.dropdown && handleDropdownToggle(item.dropdown)}
-                  >
-                    <span>{item.name}</span>
-                    {item.dropdown && (
-                      <ChevronDown className={`h-5 w-5 transition-transform ${activeDropdown === item.dropdown ? 'rotate-180' : ''}`} />
-                    )}
-                  </button>
-                  
-                  {item.dropdown && (
-                    <div className={`transition-all duration-300 overflow-hidden ${activeDropdown === item.dropdown ? 'max-h-60' : 'max-h-0'}`}>
-                      <ul className="pt-2 pl-4 space-y-2">
-                        {item.items.map((subItem) => (
-                          <li key={subItem}>
-                            <Link to="#" className="block py-1 text-muted-foreground hover:text-primary">
-                              {subItem}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {item.dropdown ? (
+                    <>
+                      <button 
+                        className="text-lg font-medium py-2 w-full text-left flex items-center justify-between"
+                        onClick={() => item.dropdown && handleDropdownToggle(item.dropdown)}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`h-5 w-5 transition-transform ${activeDropdown === item.dropdown ? 'rotate-180' : ''}`} />
+                      </button>
+                      
+                      <div className={`transition-all duration-300 overflow-hidden ${activeDropdown === item.dropdown ? 'max-h-60' : 'max-h-0'}`}>
+                        <ul className="pt-2 pl-4 space-y-2">
+                          {item.items.map((subItem) => (
+                            <li key={subItem.name}>
+                              <Link to={subItem.link} className="block py-1 text-muted-foreground hover:text-primary">
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  ) : (
+                    <Link 
+                      to={item.link || "#"} 
+                      className="text-lg font-medium py-2 block"
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </li>
               ))}
