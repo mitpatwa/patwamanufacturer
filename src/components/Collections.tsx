@@ -1,37 +1,35 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-// Collection data
 const collections = [
   {
     id: 1,
-    name: "Trimmings",
+    name: "Tassels",
     image: "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3",
-    description: "Our signature trimmings curated for the season",
-    link: "#"
+    description: "Our signature tassels curated for the season",
+    link: "/collections/tassels"
   },
   {
     id: 2,
-    name: "Borders",
+    name: "Fringes",
     image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3",
-    description: "Elegant borders for sophisticated interiors",
-    link: "#"
+    description: "Elegant fringes for sophisticated interiors",
+    link: "/collections/fringes"
   },
   {
     id: 3,
     name: "Braids",
     image: "https://images.unsplash.com/photo-1561913955-b55882fb77a7?ixlib=rb-4.0.3",
     description: "Intricately woven braids for any space",
-    link: "#"
+    link: "/collections/braids"
   },
   {
     id: 4,
     name: "Cords",
     image: "https://images.unsplash.com/photo-1523567830207-96731740fa71?ixlib=rb-4.0.3",
     description: "Sophisticated cords for perfect finishing",
-    link: "#"
+    link: "/collections/cords"
   }
 ];
 

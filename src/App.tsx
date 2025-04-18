@@ -8,6 +8,11 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Inquiry from "./pages/Inquiry";
 import NotFound from "./pages/NotFound";
+import TasselsCollection from "./pages/collections/TasselsCollection";
+import FringesCollection from "./pages/collections/FringesCollection";
+import BraidsCollection from "./pages/collections/BraidsCollection";
+import CordsCollection from "./pages/collections/CordsCollection";
+import EmbelishmentsCollection from "./pages/collections/EmbelishmentsCollection";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +26,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/inquiry" element={<Inquiry />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/collections/tassels" element={<TasselsCollection />} />
+          <Route path="/collections/fringes" element={<FringesCollection />} />
+          <Route path="/collections/braids" element={<BraidsCollection />} />
+          <Route path="/collections/cords" element={<CordsCollection />} />
+          <Route path="/collections/embelishments" element={<EmbelishmentsCollection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
