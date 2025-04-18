@@ -12,12 +12,15 @@ const Story = () => {
               Our Story
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Since our founding, Patwa Manufacturer has been dedicated to delivering exceptional manufacturing solutions. Our legacy is built on an unwavering commitment to quality, precision, and innovative industrial design.
+              Welcome to our esteemed manufacturing company, where innovation, quality, and creativity converge to bring you a remarkable array of tassels, tiebacks, lace, cords, and trimmings. With a legacy of excellence, we have become a leading force in the industry, trusted by designers, decorators, and artisans worldwide.
+            </p>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              At our cutting-edge manufacturing facility, we combine traditional craftsmanship with advanced technology to produce an extensive range of exquisite trimmings. Our skilled artisans and designers work in harmony to create products that reflect meticulous attention to detail and showcase the latest trends in decorative accents.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Every product we create reflects the expertise of our skilled professionals who meticulously craft each detail. From traditional manufacturing techniques to cutting-edge technological innovations, our journey celebrates the harmonious blend of heritage and modern industrial excellence.
+              Every piece we create celebrates the perfect balance between heritage techniques and modern innovation, ensuring that each product meets the highest standards of quality and design excellence.
             </p>
-            <Link to="#" className="inline-flex items-center text-primary hover:text-accent transition-colors">
+            <Link to="/about" className="inline-flex items-center text-primary hover:text-accent transition-colors">
               <span className="mr-2 border-b border-current pb-1">Discover Our Manufacturing Journey</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
@@ -28,11 +31,11 @@ const Story = () => {
               <img 
                 src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3" 
                 alt="Patwa Manufacturer workshop" 
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-gold-50 flex items-center justify-center p-6 shadow-lg">
                 <p className="font-serif text-center text-lg">
-                  Quality manufacturing since our founding
+                  Crafting excellence since our founding
                 </p>
               </div>
             </div>
