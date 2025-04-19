@@ -29,8 +29,8 @@ const Story = () => {
           <div className="order-1 md:order-2">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3" 
-                alt="Patwa Manufacturer workshop" 
+                src="/lovable-uploads/aa29cfdf-058d-401f-9252-d8254e582349.png" 
+                alt="Luxury tassels collection" 
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-gold-50 flex items-center justify-center p-6 shadow-lg">

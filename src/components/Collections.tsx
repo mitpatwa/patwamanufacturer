@@ -6,28 +6,28 @@ const collections = [
   {
     id: 1,
     name: "Tassels",
-    image: "https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3",
+    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png",
     description: "Our signature tassels curated for the season",
     link: "/collections/tassels"
   },
   {
     id: 2,
     name: "Fringes",
-    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3",
+    image: "/lovable-uploads/1a2a40a3-9a8f-40f8-bf53-cbb5908b0788.png",
     description: "Elegant fringes for sophisticated interiors",
     link: "/collections/fringes"
   },
   {
     id: 3,
     name: "Braids",
-    image: "https://images.unsplash.com/photo-1561913955-b55882fb77a7?ixlib=rb-4.0.3",
+    image: "/lovable-uploads/90e95429-da77-4311-a13e-29206be6ee45.png",
     description: "Intricately woven braids for any space",
     link: "/collections/braids"
   },
   {
     id: 4,
     name: "Cords",
-    image: "https://images.unsplash.com/photo-1523567830207-96731740fa71?ixlib=rb-4.0.3",
+    image: "/lovable-uploads/f0b8f593-7c49-428b-8796-40de1b8c6228.png",
     description: "Sophisticated cords for perfect finishing",
     link: "/collections/cords"
   }

@@ -1,5 +1,4 @@
 
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AboutHero = () => {
@@ -24,13 +23,13 @@ const AboutHero = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3" 
-              alt="Artisan at work" 
+              src="/lovable-uploads/bc2f699b-bc03-48e4-af6a-d3342a50b0c3.png" 
+              alt="Luxury tassels and trims" 
               className="w-full h-[500px] object-cover rounded-lg shadow-lg"
             />
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-50 flex items-center justify-center p-6 shadow-lg">
               <p className="font-serif text-center text-lg">
-                Honoring traditions since our founding
+                Excellence in craftsmanship since our founding
               </p>
             </div>
           </div>
