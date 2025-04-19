@@ -5,7 +5,7 @@ import { allProducts } from "@/data/products";
 
 const EmbelishmentsCollection = () => {
   const embelishmentsProducts = allProducts.filter(
-    (product) => product.category === "Embellishment"
+    (product) => product.category === "Trim"
   );
 
   return (
