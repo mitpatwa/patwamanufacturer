@@ -167,5 +167,85 @@ export const allProducts: Product[] = [
     image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png",
     description: "Sumptuous luxury gold tassel",
     colorways: 1
+  },
+  {
+    id: 21,
+    name: "Luxury Gold & Black Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/2ad2b2ee-371b-40bf-a3dd-e3a924651aaf.png",
+    description: "Elegant gold and black tassel with ornate beading",
+    colorways: 2
+  },
+  {
+    id: 22,
+    name: "Pearl White Crystal Tiebacks",
+    category: "Tieback",
+    image: "/lovable-uploads/abb7cf4b-8350-4ed9-831f-e4e68e37cb2e.png",
+    description: "Crystal-encrusted white tiebacks with intricate beadwork",
+    colorways: 1
+  },
+  {
+    id: 23,
+    name: "Antique Gold Double Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.png",
+    description: "Luxurious gold tassels with twisted rope detail",
+    colorways: 3
+  },
+  {
+    id: 24,
+    name: "Charcoal Braided Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/c0e3994d-011f-4a47-b1ad-d1b74515cf8f.png",
+    description: "Sophisticated braided tieback in charcoal grey",
+    colorways: 4
+  },
+  {
+    id: 25,
+    name: "Multicolor Beaded Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/15a2a908-a2ee-4c7b-871d-322c41720c5c.png",
+    description: "Vibrant multicolored tassel with beaded crown",
+    colorways: 5
+  },
+  {
+    id: 26,
+    name: "Modern Black & White Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/ce4b8827-deae-4733-951a-57ce483fae6a.png",
+    description: "Contemporary tassel with monochrome beading",
+    colorways: 2
+  },
+  {
+    id: 27,
+    name: "Classic Gold Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/e7adb4dd-43d4-4ab0-81ed-7cf706d481b8.png",
+    description: "Traditional gold tieback with ornate detailing",
+    colorways: 3
+  },
+  {
+    id: 28,
+    name: "Azure Blue Statement Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/bb90f270-9776-4c0c-96c9-537cad942e0e.png",
+    description: "Bold blue tassel with decorative beading",
+    colorways: 1
+  },
+  {
+    id: 29,
+    name: "Silver Grey Elegance",
+    category: "Tassel",
+    image: "/lovable-uploads/aac488d8-6c6d-44ff-8c5b-8e0f738168bc.png",
+    description: "Refined silver grey tassel with crystal accents",
+    colorways: 2
+  },
+  {
+    id: 30,
+    name: "Vintage Bronze Column",
+    category: "Tieback",
+    image: "/lovable-uploads/f3463e60-504a-4092-8d08-712a8ccee184.png",
+    description: "Classical bronze column-style tieback",
+    colorways: 1
   }
 ];
