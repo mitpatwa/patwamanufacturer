@@ -240,7 +240,6 @@ const ProductShowcase = () => {
                   {product.category}
                 </p>
                 <h3 className="font-serif text-xl mb-1">{product.name}</h3>
-                <p className="text-muted-foreground mb-1">{product.price}</p>
                 <p className="text-sm">{product.colorways} colorways</p>
               </div>
             </div>

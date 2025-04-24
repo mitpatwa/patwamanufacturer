@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   // Footer navigation items grouped by category
@@ -33,13 +32,20 @@ const Footer = () => {
     ],
   };
 
-  // Social media links
+  // Social media links with updated Instagram link
   const socialLinks = [
-    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/patwa_manufacturer" },
     { name: "Facebook", icon: Facebook, href: "#" },
     { name: "Youtube", icon: Youtube, href: "#" },
     { name: "Twitter", icon: Twitter, href: "#" },
   ];
+
+  // Contact information
+  const contactInfo = {
+    address: "6, Maruti Complex Daxini Society, Manek Chowk, Ahmedabad, Gujarat 380001",
+    phone: "+91 93270 44019",
+    email: "contact@patwamanufacturer.com"
+  };
 
   return (
     <footer className="bg-sand-200 pt-16 pb-8">
@@ -111,12 +117,30 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Middle Footer: Logo and Social */}
+        {/* Middle Footer: Logo, Contact, and Social */}
         <div className="py-12 border-b border-sand-300 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="inline-block">
               <h1 className="text-2xl font-serif font-medium tracking-wider">PATWA MANUFACTURER</h1>
             </Link>
+            <div className="mt-4 space-y-2 text-muted-foreground">
+              <div className="flex items-start gap-2">
+                <MapPin className="h-5 w-5 mt-1 shrink-0" />
+                <p>{contactInfo.address}</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-5 w-5 shrink-0" />
+                <a href={`tel:${contactInfo.phone}`} className="hover:text-primary transition-colors">
+                  {contactInfo.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5 shrink-0" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-primary transition-colors">
+                  {contactInfo.email}
+                </a>
+              </div>
+            </div>
           </div>
           
           <div className="flex flex-col items-center md:items-end">
@@ -125,6 +149,8 @@ const Footer = () => {
                 <a 
                   key={item.name} 
                   href={item.href} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   aria-label={item.name}
                 >
