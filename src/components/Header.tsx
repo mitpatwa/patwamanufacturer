@@ -1,63 +1,44 @@
+
 import { useState, useEffect } from "react";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDropdownToggle = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  // Updated navigation items based on the website structure
+  // Updated navigation items
   const navItems = [
     { 
       name: "Collections", 
-      dropdown: "collections", 
+      link: "/collections/tassels",
       items: [
         { name: "Tassels", link: "/collections/tassels" },
         { name: "Fringes", link: "/collections/fringes" },
         { name: "Cords & Braids", link: "/collections/cords-braids" },
-        { name: "Embellishments & Trims", link: "/collections/embellishments" },
-        { name: "Custom Creations", link: "/collections/custom-creations" }
+        { name: "Embellishments", link: "/collections/embellishments" }
       ] 
     },
     { 
       name: "Custom Services", 
-      dropdown: null, 
-      items: [],
-      link: "/custom-services"
+      link: "/custom-services",
     },
     { 
-      name: "Company", 
-      dropdown: "company", 
-      items: [
-        { name: "About Us", link: "/about" },
-        { name: "Craftsmanship", link: "/craftsmanship" },
-        { name: "Workshop", link: "/workshop" },
-        { name: "Sustainability", link: "/sustainability" }
-      ] 
+      name: "About Us", 
+      link: "/about",
     },
     { 
       name: "Inquiry", 
-      dropdown: null, 
-      items: [],
-      link: "/inquiry"
+      link: "/inquiry",
     },
   ];
 
@@ -90,8 +71,10 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <Sheet>
-            <SheetTrigger className="md:hidden">
-              <Menu className="h-6 w-6" />
+            <SheetTrigger asChild>
+              <button className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="mt-8">
@@ -104,6 +87,20 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
+                      {item.items && (
+                        <ul className="pl-4 mt-2 space-y-2">
+                          {item.items.map((subItem) => (
+                            <li key={subItem.name}>
+                              <Link
+                                to={subItem.link}
+                                className="block text-base text-muted-foreground hover:text-accent transition-colors"
+                              >
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
