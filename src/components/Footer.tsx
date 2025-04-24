@@ -40,11 +40,11 @@ const Footer = () => {
     { name: "Twitter", icon: Twitter, href: "#" },
   ];
 
-  // Contact information
+  // Updated contact information
   const contactInfo = {
-    address: "6, Maruti Complex Daxini Society, Manek Chowk, Ahmedabad, Gujarat 380001",
-    phone: "+91 93270 44019",
-    email: "contact@patwamanufacturer.com"
+    address: "237/C2 Shree Vaibhav Society, near Pragati School and Junior College, Gorai 2, Borivali West, Mumbai, Maharashtra 400092",
+    phone: "+919322140480",
+    email: "patwamanufacturers@gmail.com"
   };
 
   return (
