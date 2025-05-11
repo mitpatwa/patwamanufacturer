@@ -13,6 +13,7 @@ import FringesCollection from "./pages/collections/FringesCollection";
 import BraidsCollection from "./pages/collections/BraidsCollection";
 import CordsCollection from "./pages/collections/CordsCollection";
 import EmbelishmentsCollection from "./pages/collections/EmbelishmentsCollection";
+import CustomServices from "./pages/CustomServices";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/collections/braids" element={<BraidsCollection />} />
           <Route path="/collections/cords" element={<CordsCollection />} />
           <Route path="/collections/embelishments" element={<EmbelishmentsCollection />} />
+          <Route path="/custom-services" element={<CustomServices />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
