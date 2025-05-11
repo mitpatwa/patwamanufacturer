@@ -14,6 +14,7 @@ import CordsCollection from "./pages/collections/CordsCollection";
 import EmbelishmentsCollection from "./pages/collections/EmbelishmentsCollection";
 import CustomServices from "./pages/CustomServices";
 import Craftsmanship from "./components/Craftsmanship";
+import Sustainability from "./pages/Sustainability";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/collections/embelishments" element={<EmbelishmentsCollection />} />
           <Route path="/custom-services" element={<CustomServices />} />
           <Route path="/craftsmanship" element={<Craftsmanship />} />
+          <Route path="/sustainability" element={<Sustainability />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
