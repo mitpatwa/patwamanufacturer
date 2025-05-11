@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +13,7 @@ import BraidsCollection from "./pages/collections/BraidsCollection";
 import CordsCollection from "./pages/collections/CordsCollection";
 import EmbelishmentsCollection from "./pages/collections/EmbelishmentsCollection";
 import CustomServices from "./pages/CustomServices";
+import Craftsmanship from "./components/Craftsmanship";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +33,7 @@ const App = () => (
           <Route path="/collections/cords" element={<CordsCollection />} />
           <Route path="/collections/embelishments" element={<EmbelishmentsCollection />} />
           <Route path="/custom-services" element={<CustomServices />} />
+          <Route path="/craftsmanship" element={<Craftsmanship />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
