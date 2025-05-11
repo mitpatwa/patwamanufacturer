@@ -1,8 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from "lucide-react";
-// Import the correct Pinterest icon from lucide-react
-import { PinterestIcon } from "lucide-react";
+import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail, Pinterest } from "lucide-react";
 
 const Footer = () => {
   // Footer navigation items grouped by category
@@ -38,7 +35,7 @@ const Footer = () => {
   // Updated social media links
   const socialLinks = [
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/patwa_manufacturer" },
-    { name: "Pinterest", icon: PinterestIcon, href: "https://in.pinterest.com/patwamanufacturers/" },
+    { name: "Pinterest", icon: Pinterest, href: "https://in.pinterest.com/patwamanufacturers/" },
     { name: "Facebook", icon: Facebook, href: "#" },
     { name: "Youtube", icon: Youtube, href: "#" },
     { name: "Twitter", icon: Twitter, href: "#" },
