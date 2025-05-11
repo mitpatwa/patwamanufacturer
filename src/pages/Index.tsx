@@ -6,6 +6,8 @@ import ProductShowcase from "../components/ProductShowcase";
 import Story from "../components/Story";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import Workshop from "../components/Workshop";
+import PassementerieSelector from "../components/PassementerieSelector";
 
 const Index = () => {
   return (
@@ -16,6 +18,8 @@ const Index = () => {
         <Collections />
         <ProductShowcase />
         <Story />
+        <Workshop />
+        <PassementerieSelector />
         <Newsletter />
       </main>
       <Footer />
