@@ -1,5 +1,7 @@
-import { useState } from "react";
+
+import { useState, useEffect, useRef } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Product data
 const products = [
@@ -167,8 +169,10 @@ const products = [
 
 const ProductShowcase = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const productsPerPage = 3;
   const totalSlides = Math.ceil(products.length / productsPerPage);
+  const containerRef = useRef<HTMLDivElement>(null);
   
   const prevSlide = () => {
     setSlideIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
@@ -184,81 +188,114 @@ const ProductShowcase = () => {
     (slideIndex + 1) * productsPerPage
   );
 
+  // Animation when products change
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.classList.add('opacity-0');
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.classList.remove('opacity-0');
+        }
+      }, 50);
+    }
+  }, [slideIndex]);
+
   return (
-    <section className="py-20">
+    <section className="py-28">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
-              Featured Products
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight">
+              Featured <span className="text-gold-600">Collection</span>
             </h2>
-            <p className="text-muted-foreground max-w-xl">
+            <p className="text-muted-foreground max-w-xl text-lg">
               Our most distinguished and sought-after pieces, each reflecting our dedication to quality and craftsmanship.
             </p>
           </div>
           
-          <div className="flex space-x-4 mt-6 md:mt-0">
+          <div className="flex space-x-4 mt-8 md:mt-0">
             <button
               onClick={prevSlide}
-              className="h-10 w-10 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
+              className="h-12 w-12 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
               aria-label="Previous products"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-6 w-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="h-10 w-10 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
+              className="h-12 w-12 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
               aria-label="Next products"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-6 w-6" />
             </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {currentProducts.map((product) => (
-            <div 
+        <div 
+          ref={containerRef} 
+          className="grid md:grid-cols-3 gap-10 transition-opacity duration-500"
+        >
+          {currentProducts.map((product, idx) => (
+            <motion.div 
               key={product.id}
-              className="group animate-fade-in"
+              className="group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.2, duration: 0.5 }}
+              onMouseEnter={() => setHoveredProduct(product.id)}
+              onMouseLeave={() => setHoveredProduct(null)}
             >
-              <div className="relative overflow-hidden mb-4">
+              <div className="relative overflow-hidden mb-6">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+                  className={`w-full aspect-[3/4] object-cover transition-transform duration-700 ${
+                    hoveredProduct === product.id ? "scale-105" : ""
+                  }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-300 ${
+                  hoveredProduct === product.id ? "opacity-100" : "opacity-0"
+                }`} />
                 <button 
-                  className="absolute bottom-4 left-1/2 -translate-x-1/2 py-2 px-6 bg-white text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0"
+                  className={`absolute bottom-6 left-1/2 -translate-x-1/2 py-3 px-8 bg-white text-primary font-medium transition-all duration-500 ${
+                    hoveredProduct === product.id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
                 >
                   Quick View
                 </button>
               </div>
               
               <div className="text-center">
-                <p className="text-sm text-muted-foreground uppercase tracking-wider mb-1">
+                <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2 font-medium">
                   {product.category}
                 </p>
-                <h3 className="font-serif text-xl mb-1">{product.name}</h3>
-                <p className="text-sm">{product.colorways} colorways</p>
+                <h3 className="font-serif text-2xl mb-2">{product.name}</h3>
+                <p className="text-gold-600 font-medium">{product.price}</p>
+                <p className="text-sm mt-1">{product.colorways} colorways</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
-          <div className="flex space-x-2">
+        <div className="flex justify-center mt-16">
+          <div className="flex space-x-3">
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setSlideIndex(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  index === slideIndex ? "w-8 bg-primary" : "w-2 bg-muted"
+                  index === slideIndex ? "w-12 bg-primary" : "w-2 bg-muted"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <a href="/collections" className="inline-block py-3 px-10 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 text-lg">
+            View All Products
+          </a>
         </div>
       </div>
     </section>

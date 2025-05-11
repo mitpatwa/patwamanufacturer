@@ -33,21 +33,32 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   // Function to go to the next slide
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    setTimeout(() => setIsTransitioning(false), 700);
+    setIsVisible(false);
+    
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setIsTransitioning(false);
+      setIsVisible(true);
+    }, 500);
   };
 
   // Function to go to the previous slide
   const prevSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-    setTimeout(() => setIsTransitioning(false), 700);
+    setIsVisible(false);
+    
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+      setIsTransitioning(false);
+      setIsVisible(true);
+    }, 500);
   };
 
   // Auto-advance slides
@@ -58,8 +69,13 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [currentSlide, isTransitioning]);
 
+  // Initial visibility animation
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <section className="relative pt-20 lg:pt-24 h-[100vh] overflow-hidden">
+    <section className="relative h-[90vh] lg:h-screen overflow-hidden">
       {/* Slide images */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -70,8 +86,11 @@ const Hero = () => {
             }`}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              className="absolute inset-0 bg-cover bg-center transform transition-transform duration-10000 scale-105"
+              style={{ 
+                backgroundImage: `url(${slide.image})`,
+                animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
+              }}
             />
             <div className="absolute inset-0 bg-black/30" />
           </div>
@@ -90,7 +109,7 @@ const Hero = () => {
                   : "opacity-0 translate-y-8 pointer-events-none"
               }`}
             >
-              <h2 className="text-white font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-4">
+              <h2 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-4 leading-tight">
                 {slide.title}
               </h2>
               <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-xl">
@@ -108,36 +127,41 @@ const Hero = () => {
       </div>
 
       {/* Navigation buttons */}
-      <div className="absolute bottom-8 right-8 flex space-x-4">
+      <div className="absolute bottom-12 right-12 flex space-x-4 z-10">
         <button
           onClick={prevSlide}
-          className="h-12 w-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors duration-300"
+          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors duration-300"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="h-6 w-6" />
+          <ChevronLeft className="h-7 w-7" />
         </button>
         <button
           onClick={nextSlide}
-          className="h-12 w-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors duration-300"
+          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors duration-300"
           aria-label="Next slide"
         >
-          <ChevronRight className="h-6 w-6" />
+          <ChevronRight className="h-7 w-7" />
         </button>
       </div>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => {
               if (isTransitioning) return;
               setIsTransitioning(true);
-              setCurrentSlide(index);
-              setTimeout(() => setIsTransitioning(false), 700);
+              setIsVisible(false);
+              
+              setTimeout(() => {
+                setCurrentSlide(index);
+                setIsTransitioning(false);
+                setIsVisible(true);
+              }, 500);
             }}
             className={`h-2 transition-all duration-300 rounded-full ${
-              index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
+              index === currentSlide ? "w-10 bg-white" : "w-2 bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
