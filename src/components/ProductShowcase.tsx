@@ -10,7 +10,6 @@ const products = [
     name: "Beaded Silk Tiebacks",
     category: "Tieback",
     image: "/lovable-uploads/813b0828-f1f8-43d7-9a6c-70ac5196cfd2.png",
-    price: "$195.00 / pair",
     colorways: 3
   },
   {
@@ -18,7 +17,6 @@ const products = [
     name: "Metallic Knot Tassels",
     category: "Tassel",
     image: "/lovable-uploads/fa393750-1cde-4474-bbf5-a168728afc85.png",
-    price: "$165.00 / set",
     colorways: 3
   },
   {
@@ -26,7 +24,6 @@ const products = [
     name: "Burgundy Layered Tassel",
     category: "Tassel",
     image: "/lovable-uploads/42cae155-c4aa-43de-9284-a4e9742f2678.png",
-    price: "$225.00 / each",
     colorways: 4
   },
   {
@@ -34,7 +31,6 @@ const products = [
     name: "Metallic Chain Tassels",
     category: "Tassel",
     image: "/lovable-uploads/fc494274-86e3-455d-b513-fbfa251b1b11.png",
-    price: "$185.00 / pair",
     colorways: 2
   },
   {
@@ -42,7 +38,6 @@ const products = [
     name: "Crystal Beaded Tassel",
     category: "Tassel",
     image: "/lovable-uploads/ecf10800-7f78-46f7-bb79-963c62f67c04.png",
-    price: "$195.00 / each",
     colorways: 2
   },
   {
@@ -50,7 +45,6 @@ const products = [
     name: "Natural Rope Tieback",
     category: "Tieback",
     image: "/lovable-uploads/b17a5bdd-8666-478c-b577-d89f09db672f.png",
-    price: "$85.00 / each",
     colorways: 3
   },
   {
@@ -58,7 +52,6 @@ const products = [
     name: "Gold Fringe Trim",
     category: "Trim",
     image: "/lovable-uploads/8a016950-b6c8-4c66-a911-b4012fad02b6.png",
-    price: "$75.00 / yard",
     colorways: 4
   },
   {
@@ -66,7 +59,6 @@ const products = [
     name: "Classic Swag Valance",
     category: "Drapery",
     image: "/lovable-uploads/62276329-d2b8-46b7-8040-1c9ce87a985b.png",
-    price: "$450.00 / panel",
     colorways: 6
   },
   {
@@ -74,7 +66,6 @@ const products = [
     name: "Braided Rope Tieback",
     category: "Tieback",
     image: "/lovable-uploads/e05674f3-915d-4bf0-a203-d3c941e17b97.png",
-    price: "$95.00 / each",
     colorways: 5
   },
   {
@@ -82,7 +73,6 @@ const products = [
     name: "Royal Gold Tassel",
     category: "Tassel",
     image: "/lovable-uploads/c44a1bd0-7c43-40b8-8a18-e7f7ab40a989.png",
-    price: "$175.00 / pair",
     colorways: 3
   },
   {
@@ -90,7 +80,6 @@ const products = [
     name: "Pearl White Tassels",
     category: "Tassel",
     image: "/lovable-uploads/d5e67b2c-9936-4102-afd5-aa999e460e64.png",
-    price: "$215.00 / pair",
     colorways: 2
   },
   {
@@ -98,7 +87,6 @@ const products = [
     name: "Golden Crown Tassels",
     category: "Tassel",
     image: "/lovable-uploads/873e6a26-afd9-4994-87da-2b19b2419b0a.png",
-    price: "$245.00 / pair",
     colorways: 3
   },
   {
@@ -106,7 +94,6 @@ const products = [
     name: "Black & White Tassel",
     category: "Tassel",
     image: "/lovable-uploads/f9a017f0-dd42-45b0-8691-1584f936f6a1.png",
-    price: "$165.00 / each",
     colorways: 2
   },
   {
@@ -114,7 +101,6 @@ const products = [
     name: "Blue Crystal Tassel",
     category: "Tassel",
     image: "/lovable-uploads/cbdb04e9-a055-4b2b-9b9d-0a8a4c440bc6.png",
-    price: "$225.00 / each",
     colorways: 4
   },
   {
@@ -122,7 +108,6 @@ const products = [
     name: "Silver Classic Tassel",
     category: "Tassel",
     image: "/lovable-uploads/5548268a-ff4d-4450-8548-4bb463ca8c26.png",
-    price: "$195.00 / pair",
     colorways: 3
   },
   {
@@ -130,7 +115,6 @@ const products = [
     name: "Decorative Rope Tieback",
     category: "Tieback",
     image: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
-    price: "$125.00 / each",
     colorways: 4
   },
   {
@@ -138,7 +122,6 @@ const products = [
     name: "Victorian Tassels",
     category: "Tassel",
     image: "/lovable-uploads/45fc9b72-c954-4b2e-97e5-2de190f68f0a.png",
-    price: "$275.00 / pair",
     colorways: 3
   },
   {
@@ -146,7 +129,6 @@ const products = [
     name: "Beaded White Tassel",
     category: "Tassel",
     image: "/lovable-uploads/8d1190f8-63bc-4ce0-84f7-df2a961f9aa2.png",
-    price: "$185.00 / each",
     colorways: 2
   },
   {
@@ -154,7 +136,6 @@ const products = [
     name: "Silver Grey Tiebacks",
     category: "Tieback",
     image: "/lovable-uploads/d74c3fb7-87fd-4b43-b0e4-01bf9cef3e2c.png",
-    price: "$165.00 / pair",
     colorways: 2
   },
   {
@@ -162,7 +143,6 @@ const products = [
     name: "Luxury Gold Tassel",
     category: "Tassel",
     image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png",
-    price: "$295.00 / pair",
     colorways: 1
   }
 ];
@@ -270,7 +250,6 @@ const ProductShowcase = () => {
                   {product.category}
                 </p>
                 <h3 className="font-serif text-2xl mb-2">{product.name}</h3>
-                <p className="text-gold-600 font-medium">{product.price}</p>
                 <p className="text-sm mt-1">{product.colorways} colorways</p>
               </div>
             </motion.div>
