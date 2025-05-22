@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -18,6 +19,10 @@ export default defineConfig(({ mode }) => ({
       includePublic: true,
       logStats: true,
       ansiColors: true,
+      skipOptimization: [
+        'lovable-uploads/f9a017f0-dd42-45b0-8691-1584f936f6a1.png', 
+        'lovable-uploads/c0e3994d-011f-4a47-b1ad-d1b74515cf8f.png'
+      ]
     }),
     imagemin({
       gifsicle: {

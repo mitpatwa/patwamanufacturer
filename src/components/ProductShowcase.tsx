@@ -142,7 +142,8 @@ const products = [
     id: 20,
     name: "Luxury Gold Tassel",
     category: "Tassel",
-    image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png", // Changed from problematic image
+    // Changed from potentially problematic image
+    image: "/lovable-uploads/aa29cfdf-058d-401f-9252-d8254e582349.png",
     colorways: 1
   }
 ];

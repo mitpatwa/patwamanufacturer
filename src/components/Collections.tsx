@@ -29,7 +29,7 @@ const collections = [
   {
     id: 4,
     name: "Cords",
-    image: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png", // Changed from problematic image
+    image: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
     description: "Sophisticated cords for perfect finishing",
     link: "/collections/cords"
   }
