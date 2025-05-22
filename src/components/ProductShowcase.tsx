@@ -30,7 +30,7 @@ const products = [
     id: 4,
     name: "Metallic Chain Tassels",
     category: "Tassel",
-    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png", // Changed from problematic image
+    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png",
     colorways: 2
   },
   {
@@ -93,7 +93,7 @@ const products = [
     id: 13,
     name: "Black & White Tassel",
     category: "Tassel",
-    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png", // Changed from problematic image
+    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png",
     colorways: 2
   },
   {
@@ -142,7 +142,7 @@ const products = [
     id: 20,
     name: "Luxury Gold Tassel",
     category: "Tassel",
-    image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png",
+    image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png", // Changed from problematic image
     colorways: 1
   }
 ];
