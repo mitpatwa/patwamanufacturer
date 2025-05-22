@@ -30,7 +30,7 @@ const products = [
     id: 4,
     name: "Metallic Chain Tassels",
     category: "Tassel",
-    image: "/lovable-uploads/fc494274-86e3-455d-b513-fbfa251b1b11.png",
+    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png", // Changed from problematic image
     colorways: 2
   },
   {
@@ -93,7 +93,7 @@ const products = [
     id: 13,
     name: "Black & White Tassel",
     category: "Tassel",
-    image: "/lovable-uploads/f9a017f0-dd42-45b0-8691-1584f936f6a1.png",
+    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png", // Changed from problematic image
     colorways: 2
   },
   {
@@ -250,7 +250,6 @@ const ProductShowcase = () => {
                   {product.category}
                 </p>
                 <h3 className="font-serif text-2xl mb-2">{product.name}</h3>
-                <p className="text-sm mt-1">{product.colorways} colorways</p>
               </div>
             </motion.div>
           ))}

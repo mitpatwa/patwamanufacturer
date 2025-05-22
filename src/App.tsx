@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,6 +16,7 @@ import EmbelishmentsCollection from "./pages/collections/EmbelishmentsCollection
 import CustomServices from "./pages/CustomServices";
 import Craftsmanship from "./components/Craftsmanship";
 import Sustainability from "./pages/Sustainability";
+import SiteAnalysis from "./pages/SiteAnalysis";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,7 @@ const App = () => (
           <Route path="/custom-services" element={<CustomServices />} />
           <Route path="/craftsmanship" element={<Craftsmanship />} />
           <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/analysis" element={<SiteAnalysis />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
