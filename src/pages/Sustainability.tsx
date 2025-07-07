@@ -13,11 +13,7 @@ const Sustainability = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <section className="py-20 md:py-28">
-          <div className="container-custom">
-            <motion.div
+      <Helmet>
               initial="initial"
               animate="animate"
               variants={fadeIn}

@@ -5,6 +5,8 @@ import { allProducts } from "@/data/products";
 
 const TasselsCollection = () => {
   const tasselsProducts = allProducts.filter(
+
+
     (product) => product.category === "Tassel"
   );
 

@@ -22,6 +22,29 @@ const CustomizationHighlight = () => {
     }
   ];
 
+  const customExamples = [
+    {
+      image: "/public/lovable-uploads/03ee33a7-3f59-4a56-aef6-1d2c6e8182ff.png", // Replace with actual image paths
+      description: "Bespoke drapery tieback with custom color matching."
+    },
+    {
+      image: "/public/lovable-uploads/1467f076-5bc0-4a6a-a6b4-8b23cdb903c0.png",
+      description: "Hand-crafted trim for historical furniture restoration."
+    },
+    {
+      image: "/public/lovable-uploads/15a2a908-a2ee-4c7b-871d-322c41720c5c.png",
+      description: "Unique cord design with metallic thread accents."
+    },
+     {
+      image: "/public/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.png",
+      description: "Custom tassel creation for high-end interior design."
+    },
+     {
+      image: "/public/lovable-uploads/1a2a40a3-9a8f-40f8-bf53-cbb5908b0788.png",
+      description: "Elaborate braid pattern developed for a fashion project."
+    }
+  ];
+
   return (
     <section className="py-16 bg-gradient-to-b from-sand-50 to-white">
       <div className="container-custom">
@@ -59,6 +82,42 @@ const CustomizationHighlight = () => {
               <p className="text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Custom Examples Section */}
+        <div className="mt-12 mb-12">
+           <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center mb-8"
+          >
+            <h3 className="font-serif text-2xl md:text-3xl font-medium">
+              Examples of Our Custom Work
+            </h3>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {customExamples.map((example, index) => (
+              <motion.div
+                key={index}
+                 initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative overflow-hidden rounded-lg shadow-md group"
+              >
+                <img
+                  src={example.image}
+                  alt={example.description}
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-center text-sm px-3 font-medium">{example.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         <motion.div

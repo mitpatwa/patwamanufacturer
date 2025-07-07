@@ -1,8 +1,10 @@
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card";
-
+import { Card, CardContent } from "@/components/ui/card"; // Assuming you have a dialog component in your ui library
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+ 
 interface ProductCardProps {
   id: number;
   name: string;
@@ -26,6 +28,9 @@ const ProductCard = ({
   onMouseLeave,
   animationDelay = 0
 }: ProductCardProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -40,9 +45,10 @@ const ProductCard = ({
             <img
               src={image}
               alt={name}
-              className={`w-full aspect-[3/4] object-cover transition-transform duration-700 ${
+              className={`w-full aspect-[3/4] object-cover transition-transform duration-700 cursor-pointer ${
                 isHovered ? "scale-105" : ""
               }`}
+              onClick={openModal} // Add onClick to open modal
               loading="lazy"
             />
             <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-300 ${
@@ -75,6 +81,13 @@ const ProductCard = ({
           </div>
         </CardContent>
       </Card>
+
+      {/* Image Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="fixed inset-0 flex items-center justify-center p-0 max-w-full max-h-full bg-black bg-opacity-75">
+          <img src={image} alt={name} className="max-w-full max-h-full object-contain" />
+        </DialogContent>
+      </Dialog>
     </motion.div>
   );
 };

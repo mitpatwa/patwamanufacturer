@@ -14,6 +14,7 @@ import {
   FormLabel, 
   FormMessage 
 } from "@/components/ui/form";
+import { Checkbox } from "@/components/ui/checkbox";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -26,7 +27,7 @@ const inquiryFormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
   phone: z.string().min(7, { message: "Please enter a valid phone number." }).optional(),
   company: z.string().optional(),
-  projectType: z.string().min(1, { message: "Please select a project type." }),
+  projectType: z.array(z.string()).min(1, { message: "Please select at least one project type." }),
   projectDescription: z.string().min(10, { message: "Please provide a brief description of your project." }),
   timeline: z.string().optional(),
   referenceSource: z.string().optional(),
@@ -39,7 +40,7 @@ const defaultValues: Partial<InquiryFormValues> = {
   email: "",
   phone: "",
   company: "",
-  projectType: "",
+  projectType: [],
   projectDescription: "",
   timeline: "",
   referenceSource: "",

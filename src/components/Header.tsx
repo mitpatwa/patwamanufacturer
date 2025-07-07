@@ -98,8 +98,10 @@ const Header = () => {
               <li>
                 <button 
                   className={`p-2 rounded-full hover:bg-white/10 transition-colors ${
+
                     isScrolled ? 'text-primary' : 'text-white'
                   }`}
+                  onClick={() => console.log('Search button clicked!')}
                 >
                   <Search className="h-5 w-5" />
                 </button>

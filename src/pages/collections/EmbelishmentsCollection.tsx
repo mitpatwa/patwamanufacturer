@@ -5,6 +5,7 @@ import { allProducts } from "@/data/products";
 
 const EmbelishmentsCollection = () => {
   const embelishmentsProducts = allProducts.filter(
+
     (product) => product.category === "Trim"
   );
 

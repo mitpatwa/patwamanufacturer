@@ -1,4 +1,3 @@
-
 import CollectionLayout from "@/components/collections/CollectionLayout";
 
 const SiteAnalysis = () => {
