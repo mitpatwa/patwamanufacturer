@@ -9,6 +9,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Workshop from "../components/Workshop";
 import PassementerieSelector from "../components/PassementerieSelector";
+import CustomizationHighlight from "../components/CustomizationHighlight";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -24,6 +25,14 @@ const Index = () => {
         <Hero />
         <Collections />
         <ProductShowcase />
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+        >
+          <CustomizationHighlight />
+        </motion.div>
         <motion.div
           initial="initial"
           whileInView="animate"

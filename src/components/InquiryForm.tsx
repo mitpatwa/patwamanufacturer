@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -79,24 +78,72 @@ const InquiryForm = () => {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Custom Passementerie Inquiry - ${values.projectType}`);
+    const body = encodeURIComponent(`
+Dear Patwa Manufacturer Team,
+
+I would like to inquire about custom passementerie services.
+
+CONTACT INFORMATION:
+Name: ${values.name}
+Email: ${values.email}
+Phone: ${values.phone || 'Not provided'}
+Company: ${values.company || 'Not provided'}
+Location: ${values.location}
+
+PROJECT DETAILS:
+Project Type: ${values.projectType}
+Timeline: ${values.timeline}
+Estimated Quantity: ${values.quantity || 'Not specified'}
+
+Description:
+${values.description}
+
+Special Requirements:
+${values.specialRequirements || 'None specified'}
+
+How did you hear about us: ${values.referralSource || 'Not specified'}
+
+${fileUploads.length > 0 ? `\nNote: ${fileUploads.length} file(s) attached separately` : ''}
+
+Best regards,
+${values.name}
+    `);
+    
+    // Open email client
+    window.location.href = `mailto:patwamanufacturers@gmail.com?subject=${subject}&body=${body}`;
+    
     // Simulate form submission
     setTimeout(() => {
       console.log({ ...values, files: fileUploads });
       
       toast({
-        title: "Inquiry Submitted",
-        description: "Thank you for your inquiry. Our team will be in touch within 48 hours.",
+        title: "Inquiry Prepared",
+        description: "Your email client should have opened with your inquiry. Please send the email to complete your request.",
       });
       
       // Reset form and state
       form.reset();
       setFileUploads([]);
       setIsSubmitting(false);
-    }, 1500);
+    }, 1000);
   };
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-sm border border-border">
+      <div className="mb-6 p-4 bg-sand-50 rounded-lg border border-sand-200">
+        <p className="text-sm text-muted-foreground text-center">
+          <strong>Direct Contact:</strong> For immediate assistance, email us directly at{" "}
+          <a 
+            href="mailto:patwamanufacturers@gmail.com" 
+            className="text-primary hover:underline font-medium"
+          >
+            patwamanufacturers@gmail.com
+          </a>
+        </p>
+      </div>
+      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="space-y-6">
@@ -396,7 +443,7 @@ const InquiryForm = () => {
             disabled={isSubmitting}
             className="w-full py-3 px-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 font-medium"
           >
-            {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+            {isSubmitting ? "Preparing Email..." : "Send Inquiry via Email"}
           </button>
         </form>
       </Form>
