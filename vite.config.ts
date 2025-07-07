@@ -18,11 +18,7 @@ export default defineConfig(({ mode }) => ({
       test: /\.(jpe?g|png|gif|webp|avif)$/i,
       includePublic: true,
       logStats: true,
-      ansiColors: true,
-      skipOptimization: [
-        'lovable-uploads/f9a017f0-dd42-45b0-8691-1584f936f6a1.png', 
-        'lovable-uploads/c0e3994d-011f-4a47-b1ad-d1b74515cf8f.png'
-      ]
+      ansiColors: true
     }),
     imagemin({
       gifsicle: {
