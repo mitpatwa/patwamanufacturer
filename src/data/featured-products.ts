@@ -30,46 +30,46 @@ export const featuredProducts: FeaturedProduct[] = [
     colorways: 4
   },
   {
-    id: 4,
-    name: "Metallic Chain Tassels",
-    category: "Tassel",
-    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png",
-    colorways: 2
-  },
-  {
-    id: 5,
-    name: "Crystal Beaded Tassel",
-    category: "Tassel",
-    image: "/lovable-uploads/ecf10800-7f78-46f7-bb79-963c62f67c04.png",
-    colorways: 2
-  },
-  {
-    id: 6,
-    name: "Natural Rope Tieback",
-    category: "Tieback",
-    image: "/lovable-uploads/b17a5bdd-8666-478c-b577-d89f09db672f.png",
-    colorways: 3
-  },
-  {
-    id: 7,
-    name: "Gold Fringe Trim",
-    category: "Trim",
-    image: "/lovable-uploads/8a016950-b6c8-4c66-a911-b4012fad02b6.png",
+    id: 31,
+    name: "Metallic Gimp Lace",
+    category: "Lace",
+    image: "/lovable-uploads/6778f542-35a6-4d7e-af0d-85a713c5b201.png",
     colorways: 4
   },
   {
-    id: 8,
-    name: "Classic Swag Valance",
-    category: "Drapery",
-    image: "/lovable-uploads/62276329-d2b8-46b7-8040-1c9ce87a985b.png",
-    colorways: 6
+    id: 32,
+    name: "Colorful Fringe Collection",
+    category: "Fringe",
+    image: "/lovable-uploads/dd01c5db-f6d2-42cd-89e7-f03c0f20caf5.png",
+    colorways: 8
   },
   {
-    id: 9,
-    name: "Braided Rope Tieback",
+    id: 33,
+    name: "Twisted Rope Cords",
+    category: "Cord",
+    image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
+    colorways: 12
+  },
+  {
+    id: 36,
+    name: "Gold Multi-Chain Tieback",
     category: "Tieback",
-    image: "/lovable-uploads/e05674f3-915d-4bf0-a203-d3c941e17b97.png",
-    colorways: 5
+    image: "/lovable-uploads/630cca58-fcf7-4018-8f3b-babcbe55732d.png",
+    colorways: 3
+  },
+  {
+    id: 37,
+    name: "Purple Silk Fringe",
+    category: "Fringe",
+    image: "/lovable-uploads/3ff8383a-7a8b-416e-834e-2e0d9bdbeb16.png",
+    colorways: 4
+  },
+  {
+    id: 39,
+    name: "Crystal Beaded Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/bada547d-121b-4be5-b214-7e6093add217.png",
+    colorways: 2
   },
   {
     id: 10,

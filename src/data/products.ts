@@ -247,5 +247,77 @@ export const allProducts: Product[] = [
     image: "/lovable-uploads/f3463e60-504a-4092-8d08-712a8ccee184.png",
     description: "Classical bronze column-style tieback",
     colorways: 1
+  },
+  {
+    id: 31,
+    name: "Metallic Gimp Lace",
+    category: "Lace",
+    image: "/lovable-uploads/6778f542-35a6-4d7e-af0d-85a713c5b201.png",
+    description: "Exquisite metallic gimp lace with intricate pattern details",
+    colorways: 4
+  },
+  {
+    id: 32,
+    name: "Colorful Fringe Collection",
+    category: "Fringe",
+    image: "/lovable-uploads/dd01c5db-f6d2-42cd-89e7-f03c0f20caf5.png",
+    description: "Vibrant collection of fringes in multiple colors",
+    colorways: 8
+  },
+  {
+    id: 33,
+    name: "Twisted Rope Cords",
+    category: "Cord",
+    image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
+    description: "Premium twisted rope cords in various colors",
+    colorways: 12
+  },
+  {
+    id: 34,
+    name: "Black Silk Fringe",
+    category: "Fringe",
+    image: "/lovable-uploads/3f30cf5b-4538-4b12-ba61-c9b23980b560.png",
+    description: "Elegant black silk fringe for sophisticated applications",
+    colorways: 3
+  },
+  {
+    id: 35,
+    name: "Ornate Grey Trim & Tassel",
+    category: "Trim",
+    image: "/lovable-uploads/b02e40b1-4aea-479a-b5ec-35e8b5cf20b2.png",
+    description: "Sophisticated grey trim with matching tassel",
+    colorways: 2
+  },
+  {
+    id: 36,
+    name: "Gold Multi-Chain Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/630cca58-fcf7-4018-8f3b-babcbe55732d.png",
+    description: "Luxurious gold multi-chain tieback with pearl accents",
+    colorways: 3
+  },
+  {
+    id: 37,
+    name: "Purple Silk Fringe",
+    category: "Fringe",
+    image: "/lovable-uploads/3ff8383a-7a8b-416e-834e-2e0d9bdbeb16.png",
+    description: "Rich purple silk fringe with fine detailing",
+    colorways: 4
+  },
+  {
+    id: 38,
+    name: "Beige Luxury Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/ad0025af-354b-4ccb-aa73-6d1e32739374.png",
+    description: "Elegant beige tassel with decorative cord",
+    colorways: 3
+  },
+  {
+    id: 39,
+    name: "Crystal Beaded Tieback",
+    category: "Tieback",
+    image: "/lovable-uploads/bada547d-121b-4be5-b214-7e6093add217.png",
+    description: "Stunning crystal beaded tieback with teardrop pendants",
+    colorways: 2
   }
 ];
