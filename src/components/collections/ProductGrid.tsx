@@ -22,15 +22,21 @@ const ProductGrid = ({ products }: ProductGridProps) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <Link
                 to="/inquiry"
-                className="absolute bottom-4 left-1/2 -translate-x-1/2 py-2 px-6 bg-white text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0"
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 py-2 px-6 bg-white text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 hover:bg-primary hover:text-white"
               >
-                Request Quote
+                Request Inquiry
               </Link>
             </div>
             <div className="p-6 text-center">
               <h3 className="font-serif text-xl mb-2">{product.name}</h3>
-              <p className="text-muted-foreground mb-2">{product.description}</p>
-              <p className="text-sm">{product.colorways} colorways available</p>
+              <p className="text-muted-foreground mb-4">{product.description}</p>
+              <p className="text-sm mb-4">{product.colorways} colorways available</p>
+              <Link
+                to="/inquiry"
+                className="inline-block py-2 px-6 bg-primary text-white hover:bg-primary/90 transition-colors duration-300"
+              >
+                Request Inquiry
+              </Link>
             </div>
           </CardContent>
         </Card>

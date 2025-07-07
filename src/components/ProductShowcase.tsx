@@ -1,14 +1,14 @@
-
 import { useState, useEffect, useRef } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Product data
 const products = [
   {
     id: 1,
     name: "Beaded Silk Tiebacks",
-    category: "Tieback",
+    category: "Tieback", 
     image: "/lovable-uploads/813b0828-f1f8-43d7-9a6c-70ac5196cfd2.png",
     colorways: 3
   },
@@ -237,20 +237,27 @@ const ProductShowcase = () => {
                 <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-300 ${
                   hoveredProduct === product.id ? "opacity-100" : "opacity-0"
                 }`} />
-                <button 
-                  className={`absolute bottom-6 left-1/2 -translate-x-1/2 py-3 px-8 bg-white text-primary font-medium transition-all duration-500 ${
+                <Link 
+                  to="/inquiry"
+                  className={`absolute bottom-6 left-1/2 -translate-x-1/2 py-3 px-8 bg-white text-primary font-medium transition-all duration-500 hover:bg-primary hover:text-white ${
                     hoveredProduct === product.id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                 >
-                  Quick View
-                </button>
+                  Request Inquiry
+                </Link>
               </div>
               
               <div className="text-center">
                 <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2 font-medium">
                   {product.category}
                 </p>
-                <h3 className="font-serif text-2xl mb-2">{product.name}</h3>
+                <h3 className="font-serif text-2xl mb-4">{product.name}</h3>
+                <Link 
+                  to="/inquiry"
+                  className="inline-block py-2 px-6 bg-primary text-white hover:bg-primary/90 transition-colors duration-300"
+                >
+                  Request Inquiry
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -272,9 +279,9 @@ const ProductShowcase = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <a href="/collections" className="inline-block py-3 px-10 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 text-lg">
+          <Link to="/collections" className="inline-block py-3 px-10 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 text-lg">
             View All Products
-          </a>
+          </Link>
         </div>
       </div>
     </section>
