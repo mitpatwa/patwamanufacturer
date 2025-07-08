@@ -16,31 +16,52 @@ export type Database = {
     Tables: {
       inquiries: {
         Row: {
-          created_at: string | null
+          company: string | null
+          created_at: string
+          description: string
           email: string
-          id: number
-          message: string
+          id: string
+          location: string
           name: string
-          status: string | null
-          subject: string
+          phone: string | null
+          project_type: string
+          quantity: string | null
+          referral_source: string | null
+          special_requirements: string | null
+          timeline: string
+          updated_at: string
         }
         Insert: {
-          created_at?: string | null
+          company?: string | null
+          created_at?: string
+          description: string
           email: string
-          id?: never
-          message: string
+          id?: string
+          location: string
           name: string
-          status?: string | null
-          subject: string
+          phone?: string | null
+          project_type: string
+          quantity?: string | null
+          referral_source?: string | null
+          special_requirements?: string | null
+          timeline: string
+          updated_at?: string
         }
         Update: {
-          created_at?: string | null
+          company?: string | null
+          created_at?: string
+          description?: string
           email?: string
-          id?: never
-          message?: string
+          id?: string
+          location?: string
           name?: string
-          status?: string | null
-          subject?: string
+          phone?: string | null
+          project_type?: string
+          quantity?: string | null
+          referral_source?: string | null
+          special_requirements?: string | null
+          timeline?: string
+          updated_at?: string
         }
         Relationships: []
       }
