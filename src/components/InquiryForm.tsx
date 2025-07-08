@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -25,12 +26,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
 
-// Form validation schema
+// Form validation schema - simplified to match database structure
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number." }).optional(),
+  phone: z.string().optional(),
   company: z.string().optional(),
   location: z.string().min(2, { message: "Please enter your location." }),
   projectType: z.string({ required_error: "Please select a project type." }),
@@ -80,6 +82,8 @@ const InquiryForm = () => {
     setIsSubmitting(true);
     
     try {
+      console.log('Submitting form with values:', values);
+      
       // Insert inquiry into database
       const { error } = await supabase
         .from('inquiries')
@@ -472,13 +476,13 @@ ${values.name}
             )}
           />
 
-          <button
+          <Button
             type="submit"
             disabled={isSubmitting}
             className="w-full py-3 px-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 font-medium"
           >
             {isSubmitting ? "Submitting..." : "Submit Inquiry"}
-          </button>
+          </Button>
         </form>
       </Form>
     </div>
