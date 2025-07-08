@@ -3,7 +3,7 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Check, Upload } from "lucide-react";
+import { Check, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -49,6 +49,7 @@ const formSchema = z.object({
 const InquiryForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fileUploads, setFileUploads] = useState<File[]>([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -70,7 +71,32 @@ const InquiryForm = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files);
-      setFileUploads(prev => [...prev, ...newFiles]);
+      const validFiles = newFiles.filter(file => {
+        const isValidType = file.type.startsWith('image/') || file.type === 'application/pdf';
+        const isValidSize = file.size <= 10 * 1024 * 1024; // 10MB
+        
+        if (!isValidType) {
+          toast({
+            title: "Invalid file type",
+            description: `${file.name} is not a supported file type. Please upload images or PDF files only.`,
+            variant: "destructive",
+          });
+          return false;
+        }
+        
+        if (!isValidSize) {
+          toast({
+            title: "File too large",
+            description: `${file.name} is larger than 10MB. Please choose a smaller file.`,
+            variant: "destructive",
+          });
+          return false;
+        }
+        
+        return true;
+      });
+      
+      setFileUploads(prev => [...prev, ...validFiles]);
     }
   };
 
@@ -145,14 +171,16 @@ ${values.name}
       `);
       
       // Open email client
-      window.location.href = `mailto:patwamanufacturers@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:patwamanufacturers@gmail.com?subject=${subject}&body=${body}`;
+      window.open(mailtoLink, '_self');
       
       toast({
         title: "Inquiry Submitted Successfully!",
         description: "Your inquiry has been saved and your email client should open. Please send the email to complete your request.",
       });
       
-      // Reset form and state
+      // Set submitted state and reset form
+      setIsSubmitted(true);
       form.reset();
       setFileUploads([]);
       
@@ -167,6 +195,29 @@ ${values.name}
       setIsSubmitting(false);
     }
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-white p-8 rounded-lg shadow-sm border border-border text-center">
+        <div className="flex justify-center mb-6">
+          <Check className="h-16 w-16 text-green-500" />
+        </div>
+        <h2 className="font-serif text-2xl font-medium mb-4">
+          Thank You for Your Inquiry
+        </h2>
+        <p className="mb-6 text-muted-foreground">
+          We've received your request and our team will review your project details promptly. 
+          You can expect to hear from us within 48 hours to discuss your custom requirements in detail.
+        </p>
+        <Button 
+          onClick={() => setIsSubmitted(false)}
+          variant="outline"
+        >
+          Submit Another Inquiry
+        </Button>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-sm border border-border">
@@ -414,9 +465,10 @@ ${values.name}
                         <button
                           type="button"
                           onClick={() => removeFile(index)}
-                          className="text-muted-foreground hover:text-destructive transition-colors"
+                          className="text-muted-foreground hover:text-destructive transition-colors p-1"
+                          aria-label={`Remove ${file.name}`}
                         >
-                          Remove
+                          <X className="h-4 w-4" />
                         </button>
                       </li>
                     ))}
