@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
@@ -6,25 +5,25 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3",
-    title: "Spring Collection",
-    subtitle: "Elegance in every detail",
+    image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3",
+    title: "Artisan Collection",
+    subtitle: "Handcrafted excellence in every thread",
     ctaText: "Discover",
     ctaLink: "#"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3",
-    title: "Artisan Crafted",
-    subtitle: "Timeless quality and craftsmanship",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3",
+    title: "Luxury Textures",
+    subtitle: "Premium materials for distinguished interiors",
     ctaText: "Explore",
     ctaLink: "#"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1594040226829-7f251ab46d80?ixlib=rb-4.0.3",
-    title: "Design Excellence",
-    subtitle: "The finest materials, expertly crafted",
+    image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3",
+    title: "Bespoke Designs",
+    subtitle: "Custom passementerie crafted to perfection",
     ctaText: "View Collection",
     ctaLink: "#"
   }
