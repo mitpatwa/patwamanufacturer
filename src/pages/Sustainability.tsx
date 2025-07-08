@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
@@ -14,6 +15,13 @@ const Sustainability = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <title>Sustainability - Patwa Manufacturer</title>
+      </Helmet>
+      <Header />
+      <main className="pt-20">
+        <section className="py-20">
+          <div className="container-custom">
+            <motion.div
               initial="initial"
               animate="animate"
               variants={fadeIn}
