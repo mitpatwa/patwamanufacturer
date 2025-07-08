@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Check, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 import {
   Form,
@@ -75,12 +76,40 @@ const InquiryForm = () => {
     setFileUploads(prev => prev.filter((_, i) => i !== index));
   };
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Custom Passementerie Inquiry - ${values.projectType}`);
-    const body = encodeURIComponent(`
+    try {
+      // Insert inquiry into database
+      const { error } = await supabase
+        .from('inquiries')
+        .insert({
+          name: values.name,
+          email: values.email,
+          phone: values.phone || null,
+          company: values.company || null,
+          location: values.location,
+          project_type: values.projectType,
+          description: values.description,
+          timeline: values.timeline,
+          quantity: values.quantity || null,
+          special_requirements: values.specialRequirements || null,
+          referral_source: values.referralSource || null,
+        });
+
+      if (error) {
+        console.error('Error saving inquiry:', error);
+        toast({
+          title: "Error",
+          description: "There was an error submitting your inquiry. Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Custom Passementerie Inquiry - ${values.projectType}`);
+      const body = encodeURIComponent(`
 Dear Patwa Manufacturer Team,
 
 I would like to inquire about custom passementerie services.
@@ -109,25 +138,30 @@ ${fileUploads.length > 0 ? `\nNote: ${fileUploads.length} file(s) attached separ
 
 Best regards,
 ${values.name}
-    `);
-    
-    // Open email client
-    window.location.href = `mailto:patwamanufacturers@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log({ ...values, files: fileUploads });
+      `);
+      
+      // Open email client
+      window.location.href = `mailto:patwamanufacturers@gmail.com?subject=${subject}&body=${body}`;
       
       toast({
-        title: "Inquiry Prepared",
-        description: "Your email client should have opened with your inquiry. Please send the email to complete your request.",
+        title: "Inquiry Submitted Successfully!",
+        description: "Your inquiry has been saved and your email client should open. Please send the email to complete your request.",
       });
       
       // Reset form and state
       form.reset();
       setFileUploads([]);
+      
+    } catch (error) {
+      console.error('Error submitting inquiry:', error);
+      toast({
+        title: "Error",
+        description: "There was an error submitting your inquiry. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -443,7 +477,7 @@ ${values.name}
             disabled={isSubmitting}
             className="w-full py-3 px-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 font-medium"
           >
-            {isSubmitting ? "Preparing Email..." : "Send Inquiry via Email"}
+            {isSubmitting ? "Submitting..." : "Submit Inquiry"}
           </button>
         </form>
       </Form>
