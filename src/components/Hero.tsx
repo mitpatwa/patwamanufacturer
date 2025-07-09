@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
@@ -5,25 +6,25 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3",
-    title: "Artisan Collection",
-    subtitle: "Handcrafted excellence in every thread",
+    image: "/lovable-uploads/1344a1aa-642c-40df-bc14-6bce4595b904.png",
+    title: "Luxury Interiors",
+    subtitle: "Exquisite curtains and drapery for distinguished spaces",
     ctaText: "Discover",
     ctaLink: "#"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3",
-    title: "Luxury Textures",
-    subtitle: "Premium materials for distinguished interiors",
+    image: "/lovable-uploads/fabca403-590f-495c-92c0-d0b007aae2da.png",
+    title: "Artisan Craftsmanship",
+    subtitle: "Premium tassels and tie-backs handcrafted to perfection",
     ctaText: "Explore",
     ctaLink: "#"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3",
-    title: "Bespoke Designs",
-    subtitle: "Custom passementerie crafted to perfection",
+    image: "/lovable-uploads/eeb9a56c-a6a2-419d-85e7-4449d9287c9f.png",
+    title: "Elegant Drapery",
+    subtitle: "Custom window treatments with ornate detailing",
     ctaText: "View Collection",
     ctaLink: "#"
   }
