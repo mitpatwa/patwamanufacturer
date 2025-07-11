@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import Workshop from "../components/Workshop";
 import PassementerieSelector from "../components/PassementerieSelector";
 import CustomizationHighlight from "../components/CustomizationHighlight";
+import WhatsAppFloat from "../components/WhatsAppFloat";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -67,6 +68,7 @@ const Index = () => {
         </motion.div>
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
