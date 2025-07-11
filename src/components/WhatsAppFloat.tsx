@@ -16,7 +16,7 @@ const WhatsAppFloat = () => {
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ delay: 1, duration: 0.5 }}
-      className="fixed bottom-6 left-6 z-50"
+      className="fixed bottom-6 right-6 z-50"
     >
       <motion.button
         onClick={handleWhatsAppClick}
