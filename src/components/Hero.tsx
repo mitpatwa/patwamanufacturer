@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
@@ -6,7 +5,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
+    image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png",
     title: "Luxury Curtains & Drapery",
     subtitle: "Exquisite window treatments with premium passementerie details",
     ctaText: "Discover",
@@ -14,7 +13,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/lovable-uploads/67323a28-410c-44b8-b4a4-c9b3f175483c.png",
+    image: "/lovable-uploads/813b0828-f1f8-43d7-9a6c-70ac5196cfd2.png",
     title: "Artisan Craftsmanship",
     subtitle: "Handcrafted tassels, fringes, and decorative trims",
     ctaText: "Explore",
@@ -22,7 +21,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/lovable-uploads/b17a5bdd-8666-478c-b577-d89f09db672f.png",
+    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png",
     title: "Elegant Interior Design",
     subtitle: "Transform your space with our premium textile accessories",
     ctaText: "View Collection",
