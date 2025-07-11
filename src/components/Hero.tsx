@@ -7,8 +7,8 @@ const slides = [
   {
     id: 1,
     image: "/lovable-uploads/1344a1aa-642c-40df-bc14-6bce4595b904.png",
-    title: "Luxury Interiors",
-    subtitle: "Exquisite curtains and drapery for distinguished spaces",
+    title: "Luxury Curtains & Drapery",
+    subtitle: "Exquisite window treatments with premium passementerie details",
     ctaText: "Discover",
     ctaLink: "#"
   },
@@ -16,15 +16,15 @@ const slides = [
     id: 2,
     image: "/lovable-uploads/fabca403-590f-495c-92c0-d0b007aae2da.png",
     title: "Artisan Craftsmanship",
-    subtitle: "Premium tassels and tie-backs handcrafted to perfection",
+    subtitle: "Handcrafted tassels, fringes, and decorative trims",
     ctaText: "Explore",
     ctaLink: "#"
   },
   {
     id: 3,
     image: "/lovable-uploads/eeb9a56c-a6a2-419d-85e7-4449d9287c9f.png",
-    title: "Elegant Drapery",
-    subtitle: "Custom window treatments with ornate detailing",
+    title: "Elegant Interior Design",
+    subtitle: "Transform your space with our premium textile accessories",
     ctaText: "View Collection",
     ctaLink: "#"
   }
@@ -33,18 +33,15 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   // Function to go to the next slide
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setIsVisible(false);
     
     setTimeout(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
       setIsTransitioning(false);
-      setIsVisible(true);
     }, 500);
   };
 
@@ -52,12 +49,10 @@ const Hero = () => {
   const prevSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setIsVisible(false);
     
     setTimeout(() => {
       setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
       setIsTransitioning(false);
-      setIsVisible(true);
     }, 500);
   };
 
@@ -67,12 +62,7 @@ const Hero = () => {
       nextSlide();
     }, 7000);
     return () => clearInterval(interval);
-  }, [currentSlide, isTransitioning]);
-
-  // Initial visibility animation
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  }, [isTransitioning]);
 
   return (
     <section className="relative h-[90vh] lg:h-screen overflow-hidden">
@@ -86,7 +76,7 @@ const Hero = () => {
             }`}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center transform transition-transform duration-10000 scale-105"
+              className="absolute inset-0 bg-cover bg-center transform transition-transform duration-[15s] scale-105"
               style={{ 
                 backgroundImage: `url(${slide.image})`,
                 animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
@@ -152,12 +142,10 @@ const Hero = () => {
             onClick={() => {
               if (isTransitioning) return;
               setIsTransitioning(true);
-              setIsVisible(false);
               
               setTimeout(() => {
                 setCurrentSlide(index);
                 setIsTransitioning(false);
-                setIsVisible(true);
               }, 500);
             }}
             className={`h-2 transition-all duration-300 rounded-full ${
