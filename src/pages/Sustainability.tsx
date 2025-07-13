@@ -1,43 +1,60 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
-const Sustainability = () => {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8 }
-  };
+const Sustainability = () => (
+  <div className="min-h-screen bg-background">
+    <Helmet>
+      <title>Sustainability - Patwa Manufacturer</title>
+    </Helmet>
+    <Header />
+    <main className="pt-20">
+      <section className="py-20">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-8 text-center">
+              Our Commitment to <span className="text-gold-600">Sustainability</span>
+            </h1>
+            
+            <div className="max-w-3xl mx-auto mb-16 text-center">
+              <p className="text-lg text-muted-foreground">
+                We are committed to sustainable practices in our passementerie craftsmanship, 
+                ensuring that our artisanal traditions respect both our heritage and our environment.
+              </p>
+            </div>
+          </motion.div>
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Sustainability - Patwa Manufacturer</title>
-      </Helmet>
-      <Header />
-      <main className="pt-20">
-        <section className="py-20">
-          <div className="container-custom">
+          {/* Placeholder content sections */}
+          <div className="max-w-5xl mx-auto space-y-12">
             <motion.div
-              initial="initial"
-              animate="animate"
-              variants={fadeIn}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.6 }}
             >
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-8 text-center">
-                Our Commitment to <span className="text-gold-600">Sustainability</span>
-              </h1>
-              
-              <div className="max-w-3xl mx-auto mb-16 text-center">
-                <p className="text-lg text-muted-foreground">
-                  We are committed to sustainable practices in our passementerie craftsmanship, 
-                  ensuring that our artisanal traditions respect both our heritage and our environment.
-                </p>
-              </div>
+              <h2 className="text-3xl font-serif font-medium mb-6">Sustainable Sourcing</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
             </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-serif font-medium mb-6">Ethical Production & Waste Reduction</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </motion.div>
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               <motion.div 
                 className="bg-secondary p-8 rounded-lg"
@@ -96,11 +113,11 @@ const Sustainability = () => {
               </motion.div>
             </div>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Sustainability;

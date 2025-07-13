@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { useEffect, lazy, Suspense } from "react";
 
+import WhatsAppIcon from "./components/WhatsAppIcon";
 // Import pages dynamically using React.lazy
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -61,6 +62,7 @@ const App = () => (
           </Suspense>
         </BrowserRouter>
       </TooltipProvider>
+      <WhatsAppIcon phoneNumber="+919322140480" />
     </QueryClientProvider>
   </HelmetProvider>
 );
