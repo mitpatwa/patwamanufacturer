@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      auth_logs: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          metadata: Json | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          metadata?: Json | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          metadata?: Json | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       inquiries: {
         Row: {
           company: string | null
@@ -67,7 +91,21 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      auth_logs_with_users: {
+        Row: {
+          created_at: string | null
+          event_type: string | null
+          id: string | null
+          metadata: Json | null
+          user_confirmed_at: string | null
+          user_created_at: string | null
+          user_email: string | null
+          user_id: string | null
+          user_last_sign_in_at: string | null
+          user_phone: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never

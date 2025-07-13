@@ -32,6 +32,13 @@ const collections = [
     image: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
     description: "Sophisticated cords for perfect finishing",
     link: "/collections/cords"
+  },
+  {
+    id: 5,
+    name: "Embellishments",
+    image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
+    description: "Exquisite embellishments for luxury finishing touches",
+    link: "/collections/embelishments"
   }
 ];
 
