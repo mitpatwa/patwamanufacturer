@@ -21,6 +21,10 @@ const EmbelishmentsCollection = lazy(() => import("./pages/collections/Embelishm
 const WindowTreatmentsCollection = lazy(() => import("./pages/collections/WindowTreatmentsCollection"));
 const FurnitureTrimsCollection = lazy(() => import("./pages/collections/FurnitureTrimsCollection"));
 const TieBacksCollection = lazy(() => import("./pages/collections/TieBacksCollection"));
+const TableLinensCollection = lazy(() => import("./pages/collections/TableLinensCollection"));
+const OutdoorFabricsCollection = lazy(() => import("./pages/collections/OutdoorFabricsCollection"));
+const HomeAccessoriesCollection = lazy(() => import("./pages/collections/HomeAccessoriesCollection"));
+const WindowShadesCollection = lazy(() => import("./pages/collections/WindowShadesCollection"));
 const CustomServices = lazy(() => import("./pages/CustomServices"));
 const Craftsmanship = lazy(() => import("./components/Craftsmanship"));
 const Sustainability = lazy(() => import("./pages/Sustainability"));
@@ -59,6 +63,10 @@ const App = () => (
               <Route path="/collections/window-treatments" element={<WindowTreatmentsCollection />} />
               <Route path="/collections/furniture-trims" element={<FurnitureTrimsCollection />} />
               <Route path="/collections/tie-backs" element={<TieBacksCollection />} />
+              <Route path="/collections/table-linens" element={<TableLinensCollection />} />
+              <Route path="/collections/outdoor-fabrics" element={<OutdoorFabricsCollection />} />
+              <Route path="/collections/home-accessories" element={<HomeAccessoriesCollection />} />
+              <Route path="/collections/window-shades" element={<WindowShadesCollection />} />
               <Route path="/custom-services" element={<CustomServices />} />
               <Route path="/craftsmanship" element={<Craftsmanship />} />
               <Route path="/sustainability" element={<Sustainability />} />

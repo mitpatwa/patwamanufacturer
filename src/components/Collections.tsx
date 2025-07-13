@@ -60,6 +60,34 @@ const collections = [
     image: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.png",
     description: "Elegant curtain tie-backs and decorative holders",
     link: "/collections/tie-backs"
+  },
+  {
+    id: 9,
+    name: "Table Linens",
+    image: "/lovable-uploads/437a0270-a9b1-4eb4-84f9-a85debcfc454.png",
+    description: "Luxury table linens with decorative fringe details",
+    link: "/collections/table-linens"
+  },
+  {
+    id: 10,
+    name: "Outdoor Fabrics",
+    image: "/lovable-uploads/1b6cb1fa-4e2d-4749-bfed-3ba4be2d0ce8.png",
+    description: "Weather-resistant fabrics with elegant trim accents",
+    link: "/collections/outdoor-fabrics"
+  },
+  {
+    id: 11,
+    name: "Home Accessories",
+    image: "/lovable-uploads/ac771606-d69a-41ea-b768-9cdc879f906e.png",
+    description: "Decorative accessories featuring handcrafted details",
+    link: "/collections/home-accessories"
+  },
+  {
+    id: 12,
+    name: "Window Shades",
+    image: "/lovable-uploads/4cedbac7-7b23-4c38-b534-aa37f45312a8.png",
+    description: "Custom window shades with premium trim finishes",
+    link: "/collections/window-shades"
   }
 ];
 
