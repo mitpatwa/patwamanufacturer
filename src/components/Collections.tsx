@@ -39,6 +39,27 @@ const collections = [
     image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
     description: "Exquisite embellishments for luxury finishing touches",
     link: "/collections/embelishments"
+  },
+  {
+    id: 6,
+    name: "Window Treatments",
+    image: "/lovable-uploads/22dbf7e8-5d12-4434-b5c6-0752a89dc5f2.png",
+    description: "Luxury curtains and drapes with premium trims",
+    link: "/collections/window-treatments"
+  },
+  {
+    id: 7,
+    name: "Furniture Trims",
+    image: "/lovable-uploads/f4a2fabd-9067-47f8-8829-472487596808.png",
+    description: "Decorative trims for upholstery and furniture",
+    link: "/collections/furniture-trims"
+  },
+  {
+    id: 8,
+    name: "Tie-backs & Holders",
+    image: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.png",
+    description: "Elegant curtain tie-backs and decorative holders",
+    link: "/collections/tie-backs"
   }
 ];
 
@@ -85,7 +106,7 @@ const Collections = () => {
         </motion.div>
 
         <motion.div 
-          className="grid md:grid-cols-2 gap-10"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
