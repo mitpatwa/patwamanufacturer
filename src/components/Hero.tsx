@@ -5,7 +5,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/208fcff3-65d4-4ca7-9cbc-00251babcfc4.png",
+    image: "/lovable-uploads/09983249-75b7-427c-b038-8814bcde8178.png",
     title: "Luxury Curtains & Drapery",
     subtitle: "Exquisite window treatments with premium passementerie details",
     ctaText: "Discover",
