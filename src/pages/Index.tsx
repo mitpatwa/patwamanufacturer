@@ -11,6 +11,8 @@ import Workshop from "../components/Workshop";
 import PassementerieSelector from "../components/PassementerieSelector";
 import CustomizationHighlight from "../components/CustomizationHighlight";
 import WhatsAppFloat from "../components/WhatsAppFloat";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
+import InteractiveSearch from "../components/InteractiveSearch";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -58,6 +60,7 @@ const Index = () => {
         >
           <PassementerieSelector />
         </motion.div>
+        <TestimonialsCarousel />
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -69,6 +72,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <InteractiveSearch />
     </div>
   );
 };

@@ -141,48 +141,86 @@ const Collections = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           {collections.map((collection, index) => (
-            <motion.div 
-              key={collection.id}
-              className="relative overflow-hidden bg-white shadow-md"
-              variants={itemVariants}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+          <motion.div 
+            key={collection.id}
+            className="interactive-card relative overflow-hidden bg-white shadow-card rounded-2xl group"
+            variants={itemVariants}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            whileHover={{ y: -8 }}
+          >
+            <div
+              className="relative h-[400px] md:h-[450px] overflow-hidden rounded-2xl"
             >
-              <div
-                className="relative h-[400px] md:h-[450px] overflow-hidden"
-              >
-                <img
-                  src={collection.image}
-                  alt={collection.name}
-                  className={`w-full h-full object-cover transition-transform duration-700 ${
-                    hoveredIndex === index ? "scale-110" : "scale-100"
-                  }`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+              <img
+                src={collection.image}
+                alt={collection.name}
+                className={`w-full h-full object-cover transition-all duration-700 ${
+                  hoveredIndex === index ? "scale-110 brightness-110" : "scale-100"
+                }`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              
+              {/* Shimmer effect on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform transition-all duration-700 ${
+                hoveredIndex === index ? "translate-x-full" : "-translate-x-full"
+              }`} />
+              
+              {/* Floating icon */}
+              <div className={`absolute top-4 right-4 h-12 w-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-500 ${
+                hoveredIndex === index ? "opacity-100 scale-110" : "opacity-0 scale-90"
+              }`}>
+                <span className="text-white text-xl">✨</span>
               </div>
+            </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-10">
-                <h3 className="text-2xl md:text-3xl font-serif mb-3 text-white">{collection.name}</h3>
-                <p className="mb-6 text-white/90 max-w-xs">{collection.description}</p>
+                <motion.h3 
+                  className="text-2xl md:text-3xl font-serif mb-3 text-white text-glow"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {collection.name}
+                </motion.h3>
+                <motion.p 
+                  className="mb-6 text-white/90 max-w-xs"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {collection.description}
+                </motion.p>
                 <Link 
                   to={collection.link} 
-                  className={`inline-flex items-center transition-all duration-500 text-white ${
+                  className={`magnetic-button inline-flex items-center transition-all duration-500 text-white group/link ${
                     hoveredIndex === index ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
                   }`}
                 >
-                  <span className="mr-2 border-b border-white pb-1">Explore Collection</span>
-                  <ArrowRight className="h-5 w-5" />
+                  <span className="mr-2 border-b border-white pb-1 group-hover/link:border-gold-300 transition-colors">
+                    Explore Collection
+                  </span>
+                  <ArrowRight className="h-5 w-5 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        <div className="mt-16 text-center">
-          <Link to="/collections" className="btn-primary text-lg">
+        <motion.div 
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Link 
+            to="/collections" 
+            className="magnetic-button inline-block py-4 px-12 bg-gradient-to-r from-gold-400 to-gold-600 text-white hover:from-gold-500 hover:to-gold-700 transition-all duration-300 text-lg font-semibold rounded-full shadow-glow hover:shadow-floating"
+          >
             View All Collections
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
