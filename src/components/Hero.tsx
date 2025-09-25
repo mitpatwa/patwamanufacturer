@@ -90,8 +90,8 @@ const Hero = () => {
       </div>
 
       {/* Content container */}
-      <div className="relative h-full flex items-center">
-        <div className="container-custom">
+      <div className="relative h-full flex items-center justify-center">
+        <div className="container-custom text-center">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -104,7 +104,7 @@ const Hero = () => {
               <h2 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-4 leading-tight">
                 {slide.title}
               </h2>
-              <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-xl">
+              <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-xl mx-auto">
                 {slide.subtitle}
               </p>
               <a
