@@ -14,8 +14,17 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    ViteImageOptimizer({}), // Add image optimizer plugin
-    imageminPlugin({}), // Add imagemin plugin
+    ViteImageOptimizer({
+      png: { quality: 80 },
+      jpeg: { quality: 80 },
+      webp: { quality: 80 },
+      avif: { quality: 80 },
+    }),
+    imageminPlugin({
+      gifsicle: { optimizationLevel: 7 },
+      mozjpeg: { quality: 80 },
+      pngquant: { quality: [0.65, 0.8] },
+    }),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
@@ -25,5 +34,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     minify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'motion-vendor': ['framer-motion'],
+          'ui-vendor': ['lucide-react', '@radix-ui/react-slot']
+        }
+      }
+    }
   },
 }));

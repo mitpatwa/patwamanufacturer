@@ -74,12 +74,15 @@ const Hero = () => {
               index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <div 
-              className="absolute inset-0 bg-cover bg-center transform transition-transform duration-[15s] scale-105"
+            <img 
+              src={slide.image}
+              alt={slide.title}
+              className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15s] scale-105"
               style={{ 
-                backgroundImage: `url(${slide.image})`,
                 animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
               }}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/30" />
           </div>
