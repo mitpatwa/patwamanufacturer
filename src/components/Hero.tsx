@@ -91,7 +91,7 @@ const Hero = () => {
 
       {/* Content container */}
       <div className="relative h-full flex items-center justify-center">
-        <div className="container-custom text-center">
+        <div className="text-center px-4 max-w-4xl mx-auto">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -101,10 +101,10 @@ const Hero = () => {
                   : "opacity-0 translate-y-8 pointer-events-none"
               }`}
             >
-              <h2 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-4 leading-tight">
+              <h2 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
                 {slide.title}
               </h2>
-              <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-xl mx-auto">
+              <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto">
                 {slide.subtitle}
               </p>
               <a
