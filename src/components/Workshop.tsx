@@ -1,7 +1,5 @@
 
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-
 const Workshop = () => {
   return (
     <section className="py-20 bg-sand-50">
@@ -17,9 +15,14 @@ const Workshop = () => {
             <p className="text-muted-foreground mb-8 leading-relaxed">
               With our advanced production capabilities, we can fulfill orders of any size while maintaining the highest standards of quality. From small custom projects to large commercial orders, our workshop is equipped to meet the diverse needs of our clients.
             </p>
-            <Link to="/inquiry" className="btn-primary">
+            <a 
+              href="https://wa.me/919322140480?text=Hello! I'm interested in learning more about your workshop and custom services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Make an Inquiry
-            </Link>
+            </a>
           </div>
           
           <div className="order-1 md:order-2 grid grid-cols-2 gap-4">

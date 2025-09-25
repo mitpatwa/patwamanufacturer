@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card"; // Assuming you have a dialog component in your ui library
 import { Dialog, DialogContent } from "@/components/ui/dialog";
  
@@ -54,14 +53,16 @@ const ProductCard = ({
             <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-300 ${
               isHovered ? "opacity-100" : "opacity-0"
             }`} />
-            <Link
-              to="/inquiry"
+            <a
+              href={`https://wa.me/919322140480?text=Hello! I'm interested in ${name}. Could you provide more details?`}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`absolute bottom-6 left-1/2 -translate-x-1/2 py-3 px-8 bg-white text-primary font-medium transition-all duration-500 hover:bg-primary hover:text-white ${
                 isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
               Request Inquiry
-            </Link>
+            </a>
           </div>
           
           <div className="p-6 text-center">
@@ -72,12 +73,14 @@ const ProductCard = ({
             )}
             <h3 className="font-serif text-xl md:text-2xl mb-4">{name}</h3>
             <p className="text-sm mb-4">{colorways} colorways available</p>
-            <Link
-              to="/inquiry"
+            <a
+              href={`https://wa.me/919322140480?text=Hello! I'm interested in ${name}. Could you provide more details?`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block py-2 px-6 bg-primary text-white hover:bg-primary/90 transition-colors duration-300"
             >
               Request Inquiry
-            </Link>
+            </a>
           </div>
         </CardContent>
       </Card>

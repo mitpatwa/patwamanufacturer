@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+
 import { Palette, Scissors, Sparkles, Mail } from "lucide-react";
 
 const CustomizationHighlight = () => {
@@ -134,12 +134,14 @@ const CustomizationHighlight = () => {
             Share your vision with us and let our experts craft the perfect passementerie for your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/inquiry"
+            <a
+              href="https://wa.me/919322140480?text=Hello! I'm interested in your custom passementerie services."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3 rounded-md font-medium hover:bg-sand-50 transition-colors duration-300"
             >
               Request Custom Quote
-            </Link>
+            </a>
             <a
               href="mailto:patwamanufacturers@gmail.com"
               className="flex items-center gap-2 text-primary-foreground hover:opacity-80 transition-opacity"

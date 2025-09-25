@@ -11,7 +11,7 @@ import WhatsAppIcon from "./components/WhatsAppIcon";
 // Import pages dynamically using React.lazy
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
-const Inquiry = lazy(() => import("./pages/Inquiry"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 const TasselsCollection = lazy(() => import("./pages/collections/TasselsCollection"));
 const FringesCollection = lazy(() => import("./pages/collections/FringesCollection"));
@@ -54,7 +54,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
-              <Route path="/inquiry" element={<Inquiry />} />
+              
               <Route path="/collections/tassels" element={<TasselsCollection />} />
               <Route path="/collections/fringes" element={<FringesCollection />} />
               <Route path="/collections/braids" element={<BraidsCollection />} />

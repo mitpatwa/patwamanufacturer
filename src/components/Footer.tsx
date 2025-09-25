@@ -20,7 +20,7 @@ const Footer = () => {
     ],
     services: [
       { name: "Custom Services", href: "/custom-services" },
-      { name: "Inquiry", href: "/inquiry" },
+      { name: "Inquiry", href: "https://wa.me/919322140480?text=Hello! I'm interested in your passementerie products and would like to make an inquiry.", external: true },
       { name: "Trade Program", href: "/trade-program" },
       { name: "Find a Designer", href: "/find-designer" },
     ],
@@ -91,12 +91,23 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerNavigation.services.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  >
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a 
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link 
+                      to={item.href} 
+                      className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

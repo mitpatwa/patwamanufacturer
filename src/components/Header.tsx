@@ -41,7 +41,8 @@ const Header = () => {
     },
     { 
       name: "Inquiry", 
-      link: "/inquiry",
+      link: "https://wa.me/919322140480?text=Hello! I'm interested in your passementerie products and would like to make an inquiry.",
+      external: true
     },
   ];
 
@@ -65,16 +66,29 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-8">
-              {navItems.map((item) => (
+               {navItems.map((item) => (
                 <li key={item.name} className="group relative">
-                  <Link 
-                    to={item.link}
-                    className={`text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 ${
-                      isScrolled ? 'text-primary' : 'text-white'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a 
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 ${
+                        isScrolled ? 'text-primary' : 'text-white'
+                      }`}
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link 
+                      to={item.link}
+                      className={`text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 ${
+                        isScrolled ? 'text-primary' : 'text-white'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                   
                   {item.items && (
                     <div className="absolute top-full left-0 pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -120,15 +134,26 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="mt-12">
-                <ul className="space-y-6">
-                  {navItems.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        to={item.link}
-                        className="block text-lg font-medium hover:text-gold-600 transition-colors"
-                      >
-                        {item.name}
-                      </Link>
+                  <ul className="space-y-6">
+                    {navItems.map((item) => (
+                      <li key={item.name}>
+                        {item.external ? (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-lg font-medium hover:text-gold-600 transition-colors"
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link
+                            to={item.link}
+                            className="block text-lg font-medium hover:text-gold-600 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        )}
                       {item.items && (
                         <ul className="pl-4 mt-3 space-y-3">
                           {item.items.map((subItem) => (
