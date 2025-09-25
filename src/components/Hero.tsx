@@ -5,25 +5,25 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/09983249-75b7-427c-b038-8814bcde8178.png",
-    title: "Luxury Curtains & Drapery",
-    subtitle: "Exquisite window treatments with premium passementerie details",
+    image: "/lovable-uploads/hero-1-trimmings.png",
+    title: "Exquisite Trimmings",
+    subtitle: "Welcome to our world of exquisite trimmings - Innovation, Quality, Creativity",
     ctaText: "Discover",
     ctaLink: "#"
   },
   {
     id: 2,
-    image: "/lovable-uploads/813b0828-f1f8-43d7-9a6c-70ac5196cfd2.png",
-    title: "Artisan Craftsmanship",
-    subtitle: "Handcrafted tassels, fringes, and decorative trims",
+    image: "/lovable-uploads/hero-2-textiles.png",
+    title: "Elegant Home Textiles",
+    subtitle: "Our world of elegant home textiles - Quality, Craftsmanship, Inspiration",
     ctaText: "Explore",
     ctaLink: "#"
   },
   {
     id: 3,
-    image: "/lovable-uploads/3c66a637-4fda-4d59-96bc-a568454c94c3.png",
-    title: "Elegant Interior Design",
-    subtitle: "Transform your space with our premium textile accessories",
+    image: "/lovable-uploads/hero-3-craftsmanship.png",
+    title: "Artisanal Craftsmanship",
+    subtitle: "Experience the art of traditional craftsmanship with modern precision",
     ctaText: "View Collection",
     ctaLink: "#"
   }
