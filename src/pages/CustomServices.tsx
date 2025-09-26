@@ -1,4 +1,5 @@
 
+import { Helmet } from 'react-helmet-async';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PassementerieSelector from "@/components/PassementerieSelector";
@@ -7,6 +8,12 @@ import { ArrowRight } from "lucide-react";
 const CustomServices = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Custom Passementerie Services - Bespoke Trims & Tassels | Patwa Manufacturer</title>
+        <meta name="description" content="Custom passementerie and bespoke trim services. We create made-to-order tassels, fringes, braids, and decorative trims for luxury interior design projects worldwide." />
+        <meta name="keywords" content="custom passementerie, bespoke trims, made-to-order tassels, custom decorative trims, bespoke interior accessories, luxury custom textiles" />
+        <link rel="canonical" href="https://patwamanufacturer.lovable.app/custom-services" />
+      </Helmet>
       <Header />
       <main>
         {/* Hero Section */}

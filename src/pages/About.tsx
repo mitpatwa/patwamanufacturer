@@ -10,7 +10,10 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>About Us - Patwa Manufacturer</title>
+        <title>About Patwa Manufacturer - Leading Passementerie & Luxury Trims Manufacturer</title>
+        <meta name="description" content="Learn about Patwa Manufacturer, a leading producer of luxury passementerie and decorative trims. Our expertise in handcrafted tassels, fringes, and braids spans generations." />
+        <meta name="keywords" content="about Patwa Manufacturer, passementerie company, luxury trims manufacturer, handcrafted textiles, textile manufacturing India, decorative trims company" />
+        <link rel="canonical" href="https://patwamanufacturer.lovable.app/about" />
       </Helmet>
       <Header />
       <main>

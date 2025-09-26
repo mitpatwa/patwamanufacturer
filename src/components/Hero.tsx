@@ -76,7 +76,7 @@ const Hero = () => {
           >
             <img 
               src={slide.image}
-              alt={slide.title}
+              alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
               className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15s] scale-105"
               style={{ 
                 animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
@@ -101,9 +101,9 @@ const Hero = () => {
                   : "opacity-0 translate-y-8 pointer-events-none"
               }`}
             >
-              <h2 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
+              <h1 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
                 {slide.title}
-              </h2>
+              </h1>
               <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto">
                 {slide.subtitle}
               </p>
