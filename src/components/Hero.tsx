@@ -82,7 +82,11 @@ const Hero = () => {
                 animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
               }}
               loading={index === 0 ? "eager" : "lazy"}
-              decoding="async"
+              decoding={index === 0 ? "sync" : "async"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              sizes="100vw"
+              width="1920"
+              height="1080"
             />
             <div className="absolute inset-0 bg-black/30" />
           </div>
