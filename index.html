@@ -65,8 +65,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Inline critical CSS -->
+    <style>
+      :root{--background:0 0% 100%;--foreground:222.2 84% 4.9%;--card:0 0% 100%;--card-foreground:222.2 84% 4.9%;--popover:0 0% 100%;--popover-foreground:222.2 84% 4.9%;--primary:222.2 47.4% 11.2%;--primary-foreground:210 40% 98%;--secondary:210 40% 96%;--secondary-foreground:222.2 84% 4.9%;--muted:210 40% 96%;--muted-foreground:215.4 16.3% 46.9%;--accent:210 40% 96%;--accent-foreground:222.2 84% 4.9%;--destructive:0 84.2% 60.2%;--destructive-foreground:210 40% 98%;--border:214.3 31.8% 91.4%;--input:214.3 31.8% 91.4%;--ring:222.2 84% 4.9%;--radius:0.5rem}
+      *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+      body{margin:0;line-height:inherit;font-family:Inter,system-ui,sans-serif;background-color:hsl(var(--background));color:hsl(var(--foreground))}
+      .font-serif{font-family:'EB Garamond',serif}
+      @keyframes subtle-zoom{0%{transform:scale(1.05)}100%{transform:scale(1.1)}}
+    </style>
+    
     <!-- Preload critical resources first -->
-    <link rel="preload" href="/lovable-uploads/hero-1-trimmings.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="/lovable-uploads/hero-1-trimmings.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="/src/main.tsx" as="script" type="text/javascript">
     <link rel="preload" href="/src/App.tsx" as="script" type="text/javascript">
     <link rel="preload" href="https://fonts.gstatic.com/s/ebgaramond/v26/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkCY9SLIg.woff2" as="font" type="font/woff2" crossorigin>

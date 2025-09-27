@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
-// Hero slides for the carousel
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/hero-1-trimmings.png",
+    image: "/lovable-uploads/hero-1-trimmings.webp",
+    fallback: "/lovable-uploads/hero-1-trimmings.png",
     title: "Exquisite Trimmings",
     subtitle: "Welcome to our world of exquisite trimmings - Innovation, Quality, Creativity",
     ctaText: "Discover",
@@ -13,7 +13,8 @@ const slides = [
   },
   {
     id: 2,
-    image: "/lovable-uploads/hero-2-textiles.png",
+    image: "/lovable-uploads/hero-2-textiles.webp",
+    fallback: "/lovable-uploads/hero-2-textiles.png",
     title: "Elegant Home Textiles",
     subtitle: "Our world of elegant home textiles - Quality, Craftsmanship, Inspiration",
     ctaText: "Explore",
@@ -21,7 +22,8 @@ const slides = [
   },
   {
     id: 3,
-    image: "/lovable-uploads/hero-3-craftsmanship.png",
+    image: "/lovable-uploads/hero-3-craftsmanship.webp",
+    fallback: "/lovable-uploads/hero-3-craftsmanship.png",
     title: "Artisanal Craftsmanship",
     subtitle: "Experience the art of traditional craftsmanship with modern precision",
     ctaText: "View Collection",
@@ -32,16 +34,17 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
   // Function to go to the next slide
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-      setIsTransitioning(false);
-    }, 500);
+      setTimeout(() => setIsTransitioning(false), 100);
+    });
   };
 
   // Function to go to the previous slide
@@ -49,10 +52,10 @@ const Hero = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-      setIsTransitioning(false);
-    }, 500);
+      setTimeout(() => setIsTransitioning(false), 100);
+    });
   };
 
   // Auto-advance slides
@@ -74,20 +77,29 @@ const Hero = () => {
               index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <img 
-              src={slide.image}
-              alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
-              className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15s] scale-105"
-              style={{ 
-                animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
-              }}
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding={index === 0 ? "sync" : "async"}
-              fetchPriority={index === 0 ? "high" : "low"}
-              sizes="100vw"
-              width="1920"
-              height="1080"
-            />
+            <picture>
+              <source 
+                srcSet={slide.image} 
+                type="image/webp"
+              />
+              <img 
+                src={imageErrors.has(slide.id) ? slide.fallback : slide.image}
+                alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
+                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15s] scale-105"
+                style={{ 
+                  animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
+                }}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? "sync" : "async"}
+                fetchPriority={index === 0 ? "high" : "low"}
+                sizes="100vw"
+                width="1920"
+                height="1080"
+                onError={() => {
+                  setImageErrors(prev => new Set([...prev, slide.id]));
+                }}
+              />
+            </picture>
             <div className="absolute inset-0 bg-black/30" />
           </div>
         ))}
@@ -149,10 +161,10 @@ const Hero = () => {
               if (isTransitioning) return;
               setIsTransitioning(true);
               
-              setTimeout(() => {
+              requestAnimationFrame(() => {
                 setCurrentSlide(index);
-                setIsTransitioning(false);
-              }, 500);
+                setTimeout(() => setIsTransitioning(false), 100);
+              });
             }}
             className={`h-2 transition-all duration-300 rounded-full ${
               index === currentSlide ? "w-10 bg-white" : "w-2 bg-white/50"
