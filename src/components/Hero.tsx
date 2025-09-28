@@ -86,8 +86,8 @@ const Hero = () => {
                 src={imageErrors.has(slide.id) ? slide.fallback : slide.image}
                 alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
                 className="absolute inset-0 w-full h-full object-cover"
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding={index === 0 ? "sync" : "async"}
+                loading="eager"
+                decoding="sync"
                 sizes="100vw"
                 width="1920"
                 height="1080"

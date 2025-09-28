@@ -48,7 +48,7 @@ const ProductCard = ({
                 isHovered ? "scale-105" : ""
               }`}
               onClick={openModal}
-              loading="lazy"
+              loading="eager"
               width="400"
               height="533"
             />
