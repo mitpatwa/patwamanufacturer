@@ -34,6 +34,7 @@ export default defineConfig(({ mode }) => ({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
       },
     },
     rollupOptions: {
@@ -42,11 +43,17 @@ export default defineConfig(({ mode }) => ({
           'react-vendor': ['react', 'react-dom'],
           'motion-vendor': ['framer-motion'],
           'ui-vendor': ['lucide-react', '@radix-ui/react-slot'],
-          'router-vendor': ['react-router-dom']
-        }
+          'router-vendor': ['react-router-dom'],
+          'utils-vendor': ['clsx', 'tailwind-merge']
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     },
     chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048, // Reduced for better caching
+    cssCodeSplit: true,
+    sourcemap: false, // Disable sourcemaps in production
   },
 }));

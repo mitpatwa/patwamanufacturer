@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 import InteractiveSearch from "./InteractiveSearch";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -113,6 +114,9 @@ const Header = () => {
               <li>
                 <InteractiveSearch />
               </li>
+              <li>
+                <ThemeToggle />
+              </li>
             </ul>
           </nav>
 
@@ -127,9 +131,10 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="mt-12">
-                {/* Mobile Search */}
-                <div className="mb-6 pb-6 border-b border-border">
+                {/* Mobile Search and Theme Toggle */}
+                <div className="mb-6 pb-6 border-b border-border flex items-center justify-between">
                   <InteractiveSearch />
+                  <ThemeToggle />
                 </div>
                 
                 <ul className="space-y-6">

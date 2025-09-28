@@ -14,6 +14,8 @@ import CustomizationHighlight from "../components/CustomizationHighlight";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
+import StatsSection from "../components/StatsSection";
+import ParallaxSection from "../components/ParallaxSection";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -25,7 +27,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Manufacturer of Passementerie, Custom Tassels, Fringes, Braids & Decorative Trimmings | Patwa Manufacturer</title>
+        <title>Patwa Manufacturer - Custom Tassels, Fringes, Braids & Decorative Trimmings</title>
         <meta name="description" content="Leading manufacturer of passementerie, custom tassels, fringes, braids & decorative trimmings in India. Premium handcrafted quality for interior designers worldwide. Custom orders available." />
         <meta name="keywords" content="manufacturer of passementerie, custom tassels manufacturer, fringes manufacturer, braids manufacturer, decorative trimmings manufacturer, passementerie supplier, custom tassels supplier, luxury passementerie, handcrafted tassels, decorative fringes, textile braids, curtain trimmings, interior design accessories, passementerie India, tassels India, fringes India, braids India" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/" />
@@ -49,6 +51,12 @@ const Index = () => {
         <Hero />
         <Collections />
         <ProductShowcase />
+        
+        {/* Enhanced Stats Section */}
+        <ParallaxSection speed={0.3}>
+          <StatsSection />
+        </ParallaxSection>
+        
         <motion.div
           initial="initial"
           whileInView="animate"

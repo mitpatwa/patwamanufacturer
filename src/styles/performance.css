@@ -1,0 +1,158 @@
+/* Performance-optimized CSS */
+
+/* Critical above-the-fold styles */
+.hero-section {
+  contain: layout style paint;
+  will-change: auto;
+}
+
+.hero-image {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: opacity;
+}
+
+.hero-content {
+  will-change: opacity, transform;
+  transform: translateZ(0);
+}
+
+/* Optimize animations to use GPU acceleration */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%) translateZ(0);
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+/* Optimize transitions */
+.transition-optimized {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: opacity, transform;
+}
+
+/* Reduce layout thrashing */
+.stable-layout {
+  contain: layout;
+}
+
+/* Optimize font loading */
+.font-optimized {
+  font-display: swap;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeSpeed;
+}
+
+/* Optimize images */
+.image-optimized {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce paint complexity */
+.simple-paint {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+/* Optimize scrolling */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize focus states */
+.focus-optimized:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+/* Reduce reflows */
+.no-reflow {
+  contain: layout style;
+}
+
+/* Optimize button interactions */
+.button-optimized {
+  will-change: background-color, color;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Optimize text rendering */
+.text-optimized {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize layout containment */
+.layout-contained {
+  contain: layout style paint;
+}
+
+/* Optimize image loading */
+.image-loading {
+  background-color: #f3f4f6;
+  background-image: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Optimize critical rendering path */
+.critical-content {
+  contain: layout style paint;
+  will-change: auto;
+}
+
+/* Optimize non-critical content */
+.non-critical {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Optimize media queries for performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize for high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-optimized {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Optimize for mobile devices */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    contain: layout style;
+    will-change: auto;
+  }
+}

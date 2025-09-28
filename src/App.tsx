@@ -8,6 +8,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import { useEffect, lazy, Suspense } from "react";
 
 import WhatsAppIcon from "./components/WhatsAppIcon";
+import ScrollToTop from "./components/ScrollToTop";
+import LoadingSpinner from "./components/LoadingSpinner";
+import NotificationBanner from "./components/NotificationBanner";
+import { initializePerformanceMonitoring } from "./utils/performance";
 // Import pages dynamically using React.lazy
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -52,15 +56,25 @@ const ScrollToTop = () => {
   return null;
 };
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Suspense fallback={<div>Loading...</div>}>
+const App = () => {
+  // Initialize performance monitoring
+  useEffect(() => {
+    initializePerformanceMonitoring();
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <LoadingSpinner size="lg" text="Loading page..." />
+              </div>
+            }>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
@@ -97,8 +111,20 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
       <WhatsAppIcon phoneNumber="+919322140480" />
+      
+      {/* Notification Banner */}
+      <NotificationBanner
+        type="promotion"
+        title="🎉 New Collection Available!"
+        message="Discover our latest luxury passementerie collection with exclusive designs."
+        actionText="Explore Now"
+        actionUrl="/collections"
+        autoHide={true}
+        duration={8000}
+      />
     </QueryClientProvider>
   </HelmetProvider>
-);
+  );
+};
 
 export default App;
