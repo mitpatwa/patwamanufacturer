@@ -47,6 +47,8 @@
         "itemOffered": {
           "@type": "Product",
           "name": "Luxury Passementerie and Decorative Trims",
+          "description": "Premium handcrafted passementerie and decorative trims including tassels, fringes, braids, cords, and embellishments for luxury interior design applications.",
+          "image": "https://patwamanufacturer.lovable.app/patwa-logo.png",
           "category": "Textile Manufacturing",
           "offers": {
             "@type": "Offer",
@@ -54,6 +56,32 @@
             "priceCurrency": "INR",
             "priceValidUntil": "2025-12-31",
             "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "INR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "IN"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
             "seller": {
               "@type": "Organization",
               "name": "Patwa Manufacturer"
