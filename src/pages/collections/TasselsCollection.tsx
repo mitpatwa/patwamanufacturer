@@ -14,9 +14,9 @@ const TasselsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Custom Luxury Tassels Collection - Handcrafted Passementerie | Patwa Manufacturer</title>
-        <meta name="description" content="Premium handcrafted tassels collection featuring silk, crystal, and metallic designs. Custom passementerie tassels for interior designers and luxury furnishings. Made in India." />
-        <meta name="keywords" content="luxury tassels, custom tassels, handcrafted tassels, passementerie tassels, silk tassels, crystal tassels, curtain tassels, decorative tassels" />
+        <title>Tassel Trim Manufacturer | Custom Luxury Tassels Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Leading tassel trim manufacturer offering custom luxury tassels, handcrafted passementerie tassels, silk tassels, and crystal tassels for interior designers. Export quality from India." />
+        <meta name="keywords" content="tassel trim manufacturer, custom luxury tassels, handcrafted tassels, passementerie tassels, silk tassels, crystal tassels, curtain tassels, decorative tassels, luxury curtain tiebacks supplier, artisan curtain accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/tassels" />
         <script type="application/ld+json">
           {`{

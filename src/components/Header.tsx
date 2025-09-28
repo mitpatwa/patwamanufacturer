@@ -3,13 +3,11 @@ import { useState, useEffect } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import InteractiveSearch from "./InteractiveSearch";
 import { motion } from "framer-motion";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -114,9 +112,10 @@ const Header = () => {
               <li>
                 <button 
                   className={`p-2 rounded-full hover:bg-white/10 transition-colors ${
+
                     isScrolled ? 'text-primary' : 'text-white'
                   }`}
-                  onClick={() => setIsSearchOpen(true)}
+                  onClick={() => console.log('Search button clicked!')}
                 >
                   <Search className="h-5 w-5" />
                 </button>
@@ -177,12 +176,6 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
-      
-      {/* Interactive Search */}
-      <InteractiveSearch 
-        isOpen={isSearchOpen} 
-        onToggle={() => setIsSearchOpen(!isSearchOpen)} 
-      />
     </header>
   );
 };

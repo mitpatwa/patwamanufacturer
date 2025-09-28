@@ -29,6 +29,15 @@ const CustomServices = lazy(() => import("./pages/CustomServices"));
 const Craftsmanship = lazy(() => import("./components/Craftsmanship"));
 const Sustainability = lazy(() => import("./pages/Sustainability"));
 const SiteAnalysis = lazy(() => import("./pages/SiteAnalysis"));
+const SEO = lazy(() => import("./pages/SEO"));
+const Blog = lazy(() => import("./pages/Blog"));
+const TradeProgram = lazy(() => import("./pages/TradeProgram"));
+const FindDesigner = lazy(() => import("./pages/FindDesigner"));
+const Support = lazy(() => import("./pages/Support"));
+const OrderSamples = lazy(() => import("./pages/OrderSamples"));
+const ReturnsExchanges = lazy(() => import("./pages/ReturnsExchanges"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 
 const queryClient = new QueryClient();
 
@@ -71,6 +80,15 @@ const App = () => (
               <Route path="/craftsmanship" element={<Craftsmanship />} />
               <Route path="/sustainability" element={<Sustainability />} />
               <Route path="/analysis" element={<SiteAnalysis />} />
+              <Route path="/seo" element={<SEO />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/trade-program" element={<TradeProgram />} />
+              <Route path="/find-designer" element={<FindDesigner />} />
+              <Route path="/support" element={<Support />} />
+              <Route path="/order-samples" element={<OrderSamples />} />
+              <Route path="/returns-exchanges" element={<ReturnsExchanges />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

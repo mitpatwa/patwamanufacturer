@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, X, Sparkles, Zap } from "lucide-react";
 
@@ -11,19 +11,11 @@ const categories = [
   { id: "embellishments", name: "Embellishments", icon: Zap },
 ];
 
-interface InteractiveSearchProps {
-  isOpen?: boolean;
-  onToggle?: () => void;
-}
-
-const InteractiveSearch = ({ isOpen: externalIsOpen, onToggle }: InteractiveSearchProps) => {
-  const [internalIsOpen, setInternalIsOpen] = useState(false);
+const InteractiveSearch = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [isSearching, setIsSearching] = useState(false);
-
-  // Use external state if provided, otherwise use internal state
-  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
@@ -36,12 +28,7 @@ const InteractiveSearch = ({ isOpen: externalIsOpen, onToggle }: InteractiveSear
   };
 
   const toggleSearch = () => {
-    if (onToggle) {
-      onToggle();
-    } else {
-      setInternalIsOpen(!internalIsOpen);
-    }
-    
+    setIsOpen(!isOpen);
     if (!isOpen) {
       setTimeout(() => {
         document.getElementById('search-input')?.focus();
@@ -51,7 +38,16 @@ const InteractiveSearch = ({ isOpen: externalIsOpen, onToggle }: InteractiveSear
 
   return (
     <>
-      {/* Search Trigger Button - Hidden, will be triggered from Header */}
+      {/* Search Trigger Button */}
+      <motion.button
+        onClick={toggleSearch}
+        className="fixed top-1/2 right-8 z-50 magnetic-button h-14 w-14 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-white shadow-floating hover:shadow-glow transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label="Open search"
+      >
+        <Search className="h-6 w-6 mx-auto" />
+      </motion.button>
 
       {/* Search Overlay */}
       <AnimatePresence>
