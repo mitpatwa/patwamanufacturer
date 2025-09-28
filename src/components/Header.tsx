@@ -4,6 +4,7 @@ import { Menu, X, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
+import InteractiveSearch from "./InteractiveSearch";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -110,15 +111,7 @@ const Header = () => {
               ))}
               
               <li>
-                <button 
-                  className={`p-2 rounded-full hover:bg-white/10 transition-colors ${
-
-                    isScrolled ? 'text-primary' : 'text-white'
-                  }`}
-                  onClick={() => console.log('Search button clicked!')}
-                >
-                  <Search className="h-5 w-5" />
-                </button>
+                <InteractiveSearch />
               </li>
             </ul>
           </nav>
@@ -134,45 +127,50 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="mt-12">
-                  <ul className="space-y-6">
-                    {navItems.map((item) => (
-                      <li key={item.name}>
-                        {item.external ? (
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block text-lg font-medium hover:text-gold-600 transition-colors"
-                          >
-                            {item.name}
-                          </a>
-                        ) : (
-                          <Link
-                            to={item.link}
-                            className="block text-lg font-medium hover:text-gold-600 transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        )}
-                      {item.items && (
-                        <ul className="pl-4 mt-3 space-y-3">
-                          {item.items.map((subItem) => (
-                            <li key={subItem.name}>
-                              <Link
-                                to={subItem.link}
-                                className="block text-base text-muted-foreground hover:text-gold-600 transition-colors"
-                              >
-                                {subItem.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
+                {/* Mobile Search */}
+                <div className="mb-6 pb-6 border-b border-border">
+                  <InteractiveSearch />
+                </div>
+                
+                <ul className="space-y-6">
+                  {navItems.map((item) => (
+                    <li key={item.name}>
+                      {item.external ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-lg font-medium hover:text-gold-600 transition-colors"
+                        >
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.link}
+                          className="block text-lg font-medium hover:text-gold-600 transition-colors"
+                        >
+                          {item.name}
+                        </Link>
                       )}
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </SheetContent>
+                    {item.items && (
+                      <ul className="pl-4 mt-3 space-y-3">
+                        {item.items.map((subItem) => (
+                          <li key={subItem.name}>
+                            <Link
+                              to={subItem.link}
+                              className="block text-base text-muted-foreground hover:text-gold-600 transition-colors"
+                            >
+                              {subItem.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </SheetContent>
           </Sheet>
         </div>
       </div>

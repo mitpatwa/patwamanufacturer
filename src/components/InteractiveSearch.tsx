@@ -41,12 +41,12 @@ const InteractiveSearch = () => {
       {/* Search Trigger Button */}
       <motion.button
         onClick={toggleSearch}
-        className="fixed top-1/2 right-8 z-50 magnetic-button h-14 w-14 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-white shadow-floating hover:shadow-glow transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
+        className="p-2 rounded-full hover:bg-white/10 transition-colors text-white"
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open search"
       >
-        <Search className="h-6 w-6 mx-auto" />
+        <Search className="h-5 w-5" />
       </motion.button>
 
       {/* Search Overlay */}
