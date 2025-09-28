@@ -25,16 +25,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Patwa Manufacturer - Premium Passementerie & Luxury Trimmings</title>
-        <meta name="description" content="Leading manufacturer of luxury passementerie, custom tassels, fringes, braids & decorative trims. Handcrafted quality for interior designers worldwide. Made in India." />
-        <meta name="keywords" content="passementerie manufacturer, luxury trimmings, custom tassels, decorative fringes, handcrafted braids, curtain tiebacks, textile trims, interior design accessories" />
+        <title>Manufacturer of Passementerie, Custom Tassels, Fringes, Braids & Decorative Trimmings | Patwa Manufacturer</title>
+        <meta name="description" content="Leading manufacturer of passementerie, custom tassels, fringes, braids & decorative trimmings in India. Premium handcrafted quality for interior designers worldwide. Custom orders available." />
+        <meta name="keywords" content="manufacturer of passementerie, custom tassels manufacturer, fringes manufacturer, braids manufacturer, decorative trimmings manufacturer, passementerie supplier, custom tassels supplier, luxury passementerie, handcrafted tassels, decorative fringes, textile braids, curtain trimmings, interior design accessories, passementerie India, tassels India, fringes India, braids India" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Patwa Manufacturer - Premium Passementerie",
-            "description": "Leading manufacturer of luxury passementerie, custom tassels, fringes, braids & decorative trims",
+            "name": "Manufacturer of Passementerie, Custom Tassels, Fringes, Braids & Decorative Trimmings",
+            "description": "Leading manufacturer of passementerie, custom tassels, fringes, braids & decorative trimmings in India. Premium handcrafted quality for interior designers worldwide.",
             "url": "https://patwamanufacturer.lovable.app/",
             "mainEntity": {
               "@type": "ManufacturingBusiness",
