@@ -4,7 +4,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/hero-1-trimmings.webp",
+    image: "/lovable-uploads/hero-1-trimmings.png",
     fallback: "/lovable-uploads/hero-1-trimmings.png",
     title: "Exquisite Trimmings",
     subtitle: "Welcome to our world of exquisite trimmings - Innovation, Quality, Creativity",
@@ -13,7 +13,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/lovable-uploads/hero-2-textiles.webp",
+    image: "/lovable-uploads/hero-2-textiles.png",
     fallback: "/lovable-uploads/hero-2-textiles.png",
     title: "Elegant Home Textiles",
     subtitle: "Our world of elegant home textiles - Quality, Craftsmanship, Inspiration",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/lovable-uploads/hero-3-craftsmanship.webp",
+    image: "/lovable-uploads/hero-3-craftsmanship.png",
     fallback: "/lovable-uploads/hero-3-craftsmanship.png",
     title: "Artisanal Craftsmanship",
     subtitle: "Experience the art of traditional craftsmanship with modern precision",
@@ -77,29 +77,20 @@ const Hero = () => {
               index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <picture>
-              <source 
-                srcSet={slide.image} 
-                type="image/webp"
-              />
-              <img 
-                src={imageErrors.has(slide.id) ? slide.fallback : slide.image}
-                alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
-                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[15s] scale-105"
-                style={{ 
-                  animation: index === currentSlide ? "subtle-zoom 15s ease-out" : "none"
-                }}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding={index === 0 ? "sync" : "async"}
-                fetchPriority={index === 0 ? "high" : "low"}
-                sizes="100vw"
-                width="1920"
-                height="1080"
-                onError={() => {
-                  setImageErrors(prev => new Set([...prev, slide.id]));
-                }}
-              />
-            </picture>
+            <img 
+              src={imageErrors.has(slide.id) ? slide.fallback : slide.image}
+              alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              decoding="sync"
+              fetchpriority="high"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              onError={() => {
+                setImageErrors(prev => new Set([...prev, slide.id]));
+              }}
+            />
             <div className="absolute inset-0 bg-black/30" />
           </div>
         ))}
