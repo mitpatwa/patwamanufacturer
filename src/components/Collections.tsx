@@ -152,10 +152,9 @@ const Collections = () => {
             <div
               className="relative h-[400px] md:h-[450px] overflow-hidden rounded-2xl"
             >
-               <img
+              <img
                 src={collection.image}
                 alt={collection.name}
-                loading="eager"
                 className={`w-full h-full object-cover transition-all duration-700 ${
                   hoveredIndex === index ? "scale-110 brightness-110" : "scale-100"
                 }`}

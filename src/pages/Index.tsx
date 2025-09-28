@@ -1,19 +1,22 @@
 
 import { motion } from "framer-motion";
+import { lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import InteractiveSearch from "../components/InteractiveSearch";
-import Collections from "../components/Collections";
-import ProductShowcase from "../components/ProductShowcase";
-import Story from "../components/Story";
-import Newsletter from "../components/Newsletter";
-import Workshop from "../components/Workshop";
-import PassementerieSelector from "../components/PassementerieSelector";
-import CustomizationHighlight from "../components/CustomizationHighlight";
-import TestimonialsCarousel from "../components/TestimonialsCarousel";
+
+// Lazy load non-critical components
+const Collections = lazy(() => import("../components/Collections"));
+const ProductShowcase = lazy(() => import("../components/ProductShowcase"));
+const Story = lazy(() => import("../components/Story"));
+const Newsletter = lazy(() => import("../components/Newsletter"));
+const Workshop = lazy(() => import("../components/Workshop"));
+const PassementerieSelector = lazy(() => import("../components/PassementerieSelector"));
+const CustomizationHighlight = lazy(() => import("../components/CustomizationHighlight"));
+const TestimonialsCarousel = lazy(() => import("../components/TestimonialsCarousel"));
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -47,49 +50,65 @@ const Index = () => {
       <Header />
       <main role="main">
         <Hero />
-        <Collections />
-        <ProductShowcase />
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <CustomizationHighlight />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Story />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Workshop />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <PassementerieSelector />
-        </motion.div>
-        <TestimonialsCarousel />
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Newsletter />
-        </motion.div>
+        <Suspense fallback={<div className="h-20 animate-pulse bg-muted" />}>
+          <Collections />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 animate-pulse bg-muted" />}>
+          <ProductShowcase />
+        </Suspense>
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted" />}>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            <CustomizationHighlight />
+          </motion.div>
+        </Suspense>
+        <Suspense fallback={<div className="h-96 animate-pulse bg-muted" />}>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            <Story />
+          </motion.div>
+        </Suspense>
+        <Suspense fallback={<div className="h-96 animate-pulse bg-muted" />}>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            <Workshop />
+          </motion.div>
+        </Suspense>
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted" />}>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            <PassementerieSelector />
+          </motion.div>
+        </Suspense>
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted" />}>
+          <TestimonialsCarousel />
+        </Suspense>
+        <Suspense fallback={<div className="h-32 animate-pulse bg-muted" />}>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            <Newsletter />
+          </motion.div>
+        </Suspense>
       </main>
       <Footer />
       <WhatsAppFloat />
