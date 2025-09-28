@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
-import WhatsAppFloat from "../components/WhatsAppFloat";
-import InteractiveSearch from "../components/InteractiveSearch";
 import Collections from "../components/Collections";
 import ProductShowcase from "../components/ProductShowcase";
 import Story from "../components/Story";
 import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
 import Workshop from "../components/Workshop";
 import PassementerieSelector from "../components/PassementerieSelector";
 import CustomizationHighlight from "../components/CustomizationHighlight";
+import WhatsAppFloat from "../components/WhatsAppFloat";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
+import InteractiveSearch from "../components/InteractiveSearch";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
