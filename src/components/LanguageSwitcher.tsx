@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 type Lang = {
@@ -25,12 +25,25 @@ const LanguageSwitcher: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<Lang>(languages[1]);
 
+  // Load persisted language on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('siteLang');
+    const found = languages.find(l => l.code === saved);
+    if (found) {
+      setCurrent(found);
+      if (window.setLanguage) window.setLanguage(found.code);
+      document.documentElement.setAttribute('lang', found.code);
+    }
+  }, []);
+
   const choose = (lang: Lang) => {
     setCurrent(lang);
     setOpen(false);
     if (window.setLanguage) {
       window.setLanguage(lang.code);
     }
+    localStorage.setItem('siteLang', lang.code);
+    document.documentElement.setAttribute('lang', lang.code);
   };
 
   return (
@@ -38,24 +51,25 @@ const LanguageSwitcher: React.FC = () => {
       <button
         aria-label="Language selector"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors"
+        className="flex items-center gap-2 px-3 py-2 rounded-md bg-white/90 text-gray-800 hover:bg-white shadow-sm border border-gray-200 transition-colors"
       >
-        <span className="text-lg" aria-hidden>{current.flag}</span>
+        <span className="text-base" aria-hidden>{current.flag}</span>
         <span className="hidden sm:inline text-sm font-medium">{current.name}</span>
         <ChevronDown className="h-4 w-4" />
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-lg border border-gray-200 z-50">
-          <ul className="py-2">
+        <div className="absolute right-0 mt-2 w-60 bg-white rounded-xl shadow-lg border border-gray-200 z-50">
+          <ul className="py-1">
             {languages.map((l) => (
               <li key={l.code}>
                 <button
                   onClick={() => choose(l)}
-                  className={`w-full text-left px-4 py-2 flex items-center gap-3 hover:bg-gray-50 ${current.code===l.code?'bg-gray-50':''}`}
+                  className={`w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-gray-50 ${current.code===l.code?'bg-gray-50':''}`}
                 >
-                  <span className="text-lg" aria-hidden>{l.flag}</span>
-                  <span className="text-sm text-gray-800">{l.name}</span>
+                  <span className="text-base" aria-hidden>{l.flag}</span>
+                  <span className="text-[15px] text-gray-800">{l.name}</span>
                 </button>
+                <div className="h-px bg-gray-200 mx-3" />
               </li>
             ))}
           </ul>
