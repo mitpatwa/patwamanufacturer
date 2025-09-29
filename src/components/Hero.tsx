@@ -5,8 +5,8 @@ import OptimizedImage from "./OptimizedImage";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/hero-1-trimmings.webp",
-    fallback: "/lovable-uploads/hero-1-trimmings.png",
+    image: "/lovable-uploads/hero-1-user.png",
+    fallback: "/lovable-uploads/hero-1-user.png",
     title: "Exquisite Trimmings",
     subtitle: "Welcome to our world of exquisite trimmings - Innovation, Quality, Creativity",
     ctaText: "Discover",
@@ -14,8 +14,8 @@ const slides = [
   },
   {
     id: 2,
-    image: "/lovable-uploads/hero-2-textiles.webp",
-    fallback: "/lovable-uploads/hero-2-textiles.png",
+    image: "/lovable-uploads/hero-2-user.png",
+    fallback: "/lovable-uploads/hero-2-user.png",
     title: "Elegant Home Textiles",
     subtitle: "Our world of elegant home textiles - Quality, Craftsmanship, Inspiration",
     ctaText: "Explore",
@@ -23,8 +23,8 @@ const slides = [
   },
   {
     id: 3,
-    image: "/lovable-uploads/hero-3-craftsmanship.webp",
-    fallback: "/lovable-uploads/hero-3-craftsmanship.png",
+    image: "/lovable-uploads/hero-3-user.png",
+    fallback: "/lovable-uploads/hero-3-user.png",
     title: "Artisanal Craftsmanship",
     subtitle: "Experience the art of traditional craftsmanship with modern precision",
     ctaText: "View Collection",
