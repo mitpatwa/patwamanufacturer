@@ -88,18 +88,21 @@ const Hero = () => {
             }`}
             style={{ willChange: index === currentSlide ? 'opacity' : 'auto' }}
           >
-            <OptimizedImage
+            <img
               src={slide.image}
-              fallback={slide.fallback}
               alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
               className="absolute inset-0 w-full h-full object-cover"
               loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "low"}
-              sizes="100vw"
-              width={1920}
-              height={1080}
-              onError={() => {
+              style={{ 
+                display: 'block',
+                opacity: 1
+              }}
+              onError={(e) => {
+                console.log(`Failed to load image: ${slide.image}`);
                 setImageErrors(prev => new Set([...prev, slide.id]));
+              }}
+              onLoad={() => {
+                console.log(`Successfully loaded image: ${slide.image}`);
               }}
             />
             <div className="absolute inset-0 bg-black/30" />
