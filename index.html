@@ -185,9 +185,37 @@
 
   <body>
     <div id="root"></div>
+    <div id="google_translate_element" style="display:none"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module" defer></script>
     <script type="module" src="/src/main.tsx" defer></script>
+    <style>
+      .goog-te-banner-frame{display:none !important}
+      body{top:0 !important}
+      .goog-logo-link,.goog-te-gadget span{display:none !important}
+      .goog-te-gadget{height:0; overflow:hidden}
+    </style>
+    <script>
+      function googleTranslateElementInit(){
+        new google.translate.TranslateElement({
+          pageLanguage:'en',
+          includedLanguages:'en,nl,fr,de,pt,es,sv',
+          autoDisplay:false
+        }, 'google_translate_element');
+      }
+      function setLanguage(lang){
+        var select = document.querySelector('#google_translate_element select');
+        if(!select){ console.warn('Translate not ready'); return; }
+        var found=false;
+        for(var i=0;i<select.options.length;i++){
+          var v = select.options[i].value;
+          if(v===lang || v.indexOf(lang)>=0){ select.selectedIndex=i; found=true; break; }
+        }
+        if(found){ var event = new Event('change'); select.dispatchEvent(event); }
+      }
+      window.setLanguage = setLanguage;
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
     
     <!-- Service Worker Registration -->
     <script>

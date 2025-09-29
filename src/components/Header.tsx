@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 import InteractiveSearch from "./InteractiveSearch";
+import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
@@ -111,6 +112,9 @@ const Header = () => {
                 </li>
               ))}
               
+              <li>
+                <LanguageSwitcher />
+              </li>
               <li>
                 <InteractiveSearch />
               </li>
