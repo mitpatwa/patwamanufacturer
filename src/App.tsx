@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { useEffect, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 
 import WhatsAppIcon from "./components/WhatsAppIcon";
 
@@ -49,7 +49,7 @@ const queryClient = new QueryClient();
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   
@@ -58,7 +58,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   // Initialize performance monitoring
-  useEffect(() => {
+  React.useEffect(() => {
     initializePerformanceMonitoring();
   }, []);
 
