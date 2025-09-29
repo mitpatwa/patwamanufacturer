@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, X, Sparkles, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const categories = [
   { id: "all", name: "All Products", icon: Sparkles },
@@ -11,11 +12,28 @@ const categories = [
   { id: "embellishments", name: "Embellishments", icon: Zap },
 ];
 
+const searchIndex = [
+  { title: "Tassels", url: "/collections/tassels", category: "tassels", tags: ["tassel", "passementerie", "trim"] },
+  { title: "Fringes", url: "/collections/fringes", category: "fringes", tags: ["fringe", "trims", "curtain"] },
+  { title: "Braids", url: "/collections/braids", category: "braids", tags: ["braid", "border", "decorative"] },
+  { title: "Cords", url: "/collections/cords", category: "cords", tags: ["cord", "rope", "tie"] },
+  { title: "Embellishments", url: "/collections/embelishments", category: "embellishments", tags: ["embellishment", "metallic", "lace"] },
+  { title: "Custom Services", url: "/custom-services", category: "services", tags: ["custom", "made to order", "manufacturing"] },
+  { title: "Find a Designer", url: "/find-designer", category: "designers", tags: ["designer", "architect"] },
+  { title: "Trade Program", url: "/trade-program", category: "trade", tags: ["trade", "pricing", "account"] },
+  { title: "Order Samples", url: "/order-samples", category: "samples", tags: ["sample", "request"] },
+  { title: "Returns & Exchanges", url: "/returns-exchanges", category: "support", tags: ["returns", "exchange", "policy"] },
+  { title: "Support", url: "/support", category: "support", tags: ["help", "contact", "faq"] },
+  { title: "About Us", url: "/about", category: "about", tags: ["company", "story"] },
+  { title: "Blog", url: "/blog", category: "blog", tags: ["articles", "news"] },
+];
+
 const InteractiveSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [isSearching, setIsSearching] = useState(false);
+  const navigate = useNavigate();
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
@@ -34,6 +52,54 @@ const InteractiveSearch = () => {
         document.getElementById('search-input')?.focus();
       }, 300);
     }
+  };
+
+  // Derived filtered results
+  const results = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase();
+    return searchIndex.filter(item => {
+      const matchesCategory = selectedCategory === "all" || item.category === selectedCategory;
+      if (!term) return matchesCategory;
+      const hay = `${item.title} ${item.tags.join(" ")}`.toLowerCase();
+      return matchesCategory && hay.includes(term);
+    }).slice(0, 8);
+  }, [searchTerm, selectedCategory]);
+
+  // Keyboard interactions
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === '/' && !isOpen) {
+        e.preventDefault();
+        setIsOpen(true);
+        setTimeout(() => document.getElementById('search-input')?.focus(), 0);
+      } else if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      } else if ((e.key === 'Enter') && isOpen) {
+        if (results[0]) {
+          navigate(results[0].url);
+          setIsOpen(false);
+        }
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isOpen, results, navigate]);
+
+  const submitSearch = () => {
+    if (results[0]) {
+      navigate(results[0].url);
+      setIsOpen(false);
+    }
+  };
+
+  const goFeatured = () => {
+    navigate('/collections/tassels');
+    setIsOpen(false);
+  };
+
+  const goCustom = () => {
+    navigate('/custom-services');
+    setIsOpen(false);
   };
 
   return (
@@ -89,11 +155,17 @@ const InteractiveSearch = () => {
                     onChange={(e) => handleSearch(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 border-2 border-sand-200 rounded-xl focus:border-gold-400 focus:outline-none transition-colors"
                   />
-                  {isSearching && (
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                  <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                    {isSearching && (
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gold-400"></div>
-                    </div>
-                  )}
+                    )}
+                    <button
+                      onClick={submitSearch}
+                      className="px-3 py-1.5 text-sm rounded-lg bg-gold-400 text-white hover:bg-gold-500 transition-colors"
+                    >
+                      Search
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -126,9 +198,33 @@ const InteractiveSearch = () => {
                   </div>
                 </div>
 
+                {/* Results */}
+                <div className="mb-6">
+                  {results.length > 0 ? (
+                    <ul className="divide-y divide-sand-200 rounded-xl border border-sand-200 overflow-hidden">
+                      {results.map((r) => (
+                        <li key={r.url}>
+                          <button
+                            onClick={() => { navigate(r.url); setIsOpen(false); }}
+                            className="w-full text-left p-4 hover:bg-sand-100 flex items-center justify-between"
+                          >
+                            <span className="font-medium text-foreground">{r.title}</span>
+                            <span className="text-xs px-2 py-1 rounded-full bg-sand-100 text-muted-foreground">
+                              {r.category}
+                            </span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-sm text-muted-foreground">No results. Try another term or category.</p>
+                  )}
+                </div>
+
                 {/* Quick Actions */}
                 <div className="grid grid-cols-2 gap-4">
                   <motion.button
+                    onClick={goFeatured}
                     className="interactive-card p-4 bg-gradient-to-br from-gold-50 to-gold-100 rounded-xl text-left"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -139,6 +235,7 @@ const InteractiveSearch = () => {
                   </motion.button>
 
                   <motion.button
+                    onClick={goCustom}
                     className="interactive-card p-4 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl text-left"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
