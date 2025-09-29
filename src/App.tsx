@@ -8,7 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { useEffect, lazy, Suspense } from "react";
 
 import WhatsAppIcon from "./components/WhatsAppIcon";
-import ScrollToTop from "./components/ScrollToTop";
+
 import LoadingSpinner from "./components/LoadingSpinner";
 import NotificationBanner from "./components/NotificationBanner";
 import { initializePerformanceMonitoring } from "./utils/performance";

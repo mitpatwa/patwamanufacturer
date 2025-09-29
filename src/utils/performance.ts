@@ -72,7 +72,7 @@ export const measureWebVitals = () => {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        const fid = entry.processingStart - entry.startTime;
+        const fid = (entry as any).processingStart - entry.startTime;
         console.log('FID:', fid);
         
         if ('gtag' in window) {
