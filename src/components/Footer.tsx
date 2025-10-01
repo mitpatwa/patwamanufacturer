@@ -25,11 +25,11 @@ const Footer = () => {
       { name: "Find a Designer", href: "/find-designer" },
     ],
     support: [
-      { name: "FAQs", href: "/faqs" },
-      { name: "Order Samples", href: "/samples" },
-      { name: "Returns & Exchanges", href: "/returns" },
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
+      { name: "Support", href: "/support" },
+      { name: "Order Samples", href: "/order-samples" },
+      { name: "Returns & Exchanges", href: "/returns-exchanges" },
+      { name: "Privacy Policy", href: "/privacy-policy" },
+      { name: "Terms of Service", href: "/terms-of-service" },
     ],
   };
 
@@ -194,17 +194,14 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Patwa Manufacturer. All rights reserved.</p>
           
           <div className="flex flex-wrap justify-center mt-4 md:mt-0 gap-x-6 gap-y-2">
-            <Link to="/privacy" className="hover:text-primary transition-colors duration-200">
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors duration-200">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="hover:text-primary transition-colors duration-200">
+            <Link to="/terms-of-service" className="hover:text-primary transition-colors duration-200">
               Terms of Service
             </Link>
-            <Link to="/accessibility" className="hover:text-primary transition-colors duration-200">
-              Accessibility
-            </Link>
-            <Link to="/cookies" className="hover:text-primary transition-colors duration-200">
-              Cookie Settings
+            <Link to="/support" className="hover:text-primary transition-colors duration-200">
+              Support
             </Link>
           </div>
         </div>
