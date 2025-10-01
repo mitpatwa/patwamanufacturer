@@ -1,5 +1,6 @@
 
 import { useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { featuredProducts } from "@/data/featured-products";
@@ -36,33 +37,43 @@ const ProductShowcase = () => {
           </div>
           
           <div className="flex space-x-4 mt-8 md:mt-0">
-            <button
+            <motion.button
               onClick={prevSlide}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               className="h-12 w-12 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
               aria-label="Previous products"
             >
               <ChevronLeft className="h-6 w-6" />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={nextSlide}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               className="h-12 w-12 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300"
               aria-label="Next products"
             >
               <ChevronRight className="h-6 w-6" />
-            </button>
+            </motion.button>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
           {currentProducts.map((product, idx) => (
-            <ProductCard
+            <motion.div
               key={product.id}
-              {...product}
-              isHovered={hoveredProduct === product.id}
-              onMouseEnter={() => setHoveredProduct(product.id)}
-              onMouseLeave={() => setHoveredProduct(null)}
-              animationDelay={idx * 0.2}
-            />
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+            >
+              <ProductCard
+                {...product}
+                isHovered={hoveredProduct === product.id}
+                onMouseEnter={() => setHoveredProduct(product.id)}
+                onMouseLeave={() => setHoveredProduct(null)}
+                animationDelay={idx * 0.2}
+              />
+            </motion.div>
           ))}
         </div>
 

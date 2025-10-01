@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import WhatsAppFloat from '../components/WhatsAppFloat';
+import ScrollToTop from '../components/ScrollToTop';
 import { Search, MapPin, Star, Filter, Users, Award, Phone, Mail, Globe, CheckCircle } from 'lucide-react';
 
 interface Designer {
@@ -268,8 +271,15 @@ const FindDesigner = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedDesigners.map((designer) => (
-              <div key={designer.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+            {sortedDesigners.map((designer, index) => (
+              <motion.div
+                key={designer.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px -20px rgba(0,0,0,0.15)" }}
+                className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-all duration-300"
+              >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -323,20 +333,24 @@ const FindDesigner = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <a
+                    <motion.a
                       href={`tel:${designer.phone}`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       className="flex-1 bg-purple-600 text-white text-center py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
                     >
                       <Phone className="h-4 w-4 inline mr-1" />
                       Call
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                       href={`mailto:${designer.email}`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       className="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium"
                     >
                       <Mail className="h-4 w-4 inline mr-1" />
                       Email
-                    </a>
+                    </motion.a>
                   </div>
                   
                   {designer.website && (
@@ -353,7 +367,7 @@ const FindDesigner = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -385,6 +399,8 @@ const FindDesigner = () => {
       </main>
       
       <Footer />
+      <WhatsAppFloat />
+      <ScrollToTop />
     </div>
   );
 };

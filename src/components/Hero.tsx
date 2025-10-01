@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
+import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import OptimizedImage from "./OptimizedImage";
 
 const slides = [
   {
@@ -114,54 +114,69 @@ const Hero = () => {
       <div className="relative h-full flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">
           {slides.map((slide, index) => (
-            <div
+            <motion.div
               key={slide.id}
-              className={`transition-all duration-700 ${
-                index === currentSlide
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8 pointer-events-none"
-              }`}
+              initial={{ opacity: 0, y: 30 }}
+              animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className={index === currentSlide ? "" : "pointer-events-none"}
               style={{ 
-                willChange: index === currentSlide ? 'opacity, transform' : 'auto',
-                transform: 'translateZ(0)' // Force hardware acceleration
+                position: index === currentSlide ? 'relative' : 'absolute',
+                transform: 'translateZ(0)'
               }}
             >
-              <h1 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight"
+              >
                 {slide.title}
-              </h1>
-              <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto">
+              </motion.h1>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto"
+              >
                 {slide.subtitle}
-              </p>
-              <a
+              </motion.p>
+              <motion.a
                 href={slide.ctaLink}
+                initial={{ opacity: 0, y: 20 }}
+                animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,1)" }}
+                whileTap={{ scale: 0.95 }}
                 className="inline-block py-3 px-8 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300 text-lg"
-                style={{ willChange: 'background-color, color' }}
               >
                 {slide.ctaText}
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
 
       {/* Navigation buttons with optimized interactions */}
       <div className="absolute bottom-12 right-12 flex space-x-4 z-10">
-        <button
+        <motion.button
           onClick={prevSlide}
-          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors duration-300"
+          whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,1)" }}
+          whileTap={{ scale: 0.9 }}
+          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
           aria-label="Previous slide"
-          style={{ willChange: 'background-color, color' }}
         >
           <ChevronLeft className="h-7 w-7" />
-        </button>
-        <button
+        </motion.button>
+        <motion.button
           onClick={nextSlide}
-          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors duration-300"
+          whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,1)" }}
+          whileTap={{ scale: 0.9 }}
+          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
           aria-label="Next slide"
-          style={{ willChange: 'background-color, color' }}
         >
           <ChevronRight className="h-7 w-7" />
-        </button>
+        </motion.button>
       </div>
 
       {/* Slide indicators with optimized click handlers */}

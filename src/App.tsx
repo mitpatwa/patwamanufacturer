@@ -7,8 +7,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 
-import WhatsAppIcon from "./components/WhatsAppIcon";
-
 import LoadingSpinner from "./components/LoadingSpinner";
 import NotificationBanner from "./components/NotificationBanner";
 import { initializePerformanceMonitoring } from "./utils/performance";
@@ -107,10 +105,9 @@ const App = () => {
               <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </Suspense>
+           </Suspense>
         </BrowserRouter>
       </TooltipProvider>
-      <WhatsAppIcon phoneNumber="+919322140480" />
       
       {/* Notification Banner */}
       <NotificationBanner

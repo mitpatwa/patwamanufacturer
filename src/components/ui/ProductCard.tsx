@@ -35,36 +35,41 @@ const ProductCard = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: animationDelay, duration: 0.5 }}
+      whileHover={{ y: -8 }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Card className="group overflow-hidden">
+      <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
         <CardContent className="p-0">
-          <div className="relative">
-            <img
+          <div className="relative overflow-hidden">
+            <motion.img
               src={image}
               alt={`${name} - ${category || 'Luxury passementerie'} by Patwa Manufacturer - Custom decorative trims and tassels`}
-              className={`w-full aspect-[3/4] object-cover transition-transform duration-700 cursor-pointer ${
-                isHovered ? "scale-105" : ""
-              }`}
+              className="w-full aspect-[3/4] object-cover cursor-pointer"
               onClick={openModal}
               loading="lazy"
               width="400"
               height="533"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.7 }}
             />
-            <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-300 ${
-              isHovered ? "opacity-100" : "opacity-0"
-            }`} />
-            <a
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isHovered ? 1 : 0 }}
+              className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+            />
+            <motion.a
               href={`https://wa.me/919322140480?text=Hello! I'm interested in ${name}. Could you provide more details?`}
               target="_blank"
               rel="noopener noreferrer"
-              className={`absolute bottom-6 left-1/2 -translate-x-1/2 py-3 px-8 bg-white text-primary font-medium transition-all duration-500 hover:bg-primary hover:text-white ${
-                isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 py-3 px-8 bg-white text-primary font-medium transition-all duration-300 hover:bg-primary hover:text-white"
             >
               Request Inquiry
-            </a>
+            </motion.a>
           </div>
           
           <div className="p-6 text-center">
@@ -75,14 +80,16 @@ const ProductCard = ({
             )}
             <h3 className="font-serif text-xl md:text-2xl mb-4" itemProp="name">{name}</h3>
             <p className="text-sm mb-4">{colorways} colorways available</p>
-            <a
+            <motion.a
               href={`https://wa.me/919322140480?text=Hello! I'm interested in ${name}. Could you provide more details?`}
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="inline-block py-2 px-6 bg-primary text-white hover:bg-primary/90 transition-colors duration-300"
             >
               Request Inquiry
-            </a>
+            </motion.a>
           </div>
         </CardContent>
       </Card>

@@ -59,11 +59,17 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="inline-block">
-            <h1 className={`text-xl md:text-2xl font-serif font-medium tracking-wider transition-colors duration-300 ${
-              isScrolled || isMenuOpen ? 'text-primary' : 'text-white'
-            }`}>
+            <motion.h1
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              className={`text-xl md:text-2xl font-serif font-medium tracking-wider transition-colors duration-300 ${
+                isScrolled || isMenuOpen ? 'text-primary' : 'text-white'
+              }`}
+            >
               PATWA MANUFACTURER
-            </h1>
+            </motion.h1>
           </Link>
 
           {/* Desktop Navigation */}
@@ -94,20 +100,29 @@ const Header = () => {
                   )}
                   
                   {item.items && (
-                    <div className="absolute top-full left-0 pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      className="absolute top-full left-0 pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+                    >
                       <ul className="bg-white shadow-lg rounded-md py-2 border border-border">
-                        {item.items.map((subItem) => (
-                          <li key={subItem.name}>
+                        {item.items.map((subItem, idx) => (
+                          <motion.li
+                            key={subItem.name}
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.05 }}
+                          >
                             <Link
                               to={subItem.link}
                               className="block px-5 py-2 text-sm hover:bg-sand-50 hover:text-gold-600 transition-colors"
                             >
                               {subItem.name}
                             </Link>
-                          </li>
+                          </motion.li>
                         ))}
                       </ul>
-                    </div>
+                    </motion.div>
                   )}
                 </li>
               ))}

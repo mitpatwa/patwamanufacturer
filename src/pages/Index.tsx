@@ -12,6 +12,7 @@ import Workshop from "../components/Workshop";
 import PassementerieSelector from "../components/PassementerieSelector";
 import CustomizationHighlight from "../components/CustomizationHighlight";
 import WhatsAppFloat from "../components/WhatsAppFloat";
+import ScrollToTop from "../components/ScrollToTop";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
@@ -101,6 +102,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <ScrollToTop />
       <InteractiveSearch />
     </div>
   );
