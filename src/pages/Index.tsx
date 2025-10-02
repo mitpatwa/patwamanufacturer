@@ -17,6 +17,7 @@ import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
 import ParallaxSection from "../components/ParallaxSection";
+import FloatingOrbs from "../components/FloatingOrbs";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -26,7 +27,10 @@ const fadeInUp = {
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Floating background orbs */}
+      <FloatingOrbs />
+      
       <Helmet>
         <title>Patwa Manufacturer - Custom Tassels, Fringes, Braids & Decorative Trimmings</title>
         <meta name="description" content="Leading manufacturer of passementerie, custom tassels, fringes, braids & decorative trimmings in India. Premium handcrafted quality for interior designers worldwide. Custom orders available." />
@@ -48,7 +52,7 @@ const Index = () => {
         </script>
       </Helmet>
       <Header />
-      <main role="main">
+      <main role="main" className="relative z-10">
         <Hero />
         <Collections />
         <ProductShowcase />
