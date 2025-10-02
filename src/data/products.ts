@@ -319,5 +319,69 @@ export const allProducts: Product[] = [
     image: "/lovable-uploads/bada547d-121b-4be5-b214-7e6093add217.png",
     description: "Stunning crystal beaded tieback with teardrop pendants",
     colorways: 2
+  },
+  {
+    id: 40,
+    name: "Beige Decorative Fringe Braid",
+    category: "Fringe",
+    image: "/lovable-uploads/fringe-braid-beige.jpeg",
+    description: "Elegant beige fringe braid with intricate detailing",
+    colorways: 5
+  },
+  {
+    id: 41,
+    name: "Golden Yellow Fringe Trim",
+    category: "Fringe",
+    image: "/lovable-uploads/fringe-gold.jpeg",
+    description: "Luxurious golden yellow fringe trim for elegant finishing",
+    colorways: 4
+  },
+  {
+    id: 42,
+    name: "Silver Grey Braid Trim",
+    category: "Braid",
+    image: "/lovable-uploads/braid-silver.jpeg",
+    description: "Sophisticated silver grey braid with decorative pattern",
+    colorways: 3
+  },
+  {
+    id: 43,
+    name: "Royal Blue Fringe",
+    category: "Fringe",
+    image: "/lovable-uploads/fringe-blue.jpeg",
+    description: "Vibrant royal blue fringe with dense, luxurious finish",
+    colorways: 6
+  },
+  {
+    id: 44,
+    name: "Gold Tassel Collection",
+    category: "Tassel",
+    image: "/lovable-uploads/tassels-gold-collection.jpg",
+    description: "Exquisite collection of gold tassels with decorative elements",
+    colorways: 3
+  },
+  {
+    id: 45,
+    name: "Multicolor Tassel Set",
+    category: "Tassel",
+    image: "/lovable-uploads/tassels-multicolor.jpg",
+    description: "Premium multicolor tassels in black, grey, beige, and gold",
+    colorways: 8
+  },
+  {
+    id: 46,
+    name: "Black Ornate Tassels",
+    category: "Tassel",
+    image: "/lovable-uploads/tassels-black-ornate.jpg",
+    description: "Sophisticated black tassels with ornamental decorations",
+    colorways: 2
+  },
+  {
+    id: 47,
+    name: "Cream Workshop Tassel",
+    category: "Tassel",
+    image: "/lovable-uploads/tassel-cream-workshop.jpg",
+    description: "Handcrafted cream tassel with artisanal detailing",
+    colorways: 4
   }
 ];
