@@ -3,12 +3,12 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhatsAppFloat = () => {
-  const whatsappNumber = "+919322140480";
+  const whatsappNumber = "919322140480"; // WhatsApp number without +
   const message = "Hello! I'm interested in your passementerie products.";
   
   const handleWhatsAppClick = () => {
-    const url = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
