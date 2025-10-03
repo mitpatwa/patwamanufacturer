@@ -142,7 +142,7 @@ const ProductCard = ({
               </>
             )}
             <motion.a
-              href={`https://wa.me/919322140480?text=Hello! I'm interested in ${name}. Could you provide more details?`}
+              href={`https://wa.me/919322140480?text=${encodeURIComponent(`Hello! I'm interested in ${name}. Could you provide more details?`)}`}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
@@ -170,7 +170,7 @@ const ProductCard = ({
             <h3 className="font-serif text-xl md:text-2xl mb-4" itemProp="name">{name}</h3>
             <p className="text-sm mb-4">{colorways} colorways available</p>
             <motion.a
-              href={`https://wa.me/919322140480?text=Hello! I'm interested in ${name}. Could you provide more details?`}
+              href={`https://wa.me/919322140480?text=${encodeURIComponent(`Hello! I'm interested in ${name}. Could you provide more details?`)}`}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

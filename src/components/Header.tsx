@@ -44,7 +44,7 @@ const Header = () => {
     },
     { 
       name: "Inquiry", 
-      link: "https://wa.me/919322140480?text=Hello! I'm interested in your passementerie products and would like to make an inquiry.",
+      link: "https://wa.me/919322140480?text=Hello!%20I'm%20interested%20in%20your%20passementerie%20products%20and%20would%20like%20to%20make%20an%20inquiry.",
       external: true
     },
   ];

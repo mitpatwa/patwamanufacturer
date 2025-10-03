@@ -20,7 +20,7 @@ const Footer = () => {
     ],
     services: [
       { name: "Custom Services", href: "/custom-services" },
-      { name: "Inquiry", href: "https://wa.me/919322140480?text=Hello! I'm interested in your passementerie products and would like to make an inquiry.", external: true },
+      { name: "Inquiry", href: "https://wa.me/919322140480?text=Hello!%20I'm%20interested%20in%20your%20passementerie%20products%20and%20would%20like%20to%20make%20an%20inquiry.", external: true },
       { name: "Trade Program", href: "/trade-program" },
       { name: "Find a Designer", href: "/find-designer" },
     ],

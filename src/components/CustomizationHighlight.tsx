@@ -158,7 +158,7 @@ const CustomizationHighlight = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <motion.a
-                href="https://wa.me/919322140480?text=Hello! I'm interested in your custom passementerie services."
+                href="https://wa.me/919322140480?text=Hello!%20I'm%20interested%20in%20your%20custom%20passementerie%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
