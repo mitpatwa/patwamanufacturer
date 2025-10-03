@@ -8,7 +8,7 @@ import ProductShowcase from "../components/ProductShowcase";
 import Story from "../components/Story";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-import Workshop from "../components/Workshop";
+
 
 import CustomizationHighlight from "../components/CustomizationHighlight";
 import WhatsAppFloat from "../components/WhatsAppFloat";
@@ -77,14 +77,6 @@ const Index = () => {
           variants={fadeInUp}
         >
           <Story />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Workshop />
         </motion.div>
         <TestimonialsCarousel />
         <motion.div
