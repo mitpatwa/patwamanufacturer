@@ -25,7 +25,16 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    
+    /* Spacing and layout */
+    --section-padding: 8rem;
+    --container-padding: 2.5rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
     
     /* Enhanced Design Tokens */
     --gold-50: 48 100% 96%;
@@ -121,11 +130,11 @@
   }
   
   .section-heading {
-    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight;
+    @apply font-serif text-4xl md:text-5xl lg:text-7xl font-medium mb-6 leading-tight tracking-tight;
   }
   
   .section-subheading {
-    @apply text-muted-foreground text-lg max-w-2xl;
+    @apply text-muted-foreground text-lg md:text-xl max-w-3xl leading-relaxed;
   }
   
   .btn-primary {

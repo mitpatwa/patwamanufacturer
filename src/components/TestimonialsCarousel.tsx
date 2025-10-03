@@ -65,8 +65,10 @@ const TestimonialsCarousel = () => {
   }, [isAnimating]);
 
   return (
-    <section className="py-28 bg-gradient-to-br from-sand-50 to-gold-50 relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-br from-sand-50 via-gold-50/30 to-sand-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-gold-100/30 to-sand-100/30"></div>
+      <div className="absolute top-20 right-10 w-80 h-80 bg-gold-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
       
       <div className="container-custom relative z-10">
         <motion.div 

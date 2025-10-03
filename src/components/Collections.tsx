@@ -115,17 +115,32 @@ const Collections = () => {
   };
 
   return (
-    <section className="py-28 bg-sand-50">
-      <div className="container-custom">
+    <section className="py-32 bg-gradient-to-br from-sand-50 via-white to-sand-50 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      
+      <div className="container-custom relative z-10">
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-24"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true, margin: "-100px" }}
         >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="inline-block mb-4"
+          >
+            <span className="px-6 py-2 bg-gradient-to-r from-gold-100 to-primary/10 text-gold-700 rounded-full text-sm font-semibold tracking-wide">
+              LUXURY PASSEMENTERIE
+            </span>
+          </motion.div>
           <h2 className="section-heading">
-            Our <span className="text-gold-600">Collections</span>
+            Our <span className="gradient-text">Collections</span>
           </h2>
           <p className="section-subheading mx-auto">
             Discover our curated selection of luxurious trimmings and embellishments, 
@@ -134,7 +149,7 @@ const Collections = () => {
         </motion.div>
 
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -143,14 +158,15 @@ const Collections = () => {
           {collections.map((collection, index) => (
           <motion.div 
             key={collection.id}
-            className="interactive-card relative overflow-hidden bg-white shadow-card rounded-2xl group"
+            className="interactive-card relative overflow-hidden bg-white shadow-card hover:shadow-floating rounded-3xl group"
             variants={itemVariants}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            whileHover={{ y: -8 }}
+            whileHover={{ y: -12, scale: 1.02 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div
-              className="relative h-[400px] md:h-[450px] overflow-hidden rounded-2xl"
+              className="relative h-[400px] md:h-[450px] overflow-hidden rounded-3xl"
             >
               <img
                 src={collection.image}
