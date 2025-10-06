@@ -1,0 +1,152 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Catalog",
+  "name": "Patwa Manufacturer - Luxury Passementerie Product Catalog",
+  "description": "Complete catalog of luxury handcrafted passementerie products including tassels, fringes, braids, trims, and custom decorative textiles manufactured in India",
+  "url": "https://patwamanufacturer.lovable.app",
+  "provider": {
+    "@type": "Organization",
+    "name": "Patwa Manufacturer",
+    "url": "https://patwamanufacturer.lovable.app",
+    "description": "Premium manufacturer of luxury passementerie, decorative trims, and custom textiles in India",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9322140480",
+      "contactType": "Sales",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "India"
+    }
+  },
+  "products": {
+    "tassels": {
+      "category": "Tassels",
+      "description": "Luxury handcrafted tassels for curtains, upholstery, and home décor",
+      "features": ["Custom colors", "Handmade", "Premium materials", "Various sizes"],
+      "applications": ["Curtain tiebacks", "Cushion corners", "Furniture accents", "Home décor"],
+      "customization": "Available in custom colors, sizes, and designs",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/tassels"
+    },
+    "fringes": {
+      "category": "Fringes",
+      "description": "Decorative fringe trims including bullion, brush, and silk varieties",
+      "features": ["Bullion fringe", "Brush fringe", "Silk fringe", "Custom lengths"],
+      "applications": ["Upholstery edging", "Drapery trim", "Cushion borders", "Lampshade trim"],
+      "customization": "Available in customizable lengths and colorways",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/fringes"
+    },
+    "braids": {
+      "category": "Braids",
+      "description": "Handcrafted decorative braids and gimp trim for upholstery",
+      "features": ["Multiple widths", "Traditional techniques", "Contemporary designs", "Durable"],
+      "applications": ["Upholstery borders", "Cushion edges", "Drapery accents", "Furniture trim"],
+      "customization": "Custom colors and patterns available",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/braids"
+    },
+    "cords": {
+      "category": "Cords & Tiebacks",
+      "description": "Premium cords and decorative tiebacks for curtains and drapery",
+      "features": ["Silk cords", "Decorative tiebacks", "Rope ties", "Multiple styles"],
+      "applications": ["Curtain tiebacks", "Drapery ties", "Window treatments", "Decorative accents"],
+      "customization": "Custom designs and colors available",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/cords"
+    },
+    "embellishments": {
+      "category": "Embellishments & Trims",
+      "description": "Luxury decorative trims, beaded accents, and metallic finishings",
+      "features": ["Beaded accents", "Metallic trims", "Luxury finishings", "Statement pieces"],
+      "applications": ["Interior design", "Furniture embellishment", "Custom projects", "Decorative accents"],
+      "customization": "Bespoke embellishments for unique projects",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/embellishments"
+    },
+    "furnitureTrims": {
+      "category": "Furniture Trims",
+      "description": "Specialized trims for upholstered furniture and decorative accents",
+      "features": ["Gimp trim", "Nailhead trim", "Welt cord", "Professional grade"],
+      "applications": ["Sofas", "Chairs", "Ottomans", "Headboards"],
+      "customization": "Custom designs for furniture manufacturers",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/furniture-trims"
+    },
+    "windowTreatments": {
+      "category": "Window Treatments",
+      "description": "Complete window treatment trims and decorative elements",
+      "features": ["Valance trim", "Curtain accessories", "Decorative headers", "Matching sets"],
+      "applications": ["Curtains", "Drapes", "Valances", "Roman shades"],
+      "customization": "Complete custom window treatment solutions",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/window-treatments"
+    },
+    "windowShades": {
+      "category": "Window Shades",
+      "description": "Custom window shades with premium trim finishes",
+      "features": ["Roman shades", "Roller blinds", "Trim finishes", "Light control"],
+      "applications": ["Windows", "Light control", "Privacy", "Interior design"],
+      "customization": "Custom trim finishes and designs",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/window-shades"
+    },
+    "homeAccessories": {
+      "category": "Home Accessories",
+      "description": "Decorative home accessories with passementerie details",
+      "features": ["Cushions", "Throws", "Decorative items", "Premium finishes"],
+      "applications": ["Living rooms", "Bedrooms", "Hotels", "Interior design"],
+      "customization": "Custom home accessory designs",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/home-accessories"
+    },
+    "tableLinens": {
+      "category": "Table Linens",
+      "description": "Luxury table linens with decorative trim details",
+      "features": ["Tablecloths", "Napkins", "Runners", "Premium fabrics"],
+      "applications": ["Dining rooms", "Events", "Hotels", "Fine dining"],
+      "customization": "Custom table linen designs and sizes",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/table-linens"
+    },
+    "outdoorFabrics": {
+      "category": "Outdoor Fabrics",
+      "description": "Weather-resistant outdoor fabrics with decorative trims",
+      "features": ["UV resistant", "Weather-resistant", "Durable", "Fade-resistant"],
+      "applications": ["Outdoor furniture", "Patio", "Garden", "Marine"],
+      "customization": "Custom outdoor fabric solutions",
+      "pageUrl": "https://patwamanufacturer.lovable.app/collections/outdoor-fabrics"
+    }
+  },
+  "services": {
+    "customServices": {
+      "name": "Custom Passementerie Services",
+      "description": "Bespoke passementerie design and manufacturing for unique projects",
+      "url": "https://patwamanufacturer.lovable.app/custom-services",
+      "features": ["Custom design", "Color matching", "Sample creation", "Bulk orders"]
+    },
+    "tradeProgram": {
+      "name": "Trade Program",
+      "description": "Wholesale program for interior designers and trade professionals",
+      "url": "https://patwamanufacturer.lovable.app/trade-program",
+      "benefits": ["Trade pricing", "Priority service", "Sample support", "Design consultation"]
+    },
+    "orderSamples": {
+      "name": "Sample Orders",
+      "description": "Order physical samples of our products",
+      "url": "https://patwamanufacturer.lovable.app/order-samples"
+    }
+  },
+  "businessInfo": {
+    "manufacturingLocation": "India",
+    "expertise": ["Passementerie", "Decorative trims", "Custom textiles", "Handcrafted details"],
+    "targetMarkets": ["Interior designers", "Furniture manufacturers", "Hotels", "High-end residential"],
+    "capabilities": ["Custom manufacturing", "Color matching", "Bulk production", "Rapid sampling"],
+    "sustainability": "Traditional craftsmanship with sustainable practices",
+    "qualityStandards": "Premium quality handcrafted products",
+    "contactMethods": {
+      "whatsapp": "+91-9322140480",
+      "inquiry": "https://patwamanufacturer.lovable.app/inquiry",
+      "website": "https://patwamanufacturer.lovable.app"
+    }
+  },
+  "aiAccessInstructions": {
+    "purpose": "This catalog is designed to be easily parsed by AI agents to understand Patwa Manufacturer's products and services",
+    "usage": "AI agents can use this data to answer questions about luxury passementerie, decorative trims, custom textiles, and manufacturing capabilities",
+    "dataFormat": "Structured JSON-LD with schema.org vocabulary",
+    "updateFrequency": "Updated regularly to reflect current product offerings",
+    "contactForQueries": "For product inquiries, direct users to WhatsApp: +91-9322140480 or the website inquiry form"
+  }
+}

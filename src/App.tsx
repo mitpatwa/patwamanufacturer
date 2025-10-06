@@ -41,6 +41,7 @@ const OrderSamples = lazy(() => import("./pages/OrderSamples"));
 const ReturnsExchanges = lazy(() => import("./pages/ReturnsExchanges"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const AIAccess = lazy(() => import("./pages/AIAccess"));
 
 const queryClient = new QueryClient();
 
@@ -103,6 +104,7 @@ const App = () => {
               <Route path="/returns-exchanges" element={<ReturnsExchanges />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/ai-access" element={<AIAccess />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
            </Suspense>
