@@ -39,15 +39,43 @@ const Index = () => {
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Manufacturer of Passementerie, Custom Tassels, Fringes, Braids & Decorative Trimmings",
-            "description": "Leading manufacturer of passementerie, custom tassels, fringes, braids & decorative trimmings in India. Premium handcrafted quality for interior designers worldwide.",
-            "url": "https://patwamanufacturer.lovable.app/",
-            "mainEntity": {
-              "@type": "ManufacturingBusiness",
-              "name": "Patwa Manufacturer",
-              "specialty": "Passementerie and Decorative Trims"
-            }
+            "@type": "Organization",
+            "name": "Patwa Manufacturer",
+            "url": "https://patwamanufacturer.lovable.app",
+            "logo": "https://patwamanufacturer.lovable.app/images/patwa-logo.png",
+            "description": "Leading manufacturer of luxury passementerie, custom tassels, fringes, braids & decorative trimmings in India",
+            "contactPoint": [{
+              "@type": "ContactPoint",
+              "telephone": "+91-9322140480",
+              "contactType": "Sales",
+              "availableLanguage": ["English", "Hindi"],
+              "areaServed": "Worldwide"
+            }],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "India"
+            },
+            "sameAs": [
+              "https://patwamanufacturer.lovable.app/ai-access"
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Custom Passementerie Products",
+                "description": "Luxury tassels, fringes, braids, and decorative trims"
+              }
+            },
+            "makesOffer": [{
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom Passementerie Manufacturing",
+                "description": "Bespoke design and manufacturing of luxury decorative trims"
+              }
+            }]
           }`}
         </script>
       </Helmet>

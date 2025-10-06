@@ -142,13 +142,40 @@ const AIAccess = () => {
               {/* AI Agents Supported */}
               <div className="mt-12 text-center">
                 <h3 className="text-xl font-semibold mb-4">Accessible to All Major AI Agents</h3>
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8">
                   <span className="px-4 py-2 bg-card border rounded-full">ChatGPT</span>
                   <span className="px-4 py-2 bg-card border rounded-full">Claude</span>
                   <span className="px-4 py-2 bg-card border rounded-full">Gemini</span>
                   <span className="px-4 py-2 bg-card border rounded-full">Perplexity</span>
                   <span className="px-4 py-2 bg-card border rounded-full">You.com</span>
                   <span className="px-4 py-2 bg-card border rounded-full">Bing AI</span>
+                </div>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  When AI agents access our catalog, they can help potential customers understand our products, 
+                  capabilities, and guide them to the right contact method based on their specific needs.
+                </p>
+              </div>
+
+              {/* Lead Generation Info */}
+              <div className="mt-12 bg-primary/5 rounded-lg p-8 border border-primary/20">
+                <h3 className="text-2xl font-semibold mb-4 text-center">AI-Powered Lead Generation</h3>
+                <p className="text-muted-foreground text-center mb-6">
+                  Our AI-accessible catalog is optimized to convert inquiries into qualified leads by providing 
+                  comprehensive product information and clear paths to contact our team.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+                    <p className="text-sm text-muted-foreground">AI agents can access product info anytime</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">100%</div>
+                    <p className="text-sm text-muted-foreground">Complete product catalog coverage</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">Direct</div>
+                    <p className="text-sm text-muted-foreground">Clear paths to WhatsApp & inquiry form</p>
+                  </div>
                 </div>
               </div>
             </div>

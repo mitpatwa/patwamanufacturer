@@ -9,8 +9,8 @@ const slides = [
     fallback: "/lovable-uploads/hero-1-new.png",
     title: "Exquisite Trimmings",
     subtitle: "Innovation, Quality, Creativity",
-    ctaText: "Discover",
-    ctaLink: "#"
+    ctaText: "Get Quote",
+    ctaLink: "/inquiry"
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ const slides = [
     fallback: "/lovable-uploads/hero-2-new.png",
     title: "Elegant Home Textiles",
     subtitle: "Quality, Craftsmanship, Inspiration",
-    ctaText: "Explore",
-    ctaLink: "#"
+    ctaText: "Order Samples",
+    ctaLink: "/order-samples"
   },
   {
     id: 3,
@@ -27,8 +27,8 @@ const slides = [
     fallback: "/lovable-uploads/hero-3-new.png",
     title: "Artisanal Craftsmanship",
     subtitle: "Experience the art of traditional craftsmanship with modern precision",
-    ctaText: "View Collection",
-    ctaLink: "#"
+    ctaText: "Contact Us",
+    ctaLink: "https://wa.me/919322140480?text=Hello%2C%20I%27m%20interested%20in%20your%20passementerie%20products"
   }
 ];
 
