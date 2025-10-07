@@ -11,7 +11,32 @@ const WindowTreatmentsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Window Treatments Collection - Patwa Manufacturer</title>
+        <title>Luxury Window Treatments Collection - Custom Curtains & Drapes | Patwa Manufacturer</title>
+        <meta name="description" content="Exquisite window treatments featuring custom curtains, drapes, and luxury window accessories with handcrafted passementerie details. Premium interior décor from India." />
+        <meta name="keywords" content="luxury window treatments, custom curtains, decorative drapes, window accessories, passementerie curtains, interior décor manufacturers India, custom window drapery, luxury curtain accessories" />
+        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/window-treatments" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Luxury Window Treatments Collection",
+            "description": "Custom curtains, drapes, and window accessories with signature passementerie details",
+            "url": "https://patwamanufacturer.lovable.app/collections/window-treatments",
+            "mainEntity": {
+              "@type": "ItemList",
+              "numberOfItems": ${windowTreatmentProducts.length},
+              "itemListElement": [
+                ${windowTreatmentProducts.slice(0, 5).map((product, index) => `{
+                  "@type": "Product",
+                  "position": ${index + 1},
+                  "name": "${product.name}",
+                  "description": "${product.description}",
+                  "category": "Window Treatments"
+                }`).join(',')}
+              ]
+            }
+          }`}
+        </script>
       </Helmet>
       <CollectionLayout
         title="Luxury Window Treatments"
