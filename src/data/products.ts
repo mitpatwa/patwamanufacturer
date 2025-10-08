@@ -5,6 +5,26 @@ export interface Product {
   image: string;
   description: string;
   colorways: number;
+  // Enhanced technical specifications
+  material?: string;
+  dimensions?: {
+    length?: string;
+    width?: string;
+    height?: string;
+  };
+  weight?: string;
+  construction?: string;
+  application?: string[];
+  moq?: number; // Minimum Order Quantity
+  leadTime?: string;
+  price?: {
+    range: string;
+    unit: string;
+  };
+  sku?: string;
+  colors?: string[];
+  style?: string;
+  finish?: string;
 }
 
 export const allProducts: Product[] = [
