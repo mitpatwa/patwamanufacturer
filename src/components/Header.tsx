@@ -35,6 +35,10 @@ const Header = () => {
       ] 
     },
     { 
+      name: "Custom Builder", 
+      link: "/configurator",
+    },
+    { 
       name: "Custom Services", 
       link: "/custom-services",
     },
