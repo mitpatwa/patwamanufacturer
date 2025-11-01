@@ -84,8 +84,23 @@ Website: patwamanufacturer.lovable.app
   return (
     <>
       <Helmet>
-        <title>Product Configurator - Custom Passementerie Builder | Patwa Manufacturer</title>
-        <meta name="description" content="Design your custom tassels, trims, and passementerie with our interactive builder. Live preview, instant pricing, and downloadable specifications." />
+        <title>Custom Passementerie Configurator | Design Bespoke Trims Online | Patwa Manufacturer</title>
+        <meta name="description" content="Interactive passementerie configurator to design custom tassels, fringes, braids, and trims. Live preview, instant pricing, spec sheet download, and save/share options." />
+        <meta name="keywords" content="passementerie configurator, custom trim builder, design custom tassels, bespoke passementerie tool, interactive trim designer, custom trim configurator" />
+        <link rel="canonical" href="https://patwamanufacturer.lovable.app/configurator" />
+        <meta property="og:title" content="Custom Passementerie Configurator | Patwa Manufacturer" />
+        <meta property="og:description" content="Design your bespoke passementerie online with live preview and instant pricing." />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/configurator" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Passementerie Product Configurator",
+            "description": "Interactive design tool for custom passementerie",
+            "url": "https://patwamanufacturer.lovable.app/configurator",
+            "applicationCategory": "DesignApplication"
+          }`}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

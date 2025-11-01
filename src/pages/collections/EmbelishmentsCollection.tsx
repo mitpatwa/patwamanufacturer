@@ -16,7 +16,19 @@ const EmbelishmentsCollection = () => {
         <title>Luxury Embellishments & Decorative Trims Collection | Patwa Manufacturer</title>
         <meta name="description" content="Exquisite embellishments and decorative trim collection featuring beaded accents, metallic trims, and luxury finishings for interior design projects." />
         <meta name="keywords" content="luxury embellishments, decorative trims, beaded accents, metallic trims, passementerie embellishments, custom trim work, interior design accessories" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/embellishments" />
+        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/embelishments" />
+        <meta property="og:title" content="Luxury Embellishments Collection | Patwa Manufacturer" />
+        <meta property="og:description" content="Exquisite embellishments and decorative trims for luxury interior design." />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/embelishments" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Luxury Embellishments & Decorative Trims",
+            "description": "Beaded accents, metallic trims, and luxury finishings for interior projects",
+            "url": "https://patwamanufacturer.lovable.app/collections/embelishments"
+          }`}
+        </script>
       </Helmet>
       <CollectionLayout
         title="Luxury Embellishments Collection"

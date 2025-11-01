@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
   <url>
     <loc>https://patwamanufacturer.lovable.app/</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://patwamanufacturer.lovable.app/lovable-uploads/hero-1-trimmings.png?v=2025-09-29-1</image:loc>
+      <image:loc>https://patwamanufacturer.lovable.app/lovable-uploads/hero-1-trimmings.png</image:loc>
       <image:title>Tassel Trim Manufacturer - Luxury Passementerie</image:title>
       <image:caption>Leading tassel trim manufacturer and luxury curtain tiebacks supplier</image:caption>
     </image:image>
@@ -22,166 +23,205 @@
       <image:caption>Export quality decorative trims and premium trimmings for upholstery</image:caption>
     </image:image>
   </url>
+
+  <!-- About & Main Pages -->
   <url>
-    <loc>https://patwamanufacturer.lovable.app/seo</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <loc>https://patwamanufacturer.lovable.app/about</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://patwamanufacturer.lovable.app/blog</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <loc>https://patwamanufacturer.lovable.app/passementerie-manufacturer</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Primary Collections (High Priority) -->
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/tassels</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/fringes</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/braids</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/cords</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/tie-backs</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Secondary Collections -->
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/embelishments</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/window-treatments</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/furniture-trims</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/home-accessories</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/table-linens</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/outdoor-fabrics</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/collections/window-shades</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Services & Features -->
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/configurator</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/custom-services</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <url>
     <loc>https://patwamanufacturer.lovable.app/trade-program</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/blog</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/craftsmanship</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/sustainability</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://patwamanufacturer.lovable.app/find-designer</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/support</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
   <url>
     <loc>https://patwamanufacturer.lovable.app/order-samples</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://patwamanufacturer.lovable.app/returns-exchanges</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <loc>https://patwamanufacturer.lovable.app/ai-access</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Support & Legal -->
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/support</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/seo</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/returns-exchanges</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <url>
     <loc>https://patwamanufacturer.lovable.app/privacy-policy</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://patwamanufacturer.lovable.app/terms-of-service</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/about</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/ai-access</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/passementerie-manufacturer</loc>
-    <lastmod>2025-01-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/custom-services</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/tassels</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/fringes</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/braids</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/cords</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/embellishments</loc>
-    <lastmod>2025-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/sustainability</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/craftsmanship</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/furniture-trims</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/window-treatments</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/window-shades</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/tie-backs</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/table-linens</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/outdoor-fabrics</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://patwamanufacturer.lovable.app/collections/home-accessories</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>

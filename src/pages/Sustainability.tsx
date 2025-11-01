@@ -7,7 +7,31 @@ import { motion } from "framer-motion";
 const Sustainability = () => (
   <div className="min-h-screen bg-background">
     <Helmet>
-      <title>Sustainability - Patwa Manufacturer</title>
+      <title>Sustainability & Ethical Manufacturing | Eco-Friendly Passementerie | Patwa Manufacturer</title>
+      <meta name="description" content="Sustainable passementerie manufacturing with eco-friendly materials, ethical production, and waste reduction. Learn about our commitment to environmental responsibility and heritage preservation." />
+      <meta name="keywords" content="sustainable textiles, eco-friendly trims, ethical manufacturing, sustainable passementerie, green production, waste reduction, fair trade textiles, sustainable craftsmanship" />
+      <link rel="canonical" href="https://patwamanufacturer.lovable.app/sustainability" />
+      <meta property="og:title" content="Sustainability & Ethical Manufacturing | Patwa Manufacturer" />
+      <meta property="og:description" content="Discover our commitment to sustainable passementerie manufacturing with eco-friendly materials and ethical production practices." />
+      <meta property="og:url" content="https://patwamanufacturer.lovable.app/sustainability" />
+      <meta property="og:type" content="website" />
+      <script type="application/ld+json">
+        {`{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Sustainability - Patwa Manufacturer",
+          "description": "Our commitment to sustainable and ethical passementerie manufacturing",
+          "url": "https://patwamanufacturer.lovable.app/sustainability",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Patwa Manufacturer",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://patwamanufacturer.lovable.app/images/patwa-logo.png"
+            }
+          }
+        }`}
+      </script>
     </Helmet>
     <Header />
     <main className="pt-20">
