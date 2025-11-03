@@ -34,6 +34,7 @@ const Sustainability = lazy(() => import("./pages/Sustainability"));
 const SiteAnalysis = lazy(() => import("./pages/SiteAnalysis"));
 const SEO = lazy(() => import("./pages/SEO"));
 const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const TradeProgram = lazy(() => import("./pages/TradeProgram"));
 const FindDesigner = lazy(() => import("./pages/FindDesigner"));
 const Support = lazy(() => import("./pages/Support"));
@@ -97,7 +98,8 @@ const App = () => {
               <Route path="/sustainability" element={<Sustainability />} />
               <Route path="/analysis" element={<SiteAnalysis />} />
               <Route path="/seo" element={<SEO />} />
-              <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/trade-program" element={<TradeProgram />} />
               <Route path="/find-designer" element={<FindDesigner />} />
               <Route path="/support" element={<Support />} />

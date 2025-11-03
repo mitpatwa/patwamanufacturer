@@ -18,6 +18,8 @@ import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
 import ParallaxSection from "../components/ParallaxSection";
 import FloatingOrbs from "../components/FloatingOrbs";
+import SocialMediaBar from "../components/SocialMediaBar";
+import LiveChatWidget from "../components/LiveChatWidget";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -293,6 +295,8 @@ const Index = () => {
       <WhatsAppFloat />
       <ScrollToTop />
       <InteractiveSearch />
+      <SocialMediaBar />
+      <LiveChatWidget />
     </div>
   );
 };
