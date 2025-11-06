@@ -11,8 +11,86 @@ const CustomServices = () => {
       <Helmet>
         <title>Custom Passementerie Services - Bespoke Trims & Tassels | Patwa Manufacturer</title>
         <meta name="description" content="Custom passementerie and bespoke trim services. We create made-to-order tassels, fringes, braids, and decorative trims for luxury interior design projects worldwide." />
-        <meta name="keywords" content="custom passementerie, bespoke trims, made-to-order tassels, custom decorative trims, bespoke interior accessories, luxury custom textiles" />
+        <meta name="keywords" content="custom passementerie, bespoke trims, made-to-order tassels, custom decorative trims, bespoke interior accessories, luxury custom textiles, custom fringe manufacturer, bespoke tassel design, color matching service" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/custom-services" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/custom-services" />
+        <meta property="og:title" content="Custom Passementerie Services - Bespoke Trims & Tassels" />
+        <meta property="og:description" content="Made-to-order passementerie with custom design, color matching, and restoration services." />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/custom-services" />
+        <meta name="twitter:title" content="Custom Passementerie Services" />
+        <meta name="twitter:description" content="Made-to-order passementerie with custom design, color matching, and restoration." />
+        
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Custom Passementerie Services",
+            "description": "Bespoke trimmings created to exact specifications including custom design, color matching, and historical restoration",
+            "url": "https://patwamanufacturer.lovable.app/custom-services",
+            "provider": {
+              "@type": "Organization",
+              "name": "Patwa Manufacturer"
+            },
+            "serviceType": "Custom Manufacturing",
+            "areaServed": "Worldwide",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Custom Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Design",
+                    "description": "Bespoke trimmings designed to complement your interior project"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Color Matching",
+                    "description": "Precision dyeing to match any color palette"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Restoration",
+                    "description": "Historical trimming restoration for heritage properties"
+                  }
+                }
+              ]
+            }
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://patwamanufacturer.lovable.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Custom Services",
+                "item": "https://patwamanufacturer.lovable.app/custom-services"
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
       <Header />
       <main>

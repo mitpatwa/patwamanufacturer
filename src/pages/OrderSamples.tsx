@@ -166,8 +166,62 @@ const OrderSamples = () => {
       <Helmet>
         <title>Order Samples - Free Passementerie Samples | Patwa Manufacturer</title>
         <meta name="description" content="Request free samples of our premium passementerie and decorative trimmings. Experience our quality firsthand with complimentary samples for qualified professionals." />
-        <meta name="keywords" content="free samples, passementerie samples, decorative trimmings samples, tassel samples, fringe samples, custom samples" />
+        <meta name="keywords" content="free samples, passementerie samples, decorative trimmings samples, tassel samples, fringe samples, custom samples, request swatches, free trim samples, decorative trim swatches" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/order-samples" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/order-samples" />
+        <meta property="og:title" content="Order Free Passementerie Samples" />
+        <meta property="og:description" content="Request complimentary samples of premium passementerie and decorative trimmings. Fast shipping within 2-3 days." />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/order-samples" />
+        <meta name="twitter:title" content="Order Free Passementerie Samples" />
+        <meta name="twitter:description" content="Request complimentary samples. Fast shipping within 2-3 days." />
+        
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Order Free Samples",
+            "description": "Request complimentary samples of premium passementerie and decorative trimmings",
+            "url": "https://patwamanufacturer.lovable.app/order-samples",
+            "mainEntity": {
+              "@type": "Offer",
+              "name": "Free Sample Program",
+              "description": "Complimentary samples for qualified professionals with fast shipping",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "Patwa Manufacturer"
+              }
+            }
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://patwamanufacturer.lovable.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Order Samples",
+                "item": "https://patwamanufacturer.lovable.app/order-samples"
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
       
       <Header />

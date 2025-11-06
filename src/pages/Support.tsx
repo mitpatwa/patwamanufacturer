@@ -163,8 +163,101 @@ const Support = () => {
       <Helmet>
         <title>Support - Get Help with Your Passementerie Needs | Patwa Manufacturer</title>
         <meta name="description" content="Get expert support for your passementerie and decorative trimmings needs. Contact our team via phone, email, WhatsApp, or visit our showroom for personalized assistance." />
-        <meta name="keywords" content="passementerie support, decorative trimmings help, custom manufacturing support, trade program assistance, design consultation" />
+        <meta name="keywords" content="passementerie support, decorative trimmings help, custom manufacturing support, trade program assistance, design consultation, customer service, technical support, product inquiries" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/support" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/support" />
+        <meta property="og:title" content="Expert Support for Passementerie & Decorative Trimmings" />
+        <meta property="og:description" content="24/7 support via phone, email, WhatsApp. Expert guidance for all your passementerie needs." />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/support" />
+        <meta name="twitter:title" content="Expert Support for Passementerie" />
+        <meta name="twitter:description" content="24/7 support via phone, email, WhatsApp." />
+        
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Support & Contact",
+            "description": "Expert support for passementerie and decorative trimmings needs",
+            "url": "https://patwamanufacturer.lovable.app/support",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Patwa Manufacturer",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9322140480",
+                  "contactType": "customer service",
+                  "availableLanguage": ["English", "Hindi"],
+                  "areaServed": "Worldwide"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "email": "support@patwamanufacturer.com",
+                  "contactType": "customer service",
+                  "availableLanguage": ["English"]
+                }
+              ]
+            }
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is passementerie?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Passementerie refers to decorative trimmings and embellishments used in interior design, including tassels, fringes, braids, cords, and other ornamental elements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer custom manufacturing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we specialize in custom passementerie and decorative trimmings tailored to your specific design requirements and project needs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does production take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard items typically ship within 7-10 business days. Custom orders may take 2-4 weeks depending on complexity and current production schedule."
+                }
+              }
+            ]
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://patwamanufacturer.lovable.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Support",
+                "item": "https://patwamanufacturer.lovable.app/support"
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
       
       <Header />

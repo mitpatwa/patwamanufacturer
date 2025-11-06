@@ -126,8 +126,64 @@ const TradeProgram = () => {
       <Helmet>
         <title>Trade Program - Exclusive Benefits for Design Professionals | Patwa Manufacturer</title>
         <meta name="description" content="Join our exclusive trade program for interior designers, architects, and contractors. Get special pricing, priority shipping, custom manufacturing, and dedicated support for your projects." />
-        <meta name="keywords" content="trade program, interior designer discounts, trade pricing, custom trimmings, passementerie trade, design professional benefits, trade account" />
+        <meta name="keywords" content="trade program, interior designer discounts, trade pricing, custom trimmings, passementerie trade, design professional benefits, trade account, wholesale passementerie, decorator discount program" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/trade-program" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/trade-program" />
+        <meta property="og:title" content="Exclusive Trade Program for Design Professionals" />
+        <meta property="og:description" content="Up to 40% trade discounts, priority shipping, custom manufacturing for interior designers and architects." />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/trade-program" />
+        <meta name="twitter:title" content="Exclusive Trade Program for Design Professionals" />
+        <meta name="twitter:description" content="Up to 40% trade discounts, priority shipping, custom manufacturing." />
+        
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Patwa Manufacturer Trade Program",
+            "description": "Exclusive trade program offering special pricing, custom manufacturing, and dedicated support for interior designers, architects, and contractors",
+            "url": "https://patwamanufacturer.lovable.app/trade-program",
+            "provider": {
+              "@type": "Organization",
+              "name": "Patwa Manufacturer"
+            },
+            "areaServed": "Worldwide",
+            "audience": {
+              "@type": "Audience",
+              "audienceType": ["Interior Designers", "Architects", "Contractors", "Decorators"]
+            },
+            "offers": {
+              "@type": "Offer",
+              "description": "Trade pricing up to 40% off, priority shipping, custom manufacturing, dedicated support",
+              "eligibleCustomerType": "Business"
+            }
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://patwamanufacturer.lovable.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Trade Program",
+                "item": "https://patwamanufacturer.lovable.app/trade-program"
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
       
       <Header />
