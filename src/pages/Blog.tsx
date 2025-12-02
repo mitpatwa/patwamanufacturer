@@ -32,8 +32,68 @@ const Blog = () => {
       <Helmet>
         <title>Blog - Interior Design Trimmings & Passementerie Insights | Patwa Manufacturer</title>
         <meta name="description" content="Expert insights on interior design trimmings, passementerie trends, and decorative textiles. Learn from industry professionals and discover the latest in tassels, fringes, and braids." />
-        <meta name="keywords" content="interior design blog, trimmings blog, passementerie insights, decorative textiles blog, tassel guides, curtain tiebacks, lace trends, upholstery cords" />
+        <meta name="keywords" content="interior design blog, trimmings blog, passementerie insights, decorative textiles blog, tassel guides, curtain tiebacks, lace trends, upholstery cords, decorative trim guide, luxury fringe tips" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/blog" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="blog" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/blog" />
+        <meta property="og:title" content="Passementerie Blog - Design Insights & Trends | Patwa Manufacturer" />
+        <meta property="og:description" content="Expert insights on interior design trimmings, passementerie trends, and decorative textiles." />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Passementerie Blog | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Expert insights on luxury trimmings, tassels, fringes, and interior design trends." />
+        
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Patwa Manufacturer Blog",
+            "description": "Expert insights on interior design trimmings, passementerie trends, and decorative textiles",
+            "url": "https://patwamanufacturer.lovable.app/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Patwa Manufacturer",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://patwamanufacturer.lovable.app/images/patwa-logo.png"
+              }
+            },
+            "blogPost": ${JSON.stringify(blogPosts.slice(0, 5).map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "datePublished": post.date,
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              },
+              "url": "https://patwamanufacturer.lovable.app/blog/" + post.slug
+            })))}
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://patwamanufacturer.lovable.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://patwamanufacturer.lovable.app/blog"
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
       
       <Header />
