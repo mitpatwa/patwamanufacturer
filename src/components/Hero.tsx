@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const slides = [
@@ -35,17 +34,15 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
   // Optimized slide transition function to prevent forced reflows
   const transitionToSlide = useCallback((newSlide: number) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     
-    // Use requestAnimationFrame to batch DOM operations and prevent forced reflows
+    // Use requestAnimationFrame to batch DOM operations
     requestAnimationFrame(() => {
       setCurrentSlide(newSlide);
-      // Use a single timeout to reset transition state
       setTimeout(() => setIsTransitioning(false), 300);
     });
   }, [isTransitioning]);
@@ -86,24 +83,15 @@ const Hero = () => {
             className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
-            style={{ willChange: index === currentSlide ? 'opacity' : 'auto' }}
           >
             <img
               src={slide.image}
               alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
               className="absolute inset-0 w-full h-full object-cover"
               loading={index === 0 ? "eager" : "lazy"}
-              style={{ 
-                display: 'block',
-                opacity: 1
-              }}
-              onError={(e) => {
-                console.log(`Failed to load image: ${slide.image}`);
-                setImageErrors(prev => new Set([...prev, slide.id]));
-              }}
-              onLoad={() => {
-                console.log(`Successfully loaded image: ${slide.image}`);
-              }}
+              fetchPriority={index === 0 ? "high" : "low"}
+              width={1920}
+              height={1080}
             />
             <div className="absolute inset-0 bg-black/30" />
           </div>
@@ -113,73 +101,45 @@ const Hero = () => {
       {/* Content container with optimized rendering */}
       <div className="relative h-full flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">
-          {slides.map((slide, index) => (
-            <motion.div
-              key={slide.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className={index === currentSlide ? "" : "pointer-events-none"}
-              style={{ 
-                position: index === currentSlide ? 'relative' : 'absolute',
-                transform: 'translateZ(0)'
-              }}
+          <div
+            key={currentSlideData.id}
+            className="animate-fade-in"
+          >
+            <h1 className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
+              {currentSlideData.title}
+            </h1>
+            <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto">
+              {currentSlideData.subtitle}
+            </p>
+            <a
+              href={currentSlideData.ctaLink}
+              className="inline-block py-3 px-8 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300 text-lg hover:scale-105 transform"
             >
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-white font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight"
-              >
-                {slide.title}
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto"
-              >
-                {slide.subtitle}
-              </motion.p>
-              <motion.a
-                href={slide.ctaLink}
-                initial={{ opacity: 0, y: 20 }}
-                animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,1)" }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block py-3 px-8 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300 text-lg"
-              >
-                {slide.ctaText}
-              </motion.a>
-            </motion.div>
-          ))}
+              {currentSlideData.ctaText}
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Navigation buttons with optimized interactions */}
       <div className="absolute bottom-12 right-12 flex space-x-4 z-10">
-        <motion.button
+        <button
           onClick={prevSlide}
-          whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,1)" }}
-          whileTap={{ scale: 0.9 }}
-          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
+          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary hover:scale-110 active:scale-90 transition-all duration-300"
           aria-label="Previous slide"
         >
           <ChevronLeft className="h-7 w-7" />
-        </motion.button>
-        <motion.button
+        </button>
+        <button
           onClick={nextSlide}
-          whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,1)" }}
-          whileTap={{ scale: 0.9 }}
-          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
+          className="h-14 w-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-primary hover:scale-110 active:scale-90 transition-all duration-300"
           aria-label="Next slide"
         >
           <ChevronRight className="h-7 w-7" />
-        </motion.button>
+        </button>
       </div>
 
-      {/* Slide indicators with optimized click handlers */}
+      {/* Slide indicators */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
@@ -189,7 +149,6 @@ const Hero = () => {
               index === currentSlide ? "w-10 bg-white" : "w-2 bg-white/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
-            style={{ willChange: 'width, background-color' }}
           />
         ))}
       </div>
