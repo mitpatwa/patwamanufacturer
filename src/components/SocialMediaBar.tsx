@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 
 const SocialMediaBar = () => {
   const socialLinks = [
-    { icon: Instagram, url: 'https://instagram.com/patwamanufacturer', label: 'Instagram', color: 'hover:text-pink-500' },
+    { icon: Instagram, url: 'https://www.instagram.com/patwa_manufacturer/', label: 'Instagram', color: 'hover:text-pink-500' },
     { icon: Facebook, url: 'https://facebook.com/patwamanufacturer', label: 'Facebook', color: 'hover:text-blue-600' },
     { icon: Share2, url: 'https://pinterest.com/patwamanufacturer', label: 'Pinterest', color: 'hover:text-red-600' },
     { icon: Linkedin, url: 'https://linkedin.com/company/patwamanufacturer', label: 'LinkedIn', color: 'hover:text-blue-700' },
