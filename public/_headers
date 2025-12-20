@@ -1,10 +1,14 @@
 # Cache static assets aggressively
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: cross-origin
+  Accept-Encoding: gzip, br
 
-# Cache uploaded images
+# Cache uploaded images with stale-while-revalidate
 /lovable-uploads/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, stale-while-revalidate=86400, immutable
+  Cross-Origin-Resource-Policy: cross-origin
+  Accept-Encoding: gzip, br
 
 # Cache fonts
 /*.woff2
@@ -32,9 +36,11 @@
 /*.svg
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML files - shorter cache
+# HTML files - shorter cache with stale-while-revalidate
 /*.html
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Accept-Encoding: gzip, br
 
 /
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Accept-Encoding: gzip, br

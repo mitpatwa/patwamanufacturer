@@ -1,7 +1,9 @@
 // Service Worker for caching optimization
-const CACHE_NAME = 'patwa-manufacturer-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+const CACHE_VERSION = 'v2'; // Updated for new caching strategies
+const STATIC_CACHE = `static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
+const FONT_CACHE = `fonts-${CACHE_VERSION}`;
+const MAX_DYNAMIC_CACHE_SIZE = 50; // Limit dynamic cache size
 
 // Assets to cache immediately
 const STATIC_ASSETS = [
@@ -35,7 +37,9 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames
             .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+              return cacheName !== STATIC_CACHE &&
+                cacheName !== DYNAMIC_CACHE &&
+                cacheName !== FONT_CACHE;
             })
             .map((cacheName) => {
               return caches.delete(cacheName);
@@ -58,7 +62,23 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip external requests
+  // Handle Google Fonts with dedicated caching
+  if (url.origin === 'https://fonts.googleapis.com' ||
+    url.origin === 'https://fonts.gstatic.com') {
+    event.respondWith(
+      caches.open(FONT_CACHE).then((cache) => {
+        return cache.match(request).then((response) => {
+          return response || fetch(request).then((networkResponse) => {
+            cache.put(request, networkResponse.clone());
+            return networkResponse;
+          });
+        });
+      })
+    );
+    return;
+  }
+
+  // Skip external requests (except fonts handled above)
   if (url.origin !== location.origin) {
     return;
   }
@@ -70,7 +90,8 @@ self.addEventListener('fetch', (event) => {
           return cachedResponse;
         }
 
-        return fetch(request)
+        // Fetch with timeout
+        return fetchWithTimeout(request, 5000)
           .then((networkResponse) => {
             // Don't cache non-successful responses
             if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
@@ -81,12 +102,14 @@ self.addEventListener('fetch', (event) => {
             const responseToCache = networkResponse.clone();
 
             // Cache images and static assets
-            if (request.destination === 'image' || 
-                request.url.includes('/assets/') ||
-                request.url.includes('/lovable-uploads/')) {
+            if (request.destination === 'image' ||
+              request.url.includes('/assets/') ||
+              request.url.includes('/lovable-uploads/')) {
               caches.open(DYNAMIC_CACHE)
                 .then((cache) => {
                   cache.put(request, responseToCache);
+                  // Limit cache size
+                  limitCacheSize(DYNAMIC_CACHE, MAX_DYNAMIC_CACHE_SIZE);
                 });
             }
 
@@ -117,7 +140,7 @@ async function sendQueuedAnalytics() {
   try {
     const cache = await caches.open('analytics-queue');
     const requests = await cache.keys();
-    
+
     for (const request of requests) {
       try {
         await fetch(request);
@@ -128,5 +151,26 @@ async function sendQueuedAnalytics() {
     }
   } catch (error) {
     console.log('Analytics sync failed:', error);
+  }
+}
+
+// Helper function to fetch with timeout
+function fetchWithTimeout(request, timeout = 5000) {
+  return Promise.race([
+    fetch(request),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Request timeout')), timeout)
+    )
+  ]);
+}
+
+// Helper function to limit cache size
+async function limitCacheSize(cacheName, maxItems) {
+  const cache = await caches.open(cacheName);
+  const keys = await cache.keys();
+  if (keys.length > maxItems) {
+    // Delete oldest entries
+    await cache.delete(keys[0]);
+    await limitCacheSize(cacheName, maxItems);
   }
 }

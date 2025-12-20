@@ -27,6 +27,21 @@ export default defineConfig(({ mode }) => ({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2, // Multiple compression passes for better results
+        unsafe: true, // Enable unsafe optimizations for smaller bundle
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        dead_code: true,
+        collapse_vars: true,
+        reduce_vars: true,
+        booleans_as_integers: false,
+      },
+      mangle: {
+        safari10: true, // Fix Safari 10 issues
+      },
+      format: {
+        comments: false, // Remove all comments
       },
     },
     rollupOptions: {
