@@ -1,12 +1,23 @@
 // Deferred script loading utilities
 // This module helps defer non-critical third-party scripts until after page load
 
+// Extend Window interface for third-party scripts
+declare global {
+  interface Window {
+    googleTranslateElementInit?: () => void;
+    google?: {
+      translate?: unknown;
+    };
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 /**
  * Load a script after the page becomes idle
  * @param {string} id - Unique identifier for the script
  * @param {Function} callback - Function to execute when idle
  */
-export function loadWhenIdle(id, callback) {
+export function loadWhenIdle(id: string, callback: () => void): void {
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
             callback();
@@ -22,7 +33,7 @@ export function loadWhenIdle(id, callback) {
  * @param {string} scriptId - Unique identifier for the script
  * @param {Function} loadScript - Function that loads the script
  */
-export function loadOnInteraction(scriptId, loadScript) {
+export function loadOnInteraction(scriptId: string, loadScript: () => void): void {
     const events = ['mousedown', 'touchstart', 'keydown', 'scroll'];
     const loadHandler = () => {
         loadScript();
@@ -42,7 +53,7 @@ export function loadOnInteraction(scriptId, loadScript) {
 /**
  * Load Google Translate when idle
  */
-export function initGoogleTranslateDeferred() {
+export function initGoogleTranslateDeferred(): void {
     loadWhenIdle('google-translate', () => {
         if (!window.googleTranslateElementInit) {
             console.warn('Google Translate init function not found');
@@ -65,7 +76,7 @@ export function initGoogleTranslateDeferred() {
 /**
  * Defer analytics initialization
  */
-export function initAnalyticsDeferred() {
+export function initAnalyticsDeferred(): void {
     loadWhenIdle('analytics', () => {
         // Analytics is already in index.html, this just ensures
         // we're not blocking main thread
