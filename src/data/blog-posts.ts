@@ -3192,3 +3192,28 @@ Mastering passementerie terminology serves practical purposes beyond mere academ
     seoKeywords: ['passementerie glossary', 'trim terminology', 'decorative trim terms', 'textile vocabulary', 'passementerie definitions']
   }
 ];
+
+export interface BlogCategory {
+  name: string;
+  slug: string;
+  description: string;
+}
+
+export const blogCategories: BlogCategory[] = [
+  { name: 'Education', slug: 'education', description: 'Learn the fundamentals of passementerie, textile terminology, and decorative trim techniques.' },
+  { name: 'How-To', slug: 'how-to', description: 'Step-by-step tutorials for applying, installing, and creating decorative trims.' },
+  { name: 'Design Ideas', slug: 'design-ideas', description: 'Creative inspiration for incorporating passementerie into your interior design projects.' },
+  { name: 'Trends', slug: 'trends', description: 'Stay current with the latest passementerie and interior design trends.' },
+  { name: 'Design Philosophy', slug: 'design-philosophy', description: 'Explore design principles, aesthetics, and the philosophy behind decorative arts.' },
+  { name: 'Maintenance', slug: 'maintenance', description: 'Expert tips on caring for, cleaning, and preserving your decorative trims.' },
+  { name: 'Materials', slug: 'materials', description: 'Deep dives into the fibers, fabrics, and materials used in quality passementerie.' },
+  { name: 'Room Design', slug: 'room-design', description: 'Room-by-room guides for using trimmings to elevate your living spaces.' },
+  { name: 'History', slug: 'history', description: 'The rich heritage and fascinating history of passementerie across cultures.' },
+  { name: 'Commercial', slug: 'commercial', description: 'Passementerie applications for hospitality, retail, and commercial interiors.' },
+  { name: 'Sustainability', slug: 'sustainability', description: 'Eco-friendly practices and sustainable approaches in decorative textile manufacturing.' },
+  { name: 'DIY', slug: 'diy', description: 'Hands-on projects and creative crafts using passementerie techniques.' },
+  { name: 'Design Guide', slug: 'design-guide', description: 'Comprehensive guides for selecting and specifying decorative trims.' },
+  { name: 'Product Guide', slug: 'product-guide', description: 'Detailed guides to specific passementerie products, styles, and applications.' },
+  { name: 'Fashion', slug: 'fashion', description: 'Passementerie in fashion, bridal wear, and textile couture.' },
+  { name: 'Business', slug: 'business', description: 'Industry insights, manufacturing, and the business side of passementerie.' },
+];
