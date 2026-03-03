@@ -35,6 +35,7 @@ const SiteAnalysis = lazy(() => import("./pages/SiteAnalysis"));
 const SEO = lazy(() => import("./pages/SEO"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const BlogCategory = lazy(() => import("./pages/BlogCategory"));
 const ContentCalendar = lazy(() => import("./components/ContentCalendar"));
 const TradeProgram = lazy(() => import("./pages/TradeProgram"));
 const FindDesigner = lazy(() => import("./pages/FindDesigner"));
@@ -100,6 +101,7 @@ const App = () => {
               <Route path="/analysis" element={<SiteAnalysis />} />
               <Route path="/seo" element={<SEO />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/category/:category" element={<BlogCategory />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/content-calendar" element={<ContentCalendar />} />
               <Route path="/trade-program" element={<TradeProgram />} />

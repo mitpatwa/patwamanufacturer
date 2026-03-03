@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Search, Calendar, Clock, Tag, TrendingUp, ArrowRight } from 'lucide-react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { blogPosts } from '../data/blog-posts';
+import { blogPosts, blogCategories } from '../data/blog-posts';
 import ReviewSubmissionForm from '../components/ReviewSubmissionForm';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const categories = ['All', 'Guides', 'Trends', 'Product Guides', 'Buying Guides', 'Sustainability'];
+  const categories = ['All', ...blogCategories.map(c => c.name)];
   
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -157,16 +158,36 @@ const Blog = () => {
               
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <Button
-                    key={category}
-                    variant={selectedCategory === category || (!selectedCategory && category === 'All') ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => setSelectedCategory(category === 'All' ? null : category)}
-                  >
-                    {category}
-                  </Button>
-                ))}
+                {categories.map((category) => {
+                  const catInfo = blogCategories.find(c => c.name === category);
+                  return (
+                    <div key={category} className="flex gap-1">
+                      {catInfo ? (
+                        <RouterLink to={`/blog/category/${catInfo.slug}`}>
+                          <Button
+                            variant={selectedCategory === category ? 'default' : 'outline'}
+                            size="sm"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setSelectedCategory(category === 'All' ? null : category);
+                            }}
+                            onAuxClick={() => {}} // allow middle-click to navigate
+                          >
+                            {category}
+                          </Button>
+                        </RouterLink>
+                      ) : (
+                        <Button
+                          variant={!selectedCategory ? 'default' : 'outline'}
+                          size="sm"
+                          onClick={() => setSelectedCategory(null)}
+                        >
+                          {category}
+                        </Button>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
