@@ -9,8 +9,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Button } from '../components/ui/button';
 import { blogPosts, blogCategories, type BlogCategory as BlogCategoryType } from '../data/blog-posts';
 
+const POSTS_PER_PAGE = 9;
+
 const BlogCategory = () => {
   const { category } = useParams<{ category: string }>();
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  React.useEffect(() => { setCurrentPage(1); }, [category]);
   
   const categoryInfo = blogCategories.find(
     c => c.slug === category
@@ -25,6 +30,8 @@ const BlogCategory = () => {
   );
 
   const featuredPosts = categoryPosts.filter(post => post.featured);
+  const totalPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = categoryPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
   return (
     <div className="min-h-screen bg-background">
@@ -96,7 +103,7 @@ const BlogCategory = () => {
         <div className="max-w-7xl mx-auto px-4 pb-16">
           <h2 className="text-2xl font-bold mb-6">All {categoryInfo.name} Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categoryPosts.map((post) => (
+            {paginatedPosts.map((post) => (
               <Link key={post.id} to={`/blog/${post.slug}`}>
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <div className="relative h-48 overflow-hidden">
@@ -130,6 +137,38 @@ const BlogCategory = () => {
               </Link>
             ))}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-12">
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage === 1}
+                onClick={() => { setCurrentPage(p => p - 1); window.scrollTo({ top: 400, behavior: 'smooth' }); }}
+              >
+                Previous
+              </Button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                <Button
+                  key={page}
+                  variant={page === currentPage ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => { setCurrentPage(page); window.scrollTo({ top: 400, behavior: 'smooth' }); }}
+                >
+                  {page}
+                </Button>
+              ))}
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage === totalPages}
+                onClick={() => { setCurrentPage(p => p + 1); window.scrollTo({ top: 400, behavior: 'smooth' }); }}
+              >
+                Next
+              </Button>
+            </div>
+          )}
 
           {categoryPosts.length === 0 && (
             <div className="text-center py-12">
