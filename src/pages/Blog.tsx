@@ -12,9 +12,12 @@ import { Button } from '../components/ui/button';
 import { blogPosts, blogCategories } from '../data/blog-posts';
 import ReviewSubmissionForm from '../components/ReviewSubmissionForm';
 
+const POSTS_PER_PAGE = 9;
+
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const categories = ['All', ...blogCategories.map(c => c.name)];
   
@@ -25,6 +28,14 @@ const Blog = () => {
     const matchesCategory = !selectedCategory || selectedCategory === 'All' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
+
+  // Reset page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory]);
 
   const featuredPosts = blogPosts.filter(post => post.featured);
 
@@ -193,9 +204,10 @@ const Blog = () => {
           </div>
 
           {/* Blog Posts Grid */}
+          <p className="text-sm text-muted-foreground mb-4">{filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.length > 0 ? (
-              filteredPosts.map((post) => (
+            {paginatedPosts.length > 0 ? (
+              paginatedPosts.map((post) => (
                 <Link key={post.id} to={`/blog/${post.slug}`}>
                   <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                     <div className="relative h-48 overflow-hidden">
@@ -242,6 +254,38 @@ const Blog = () => {
               </div>
             )}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-12">
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage === 1}
+                onClick={() => { setCurrentPage(p => p - 1); window.scrollTo({ top: 500, behavior: 'smooth' }); }}
+              >
+                Previous
+              </Button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                <Button
+                  key={page}
+                  variant={page === currentPage ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => { setCurrentPage(page); window.scrollTo({ top: 500, behavior: 'smooth' }); }}
+                >
+                  {page}
+                </Button>
+              ))}
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage === totalPages}
+                onClick={() => { setCurrentPage(p => p + 1); window.scrollTo({ top: 500, behavior: 'smooth' }); }}
+              >
+                Next
+              </Button>
+            </div>
+          )}
 
           {/* Newsletter & Reviews */}
           <div className="mt-16">
