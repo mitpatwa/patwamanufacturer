@@ -17,7 +17,8 @@ import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
 import ParallaxSection from "../components/ParallaxSection";
-import FloatingOrbs from "../components/FloatingOrbs";
+import { lazy, Suspense } from "react";
+const FloatingOrbs = lazy(() => import("../components/FloatingOrbs"));
 import SocialMediaBar from "../components/SocialMediaBar";
 
 const fadeInUp = {
