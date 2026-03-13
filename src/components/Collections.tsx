@@ -8,21 +8,24 @@ const collections = [
   {
     id: 1,
     name: "Tassels",
-    image: "/lovable-uploads/42cae155-c4aa-43de-9284-a4e9742f2678.png",
+    image: "/lovable-uploads/42cae155-c4aa-43de-9284-a4e9742f2678.webp",
+    fallback: "/lovable-uploads/42cae155-c4aa-43de-9284-a4e9742f2678.png",
     description: "Our signature tassels curated for the season",
     link: "/collections/tassels"
   },
   {
     id: 2,
     name: "Fringes",
-    image: "/lovable-uploads/fa393750-1cde-4474-bbf5-a168728afc85.png",
+    image: "/lovable-uploads/fa393750-1cde-4474-bbf5-a168728afc85.webp",
+    fallback: "/lovable-uploads/fa393750-1cde-4474-bbf5-a168728afc85.png",
     description: "Elegant fringes for sophisticated interiors",
     link: "/collections/fringes"
   },
   {
     id: 3,
     name: "Braids",
-    image: "/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.png",
+    image: "/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.webp",
+    fallback: "/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.png",
     description: "Intricately woven braids for any space",
     link: "/collections/braids"
   },
@@ -30,62 +33,71 @@ const collections = [
     id: 4,
     name: "Cords",
     image: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
+    fallback: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
     description: "Sophisticated cords for perfect finishing",
     link: "/collections/cords"
   },
   {
     id: 5,
     name: "Embellishments",
-    image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
+    image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.webp",
+    fallback: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
     description: "Exquisite embellishments for luxury finishing touches",
     link: "/collections/embelishments"
   },
   {
     id: 6,
     name: "Window Treatments",
-    image: "/lovable-uploads/22dbf7e8-5d12-4434-b5c6-0752a89dc5f2.png",
+    image: "/lovable-uploads/22dbf7e8-5d12-4434-b5c6-0752a89dc5f2.webp",
+    fallback: "/lovable-uploads/22dbf7e8-5d12-4434-b5c6-0752a89dc5f2.png",
     description: "Luxury curtains and drapes with premium trims",
     link: "/collections/window-treatments"
   },
   {
     id: 7,
     name: "Furniture Trims",
-    image: "/lovable-uploads/f4a2fabd-9067-47f8-8829-472487596808.png",
+    image: "/lovable-uploads/f4a2fabd-9067-47f8-8829-472487596808.webp",
+    fallback: "/lovable-uploads/f4a2fabd-9067-47f8-8829-472487596808.png",
     description: "Decorative trims for upholstery and furniture",
     link: "/collections/furniture-trims"
   },
   {
     id: 8,
     name: "Tie-backs & Holders",
-    image: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.png",
+    image: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.webp",
+    fallback: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.png",
     description: "Elegant curtain tie-backs and decorative holders",
     link: "/collections/tie-backs"
   },
   {
     id: 9,
     name: "Table Linens",
-    image: "/lovable-uploads/437a0270-a9b1-4eb4-84f9-a85debcfc454.png",
+    image: "/lovable-uploads/437a0270-a9b1-4eb4-84f9-a85debcfc454.webp",
+    fallback: "/lovable-uploads/437a0270-a9b1-4eb4-84f9-a85debcfc454.png",
     description: "Luxury table linens with decorative fringe details",
     link: "/collections/table-linens"
   },
   {
     id: 10,
     name: "Outdoor Fabrics",
-    image: "/lovable-uploads/1b6cb1fa-4e2d-4749-bfed-3ba4be2d0ce8.png",
+    image: "/lovable-uploads/1b6cb1fa-4e2d-4749-bfed-3ba4be2d0ce8.webp",
+    fallback: "/lovable-uploads/1b6cb1fa-4e2d-4749-bfed-3ba4be2d0ce8.png",
     description: "Weather-resistant fabrics with elegant trim accents",
     link: "/collections/outdoor-fabrics"
   },
   {
     id: 11,
     name: "Home Accessories",
-    image: "/lovable-uploads/ac771606-d69a-41ea-b768-9cdc879f906e.png",
+    image: "/lovable-uploads/ac771606-d69a-41ea-b768-9cdc879f906e.webp",
+    fallback: "/lovable-uploads/ac771606-d69a-41ea-b768-9cdc879f906e.png",
     description: "Decorative accessories featuring handcrafted details",
     link: "/collections/home-accessories"
   },
   {
     id: 12,
     name: "Window Shades",
-    image: "/lovable-uploads/4cedbac7-7b23-4c38-b534-aa37f45312a8.png",
+    image: "/lovable-uploads/4cedbac7-7b23-4c38-b534-aa37f45312a8.webp",
+    fallback: "/lovable-uploads/4cedbac7-7b23-4c38-b534-aa37f45312a8.png",
     description: "Custom window shades with premium trim finishes",
     link: "/collections/window-shades"
   }
@@ -168,13 +180,19 @@ const Collections = () => {
             <div
               className="relative h-[400px] md:h-[450px] overflow-hidden rounded-3xl"
             >
-              <img
-                src={collection.image}
-                alt={collection.name}
-                className={`w-full h-full object-cover transition-all duration-700 ${
-                  hoveredIndex === index ? "scale-110 brightness-110" : "scale-100"
-                }`}
-              />
+              <picture>
+                <source srcSet={collection.image} type="image/webp" />
+                <img
+                  src={collection.fallback}
+                  alt={collection.name}
+                  className={`w-full h-full object-cover transition-all duration-700 ${
+                    hoveredIndex === index ? "scale-110 brightness-110" : "scale-100"
+                  }`}
+                  loading="lazy"
+                  width={400}
+                  height={450}
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
               
               {/* Shimmer effect on hover */}

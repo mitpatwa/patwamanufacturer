@@ -4,7 +4,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/hero-1-new.png",
+    image: "/lovable-uploads/hero-1-new.webp",
     fallback: "/lovable-uploads/hero-1-new.png",
     title: "Exquisite Trimmings",
     subtitle: "Innovation, Quality, Creativity",
@@ -13,7 +13,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/lovable-uploads/hero-2-new.png",
+    image: "/lovable-uploads/hero-2-new.webp",
     fallback: "/lovable-uploads/hero-2-new.png",
     title: "Elegant Home Textiles",
     subtitle: "Quality, Craftsmanship, Inspiration",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/lovable-uploads/hero-3-new.png",
+    image: "/lovable-uploads/hero-3-new.webp",
     fallback: "/lovable-uploads/hero-3-new.png",
     title: "Artisanal Craftsmanship",
     subtitle: "Experience the art of traditional craftsmanship with modern precision",
@@ -74,7 +74,7 @@ const Hero = () => {
   }, [nextSlide]);
 
   return (
-    <section className="relative h-[90vh] lg:h-screen overflow-hidden">
+    <section className="relative h-[90vh] lg:h-screen overflow-hidden" style={{ minHeight: '90vh' }}>
       {/* Slide images with optimized loading */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -84,15 +84,18 @@ const Hero = () => {
               index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <img
-              src={slide.image}
-              alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
-              className="absolute inset-0 w-full h-full object-cover"
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "low"}
-              width={1920}
-              height={1080}
-            />
+            <picture>
+              <source srcSet={slide.image} type="image/webp" />
+              <img
+                src={slide.fallback}
+                alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
+                className="absolute inset-0 w-full h-full object-cover"
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "low"}
+                width={1920}
+                height={1080}
+              />
+            </picture>
             <div className="absolute inset-0 bg-black/30" />
           </div>
         ))}
