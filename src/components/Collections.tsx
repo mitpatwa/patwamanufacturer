@@ -180,13 +180,19 @@ const Collections = () => {
             <div
               className="relative h-[400px] md:h-[450px] overflow-hidden rounded-3xl"
             >
-              <img
-                src={collection.image}
-                alt={collection.name}
-                className={`w-full h-full object-cover transition-all duration-700 ${
-                  hoveredIndex === index ? "scale-110 brightness-110" : "scale-100"
-                }`}
-              />
+              <picture>
+                <source srcSet={collection.image} type="image/webp" />
+                <img
+                  src={collection.fallback}
+                  alt={collection.name}
+                  className={`w-full h-full object-cover transition-all duration-700 ${
+                    hoveredIndex === index ? "scale-110 brightness-110" : "scale-100"
+                  }`}
+                  loading="lazy"
+                  width={400}
+                  height={450}
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
               
               {/* Shimmer effect on hover */}
