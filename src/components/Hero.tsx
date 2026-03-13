@@ -84,15 +84,18 @@ const Hero = () => {
               index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <img
-              src={slide.image}
-              alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
-              className="absolute inset-0 w-full h-full object-cover"
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "low"}
-              width={1920}
-              height={1080}
-            />
+            <picture>
+              <source srcSet={slide.image} type="image/webp" />
+              <img
+                src={slide.fallback}
+                alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
+                className="absolute inset-0 w-full h-full object-cover"
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "low"}
+                width={1920}
+                height={1080}
+              />
+            </picture>
             <div className="absolute inset-0 bg-black/30" />
           </div>
         ))}

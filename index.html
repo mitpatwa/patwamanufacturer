@@ -186,8 +186,16 @@
       color: hsl(var(--foreground))
     }
 
+    /* Reserve font space to prevent CLS */
     .font-serif {
-      font-family: 'EB Garamond', serif
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size-adjust: 0.48;
+    }
+
+    /* Ensure fallback font metrics match to reduce CLS */
+    body, .font-sans {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size-adjust: 0.48;
     }
 
     @keyframes subtle-zoom {
