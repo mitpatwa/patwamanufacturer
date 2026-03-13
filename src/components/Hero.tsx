@@ -74,7 +74,7 @@ const Hero = () => {
   }, [nextSlide]);
 
   return (
-    <section className="relative h-[90vh] lg:h-screen overflow-hidden">
+    <section className="relative h-[90vh] lg:h-screen overflow-hidden" style={{ minHeight: '90vh' }}>
       {/* Slide images with optimized loading */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (

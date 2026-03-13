@@ -30,8 +30,10 @@ const fadeInUp = {
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Floating background orbs */}
-      <FloatingOrbs />
+      {/* Floating background orbs - lazy loaded to avoid forced reflow */}
+      <Suspense fallback={null}>
+        <FloatingOrbs />
+      </Suspense>
       
       <Helmet>
         <title>Patwa Manufacturer - Leading Passementerie, Tassel, Fringe & Braid Manufacturer India</title>
