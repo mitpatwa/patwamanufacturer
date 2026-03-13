@@ -222,10 +222,11 @@
     href="https://fonts.gstatic.com/s/ebgaramond/v32/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL99U6i1gmFJ.woff2"
     as="font" type="font/woff2" crossorigin>
 
-  <!-- Load fonts with display swap for better performance -->
-  <link
+  <!-- Load fonts non-render-blocking -->
+  <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 
 
 
