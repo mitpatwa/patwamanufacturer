@@ -4,7 +4,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/lovable-uploads/hero-1-new.png",
+    image: "/lovable-uploads/hero-1-new.webp",
     fallback: "/lovable-uploads/hero-1-new.png",
     title: "Exquisite Trimmings",
     subtitle: "Innovation, Quality, Creativity",
@@ -13,7 +13,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/lovable-uploads/hero-2-new.png",
+    image: "/lovable-uploads/hero-2-new.webp",
     fallback: "/lovable-uploads/hero-2-new.png",
     title: "Elegant Home Textiles",
     subtitle: "Quality, Craftsmanship, Inspiration",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/lovable-uploads/hero-3-new.png",
+    image: "/lovable-uploads/hero-3-new.webp",
     fallback: "/lovable-uploads/hero-3-new.png",
     title: "Artisanal Craftsmanship",
     subtitle: "Experience the art of traditional craftsmanship with modern precision",
