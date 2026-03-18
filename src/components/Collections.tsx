@@ -218,7 +218,7 @@ const Collections = () => {
                   className="mb-6 text-white/90 max-w-xs"
                 >
                   {collection.description}
-                </motion.p>
+                </p>
                 <Link 
                   to={collection.link} 
                   className={`magnetic-button inline-flex items-center transition-all duration-500 text-white group/link ${
