@@ -209,19 +209,13 @@ const Collections = () => {
             </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-10">
-                <motion.h3 
+              <h3 
                   className="text-2xl md:text-3xl font-serif mb-3 text-white text-glow"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
                 >
                   {collection.name}
-                </motion.h3>
-                <motion.p 
+                </h3>
+                <p 
                   className="mb-6 text-white/90 max-w-xs"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
                 >
                   {collection.description}
                 </motion.p>
