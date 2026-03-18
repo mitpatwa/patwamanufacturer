@@ -36,9 +36,6 @@ const LanguageSwitcher: React.FC = () => {
   const choose = (lang: Lang) => {
     setCurrent(lang);
     setOpen(false);
-    if (window.setLanguage) {
-      window.setLanguage(lang.code);
-    }
     localStorage.setItem('siteLang', lang.code);
     document.documentElement.setAttribute('lang', lang.code);
   };
