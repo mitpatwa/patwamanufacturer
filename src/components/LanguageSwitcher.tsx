@@ -17,9 +17,6 @@ const languages: Lang[] = [
   { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
 ];
 
-declare global {
-  interface Window { setLanguage?: (lang: string) => void }
-}
 
 const LanguageSwitcher: React.FC = () => {
   const [open, setOpen] = useState(false);
