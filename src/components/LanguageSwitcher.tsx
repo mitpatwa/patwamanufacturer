@@ -28,8 +28,8 @@ const LanguageSwitcher: React.FC = () => {
     const found = languages.find(l => l.code === saved);
     if (found) {
       setCurrent(found);
-      if (window.setLanguage) window.setLanguage(found.code);
       document.documentElement.setAttribute('lang', found.code);
+    }
     }
   }, []);
 
