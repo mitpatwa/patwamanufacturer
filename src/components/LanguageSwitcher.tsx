@@ -30,7 +30,6 @@ const LanguageSwitcher: React.FC = () => {
       setCurrent(found);
       document.documentElement.setAttribute('lang', found.code);
     }
-    }
   }, []);
 
   const choose = (lang: Lang) => {
