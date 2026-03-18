@@ -17,9 +17,6 @@ const languages: Lang[] = [
   { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
 ];
 
-declare global {
-  interface Window { setLanguage?: (lang: string) => void }
-}
 
 const LanguageSwitcher: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -31,7 +28,6 @@ const LanguageSwitcher: React.FC = () => {
     const found = languages.find(l => l.code === saved);
     if (found) {
       setCurrent(found);
-      if (window.setLanguage) window.setLanguage(found.code);
       document.documentElement.setAttribute('lang', found.code);
     }
   }, []);
@@ -39,9 +35,6 @@ const LanguageSwitcher: React.FC = () => {
   const choose = (lang: Lang) => {
     setCurrent(lang);
     setOpen(false);
-    if (window.setLanguage) {
-      window.setLanguage(lang.code);
-    }
     localStorage.setItem('siteLang', lang.code);
     document.documentElement.setAttribute('lang', lang.code);
   };
