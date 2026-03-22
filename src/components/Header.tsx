@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm py-3' : 'py-5 bg-background/80 backdrop-blur-sm border-b border-white/10'
+        isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm py-3' : 'py-5 bg-background/90 backdrop-blur-md border-b border-border/20'
       }`}
     >
       <div className="container-custom">
@@ -72,9 +72,7 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
-              className={`text-xl md:text-2xl font-serif font-medium tracking-wider transition-colors duration-300 ${
-                isScrolled || isMenuOpen ? 'text-primary' : 'text-white'
-              }`}
+              className="text-xl md:text-2xl font-serif font-medium tracking-wider text-foreground"
             >
               PATWA MANUFACTURER
             </motion.h1>
@@ -90,18 +88,14 @@ const Header = () => {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 ${
-                        isScrolled ? 'text-primary' : 'text-white'
-                      }`}
+                      className="text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 text-foreground"
                     >
                       {item.name}
                     </a>
                   ) : (
                     <Link 
                       to={item.link}
-                      className={`text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 ${
-                        isScrolled ? 'text-primary' : 'text-white'
-                      }`}
+                      className="text-sm font-medium hover:text-gold-600 transition-colors duration-300 py-2 text-foreground"
                     >
                       {item.name}
                     </Link>
