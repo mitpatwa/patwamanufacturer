@@ -1,5 +1,4 @@
 
-import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -259,31 +258,10 @@ const Index = () => {
           <StatsSection />
         </ParallaxSection>
         
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <CustomizationHighlight />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Story />
-        </motion.div>
+        <CustomizationHighlight />
+        <Story />
         <TestimonialsCarousel />
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Newsletter />
-        </motion.div>
+        <Newsletter />
         </article>
       </main>
       <Footer />
