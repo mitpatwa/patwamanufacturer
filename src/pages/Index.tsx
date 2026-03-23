@@ -1,5 +1,4 @@
 
-import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -16,25 +15,11 @@ import ScrollToTop from "../components/ScrollToTop";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
-import ParallaxSection from "../components/ParallaxSection";
-import { lazy, Suspense } from "react";
-const FloatingOrbs = lazy(() => import("../components/FloatingOrbs"));
 import SocialMediaBar from "../components/SocialMediaBar";
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 }
-};
 
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Floating background orbs - lazy loaded to avoid forced reflow */}
-      <Suspense fallback={null}>
-        <FloatingOrbs />
-      </Suspense>
-      
       <Helmet>
         <title>Patwa Manufacturer - Leading Passementerie, Tassel, Fringe & Braid Manufacturer India</title>
         <meta name="description" content="Premier manufacturer & supplier of luxury passementerie, custom tassels, decorative fringes, braids & trimmings. Direct from manufacturer in India. Wholesale & custom orders. MOQ flexible. Export worldwide." />
@@ -261,36 +246,12 @@ const Index = () => {
         <Collections />
         <ProductShowcase />
         
-        {/* Enhanced Stats Section */}
-        <ParallaxSection speed={0.3}>
-          <StatsSection />
-        </ParallaxSection>
+        <StatsSection />
         
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <CustomizationHighlight />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Story />
-        </motion.div>
+        <CustomizationHighlight />
+        <Story />
         <TestimonialsCarousel />
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-        >
-          <Newsletter />
-        </motion.div>
+        <Newsletter />
         </article>
       </main>
       <Footer />
