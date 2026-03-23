@@ -17,8 +17,6 @@ import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
 import ParallaxSection from "../components/ParallaxSection";
-import { lazy, Suspense } from "react";
-const FloatingOrbs = lazy(() => import("../components/FloatingOrbs"));
 import SocialMediaBar from "../components/SocialMediaBar";
 
 const fadeInUp = {
@@ -30,11 +28,6 @@ const fadeInUp = {
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Floating background orbs - lazy loaded to avoid forced reflow */}
-      <Suspense fallback={null}>
-        <FloatingOrbs />
-      </Suspense>
-      
       <Helmet>
         <title>Patwa Manufacturer - Leading Passementerie, Tassel, Fringe & Braid Manufacturer India</title>
         <meta name="description" content="Premier manufacturer & supplier of luxury passementerie, custom tassels, decorative fringes, braids & trimmings. Direct from manufacturer in India. Wholesale & custom orders. MOQ flexible. Export worldwide." />
