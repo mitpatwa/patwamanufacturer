@@ -15,14 +15,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
-import ParallaxSection from "../components/ParallaxSection";
 import SocialMediaBar from "../components/SocialMediaBar";
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 }
-};
 
 const Index = () => {
   return (
@@ -253,10 +246,7 @@ const Index = () => {
         <Collections />
         <ProductShowcase />
         
-        {/* Enhanced Stats Section */}
-        <ParallaxSection speed={0.3}>
-          <StatsSection />
-        </ParallaxSection>
+        <StatsSection />
         
         <CustomizationHighlight />
         <Story />
