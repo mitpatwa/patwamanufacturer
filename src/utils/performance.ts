@@ -122,11 +122,15 @@ export const optimizeResourceLoading = () => {
   // Preload critical resources
   const preloadCriticalResources = () => {
     const criticalImages = [
-      '/lovable-uploads/hero-1-trimmings.webp',
-      '/lovable-uploads/hero-1-trimmings.png'
+      '/lovable-uploads/hero-1-new.webp',
+      '/lovable-uploads/hero-1-new.png'
     ];
 
     criticalImages.forEach((src) => {
+      if (document.querySelector(`link[rel="preload"][href="${src}"]`)) {
+        return;
+      }
+
       const link = document.createElement('link');
       link.rel = 'preload';
       link.as = 'image';
@@ -136,31 +140,8 @@ export const optimizeResourceLoading = () => {
     });
   };
 
-  // Defer non-critical resources
-  const deferNonCriticalResources = () => {
-    const nonCriticalSelectors = [
-      'link[rel="stylesheet"]:not([media="print"])',
-      'script:not([defer]):not([async])'
-    ];
-
-    nonCriticalSelectors.forEach((selector) => {
-      const elements = document.querySelectorAll(selector);
-      elements.forEach((element) => {
-        if (element instanceof HTMLLinkElement) {
-          element.media = 'print';
-          element.onload = () => {
-            element.media = 'all';
-          };
-        } else if (element instanceof HTMLScriptElement) {
-          element.defer = true;
-        }
-      });
-    });
-  };
-
   // Initialize optimizations
   preloadCriticalResources();
-  deferNonCriticalResources();
 };
 
 // Initialize performance monitoring
