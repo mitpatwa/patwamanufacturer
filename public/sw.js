@@ -1,5 +1,5 @@
 // Service Worker for caching optimization
-const CACHE_VERSION = 'v2'; // Updated for new caching strategies
+const CACHE_VERSION = 'v3';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
 const FONT_CACHE = `fonts-${CACHE_VERSION}`;
@@ -9,10 +9,8 @@ const MAX_DYNAMIC_CACHE_SIZE = 50; // Limit dynamic cache size
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/src/main.tsx',
-  '/src/App.tsx',
-  '/lovable-uploads/hero-1-trimmings.webp',
-  '/lovable-uploads/hero-1-trimmings.png',
+  '/lovable-uploads/hero-1-new.webp',
+  '/lovable-uploads/hero-1-new.png',
   '/patwa-logo.png'
 ];
 
@@ -80,6 +78,23 @@ self.addEventListener('fetch', (event) => {
 
   // Skip external requests (except fonts handled above)
   if (url.origin !== location.origin) {
+    return;
+  }
+
+   if (request.mode === 'navigate') {
+    event.respondWith(
+      fetchWithTimeout(request, 5000)
+        .then((networkResponse) => {
+          const responseToCache = networkResponse.clone();
+          caches.open(DYNAMIC_CACHE).then((cache) => {
+            cache.put('/index.html', responseToCache);
+          });
+          return networkResponse;
+        })
+        .catch(async () => {
+          return (await caches.match(request)) || caches.match('/index.html');
+        })
+    );
     return;
   }
 
