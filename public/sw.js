@@ -1,190 +1,125 @@
 // Service Worker for caching optimization
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
 const FONT_CACHE = `fonts-${CACHE_VERSION}`;
-const MAX_DYNAMIC_CACHE_SIZE = 50; // Limit dynamic cache size
+const MAX_DYNAMIC_CACHE_SIZE = 50;
 
-// Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/lovable-uploads/hero-1-new.webp',
-  '/lovable-uploads/hero-1-new.png',
   '/patwa-logo.png'
 ];
 
-// Install event - cache static assets
+// Install - cache static assets and activate immediately
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
-      .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      })
+      .then((cache) => cache.addAll(STATIC_ASSETS))
+      .then(() => self.skipWaiting())
   );
 });
 
-// Activate event - clean up old caches
+// Activate - purge ALL old caches and take control
 self.addEventListener('activate', (event) => {
+  const currentCaches = [STATIC_CACHE, DYNAMIC_CACHE, FONT_CACHE];
   event.waitUntil(
     caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
+      .then((cacheNames) =>
+        Promise.all(
           cacheNames
-            .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE &&
-                cacheName !== DYNAMIC_CACHE &&
-                cacheName !== FONT_CACHE;
-            })
-            .map((cacheName) => {
-              return caches.delete(cacheName);
-            })
-        );
-      })
-      .then(() => {
-        return self.clients.claim();
-      })
+            .filter((name) => !currentCaches.includes(name))
+            .map((name) => caches.delete(name))
+        )
+      )
+      .then(() => self.clients.claim())
   );
 });
 
-// Fetch event - serve from cache with network fallback
+// Listen for skip-waiting message from the app
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
+// Fetch - network-first for navigation, stale-while-revalidate for assets
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
+  if (request.method !== 'GET') return;
 
-  // Handle Google Fonts with dedicated caching
+  // Google Fonts - cache-first (they never change)
   if (url.origin === 'https://fonts.googleapis.com' ||
-    url.origin === 'https://fonts.gstatic.com') {
+      url.origin === 'https://fonts.gstatic.com') {
     event.respondWith(
-      caches.open(FONT_CACHE).then((cache) => {
-        return cache.match(request).then((response) => {
-          return response || fetch(request).then((networkResponse) => {
-            cache.put(request, networkResponse.clone());
-            return networkResponse;
-          });
-        });
-      })
-    );
-    return;
-  }
-
-  // Skip external requests (except fonts handled above)
-  if (url.origin !== location.origin) {
-    return;
-  }
-
-   if (request.mode === 'navigate') {
-    event.respondWith(
-      fetchWithTimeout(request, 5000)
-        .then((networkResponse) => {
-          const responseToCache = networkResponse.clone();
-          caches.open(DYNAMIC_CACHE).then((cache) => {
-            cache.put('/index.html', responseToCache);
-          });
-          return networkResponse;
-        })
-        .catch(async () => {
-          return (await caches.match(request)) || caches.match('/index.html');
-        })
-    );
-    return;
-  }
-
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        // Fetch with timeout
-        return fetchWithTimeout(request, 5000)
-          .then((networkResponse) => {
-            // Don't cache non-successful responses
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse;
-            }
-
-            // Clone the response
-            const responseToCache = networkResponse.clone();
-
-            // Cache images and static assets
-            if (request.destination === 'image' ||
-              request.url.includes('/assets/') ||
-              request.url.includes('/lovable-uploads/')) {
-              caches.open(DYNAMIC_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                  // Limit cache size
-                  limitCacheSize(DYNAMIC_CACHE, MAX_DYNAMIC_CACHE_SIZE);
-                });
-            }
-
-            return networkResponse;
+      caches.open(FONT_CACHE).then((cache) =>
+        cache.match(request).then((cached) =>
+          cached || fetch(request).then((res) => {
+            cache.put(request, res.clone());
+            return res;
           })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/index.html');
-            }
+        )
+      )
+    );
+    return;
+  }
+
+  // Skip external requests
+  if (url.origin !== location.origin) return;
+
+  // Navigation - always network-first
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((res) => {
+          const clone = res.clone();
+          caches.open(STATIC_CACHE).then((c) => c.put('/index.html', clone));
+          return res;
+        })
+        .catch(() => caches.match('/index.html'))
+    );
+    return;
+  }
+
+  // Hashed assets (Vite output) - cache-first (content-addressed)
+  if (url.pathname.startsWith('/assets/') && /\.[a-f0-9]{8,}\./.test(url.pathname)) {
+    event.respondWith(
+      caches.match(request).then((cached) =>
+        cached || fetch(request).then((res) => {
+          if (res.ok) {
+            const clone = res.clone();
+            caches.open(DYNAMIC_CACHE).then((c) => c.put(request, clone));
+          }
+          return res;
+        })
+      )
+    );
+    return;
+  }
+
+  // Other same-origin requests - network-first
+  event.respondWith(
+    fetch(request)
+      .then((res) => {
+        if (res.ok && (request.destination === 'image' || url.pathname.startsWith('/lovable-uploads/'))) {
+          const clone = res.clone();
+          caches.open(DYNAMIC_CACHE).then((c) => {
+            c.put(request, clone);
+            limitCacheSize(DYNAMIC_CACHE, MAX_DYNAMIC_CACHE_SIZE);
           });
+        }
+        return res;
       })
+      .catch(() => caches.match(request))
   );
 });
 
-// Background sync for analytics
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Send queued analytics data
-      sendQueuedAnalytics()
-    );
-  }
-});
-
-// Function to send queued analytics
-async function sendQueuedAnalytics() {
-  try {
-    const cache = await caches.open('analytics-queue');
-    const requests = await cache.keys();
-
-    for (const request of requests) {
-      try {
-        await fetch(request);
-        await cache.delete(request);
-      } catch (error) {
-        console.log('Failed to send analytics:', error);
-      }
-    }
-  } catch (error) {
-    console.log('Analytics sync failed:', error);
-  }
-}
-
-// Helper function to fetch with timeout
-function fetchWithTimeout(request, timeout = 5000) {
-  return Promise.race([
-    fetch(request),
-    new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('Request timeout')), timeout)
-    )
-  ]);
-}
-
-// Helper function to limit cache size
 async function limitCacheSize(cacheName, maxItems) {
   const cache = await caches.open(cacheName);
   const keys = await cache.keys();
   if (keys.length > maxItems) {
-    // Delete oldest entries
     await cache.delete(keys[0]);
     await limitCacheSize(cacheName, maxItems);
   }
