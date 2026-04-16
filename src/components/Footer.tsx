@@ -35,7 +35,7 @@ const Footer = () => {
 
   // Updated social media links - using Twitter icon for Pinterest since Pinterest icon isn't available in lucide-react
   const socialLinks = [
-    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/patwa_manufacturer" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/patwa_manufacturer?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
     { name: "Pinterest", icon: Twitter, href: "https://in.pinterest.com/patwamanufacturers/" }, // Using Twitter icon as placeholder
     { name: "Facebook", icon: Facebook, href: "#" },
     { name: "Youtube", icon: Youtube, href: "#" },
