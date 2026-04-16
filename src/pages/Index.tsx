@@ -16,6 +16,7 @@ import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
 import StatsSection from "../components/StatsSection";
 import SocialMediaBar from "../components/SocialMediaBar";
+import InspirationGallery from "../components/InspirationGallery";
 
 const Index = () => {
   return (
@@ -250,6 +251,7 @@ const Index = () => {
         
         <CustomizationHighlight />
         <Story />
+        <InspirationGallery />
         <TestimonialsCarousel />
         <Newsletter />
         </article>
