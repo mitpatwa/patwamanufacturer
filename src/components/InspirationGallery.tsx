@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
 const galleryImages = [
   { src: '/images/gallery/bagatelle-12.jpg', alt: 'Bagatelle collection - luxury passementerie in elegant interior setting' },
@@ -50,20 +51,20 @@ const InspirationGallery = () => {
       </div>
 
       {/* Lightbox */}
-      {lightboxIndex !== null && (
+      {lightboxIndex !== null && createPortal(
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-4"
           onClick={() => setLightboxIndex(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white/80 hover:text-white text-3xl leading-none"
+            className="absolute top-4 right-4 text-white/80 hover:text-white text-3xl leading-none z-10"
             onClick={() => setLightboxIndex(null)}
             aria-label="Close lightbox"
           >
             ✕
           </button>
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl leading-none px-2"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl leading-none px-2 z-10"
             onClick={(e) => {
               e.stopPropagation();
               setLightboxIndex((lightboxIndex - 1 + galleryImages.length) % galleryImages.length);
@@ -78,7 +79,7 @@ const InspirationGallery = () => {
             className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
           />
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl leading-none px-2"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl leading-none px-2 z-10"
             onClick={(e) => {
               e.stopPropagation();
               setLightboxIndex((lightboxIndex + 1) % galleryImages.length);
@@ -87,7 +88,8 @@ const InspirationGallery = () => {
           >
             ›
           </button>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
