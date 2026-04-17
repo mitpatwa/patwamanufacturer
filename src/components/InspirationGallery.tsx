@@ -12,6 +12,14 @@ const galleryImages = [
   { src: '/images/gallery/bagatelle-20.jpg', alt: 'Bagatelle collection - decorative trims in modern setting' },
   { src: '/images/gallery/bagatelle-22.jpg', alt: 'Bagatelle collection - artisan crafted embellishments' },
   { src: '/images/gallery/bagatelle-23.jpg', alt: 'Bagatelle collection - sophisticated tassel arrangements' },
+  { src: '/images/gallery/saisons-02.jpg', alt: 'Saisons collection - luxury passementerie installation in elegant interior' },
+  { src: '/images/gallery/savanna-04.jpg', alt: 'Savanna collection - artisan trimmings adorning sophisticated drapery' },
+  { src: '/images/gallery/semma-09.jpg', alt: 'Semma collection - handcrafted decorative trims in styled setting' },
+  { src: '/images/gallery/seychelles-04.jpg', alt: 'Seychelles collection - bespoke tassels enhancing window treatments' },
+  { src: '/images/gallery/sophie-01.jpg', alt: 'Sophie collection - refined passementerie in luxury interior design' },
+  { src: '/images/gallery/sophie-11.jpg', alt: 'Sophie collection - elegant tie-backs and trim detailing' },
+  { src: '/images/gallery/taos-09.jpg', alt: 'Taos collection - premium decorative embellishments in modern home' },
+  { src: '/images/gallery/tiverton-01.jpg', alt: 'Tiverton collection - sophisticated braids and trim installation' },
 ];
 
 const InspirationGallery = () => {
