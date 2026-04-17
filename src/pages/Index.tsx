@@ -3,18 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Collections from "../components/Collections";
-import ProductShowcase from "../components/ProductShowcase";
-import Story from "../components/Story";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-
-
-import CustomizationHighlight from "../components/CustomizationHighlight";
 import WhatsAppFloat from "../components/WhatsAppFloat";
 import ScrollToTop from "../components/ScrollToTop";
-import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import InteractiveSearch from "../components/InteractiveSearch";
-import StatsSection from "../components/StatsSection";
 import SocialMediaBar from "../components/SocialMediaBar";
 import InspirationGallery from "../components/InspirationGallery";
 
@@ -245,14 +238,7 @@ const Index = () => {
           <meta itemProp="description" content="Leading manufacturer of luxury passementerie, custom tassels, fringes, braids & decorative trimmings" />
         <Hero />
         <Collections />
-        <ProductShowcase />
-        
-        <StatsSection />
-        
-        <CustomizationHighlight />
-        <Story />
         <InspirationGallery />
-        <TestimonialsCarousel />
         <Newsletter />
         </article>
       </main>
