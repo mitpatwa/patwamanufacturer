@@ -259,5 +259,32 @@
     <lastmod>2025-12-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  <url>
+    <loc>https://patwamanufacturer.lovable.app/blog/fringe-trim-guide</loc>
+    <lastmod>2025-12-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
+  <!-- Blog Categories -->
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/education</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/how-to</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/design-ideas</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/trends</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/design-philosophy</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/maintenance</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/materials</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/room-design</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/history</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/commercial</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/sustainability</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/diy</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/design-guide</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/product-guide</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/fashion</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/blog/category/business</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- Internal/Utility Pages -->
+  <url><loc>https://patwamanufacturer.lovable.app/analysis</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://patwamanufacturer.lovable.app/content-calendar</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 </urlset>

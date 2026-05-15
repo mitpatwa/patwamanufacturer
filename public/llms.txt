@@ -1,0 +1,49 @@
+# Patwa Manufacturer
+
+> Direct manufacturer of luxury passementerie — custom tassels, fringes, braids, cords, and decorative trims handcrafted in India and exported worldwide since 1990.
+
+## Pages
+
+- [Home](/): Overview of Patwa Manufacturer's luxury passementerie offering.
+- [About](/about): 30+ year heritage, artisans, and manufacturing facility.
+- [Passementerie Manufacturer](/passementerie-manufacturer): Manufacturing capabilities and services.
+- [Custom Services](/custom-services): Bespoke design and custom manufacturing.
+- [Product Configurator](/configurator): Interactive tool to design custom tassels and trims.
+- [Trade Program](/trade-program): For interior designers and trade buyers.
+- [Order Samples](/order-samples): Request physical samples before bulk orders.
+- [Find a Designer](/find-designer): Connect with interior designers using our products.
+- [Sustainability](/sustainability): Eco-friendly materials and ethical production.
+- [Blog](/blog): Articles on passementerie, design, and trends.
+- [AI Access](/ai-access): Machine-readable catalog and AI assistant access.
+- [Support](/support): Help and contact information.
+
+## Collections
+
+- [Tassels](/collections/tassels): Silk, crystal, and metallic decorative tassels.
+- [Fringes](/collections/fringes): Bullion, brush, and silk fringe trims.
+- [Braids](/collections/braids): Decorative braids and gimp trim.
+- [Cords](/collections/cords): Silk cords and rope ties.
+- [Tie-backs](/collections/tie-backs): Curtain tiebacks and holders.
+- [Embellishments](/collections/embelishments): Beaded accents and metallic trims.
+- [Window Treatments](/collections/window-treatments): Custom curtains and drapes.
+- [Window Shades](/collections/window-shades): Roman shades with trim finishes.
+- [Furniture Trims](/collections/furniture-trims): Sofa fringes and chair borders.
+- [Home Accessories](/collections/home-accessories): Pillows and accent pieces.
+- [Table Linens](/collections/table-linens): Decorative tablecloths and runners.
+- [Outdoor Fabrics](/collections/outdoor-fabrics): Weather-resistant trims and textiles.
+
+## Blog Categories
+
+- [Education](/blog/category/education): Passementerie fundamentals.
+- [How-To](/blog/category/how-to): Tutorials for applying decorative trims.
+- [Design Ideas](/blog/category/design-ideas): Inspiration for interior design.
+- [Trends](/blog/category/trends): Latest passementerie and design trends.
+- [Materials](/blog/category/materials): Fibers and fabrics deep dives.
+- [History](/blog/category/history): Heritage of passementerie across cultures.
+
+## Optional
+
+- [Returns & Exchanges](/returns-exchanges)
+- [Privacy Policy](/privacy-policy)
+- [Terms of Service](/terms-of-service)
+- [Product Catalog (JSON)](/ai-product-catalog.json)
