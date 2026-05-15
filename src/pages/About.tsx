@@ -10,8 +10,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>About Patwa Manufacturer - 30+ Years Passementerie Manufacturing Excellence India</title>
-        <meta name="description" content="Established manufacturer of luxury passementerie since 1990. Specializing in custom tassels, fringes, braids & decorative trims. 50+ artisans, export to 30+ countries. ISO certified manufacturing facility in India." />
+        <title>About Patwa Manufacturer | Passementerie Since 1990</title>
+        <meta name="description" content="Luxury passementerie maker since 1990. 50+ artisans crafting custom tassels, fringes & trims, exported to 30+ countries." />
         <meta name="keywords" content="about Patwa Manufacturer, passementerie manufacturer India, tassel manufacturer heritage, luxury trim factory, handcrafted passementerie, decorative trim manufacturer, artisan tassel maker, ISO certified trim manufacturer, export passementerie manufacturer, wholesale tassel supplier, passementerie manufacturing facility" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/about" />
         

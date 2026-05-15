@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 const Sustainability = () => (
   <div className="min-h-screen bg-background">
     <Helmet>
-      <title>Sustainability & Ethical Manufacturing | Eco-Friendly Passementerie | Patwa Manufacturer</title>
-      <meta name="description" content="Sustainable passementerie manufacturing with eco-friendly materials, ethical production, and waste reduction. Learn about our commitment to environmental responsibility and heritage preservation." />
+      <title>Sustainable Passementerie Manufacturing | Patwa Manufacturer</title>
+      <meta name="description" content="Eco-friendly passementerie crafted with ethical materials, low-waste production, and fair-trade artisans." />
       <meta name="keywords" content="sustainable textiles, eco-friendly trims, ethical manufacturing, sustainable passementerie, green production, waste reduction, fair trade textiles, sustainable craftsmanship" />
       <link rel="canonical" href="https://patwamanufacturer.lovable.app/sustainability" />
       <meta property="og:title" content="Sustainability & Ethical Manufacturing | Patwa Manufacturer" />
