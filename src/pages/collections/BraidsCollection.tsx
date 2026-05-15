@@ -12,10 +12,14 @@ const BraidsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Decorative Braids Collection - Custom Upholstery Trim | Patwa Manufacturer</title>
-        <meta name="description" content="Premium decorative braids and gimp trim collection for upholstery, cushions, and drapery. Handcrafted luxury braids with custom colors and designs. Made in India." />
+        <title>Luxury Braids Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Handcrafted decorative braids and gimp trim for upholstery, cushions, and drapery. Custom colors made in India." />
         <meta name="keywords" content="decorative braids, upholstery trim, gimp braid, cushion edging, luxury braids, handcrafted trim, passementerie braids, custom braids" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/braids" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/braids" />
+        <meta property="og:title" content="Luxury Braids Collection | Patwa Manufacturer" />
+        <meta property="og:description" content="Decorative braids and gimp trim handcrafted for upholstery, cushions, and drapery." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

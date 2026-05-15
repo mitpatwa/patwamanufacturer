@@ -14,10 +14,14 @@ const TasselsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Tassel Trim Manufacturer | Custom Luxury Tassels Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Leading tassel trim manufacturer offering custom luxury tassels, handcrafted passementerie tassels, silk tassels, and crystal tassels for interior designers. Export quality from India." />
+        <title>Luxury Tassels Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Custom luxury tassels in silk, crystal, and metallic finishes — handcrafted passementerie from India." />
         <meta name="keywords" content="tassel trim manufacturer, custom luxury tassels, handcrafted tassels, passementerie tassels, silk tassels, crystal tassels, curtain tassels, decorative tassels, luxury curtain tiebacks supplier, artisan curtain accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/tassels" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/tassels" />
+        <meta property="og:title" content="Luxury Tassels Collection | Patwa Manufacturer" />
+        <meta property="og:description" content="Handcrafted silk, crystal, and metallic tassels for curtains, upholstery, and luxury interiors." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
