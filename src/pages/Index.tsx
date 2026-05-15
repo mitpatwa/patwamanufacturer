@@ -15,8 +15,8 @@ const Index = () => {
   return (
     <div className="min-h-screen relative">
       <Helmet>
-        <title>Patwa Manufacturer - Leading Passementerie, Tassel, Fringe & Braid Manufacturer India</title>
-        <meta name="description" content="Premier manufacturer & supplier of luxury passementerie, custom tassels, decorative fringes, braids & trimmings. Direct from manufacturer in India. Wholesale & custom orders. MOQ flexible. Export worldwide." />
+        <title>Patwa Manufacturer | Luxury Passementerie & Tassels India</title>
+        <meta name="description" content="Direct manufacturer of luxury passementerie, tassels, fringes, braids & decorative trims. Wholesale, custom orders, worldwide export." />
         <meta name="keywords" content="passementerie manufacturer, tassel manufacturer India, fringe manufacturer, braid manufacturer, decorative trim manufacturer, curtain tassel supplier, wholesale passementerie, custom tassel manufacturer, upholstery trim manufacturer, bulk tassel supplier, passementerie factory India, decorative trimmings manufacturer, curtain accessories manufacturer, luxury trim manufacturer, handcrafted tassel manufacturer, custom fringe manufacturer, wholesale decorative trims, passementerie supplier India, tassel factory, trim manufacturer exporter" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/" />
         

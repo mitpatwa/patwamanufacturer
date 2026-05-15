@@ -13,13 +13,14 @@ const EmbelishmentsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Embellishments & Decorative Trims Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Exquisite embellishments and decorative trim collection featuring beaded accents, metallic trims, and luxury finishings for interior design projects." />
+        <title>Luxury Embellishments Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Beaded accents, metallic trims, and decorative embellishments for luxury interior projects." />
         <meta name="keywords" content="luxury embellishments, decorative trims, beaded accents, metallic trims, passementerie embellishments, custom trim work, interior design accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/embelishments" />
         <meta property="og:title" content="Luxury Embellishments Collection | Patwa Manufacturer" />
-        <meta property="og:description" content="Exquisite embellishments and decorative trims for luxury interior design." />
+        <meta property="og:description" content="Beaded accents and metallic trims that finish any luxury interior project." />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/embelishments" />
+        <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

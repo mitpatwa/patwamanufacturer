@@ -12,10 +12,14 @@ const FringesCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Fringe Trim Collection - Custom Decorative Fringes | Patwa Manufacturer</title>
-        <meta name="description" content="Exquisite fringe trim collection featuring bullion, brush, and silk fringes. Custom decorative fringe trims for upholstery, drapery, and interior design. Made in India." />
+        <title>Luxury Fringe Trim Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Custom bullion, brush, and silk fringe trims for upholstery, drapery, and decor. Handcrafted in India." />
         <meta name="keywords" content="luxury fringe trim, decorative fringes, bullion fringe, silk fringe, upholstery fringe, drapery trim, passementerie fringe, custom fringe, beaded fringe trim wholesale" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/fringes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/fringes" />
+        <meta property="og:title" content="Luxury Fringe Trim Collection | Patwa Manufacturer" />
+        <meta property="og:description" content="Bullion, brush and silk fringe trims handcrafted for upholstery and drapery." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

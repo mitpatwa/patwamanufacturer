@@ -48,7 +48,7 @@ const Blog = () => {
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/blog" />
         
         {/* Open Graph */}
-        <meta property="og:type" content="blog" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/blog" />
         <meta property="og:title" content="Passementerie Blog - Design Insights & Trends | Patwa Manufacturer" />
         <meta property="og:description" content="Expert insights on interior design trimmings, passementerie trends, and decorative textiles." />

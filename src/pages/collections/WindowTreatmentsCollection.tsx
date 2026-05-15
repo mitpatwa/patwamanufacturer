@@ -11,8 +11,12 @@ const WindowTreatmentsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Window Treatments Collection - Custom Curtains & Drapes | Patwa Manufacturer</title>
-        <meta name="description" content="Exquisite window treatments featuring custom curtains, drapes, and luxury window accessories with handcrafted passementerie details. Premium interior décor from India." />
+        <title>Luxury Window Treatments Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Custom curtains, drapes, and window accessories with handcrafted passementerie details from India." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/window-treatments" />
+        <meta property="og:title" content="Luxury Window Treatments | Patwa Manufacturer" />
+        <meta property="og:description" content="Custom curtains and drapes finished with handcrafted passementerie." />
         <meta name="keywords" content="luxury window treatments, custom curtains, decorative drapes, window accessories, passementerie curtains, interior décor manufacturers India, custom window drapery, luxury curtain accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/window-treatments" />
         <script type="application/ld+json">

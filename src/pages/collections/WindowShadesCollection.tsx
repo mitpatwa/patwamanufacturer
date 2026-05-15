@@ -11,8 +11,12 @@ const WindowShadesCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Custom Window Shades & Roman Shades - Luxury Trim Finishes | Patwa Manufacturer</title>
-        <meta name="description" content="Premium window shades collection featuring custom Roman shades, roller blinds with elegant trim finishes. Luxury window treatments with decorative passementerie details." />
+        <title>Custom Window Shades & Roman Shades | Patwa Manufacturer</title>
+        <meta name="description" content="Roman shades and roller blinds with luxury passementerie trim finishes. Made in India." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/window-shades" />
+        <meta property="og:title" content="Window Shades & Roman Shades | Patwa Manufacturer" />
+        <meta property="og:description" content="Roman shades and roller blinds finished with handcrafted passementerie trim." />
         <meta name="keywords" content="custom window shades, Roman shades, luxury window treatments, decorative trim, roller blinds, window shade trim, passementerie window shades" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/window-shades" />
         <script type="application/ld+json">
