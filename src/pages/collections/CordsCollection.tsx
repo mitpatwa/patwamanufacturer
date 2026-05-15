@@ -11,8 +11,12 @@ const CordsCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Cords & Tiebacks Collection - Custom Curtain Tiebacks | Patwa Manufacturer</title>
-        <meta name="description" content="Premium cords and tiebacks collection featuring silk cords, decorative tiebacks, and rope ties. Custom curtain tiebacks for luxury drapery and window treatments." />
+        <title>Luxury Cords & Tiebacks Collection | Patwa Manufacturer</title>
+        <meta name="description" content="Silk cords, decorative tiebacks, and rope ties for luxury drapery and window treatments." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/cords" />
+        <meta property="og:title" content="Luxury Cords & Tiebacks Collection | Patwa Manufacturer" />
+        <meta property="og:description" content="Silk cords and decorative tiebacks for luxury curtains and drapery." />
         <meta name="keywords" content="luxury cords, curtain tiebacks, decorative tiebacks, silk cords, rope tiebacks, drapery ties, window treatment accessories, custom tiebacks, luxury curtain tiebacks supplier, decorative cords and piping" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/cords" />
         <script type="application/ld+json">

@@ -11,8 +11,12 @@ const HomeAccessoriesCollection = () => {
   return (
     <>
       <Helmet>
-        <title>Decorative Home Accessories Collection - Handcrafted Passementerie Details | Patwa Manufacturer</title>
-        <meta name="description" content="Curated collection of decorative home accessories featuring handcrafted passementerie details. Premium pillows, accent pieces adding sophistication to any living space." />
+        <title>Decorative Home Accessories | Patwa Manufacturer</title>
+        <meta name="description" content="Pillows and accent pieces with handcrafted passementerie details to elevate any room." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/home-accessories" />
+        <meta property="og:title" content="Decorative Home Accessories | Patwa Manufacturer" />
+        <meta property="og:description" content="Pillows and accent pieces finished with handcrafted passementerie." />
         <meta name="keywords" content="decorative home accessories, handcrafted accessories, passementerie details, decorative pillows, accent pieces, luxury home décor, artisan home accessories, custom home embellishments, premium trimmings for upholstery" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/home-accessories" />
         <script type="application/ld+json">
