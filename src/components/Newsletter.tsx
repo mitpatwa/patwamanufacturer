@@ -52,11 +52,11 @@ const Newsletter = () => {
           </motion.div>
 
           <h2 className="font-serif text-4xl md:text-5xl font-medium mb-6">
-            Stay <span className="gradient-text">Inspired</span>
+            Our <span className="gradient-text">Newsletter</span>
           </h2>
           <p className="mb-10 text-primary-foreground/90 text-lg max-w-2xl mx-auto">
-            Join our exclusive mailing list to receive updates on new collections, 
-            design insights, special events, and insider access to our latest creations.
+            A note now and then when we add new designs, open the dye book, or
+            finish a project worth sharing. Roughly once a month, often less.
           </p>
           
           <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
@@ -127,7 +127,7 @@ const Newsletter = () => {
                 >
                   <div className="flex items-center justify-center space-x-2 text-green-300">
                     <Check className="h-5 w-5" />
-                    <span className="font-medium">Thank you for subscribing! Welcome to our community.</span>
+                    <span className="font-medium">You're on the list. We'll be in touch.</span>
                   </div>
                 </motion.div>
               )}
