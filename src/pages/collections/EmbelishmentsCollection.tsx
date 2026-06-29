@@ -14,7 +14,7 @@ const EmbelishmentsCollection = () => {
     <>
       <Helmet>
         <title>Luxury Embellishments Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Beaded accents, metallic trims, and decorative embellishments for luxury interior projects." />
+        <meta name="description" content="Beaded accents, metallic detail, hand-stitched rosettes. For cushions, lampshades, headboards." />
         <meta name="keywords" content="luxury embellishments, decorative trims, beaded accents, metallic trims, passementerie embellishments, custom trim work, interior design accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/embelishments" />
         <meta property="og:title" content="Luxury Embellishments Collection | Patwa Manufacturer" />
@@ -33,7 +33,7 @@ const EmbelishmentsCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Luxury Embellishments Collection"
-        description="Our curated selection of embellishments adds the perfect finishing touch to any interior project. From delicate beaded accents to statement pieces, our artisans create unique elements that elevate your design."
+        description="Beaded accents, metallic detail, hand-stitched rosettes and medallions. Small batch work — most pieces are stitched one at a time. Tell us the project and we will suggest what fits."
       >
         <ProductGrid products={embelishmentsProducts} />
       </CollectionLayout>

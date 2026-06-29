@@ -12,7 +12,7 @@ const HomeAccessoriesCollection = () => {
     <>
       <Helmet>
         <title>Decorative Home Accessories | Patwa Manufacturer</title>
-        <meta name="description" content="Pillows and accent pieces with handcrafted passementerie details to elevate any room." />
+        <meta name="description" content="Cushions, throws and lampshade trim. Small runs, mostly one-off, finished by hand." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/home-accessories" />
         <meta property="og:title" content="Decorative Home Accessories | Patwa Manufacturer" />
@@ -44,7 +44,7 @@ const HomeAccessoriesCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Decorative Home Accessories"
-        description="Complete your interior design with our curated collection of decorative accessories featuring handcrafted passementerie details. From decorative pillows to accent pieces, each item adds sophistication to your living space."
+        description="Cushions, throws, lampshade trim and small accent pieces. Most are made one at a time using leftover trim from larger runs, so colour combinations vary. Tell us a palette and we will send what we have."
       >
         <ProductGrid products={homeAccessoriesProducts} />
       </CollectionLayout>

@@ -12,7 +12,7 @@ const TieBacksCollection = () => {
     <>
       <Helmet>
         <title>Luxury Tie-backs & Holders Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Handcrafted curtain tiebacks and decorative holders in premium materials. Custom luxury accessories." />
+        <meta name="description" content="Tassel tie-backs, corded holdbacks, brass hooks. Made to your curtain weight and colour." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/tie-backs" />
         <meta property="og:title" content="Luxury Tie-backs & Holders | Patwa Manufacturer" />
@@ -44,7 +44,7 @@ const TieBacksCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Elegant Tie-backs & Holders"
-        description="Complete your window treatments with our sophisticated collection of curtain tie-backs and decorative holders. Each piece is meticulously crafted with premium materials and intricate details to perfectly complement your drapery."
+        description="Tassel tie-backs, corded holdbacks, and brass hooks. Tell us the curtain weight and we will spec the cord thickness — a heavy velvet drapery needs more than a sheer linen, and a thin cord on a heavy panel snaps within a year."
       >
         <ProductGrid products={tieBacksProducts} />
       </CollectionLayout>

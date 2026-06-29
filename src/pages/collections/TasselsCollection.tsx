@@ -15,7 +15,7 @@ const TasselsCollection = () => {
     <>
       <Helmet>
         <title>Luxury Tassels Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Custom luxury tassels in silk, crystal, and metallic finishes — handcrafted passementerie from India." />
+        <meta name="description" content="Over 400 tassel designs in silk, cotton and metallic. Made to order in custom colours from 50 pieces." />
         <meta name="keywords" content="tassel trim manufacturer, custom luxury tassels, handcrafted tassels, passementerie tassels, silk tassels, crystal tassels, curtain tassels, decorative tassels, luxury curtain tiebacks supplier, artisan curtain accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/tassels" />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const TasselsCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Luxury Tassels Collection"
-        description="Discover our exquisite range of handcrafted tassels, from classic designs to contemporary interpretations. Each piece is meticulously created using premium materials and time-honored techniques."
+        description="Over 400 tassel designs in stock — silk, cotton, viscose, metallic. Each head is wrapped by one person, start to finish (about forty minutes). Custom colours from 50 pieces, dye lot in roughly two weeks."
       >
         <ProductGrid products={tasselsProducts} />
       </CollectionLayout>

@@ -12,7 +12,7 @@ const WindowTreatmentsCollection = () => {
     <>
       <Helmet>
         <title>Luxury Window Treatments Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Custom curtains, drapes, and window accessories with handcrafted passementerie details from India." />
+        <meta name="description" content="Curtains and drapery in your fabric, finished with our own braid, fringe or tie-backs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/window-treatments" />
         <meta property="og:title" content="Luxury Window Treatments | Patwa Manufacturer" />
