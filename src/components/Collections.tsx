@@ -10,7 +10,7 @@ const collections = [
     name: "Tassels",
     image: "/lovable-uploads/42cae155-c4aa-43de-9284-a4e9742f2678.webp",
     fallback: "/lovable-uploads/42cae155-c4aa-43de-9284-a4e9742f2678.png",
-    description: "Our signature tassels curated for the season",
+    description: "Over 400 designs in stock. Custom colours from 50 pieces.",
     link: "/collections/tassels"
   },
   {
@@ -18,7 +18,7 @@ const collections = [
     name: "Fringes",
     image: "/lovable-uploads/fa393750-1cde-4474-bbf5-a168728afc85.webp",
     fallback: "/lovable-uploads/fa393750-1cde-4474-bbf5-a168728afc85.png",
-    description: "Elegant fringes for sophisticated interiors",
+    description: "Bullion, brush, loop, ball. Cut to length, 1cm to 30cm drops.",
     link: "/collections/fringes"
   },
   {
@@ -26,7 +26,7 @@ const collections = [
     name: "Braids",
     image: "/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.webp",
     fallback: "/lovable-uploads/168b44f5-ac13-4eec-bfca-6e0c3e6edce2.png",
-    description: "Intricately woven braids for any space",
+    description: "Flat braid, gimp, scroll patterns. Off-cuts go back into the next run.",
     link: "/collections/braids"
   },
   {
@@ -34,7 +34,7 @@ const collections = [
     name: "Cords",
     image: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
     fallback: "/lovable-uploads/3d941b9a-d92e-4554-9eb2-c769ca603717.png",
-    description: "Sophisticated cords for perfect finishing",
+    description: "Twist cord, lip cord, rope. Twisted on wooden bobbins, two at a time.",
     link: "/collections/cords"
   },
   {
@@ -42,7 +42,7 @@ const collections = [
     name: "Embellishments",
     image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.webp",
     fallback: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
-    description: "Exquisite embellishments for luxury finishing touches",
+    description: "Beaded accents, metallic detail, hand-stitched rosettes.",
     link: "/collections/embelishments"
   },
   {
@@ -50,7 +50,7 @@ const collections = [
     name: "Window Treatments",
     image: "/lovable-uploads/22dbf7e8-5d12-4434-b5c6-0752a89dc5f2.webp",
     fallback: "/lovable-uploads/22dbf7e8-5d12-4434-b5c6-0752a89dc5f2.png",
-    description: "Luxury curtains and drapes with premium trims",
+    description: "Curtains and drapery finished with our own trims.",
     link: "/collections/window-treatments"
   },
   {
@@ -58,7 +58,7 @@ const collections = [
     name: "Furniture Trims",
     image: "/lovable-uploads/f4a2fabd-9067-47f8-8829-472487596808.webp",
     fallback: "/lovable-uploads/f4a2fabd-9067-47f8-8829-472487596808.png",
-    description: "Decorative trims for upholstery and furniture",
+    description: "Sofa skirts, chair borders, welt cord. Made to your fabric.",
     link: "/collections/furniture-trims"
   },
   {
@@ -66,7 +66,7 @@ const collections = [
     name: "Tie-backs & Holders",
     image: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.webp",
     fallback: "/lovable-uploads/97436c1f-0307-4f5c-9ae1-0a62b25fa834.png",
-    description: "Elegant curtain tie-backs and decorative holders",
+    description: "Tassel tie-backs, corded holdbacks, brass hooks.",
     link: "/collections/tie-backs"
   },
   {
@@ -74,7 +74,7 @@ const collections = [
     name: "Table Linens",
     image: "/lovable-uploads/437a0270-a9b1-4eb4-84f9-a85debcfc454.webp",
     fallback: "/lovable-uploads/437a0270-a9b1-4eb4-84f9-a85debcfc454.png",
-    description: "Luxury table linens with decorative fringe details",
+    description: "Runners and cloths with fringe stitched at the edge.",
     link: "/collections/table-linens"
   },
   {
@@ -82,7 +82,7 @@ const collections = [
     name: "Outdoor Fabrics",
     image: "/lovable-uploads/1b6cb1fa-4e2d-4749-bfed-3ba4be2d0ce8.webp",
     fallback: "/lovable-uploads/1b6cb1fa-4e2d-4749-bfed-3ba4be2d0ce8.png",
-    description: "Weather-resistant fabrics with elegant trim accents",
+    description: "Solution-dyed acrylic and PE. Holds colour for years in sun.",
     link: "/collections/outdoor-fabrics"
   },
   {
@@ -90,7 +90,7 @@ const collections = [
     name: "Home Accessories",
     image: "/lovable-uploads/ac771606-d69a-41ea-b768-9cdc879f906e.webp",
     fallback: "/lovable-uploads/ac771606-d69a-41ea-b768-9cdc879f906e.png",
-    description: "Decorative accessories featuring handcrafted details",
+    description: "Cushions, throws, lampshade trim. Small runs, mostly one-off.",
     link: "/collections/home-accessories"
   },
   {
@@ -98,7 +98,7 @@ const collections = [
     name: "Window Shades",
     image: "/lovable-uploads/4cedbac7-7b23-4c38-b534-aa37f45312a8.webp",
     fallback: "/lovable-uploads/4cedbac7-7b23-4c38-b534-aa37f45312a8.png",
-    description: "Custom window shades with premium trim finishes",
+    description: "Roman shades and roller blinds finished with our trims.",
     link: "/collections/window-shades"
   }
 ];
@@ -148,15 +148,15 @@ const Collections = () => {
             className="inline-block mb-4"
           >
             <span className="px-6 py-2 bg-gradient-to-r from-gold-100 to-primary/10 text-gold-700 rounded-full text-sm font-semibold tracking-wide">
-              LUXURY PASSEMENTERIE
+              WHAT WE MAKE
             </span>
           </motion.div>
           <h2 className="section-heading">
             Our <span className="gradient-text">Collections</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Discover our curated selection of luxurious trimmings and embellishments, 
-            crafted with the highest standards of quality and design excellence.
+            Twelve groups of trims. Most are stocked in 300 to 500 designs.
+            Everything can be made to order in custom colours, MOQ 50.
           </p>
         </motion.div>
 

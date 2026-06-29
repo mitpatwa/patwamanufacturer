@@ -12,7 +12,7 @@ const OutdoorFabricsCollection = () => {
     <>
       <Helmet>
         <title>Outdoor Fabrics & Marine Trims | Patwa Manufacturer</title>
-        <meta name="description" content="Weather-resistant outdoor fabrics and marine-grade trims for patios, boats, and al fresco spaces." />
+        <meta name="description" content="Solution-dyed acrylic and PE trims that hold colour in sun. For patios, pergolas and boats." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/outdoor-fabrics" />
         <meta property="og:title" content="Outdoor Fabrics & Marine Trims | Patwa Manufacturer" />
@@ -44,7 +44,7 @@ const OutdoorFabricsCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Outdoor Fabrics & Marine Trims"
-        description="Discover our weather-resistant fabrics and marine-grade trims designed for outdoor living spaces. Our outdoor collection combines durability with elegant styling, perfect for patios, boats, and al fresco dining areas."
+        description="Solution-dyed acrylic and polyethylene. Holds colour for years in full sun and wipes clean with mild soap. Not waterproof in the marine sense, but happy in rain and pool spray. MOQ 100 metres for custom colours."
       >
         <ProductGrid products={outdoorFabricsProducts} />
       </CollectionLayout>

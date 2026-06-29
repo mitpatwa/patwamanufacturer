@@ -13,7 +13,7 @@ const FringesCollection = () => {
     <>
       <Helmet>
         <title>Luxury Fringe Trim Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Custom bullion, brush, and silk fringe trims for upholstery, drapery, and decor. Handcrafted in India." />
+        <meta name="description" content="Bullion, brush, loop and tassel fringe. Cut to length, drops from 1cm to 30cm. Made in Bareilly." />
         <meta name="keywords" content="luxury fringe trim, decorative fringes, bullion fringe, silk fringe, upholstery fringe, drapery trim, passementerie fringe, custom fringe, beaded fringe trim wholesale" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/fringes" />
         <meta property="og:type" content="website" />
@@ -45,7 +45,7 @@ const FringesCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Luxury Fringes Collection"
-        description="Our collection of exquisite fringes features everything from traditional bullion to contemporary brush and moss variations. Each piece is crafted with precision and available in customizable lengths and colorways."
+        description="Bullion, brush, loop, moss, tassel. Drops from 1cm to 30cm, cut to your length. Custom colours dyed to a Pantone reference — minimum 50 metres per shade."
       >
         <ProductGrid products={fringesProducts} />
       </CollectionLayout>

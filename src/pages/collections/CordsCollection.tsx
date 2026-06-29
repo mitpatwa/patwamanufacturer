@@ -12,7 +12,7 @@ const CordsCollection = () => {
     <>
       <Helmet>
         <title>Luxury Cords & Tiebacks Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Silk cords, decorative tiebacks, and rope ties for luxury drapery and window treatments." />
+        <meta name="description" content="Twist cord, lip cord and decorative rope. Twisted on wooden bobbins, two strands at a time." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/cords" />
         <meta property="og:title" content="Luxury Cords & Tiebacks Collection | Patwa Manufacturer" />
@@ -44,7 +44,7 @@ const CordsCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Luxury Cords & Tiebacks Collection"
-        description="Our comprehensive collection of cords and tiebacks ranges from delicate silk varieties to substantial decorative options. Perfect for furnishings, drapery ties, and custom applications."
+        description="Twist cord, lip cord (with fabric flange for seam work), and decorative rope. Diameters from 3mm to 25mm. Twisted on wooden bobbins, two at a time — the slow way, but it sits flatter in the seam."
       >
         <ProductGrid products={cordsProducts} />      
       </CollectionLayout>

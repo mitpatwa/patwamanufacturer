@@ -6,27 +6,27 @@ const slides = [
     id: 1,
     image: "/lovable-uploads/hero-1-new.webp",
     fallback: "/lovable-uploads/hero-1-new.png",
-    title: "Exquisite Trimmings",
-    subtitle: "Innovation, Quality, Creativity",
-    ctaText: "Get Quote",
+    title: "Tassels, fringes, braids.",
+    subtitle: "Hand-twisted in Bareilly since 1992. Shipped to about 50 countries.",
+    ctaText: "Get a quote",
     ctaLink: "/inquiry"
   },
   {
     id: 2,
     image: "/lovable-uploads/hero-2-new.webp",
     fallback: "/lovable-uploads/hero-2-new.png",
-    title: "Elegant Home Textiles",
-    subtitle: "Quality, Craftsmanship, Inspiration",
-    ctaText: "Order Samples",
+    title: "Made to order, in small batches.",
+    subtitle: "Send us a Pantone or a sketch. Samples in about two weeks.",
+    ctaText: "Order samples",
     ctaLink: "/order-samples"
   },
   {
     id: 3,
     image: "/lovable-uploads/hero-3-new.webp",
     fallback: "/lovable-uploads/hero-3-new.png",
-    title: "Artisanal Craftsmanship",
-    subtitle: "Experience the art of traditional craftsmanship with modern precision",
-    ctaText: "Contact Us",
+    title: "Eighty weavers, mostly the same families.",
+    subtitle: "Each tassel head is wrapped by one person, start to finish. About forty minutes a piece.",
+    ctaText: "Talk to us",
     ctaLink: "https://wa.me/919322140480?text=Hello%2C%20I%27m%20interested%20in%20your%20passementerie%20products"
   }
 ];

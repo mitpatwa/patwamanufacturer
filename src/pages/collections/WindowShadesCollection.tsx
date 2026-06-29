@@ -12,7 +12,7 @@ const WindowShadesCollection = () => {
     <>
       <Helmet>
         <title>Custom Window Shades & Roman Shades | Patwa Manufacturer</title>
-        <meta name="description" content="Roman shades and roller blinds with luxury passementerie trim finishes. Made in India." />
+        <meta name="description" content="Roman shades and roller blinds finished with our own braid, fringe or beaded trim." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/window-shades" />
         <meta property="og:title" content="Window Shades & Roman Shades | Patwa Manufacturer" />
@@ -35,7 +35,7 @@ const WindowShadesCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Custom Window Shades"
-        description="Enhance your windows with our collection of custom window shades featuring premium trim finishes. From Roman shades to roller blinds, each piece combines light control with elegant design details."
+        description="Roman shades and roller blinds, finished with our own braid, fringe or beaded trim along the lower edge. We make the shade to your window size — send measurements, fabric choice, and which trim you want at the bottom."
       >
         <ProductGrid products={windowShadesProducts} />
       </CollectionLayout>

@@ -130,7 +130,7 @@ const Index = () => {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Custom Passementerie Manufacturing",
-                  "description": "Bespoke design and manufacturing of luxury decorative trims, tassels, fringes, and braids",
+                  "description": "Made-to-order design and manufacturing of decorative trims, tassels, fringes, and braids",
                   "provider": {
                     "@type": "Organization",
                     "name": "Patwa Manufacturer"
@@ -174,7 +174,7 @@ const Index = () => {
                 "name": "Do you offer custom manufacturing and what is the minimum order quantity?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, we specialize in custom manufacturing with flexible MOQ (Minimum Order Quantity). We can create bespoke designs in custom colors, materials, and sizes to match your specific project requirements. Contact us to discuss your custom needs."
+                  "text": "Yes. We make trims to order in custom colours, materials and sizes. Minimum order is usually 50 pieces or 50 metres depending on the product. Send us a Pantone or a fabric swatch and we will quote in a day or two."
                 }
               },
               {

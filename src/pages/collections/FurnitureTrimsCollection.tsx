@@ -12,7 +12,7 @@ const FurnitureTrimsCollection = () => {
     <>
       <Helmet>
         <title>Decorative Furniture Trims | Patwa Manufacturer</title>
-        <meta name="description" content="Sofa fringes, chair borders, and upholstery trim details handcrafted for luxury furniture." />
+        <meta name="description" content="Sofa skirts, chair borders, welt cord. Made to your fabric in roughly two to three weeks." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/furniture-trims" />
         <meta property="og:title" content="Decorative Furniture Trims | Patwa Manufacturer" />
@@ -44,7 +44,7 @@ const FurnitureTrimsCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Decorative Furniture Trims"
-        description="Elevate your furniture with our stunning collection of decorative trims and upholstery details. From sophisticated sofa fringes to elegant chair borders, our handcrafted trims add the perfect finishing touch to any piece of furniture."
+        description="Sofa skirts, chair borders, welt cord, key tassels. Send us a fabric swatch and we will match the cord or dye trim to it. Lead time runs about two to three weeks once the colour is signed off."
       >
         <ProductGrid products={furnitureTrimsProducts} />
       </CollectionLayout>

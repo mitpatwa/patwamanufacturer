@@ -12,7 +12,7 @@ const TableLinensCollection = () => {
     <>
       <Helmet>
         <title>Luxury Table Linens Collection | Patwa Manufacturer</title>
-        <meta name="description" content="Decorative tablecloths and runners with handcrafted fringe details for elegant dining." />
+        <meta name="description" content="Runners and tablecloths with fringe stitched at the edge. Cotton, linen, or linen-blend bases." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/table-linens" />
         <meta property="og:title" content="Luxury Table Linens | Patwa Manufacturer" />
@@ -44,7 +44,7 @@ const TableLinensCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Luxury Table Linens"
-        description="Elevate your dining experience with our exquisite collection of table linens featuring decorative fringe details. From elegant tablecloths to sophisticated runners, each piece combines functionality with artisanal craftsmanship."
+        description="Runners and cloths in cotton, linen or a linen blend, with fringe stitched at the edge. Sizes are made to your table — give us length, width and the drop you want. Washable at 30 degrees, line dry."
       >
         <ProductGrid products={tableLinensProducts} />
       </CollectionLayout>
