@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     id: '1',
     slug: 'what-is-passementerie',
     title: 'What is Passementerie? Complete Guide to Decorative Trims & Tassels',
-    excerpt: 'Discover the art of passementerie - from French origins to modern applications. Learn about tassels, fringes, braids, and how to use decorative trims in your home.',
+    excerpt: 'A plain-English guide to passementerie: what the word actually means, how the trims are made, and where they belong in a modern interior.',
     content: `
 # What is Passementerie? Complete Guide to Decorative Trims & Tassels
 
@@ -108,7 +108,7 @@ Ready to explore passementerie for your own spaces? Begin with manageable projec
     id: '2',
     slug: 'types-of-decorative-trims',
     title: '20 Types of Decorative Trims: From Gimp to Bullion Fringe',
-    excerpt: 'A visual encyclopedia of decorative trims used in upholstery and window treatments. Learn to identify and choose the perfect trim for your project.',
+    excerpt: 'Twenty trims you will run into when specifying upholstery or curtains, with photos, the right names, and notes on where each one tends to work.',
     content: `
 # 20 Types of Decorative Trims: From Gimp to Bullion Fringe
 
@@ -195,7 +195,7 @@ Explore our complete collection of decorative trims or use our innovative produc
     id: '3',
     slug: 'how-to-apply-decorative-trim',
     title: 'How to Apply Decorative Trim to Furniture: Step-by-Step Guide',
-    excerpt: 'Master the art of applying decorative trim to furniture and upholstery with our detailed tutorial. Includes tools needed, techniques, and pro tips.',
+    excerpt: 'How to apply trim to a sofa, chair or cushion without it puckering. Tools we use in our own workshop, the order of work, and what usually goes wrong the first time.',
     content: `
 # How to Apply Decorative Trim to Furniture: Step-by-Step Guide
 
@@ -298,7 +298,7 @@ The journey from ordinary furniture to extraordinary showcase pieces begins with
     id: '4',
     slug: 'custom-tassel-design-options',
     title: 'Custom Tassel Design: 10 Creative Ways to Personalize Your Window Treatments',
-    excerpt: 'Explore endless customization options for decorative tassels. From color matching to unique head styles, discover how to design tassels that perfectly complement your interior.',
+    excerpt: 'Ten ways we customise tassels for projects: head shapes, skirt lengths, mixed colours, embedded beads, and a few that worked better in theory than in practice.',
     content: `
 # Custom Tassel Design: 10 Creative Ways to Personalize Your Window Treatments
 
@@ -415,7 +415,7 @@ Ready to create your custom tassels? Use our online configurator to visualize yo
     id: '5',
     slug: '2025-passementerie-trends',
     title: '2025 Interior Design Trends: Passementerie Makes a Comeback',
-    excerpt: 'Discover the hottest passementerie trends for 2025. From sustainable materials to maximalist layering, see what\'s trending in luxury interior textiles.',
+    excerpt: 'What designers are actually ordering in 2025: heavier brush fringe, mossy greens, layered braids, and a quiet return to thick bullion.',
     content: `
 # 2025 Interior Design Trends: Passementerie Makes a Comeback
 
@@ -554,7 +554,7 @@ The passementerie revival is here. Embrace craftsmanship, personality, and luxur
     id: '6',
     slug: 'maximalist-vs-minimalist-decorative-trims',
     title: 'Maximalist vs. Minimalist: How to Use Decorative Trims in Both Styles',
-    excerpt: 'Can decorative trims work in minimalist spaces? Absolutely! Learn how to incorporate passementerie in both maximalist and minimalist interior design styles.',
+    excerpt: 'Trim in a minimalist room is mostly about restraint: one tonal braid on a curtain edge, no tassels. We show what we send for both kinds of brief.',
     content: `
 # Maximalist vs. Minimalist: How to Use Decorative Trims in Both Styles
 
@@ -667,7 +667,7 @@ Ready to define your style? Browse our collections curated for both maximalist a
     id: '7',
     slug: 'how-to-clean-decorative-trim',
     title: 'How to Clean Decorative Trim: Complete Care & Maintenance Guide',
-    excerpt: 'Preserve the beauty of your decorative trims with proper cleaning and maintenance. Expert techniques for tassels, fringes, braids, and cords.',
+    excerpt: 'How to clean tassels, fringe and braid without ruining them. What dry-cleaners get wrong, when to spot-clean, and the brush we actually use on bullion.',
     content: `
 # How to Clean Decorative Trim: Complete Care & Maintenance Guide
 
@@ -814,7 +814,7 @@ Need replacement trim or repair services? Browse our collection or contact our t
     id: '8',
     slug: 'decorative-trim-materials-guide',
     title: 'Decorative Trim Materials Guide: Silk vs Cotton vs Synthetic',
-    excerpt: 'Compare materials used in decorative trims. Learn the benefits, drawbacks, and best applications for silk, cotton, polyester, and metallic trims.',
+    excerpt: 'Silk, cotton, viscose, polyester, metallic: what each does well, what it doesn\'t, and which we would pick for a south-facing window.',
     content: `
 # Decorative Trim Materials Guide: Silk vs Cotton vs Synthetic
 
@@ -1043,7 +1043,7 @@ Ready to select your perfect trim? Browse our collection organized by fiber cont
     id: '9',
     slug: 'living-room-decorative-trim-ideas',
     title: 'Living Room Decorative Trim Ideas: 25 Ways to Add Elegance',
-    excerpt: 'Transform your living room with decorative trim. Discover 25 elegant applications for curtains, furniture, pillows, and more with expert styling tips.',
+    excerpt: 'Twenty-five places trim can sit in a living room — curtain edges, cushion seams, sofa skirts, lampshades — with photos from past jobs.',
     content: `
 # Living Room Decorative Trim Ideas: 25 Ways to Add Elegance
 
@@ -1282,7 +1282,7 @@ Your living room deserves the custom, elegant look that only thoughtfully chosen
     id: '10',
     slug: 'luxury-bedroom-passementerie-design',
     title: 'Luxury Bedroom Design with Passementerie: Create Your Retreat',
-    excerpt: 'Design a five-star luxury bedroom with decorative trims. Expert guide to headboard trim, bedding embellishments, and drapery for elegant bedrooms.',
+    excerpt: 'How we spec trim for high-end bedrooms: headboard braid, bedding edge, drapery weight, and the trims that survive a hotel laundry.',
     content: `
 # Luxury Bedroom Design with Passementerie: Create Your Retreat
 
@@ -1433,7 +1433,7 @@ Your bedroom should be your personal sanctuary, and decorative trim helps create
     id: '11',
     slug: 'history-of-passementerie',
     title: 'The History of Passementerie: From Royal Courts to Modern Homes',
-    excerpt: 'Explore the fascinating history of passementerie from ancient civilizations through European royal courts to contemporary interior design.',
+    excerpt: 'Where passementerie came from — short version: Coptic Egypt, then French royal courts in the 17th century, then everywhere. We pick out the parts that still matter to the craft today.',
     content: `
 # The History of Passementerie: From Royal Courts to Modern Homes
 
@@ -1554,7 +1554,7 @@ Whether you choose simple cord trim or elaborate tassel fringe, you participate 
     id: '12',
     slug: 'commercial-passementerie-applications',
     title: 'Commercial Applications of Passementerie: Hotels, Restaurants & Luxury Retail',
-    excerpt: 'Discover how decorative trims transform commercial spaces from hospitality to retail. Learn specification strategies for high-traffic environments.',
+    excerpt: 'Spec notes for hotels, restaurants and retail: fire ratings, scrub-resistance, what survives daily cleaning, and the trims we won\'t sell for high-traffic jobs.',
     content: `
 # Commercial Applications of Passementerie: Hotels, Restaurants & Luxury Retail
 
@@ -1665,7 +1665,7 @@ The collaboration between designers, suppliers, and contractors transforms decor
     id: '13',
     slug: 'sustainable-passementerie-guide',
     title: 'Sustainable Passementerie: Eco-Friendly Decorative Trims for Conscious Design',
-    excerpt: 'Explore environmentally responsible options in decorative trims. From organic fibers to ethical production, discover how to choose sustainable passementerie.',
+    excerpt: 'What sustainable really means in a trim workshop: who dyed what, where the water went, whether the off-cuts get reused. Honest about where we still fall short.',
     content: `
 # Sustainable Passementerie: Eco-Friendly Decorative Trims for Conscious Design
 
@@ -1782,7 +1782,7 @@ The integration of sustainability principles with traditional passementerie craf
     id: '14',
     slug: 'diy-passementerie-projects',
     title: 'DIY Passementerie Projects: Create Stunning Decorative Trims at Home',
-    excerpt: 'Learn to create beautiful handmade tassels, braids, and trims with our comprehensive DIY guide. Perfect projects for crafters of all skill levels.',
+    excerpt: 'Three home projects: a simple tassel, a twisted cord, and a basic braid. Written by Asif who teaches new weavers in our workshop.',
     content: `
 # DIY Passementerie Projects: Create Stunning Decorative Trims at Home
 
@@ -1901,7 +1901,7 @@ Whether creating simple tassels for gift embellishment or ambitious trim for hom
     id: '15',
     slug: 'curtain-trim-selection-guide',
     title: 'The Complete Guide to Curtain Trim Selection for Every Window Style',
-    excerpt: 'Master the art of selecting perfect curtain trims for any window treatment. From formal draperies to casual curtains, discover how passementerie transforms window design.',
+    excerpt: 'How to pick trim for curtains, by curtain style: pinch-pleat, eyelet, tab-top, sheer. With drop measurements and a rough rule for trim width.',
     content: `
 # The Complete Guide to Curtain Trim Selection for Every Window Style
 
@@ -2018,7 +2018,7 @@ Selecting perfect curtain trims requires understanding the intersection of funct
     id: '16',
     slug: 'hotel-and-hospitality-passementerie',
     title: 'Passementerie in Luxury Hotels: How Elite Properties Use Decorative Trims',
-    excerpt: "Explore how the world's finest hotels utilize passementerie to create memorable guest experiences. From grand lobbies to intimate suites, discover hospitality trim applications.",
+    excerpt: "What gets specified in luxury hotels and why: lobby drapery, suite tie-backs, restaurant banquettes. Notes from a few projects we have supplied.",
     content: `
 # Passementerie in Luxury Hotels: How Elite Properties Use Decorative Trims
 
@@ -2139,7 +2139,7 @@ The hospitality industry's sophisticated deployment of passementerie demonstrate
     id: '17',
     slug: 'tassel-tieback-styles-guide',
     title: 'Tassel Tie-Back Styles: A Comprehensive Guide to Curtain Holdbacks',
-    excerpt: 'Discover every style of tassel tie-back from classic to contemporary. Learn how to select, position, and install the perfect curtain holdbacks for your window treatments.',
+    excerpt: 'Every tassel tie-back style we make, what each one weighs, and how high up the wall the hook should sit (rule of thumb: one third from the bottom).',
     content: `
 # Tassel Tie-Back Styles: A Comprehensive Guide to Curtain Holdbacks
 
@@ -2256,7 +2256,7 @@ Selecting perfect tassel tie-backs requires balancing practical function against
     id: '18',
     slug: 'passementerie-color-coordination-guide',
     title: 'The Art of Color Coordination: Matching Passementerie to Your Interior Palette',
-    excerpt: 'Master the sophisticated art of color coordination when selecting decorative trims. Learn professional techniques for matching, contrasting, and harmonizing passementerie with existing interior color schemes.',
+    excerpt: 'Tonal, complementary, accent: three ways to colour-match trim to a room. How we read a fabric swatch in daylight versus a screen Pantone.',
     content: `
 # The Art of Color Coordination: Matching Passementerie to Your Interior Palette
 
@@ -2353,7 +2353,7 @@ Developing color confidence requires practice, experimentation, and willingness 
     id: '19',
     slug: 'history-of-french-passementerie',
     title: 'The Golden Age of French Passementerie: A Journey Through Centuries of Craftsmanship',
-    excerpt: 'Explore the rich history of French passementerie from royal courts to modern ateliers. Discover how centuries of tradition shaped the decorative trim industry and continues to influence contemporary design.',
+    excerpt: 'How French passementiers in the 17th and 18th centuries set the rules we still use. The guilds, the techniques, and what was lost when industrial weaving arrived.',
     content: `
 # The Golden Age of French Passementerie: A Journey Through Centuries of Craftsmanship
 
@@ -2448,7 +2448,7 @@ Understanding French passementerie's rich history transforms how we perceive dec
     id: '20',
     slug: 'passementerie-for-outdoor-spaces',
     title: 'Outdoor Passementerie: Weather-Resistant Trims for Patios, Pergolas, and Garden Rooms',
-    excerpt: 'Discover how modern materials have revolutionized outdoor passementerie applications. Learn to select durable, fade-resistant trims that bring indoor elegance to outdoor living spaces.',
+    excerpt: 'Trim that lives outside: solution-dyed acrylic, polyethylene, why polyester struggles in full sun. Notes on patio cushions and pergola drapery.',
     content: `
 # Outdoor Passementerie: Weather-Resistant Trims for Patios, Pergolas, and Garden Rooms
 
@@ -2545,7 +2545,7 @@ Outdoor living continues growing in importance as homeowners recognize the value
     id: '21',
     slug: 'passementerie-in-hospitality-design',
     title: 'Passementerie in Hospitality Design: Elevating Hotels, Restaurants & Luxury Venues',
-    excerpt: 'Explore how the world\'s finest hotels and restaurants use passementerie to create unforgettable guest experiences, from grand lobbies to intimate dining rooms.',
+    excerpt: 'What hospitality designers ask us for: fire-rated trim, washable cord, banquette welting. With a few honest notes on what we have had to redo.',
     content: `
 # Passementerie in Hospitality Design: Elevating Hotels, Restaurants & Luxury Venues
 
@@ -2612,7 +2612,7 @@ The hospitality industry's embrace of passementerie reflects a broader understan
     id: '22',
     slug: 'anatomy-of-a-tassel',
     title: 'The Anatomy of a Tassel: Understanding Every Component of This Timeless Embellishment',
-    excerpt: 'A comprehensive exploration of tassel construction, from the top knot to the skirt, revealing the engineering and artistry behind every handcrafted decorative tassel.',
+    excerpt: 'A tassel taken apart: mould, neck, ruff, skirt. What each part does, why a heavier head needs a heavier skirt, and where most cheap tassels go wrong.',
     content: `
 # The Anatomy of a Tassel: Understanding Every Component of This Timeless Embellishment
 
@@ -2689,7 +2689,7 @@ In an age of mass production and disposable decoration, the handcrafted tassel s
     id: '23',
     slug: 'passementerie-for-window-treatments',
     title: 'The Definitive Guide to Passementerie for Window Treatments: Curtains, Drapes & Valances',
-    excerpt: 'Master the art of selecting and applying decorative trims to window treatments. From traditional swags to modern minimalist curtains, learn how passementerie transforms every style.',
+    excerpt: 'Trim for curtains, drapes and valances — proportions, weights, and how the trim should hang relative to the bottom edge. With diagrams.',
     content: `
 # The Definitive Guide to Passementerie for Window Treatments: Curtains, Drapes & Valances
 
@@ -2762,7 +2762,7 @@ The art of trimming window treatments represents a convergence of practical know
     id: '24',
     slug: 'sustainable-passementerie-eco-friendly-trims',
     title: 'Sustainable Passementerie: Eco-Friendly Trims for the Conscious Designer',
-    excerpt: 'Explore the growing movement toward sustainable passementerie, from organic fibers and natural dyes to ethical production practices reshaping the decorative trim industry.',
+    excerpt: 'Organic fibres, natural dyes, day-rate pay instead of piece-rate. What is actually changing in our part of the industry and what is still mostly talk.',
     content: `
 # Sustainable Passementerie: Eco-Friendly Trims for the Conscious Designer
 
@@ -2831,7 +2831,7 @@ The future of passementerie lies in the thoughtful integration of traditional cr
     id: '25',
     slug: 'passementerie-color-trends-2025',
     title: 'Passementerie Color Trends 2025: The Palettes Defining Luxury Interiors This Year',
-    excerpt: 'Discover the color palettes shaping passementerie and decorative trim selections in 2025, from warm earth tones to bold jewel combinations redefining luxury interior design.',
+    excerpt: 'The colours moving through our dye book in 2025: warm clay, moss, oxblood, and a slow return to deep navy. Pantone references included.',
     content: `
 # Passementerie Color Trends 2025: The Palettes Defining Luxury Interiors This Year
 
@@ -2894,7 +2894,7 @@ The color trends of 2025 reflect a design culture that has matured beyond the pu
     id: '26',
     slug: 'passementerie-for-bridal-and-eventwear',
     title: 'Passementerie for Bridal & Eventwear: Elevating Fashion with Artisanal Trims',
-    excerpt: 'Explore how passementerie transforms bridal gowns, evening dresses, and haute couture with hand-crafted beaded trims, silk fringes, and ornamental tassels.',
+    excerpt: 'Trim for bridal and eveningwear: zardozi, beaded fringe, silk tassels. Notes on weight, what a seamstress will and will not stitch through.',
     content: `
 # Passementerie for Bridal & Eventwear: Elevating Fashion with Artisanal Trims
 
@@ -2949,7 +2949,7 @@ As the fashion industry continues to grapple with questions of sustainability, a
     id: '27',
     slug: 'global-passementerie-traditions',
     title: 'Global Passementerie Traditions: Decorative Trims from Around the World',
-    excerpt: 'Journey through the world\'s rich passementerie traditions—from Indian zardozi to Japanese kumihimo, Moroccan sfifa, and beyond—exploring how cultures craft ornamental trims.',
+    excerpt: 'Trim traditions from around the world: Indian zardozi, Japanese kumihimo, Moroccan sfifa, Ottoman gimp. What each technique does that the others cannot.',
     content: `
 # Global Passementerie Traditions: Decorative Trims from Around the World
 
@@ -3004,7 +3004,7 @@ The study of global passementerie traditions reveals fundamental human impulses 
     id: '28',
     slug: 'passementerie-for-furniture-upholstery',
     title: 'The Complete Guide to Passementerie for Furniture Upholstery',
-    excerpt: 'Master the art of selecting and applying decorative trims to upholstered furniture—from gimp braids and nail head alternatives to cord welting and tassel pulls.',
+    excerpt: 'Trim on upholstery: gimp braid, welt cord, tassel pulls, alternatives to nail heads. How to spec it so the upholsterer is not cursing you on site.',
     content: `
 # The Complete Guide to Passementerie for Furniture Upholstery
 
@@ -3059,7 +3059,7 @@ For furniture that receives heavy daily use, consider selecting passementerie sp
     id: '29',
     slug: 'business-of-passementerie-manufacturing',
     title: 'The Business of Passementerie Manufacturing: From Atelier to Global Market',
-    excerpt: 'An insider\'s look at the passementerie manufacturing industry—supply chains, pricing strategies, quality control, and how artisan workshops compete in a global marketplace.',
+    excerpt: 'How a passementerie workshop actually runs: where the yarn comes from, how we cost a custom tassel, why lead times stretch in October. Written from our floor in Bareilly.',
     content: `
 # The Business of Passementerie Manufacturing: From Atelier to Global Market
 
@@ -3120,7 +3120,7 @@ The manufacturers best positioned for future success are those investing simulta
     id: '30',
     slug: 'ultimate-passementerie-glossary',
     title: 'The Ultimate Passementerie Glossary: 100+ Terms Every Designer Should Know',
-    excerpt: 'A comprehensive reference guide defining over 100 essential passementerie terms—from aiguillette to zephyr braid—for interior designers, architects, and textile enthusiasts.',
+    excerpt: 'Over a hundred trim terms with plain definitions. Use it when a spec sheet says "campaign cord" or "chenille gimp" and you are not sure.',
     content: `
 # The Ultimate Passementerie Glossary: 100+ Terms Every Designer Should Know
 
