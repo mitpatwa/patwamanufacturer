@@ -44,7 +44,7 @@ const WindowTreatmentsCollection = () => {
       </Helmet>
       <CollectionLayout
         title="Luxury Window Treatments"
-        description="Transform your windows with our exquisite collection of curtains, drapes, and window accessories. Each piece is crafted with premium fabrics and finished with our signature passementerie details for the perfect blend of elegance and functionality."
+        description="Curtains, drapery and pelmets made in your fabric, finished with our own braid, fringe or tassel tie-backs. Send a fabric swatch (or a photo of the room) and we will suggest a trim that works with the weight and the light."
       >
         <ProductGrid products={windowTreatmentProducts} />
       </CollectionLayout>
