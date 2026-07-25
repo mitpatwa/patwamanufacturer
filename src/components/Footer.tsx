@@ -134,7 +134,7 @@ const Footer = () => {
         <div className="py-12 border-b border-sand-300 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="inline-block">
-              <h1 className="text-2xl font-serif font-medium tracking-wider">PATWA MANUFACTURER</h1>
+              <p className="text-2xl font-serif font-medium tracking-wider">PATWA MANUFACTURER</p>
             </Link>
             <div className="mt-4 space-y-2 text-muted-foreground">
               <div className="flex items-start gap-2">
