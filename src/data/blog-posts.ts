@@ -103,7 +103,7 @@ Ready to explore passementerie for your own spaces? Begin with manageable projec
     featured: true,
     seoTitle: 'What is Passementerie? Complete Guide to Decorative Trims 2025',
     seoDescription: 'Comprehensive guide to passementerie - learn about tassels, fringes, braids, and decorative trims. Discover types, materials, applications, and styling tips for luxury interiors.',
-    seoKeywords: ['what is passementerie', 'decorative trims', 'custom tassels', 'furniture trim', 'passementerie guide']
+    seoKeywords: ['what is passementerie', 'decorative trims', 'custom tassels', 'furniture trim', 'passementerie guide'],
     faqs: [
       { question: "How do you pronounce passementerie?", answer: "Most English speakers say \"pass-MON-tree\". In French it's closer to \"pas-mahn-tuh-REE\". Either one gets you understood in a fabric showroom." },
       { question: "What does passementerie mean?", answer: "Passementerie is the trade name for decorative textile trimmings: tassels, fringes, braids, cords, gimps and tie-backs. The word comes from the French passement, meaning a strip of ornamental trim." },
@@ -299,7 +299,7 @@ The journey from ordinary furniture to extraordinary showcase pieces begins with
     featured: true,
     seoTitle: 'How to Apply Decorative Trim to Furniture: Step-by-Step Guide',
     seoDescription: 'Complete tutorial on applying decorative trim to furniture. Learn hand sewing, gluing, and stapling techniques with pro tips for professional-looking results.',
-    seoKeywords: ['how to apply decorative trim', 'furniture trim application', 'DIY upholstery trim', 'upholstery tutorial']
+    seoKeywords: ['how to apply decorative trim', 'furniture trim application', 'DIY upholstery trim', 'upholstery tutorial'],
     faqs: [
       { question: "Should decorative trim be sewn or glued?", answer: "Sew anything that will be washed, pulled or sat on. Fabric glue is fine for lampshades, box valances and other pieces that stay put." },
       { question: "How much extra trim should I order?", answer: "Add 10% to your measured length for corners, joins and mitres, and a little more for patterned braid you need to match." },
@@ -2261,7 +2261,7 @@ Selecting perfect tassel tie-backs requires balancing practical function against
     featured: false,
     seoTitle: 'Tassel Tie-Back Styles: Complete Guide to Curtain Holdbacks',
     seoDescription: 'Comprehensive guide to tassel tie-back styles for every interior. Learn how to select, position, and install perfect curtain holdbacks for your window treatments.',
-    seoKeywords: ['tassel tie-backs', 'curtain holdbacks', 'drapery tie-backs', 'tassel styles', 'window treatment accessories']
+    seoKeywords: ['tassel tie-backs', 'curtain holdbacks', 'drapery tie-backs', 'tassel styles', 'window treatment accessories'],
     faqs: [
       { question: "How do you hang a curtain tassel tieback?", answer: "Fix a small holdback hook to the wall or window frame, roughly two-thirds down the curtain drop and 5–8 cm out from the frame. Loop the cord over the hook and let the tassel hang free on the room side." },
       { question: "How high should tassel tiebacks be placed?", answer: "Measure the full drop and place the hook at about two-thirds of that height from the top. On a 240 cm curtain that lands near 160 cm from the rod." },
