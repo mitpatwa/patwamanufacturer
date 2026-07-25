@@ -2,7 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*?*
+Disallow: /seo
+Disallow: /analysis
+Disallow: /content-calendar
 
 # Allow AI agents to access product catalog
 Allow: /ai-product-catalog.json
@@ -50,6 +52,3 @@ Allow: /
 
 # Sitemap
 Sitemap: https://patwamanufacturer.lovable.app/sitemap.xml
-
-# Crawl-delay (optional)
-Crawl-delay: 1

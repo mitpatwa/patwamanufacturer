@@ -66,6 +66,8 @@ const BlogPost = () => {
             "description": "${post.excerpt}",
             "image": "https://patwamanufacturer.lovable.app${post.image}",
             "datePublished": "${post.date}",
+            "dateModified": "${post.date}",
+            "inLanguage": "en",
             "author": {
               "@type": "Person",
               "name": "${post.author}"
