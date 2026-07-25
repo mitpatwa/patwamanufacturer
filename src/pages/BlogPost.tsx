@@ -8,6 +8,7 @@ import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import ReviewSubmissionForm from '../components/ReviewSubmissionForm';
 import { blogPosts } from '../data/blog-posts';
+import { renderArticleHtml } from '../lib/markdown';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -99,6 +100,19 @@ const BlogPost = () => {
             ],
           })}
         </script>
+        {post.faqs && post.faqs.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: post.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            })}
+          </script>
+        )}
       </Helmet>
 
       <Header />
@@ -194,9 +208,26 @@ const BlogPost = () => {
           {/* Article Content */}
           <Card className="mb-12">
             <CardContent className="p-8 prose prose-lg max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>') }} />
+              <div dangerouslySetInnerHTML={{ __html: renderArticleHtml(post.content) }} />
             </CardContent>
           </Card>
+
+          {/* FAQs — targets People Also Ask / featured snippets */}
+          {post.faqs && post.faqs.length > 0 && (
+            <Card className="mb-12">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold mb-6">Common questions</h2>
+                <dl className="space-y-6">
+                  {post.faqs.map((faq, i) => (
+                    <div key={i}>
+                      <dt className="font-semibold text-lg mb-2">{faq.question}</dt>
+                      <dd className="text-muted-foreground leading-relaxed">{faq.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </CardContent>
+            </Card>
+          )}
 
           {/* Review Form */}
           <div className="mb-12">

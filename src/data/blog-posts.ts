@@ -14,6 +14,7 @@ export interface BlogPost {
   seoTitle: string;
   seoDescription: string;
   seoKeywords: string[];
+  faqs?: { question: string; answer: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
