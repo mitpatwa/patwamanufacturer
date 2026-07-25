@@ -8,6 +8,7 @@ import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import ReviewSubmissionForm from '../components/ReviewSubmissionForm';
 import { blogPosts } from '../data/blog-posts';
+import { renderArticleHtml } from '../lib/markdown';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -42,6 +43,7 @@ const BlogPost = () => {
         <title>{post.seoTitle}</title>
         <meta name="description" content={post.seoDescription} />
         <meta name="keywords" content={post.seoKeywords.join(', ')} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
         <link rel="canonical" href={shareUrl} />
         
         {/* Open Graph */}
@@ -65,6 +67,8 @@ const BlogPost = () => {
             "description": "${post.excerpt}",
             "image": "https://patwamanufacturer.lovable.app${post.image}",
             "datePublished": "${post.date}",
+            "dateModified": "${post.date}",
+            "inLanguage": "en",
             "author": {
               "@type": "Person",
               "name": "${post.author}"
@@ -79,6 +83,36 @@ const BlogPost = () => {
             }
           }`}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://patwamanufacturer.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://patwamanufacturer.lovable.app/blog" },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.category,
+                item: `https://patwamanufacturer.lovable.app/blog/category/${post.category.toLowerCase().replace(/\s+/g, '-')}`,
+              },
+              { "@type": "ListItem", position: 4, name: post.title, item: shareUrl },
+            ],
+          })}
+        </script>
+        {post.faqs && post.faqs.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: post.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            })}
+          </script>
+        )}
       </Helmet>
 
       <Header />
@@ -174,7 +208,45 @@ const BlogPost = () => {
           {/* Article Content */}
           <Card className="mb-12">
             <CardContent className="p-8 prose prose-lg max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>') }} />
+              <div dangerouslySetInnerHTML={{ __html: renderArticleHtml(post.content) }} />
+            </CardContent>
+          </Card>
+
+          {/* FAQs — targets People Also Ask / featured snippets */}
+          {post.faqs && post.faqs.length > 0 && (
+            <Card className="mb-12">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold mb-6">Common questions</h2>
+                <dl className="space-y-6">
+                  {post.faqs.map((faq, i) => (
+                    <div key={i}>
+                      <dt className="font-semibold text-lg mb-2">{faq.question}</dt>
+                      <dd className="text-muted-foreground leading-relaxed">{faq.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Internal links to product + sampling pages */}
+          <Card className="mb-12 bg-muted/40">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold mb-2">Need the actual trim?</h2>
+              <p className="text-muted-foreground mb-5">
+                We make these in Bareilly and ship samples most weeks. Pick a starting point:
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/collections/tassels" className="underline underline-offset-4">Tassels</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/collections/fringes" className="underline underline-offset-4">Fringes</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/collections/tie-backs" className="underline underline-offset-4">Tie-backs</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/custom-services" className="underline underline-offset-4">Custom work</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/order-samples" className="underline underline-offset-4">Order samples</Link>
+              </div>
             </CardContent>
           </Card>
 
