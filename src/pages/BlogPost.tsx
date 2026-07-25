@@ -229,6 +229,27 @@ const BlogPost = () => {
             </Card>
           )}
 
+          {/* Internal links to product + sampling pages */}
+          <Card className="mb-12 bg-muted/40">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold mb-2">Need the actual trim?</h2>
+              <p className="text-muted-foreground mb-5">
+                We make these in Bareilly and ship samples most weeks. Pick a starting point:
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/collections/tassels" className="underline underline-offset-4">Tassels</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/collections/fringes" className="underline underline-offset-4">Fringes</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/collections/tie-backs" className="underline underline-offset-4">Tie-backs</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/custom-services" className="underline underline-offset-4">Custom work</Link>
+                <span className="text-muted-foreground">·</span>
+                <Link to="/order-samples" className="underline underline-offset-4">Order samples</Link>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Review Form */}
           <div className="mb-12">
             <ReviewSubmissionForm />
