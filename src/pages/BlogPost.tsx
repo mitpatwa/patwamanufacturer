@@ -42,6 +42,7 @@ const BlogPost = () => {
         <title>{post.seoTitle}</title>
         <meta name="description" content={post.seoDescription} />
         <meta name="keywords" content={post.seoKeywords.join(', ')} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
         <link rel="canonical" href={shareUrl} />
         
         {/* Open Graph */}
@@ -78,6 +79,23 @@ const BlogPost = () => {
               }
             }
           }`}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://patwamanufacturer.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://patwamanufacturer.lovable.app/blog" },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.category,
+                item: `https://patwamanufacturer.lovable.app/blog/category/${post.category.toLowerCase().replace(/\s+/g, '-')}`,
+              },
+              { "@type": "ListItem", position: 4, name: post.title, item: shareUrl },
+            ],
+          })}
         </script>
       </Helmet>
 
