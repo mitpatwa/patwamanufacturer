@@ -19,6 +19,10 @@ const FurnitureTrimsCollection = () => {
         <meta property="og:description" content="Sofa fringes and chair borders for upholstered furniture." />
         <meta name="keywords" content="furniture trims, upholstery trims, decorative furniture borders, sofa fringes, chair trims, furniture embellishments, upholstery details, handcrafted furniture trims, premium trimmings for upholstery, custom lace and trimmings for interiors" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/furniture-trims" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Decorative Furniture Trims | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Sofa fringes and chair borders for upholstered furniture." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

@@ -19,6 +19,10 @@ const TieBacksCollection = () => {
         <meta property="og:description" content="Handcrafted curtain tiebacks and decorative holders for luxury drapery." />
         <meta name="keywords" content="curtain tie-backs, decorative holders, luxury tiebacks, custom curtain holders, drapery accessories, window treatment tiebacks, handcrafted tiebacks, luxury curtain tiebacks supplier, artisan curtain accessories" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/tie-backs" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Tie-backs & Holders | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Handcrafted curtain tiebacks and decorative holders for luxury drapery." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

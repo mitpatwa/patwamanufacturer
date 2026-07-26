@@ -19,6 +19,10 @@ const OutdoorFabricsCollection = () => {
         <meta property="og:description" content="Weather-resistant trims and textiles for outdoor living spaces." />
         <meta name="keywords" content="outdoor fabrics, marine trims, weather-resistant textiles, outdoor living textiles, marine-grade fabrics, patio fabrics, outdoor upholstery, boat trims, durable outdoor textiles, export quality decorative trims" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/outdoor-fabrics" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Outdoor Fabrics & Marine Trims | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Weather-resistant trims and textiles for outdoor living spaces." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

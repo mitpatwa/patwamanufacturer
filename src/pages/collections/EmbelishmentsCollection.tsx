@@ -21,6 +21,10 @@ const EmbelishmentsCollection = () => {
         <meta property="og:description" content="Beaded accents and metallic trims that finish any luxury interior project." />
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/embelishments" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Embellishments Collection | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Beaded accents and metallic trims that finish any luxury interior project." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

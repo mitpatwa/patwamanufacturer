@@ -19,6 +19,10 @@ const CordsCollection = () => {
         <meta property="og:description" content="Silk cords and decorative tiebacks for luxury curtains and drapery." />
         <meta name="keywords" content="luxury cords, curtain tiebacks, decorative tiebacks, silk cords, rope tiebacks, drapery ties, window treatment accessories, custom tiebacks, luxury curtain tiebacks supplier, decorative cords and piping" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/cords" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Cords & Tiebacks Collection | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Silk cords and decorative tiebacks for luxury curtains and drapery." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

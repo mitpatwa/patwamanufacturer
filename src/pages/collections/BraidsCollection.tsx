@@ -20,6 +20,10 @@ const BraidsCollection = () => {
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/braids" />
         <meta property="og:title" content="Luxury Braids Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Decorative braids and gimp trim handcrafted for upholstery, cushions, and drapery." />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Braids Collection | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Decorative braids and gimp trim handcrafted for upholstery, cushions, and drapery." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
