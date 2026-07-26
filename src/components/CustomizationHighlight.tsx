@@ -168,11 +168,11 @@ const CustomizationHighlight = () => {
                 Request Custom Quote
               </motion.a>
               <a
-                href="mailto:patwamanufacturers@gmail.com"
+                href="mailto:support@patwamanufacturer.com"
                 className="flex items-center gap-2 text-primary-foreground hover:opacity-80 transition-opacity px-6 py-3"
               >
                 <Mail className="h-5 w-5" />
-                <span className="font-medium">patwamanufacturers@gmail.com</span>
+                <span className="font-medium">support@patwamanufacturer.com</span>
               </a>
             </div>
           </div>

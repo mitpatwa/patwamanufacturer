@@ -171,7 +171,7 @@ ${values.name}
       `);
       
       // Open email client
-      const mailtoLink = `mailto:patwamanufacturers@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:support@patwamanufacturer.com?subject=${subject}&body=${body}`;
       window.open(mailtoLink, '_self');
       
       toast({
@@ -225,10 +225,10 @@ ${values.name}
         <p className="text-sm text-muted-foreground text-center">
           <strong>Direct Contact:</strong> For immediate assistance, email us directly at{" "}
           <a 
-            href="mailto:patwamanufacturers@gmail.com" 
+            href="mailto:support@patwamanufacturer.com" 
             className="text-primary hover:underline font-medium"
           >
-            patwamanufacturers@gmail.com
+            support@patwamanufacturer.com
           </a>
         </p>
       </div>
