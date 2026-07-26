@@ -46,4 +46,4 @@ High-end furniture upholstery
 Contact
 For inquiries, custom orders, or more information about our products:
 
-Email: patwamanufacturers
+Email: support@patwamanufacturer.com

@@ -46,7 +46,7 @@ const Footer = () => {
   const contactInfo = {
     address: "237/C2 Shree Vaibhav Society, near Pragati School and Junior College, Gorai 2, Borivali West, Mumbai, Maharashtra 400092",
     phone: "+919322140480",
-    email: "patwamanufacturers@gmail.com"
+    email: "support@patwamanufacturer.com"
   };
 
   return (
