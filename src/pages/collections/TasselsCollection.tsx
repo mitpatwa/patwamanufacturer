@@ -22,6 +22,10 @@ const TasselsCollection = () => {
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/tassels" />
         <meta property="og:title" content="Luxury Tassels Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Handcrafted silk, crystal, and metallic tassels for curtains, upholstery, and luxury interiors." />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Tassels Collection | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Handcrafted silk, crystal, and metallic tassels for curtains, upholstery, and luxury interiors." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

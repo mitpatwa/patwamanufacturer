@@ -20,6 +20,10 @@ const FringesCollection = () => {
         <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/fringes" />
         <meta property="og:title" content="Luxury Fringe Trim Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Bullion, brush and silk fringe trims handcrafted for upholstery and drapery." />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Fringe Trim Collection | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Bullion, brush and silk fringe trims handcrafted for upholstery and drapery." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

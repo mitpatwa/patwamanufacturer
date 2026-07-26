@@ -52,12 +52,21 @@ const BlogPost = () => {
         <meta property="og:image" content={`https://patwamanufacturer.lovable.app${post.image}`} />
         <meta property="og:url" content={shareUrl} />
         <meta property="og:type" content="article" />
-        
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta property="og:image:alt" content={post.title} />
+        <meta property="article:published_time" content={new Date(post.date).toISOString()} />
+        <meta property="article:section" content={post.category} />
+        {post.tags.slice(0, 6).map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.seoTitle} />
         <meta name="twitter:description" content={post.seoDescription} />
         <meta name="twitter:image" content={`https://patwamanufacturer.lovable.app${post.image}`} />
+        <meta name="twitter:image:alt" content={post.title} />
+
         
         <script type="application/ld+json">
           {`{

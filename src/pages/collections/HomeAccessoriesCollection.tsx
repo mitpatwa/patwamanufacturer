@@ -19,6 +19,10 @@ const HomeAccessoriesCollection = () => {
         <meta property="og:description" content="Pillows and accent pieces finished with handcrafted passementerie." />
         <meta name="keywords" content="decorative home accessories, handcrafted accessories, passementerie details, decorative pillows, accent pieces, luxury home décor, artisan home accessories, custom home embellishments, premium trimmings for upholstery" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/home-accessories" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Decorative Home Accessories | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Pillows and accent pieces finished with handcrafted passementerie." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

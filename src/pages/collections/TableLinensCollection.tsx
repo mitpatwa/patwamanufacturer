@@ -19,6 +19,10 @@ const TableLinensCollection = () => {
         <meta property="og:description" content="Tablecloths and runners with artisanal fringe details for elegant dining." />
         <meta name="keywords" content="luxury table linens, decorative tablecloths, table runners, fringe tablecloths, handcrafted table linens, dining accessories, premium table textiles, custom table linens, designer textile embellishments" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/table-linens" />
+        <meta property="og:site_name" content="Patwa Manufacturer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Luxury Table Linens | Patwa Manufacturer" />
+        <meta name="twitter:description" content="Tablecloths and runners with artisanal fringe details for elegant dining." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
