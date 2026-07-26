@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import WhatsAppFloat from '../components/WhatsAppFloat';
+import EmailFloat from '../components/EmailFloat';
 import ScrollToTop from '../components/ScrollToTop';
 import { Search, MapPin, Star, Filter, Users, Award, Phone, Mail, Globe, CheckCircle } from 'lucide-react';
 
@@ -454,7 +454,7 @@ const FindDesigner = () => {
       </main>
       
       <Footer />
-      <WhatsAppFloat />
+      <EmailFloat />
       <ScrollToTop />
     </div>
   );

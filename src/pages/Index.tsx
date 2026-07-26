@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import Collections from "../components/Collections";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-import WhatsAppFloat from "../components/WhatsAppFloat";
+import EmailFloat from "../components/EmailFloat";
 import ScrollToTop from "../components/ScrollToTop";
 import InteractiveSearch from "../components/InteractiveSearch";
 import SocialMediaBar from "../components/SocialMediaBar";
@@ -243,7 +243,7 @@ const Index = () => {
         </article>
       </main>
       <Footer />
-      <WhatsAppFloat />
+      <EmailFloat />
       <ScrollToTop />
       <InteractiveSearch />
       <SocialMediaBar />
