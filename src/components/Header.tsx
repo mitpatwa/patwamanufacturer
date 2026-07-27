@@ -17,7 +17,12 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
+  const navItems: Array<{
+    name: string;
+    link: string;
+    external?: boolean;
+    items?: Array<{ name: string; link: string }>;
+  }> = [
     { 
       name: "Collections", 
       link: "/collections/tassels",

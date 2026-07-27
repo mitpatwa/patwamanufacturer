@@ -2,9 +2,15 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from "lucide-react";
 
+type FooterNavItem = {
+  name: string;
+  href: string;
+  external?: boolean;
+};
+
 const Footer = () => {
   // Footer navigation items grouped by category
-  const footerNavigation = {
+  const footerNavigation: Record<string, FooterNavItem[]> = {
     collections: [
       { name: "Tassels", href: "/collections/tassels" },
       { name: "Fringes", href: "/collections/fringes" },
