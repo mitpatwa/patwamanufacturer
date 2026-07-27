@@ -109,6 +109,7 @@ const App = () => {
               <Route path="/find-designer" element={<FindDesigner />} />
               <Route path="/support" element={<Support />} />
               <Route path="/order-samples" element={<OrderSamples />} />
+              <Route path="/inquiry" element={<Inquiry />} />
               <Route path="/returns-exchanges" element={<ReturnsExchanges />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
