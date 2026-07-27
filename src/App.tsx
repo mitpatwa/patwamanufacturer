@@ -41,6 +41,7 @@ const TradeProgram = lazy(() => import("./pages/TradeProgram"));
 const FindDesigner = lazy(() => import("./pages/FindDesigner"));
 const Support = lazy(() => import("./pages/Support"));
 const OrderSamples = lazy(() => import("./pages/OrderSamples"));
+const Inquiry = lazy(() => import("./pages/Inquiry"));
 const ReturnsExchanges = lazy(() => import("./pages/ReturnsExchanges"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -108,6 +109,7 @@ const App = () => {
               <Route path="/find-designer" element={<FindDesigner />} />
               <Route path="/support" element={<Support />} />
               <Route path="/order-samples" element={<OrderSamples />} />
+              <Route path="/inquiry" element={<Inquiry />} />
               <Route path="/returns-exchanges" element={<ReturnsExchanges />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
