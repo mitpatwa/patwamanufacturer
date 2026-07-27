@@ -108,35 +108,6 @@ const InquiryForm = () => {
     setIsSubmitting(true);
     
     try {
-      console.log('Submitting form with values:', values);
-      
-      // Insert inquiry into database
-      const { error } = await supabase
-        .from('inquiries')
-        .insert({
-          name: values.name,
-          email: values.email,
-          phone: values.phone || null,
-          company: values.company || null,
-          location: values.location,
-          project_type: values.projectType,
-          description: values.description,
-          timeline: values.timeline,
-          quantity: values.quantity || null,
-          special_requirements: values.specialRequirements || null,
-          referral_source: values.referralSource || null,
-        });
-
-      if (error) {
-        console.error('Error saving inquiry:', error);
-        toast({
-          title: "Error",
-          description: "There was an error submitting your inquiry. Please try again.",
-          variant: "destructive",
-        });
-        return;
-      }
-
       // Create mailto link with form data
       const subject = encodeURIComponent(`Custom Passementerie Inquiry - ${values.projectType}`);
       const body = encodeURIComponent(`
@@ -173,10 +144,32 @@ ${values.name}
       // Open email client
       const mailtoLink = `mailto:support@patwamanufacturer.com?subject=${subject}&body=${body}`;
       window.open(mailtoLink, '_self');
+
+      // Save a copy when the database accepts public inquiries, but do not block the email quote request.
+      supabase
+        .from('inquiries')
+        .insert({
+          name: values.name,
+          email: values.email,
+          phone: values.phone || null,
+          company: values.company || null,
+          location: values.location,
+          project_type: values.projectType,
+          description: values.description,
+          timeline: values.timeline,
+          quantity: values.quantity || null,
+          special_requirements: values.specialRequirements || null,
+          referral_source: values.referralSource || null,
+        })
+        .then(({ error }) => {
+          if (error) {
+            console.warn('Inquiry email opened, but database copy was not saved:', error.message);
+          }
+        });
       
       toast({
         title: "Inquiry Submitted Successfully!",
-        description: "Your inquiry has been saved and your email client should open. Please send the email to complete your request.",
+        description: "Your email client should open now. Please send the email to complete your request.",
       });
       
       // Set submitted state and reset form
@@ -520,7 +513,7 @@ ${values.name}
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel>
-                    I agree to the <a href="/terms" className="text-primary underline">Terms of Service</a> and <a href="/privacy" className="text-primary underline">Privacy Policy</a>
+                    I agree to the <a href="/terms-of-service" className="text-primary underline">Terms of Service</a> and <a href="/privacy-policy" className="text-primary underline">Privacy Policy</a>
                   </FormLabel>
                   <FormMessage />
                 </div>

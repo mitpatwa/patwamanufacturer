@@ -2,9 +2,15 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from "lucide-react";
 
+type FooterNavItem = {
+  name: string;
+  href: string;
+  external?: boolean;
+};
+
 const Footer = () => {
   // Footer navigation items grouped by category
-  const footerNavigation = {
+  const footerNavigation: Record<string, FooterNavItem[]> = {
     collections: [
       { name: "Tassels", href: "/collections/tassels" },
       { name: "Fringes", href: "/collections/fringes" },
@@ -20,7 +26,7 @@ const Footer = () => {
     ],
     services: [
       { name: "Custom Services", href: "/custom-services" },
-      { name: "Inquiry", href: "https://wa.me/919322140480?text=Hello!%20I'm%20interested%20in%20your%20passementerie%20products%20and%20would%20like%20to%20make%20an%20inquiry.", external: true },
+      { name: "Inquiry", href: "/inquiry" },
       { name: "Trade Program", href: "/trade-program" },
       { name: "Find a Designer", href: "/find-designer" },
     ],
