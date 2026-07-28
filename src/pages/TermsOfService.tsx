@@ -172,7 +172,7 @@ const TermsOfService = () => {
                 These terms and conditions govern your use of our website and services. 
                 Please read them carefully before using our services.
               </p>
-              <div className="flex items-center justify-center gap-2 text-gray-300">
+              <div className="flex items-center justify-center gap-2 text-gray-200">
                 <Clock className="h-5 w-5" />
                 <span>Last Updated: {lastUpdated}</span>
               </div>

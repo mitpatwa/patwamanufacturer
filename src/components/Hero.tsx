@@ -96,7 +96,7 @@ const Hero = () => {
                 height={1080}
               />
             </picture>
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-black/45" />
           </div>
         ))}
       </div>
