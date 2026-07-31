@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -27,13 +28,14 @@ const slides = [
     title: "Eighty weavers, mostly the same families.",
     subtitle: "Each tassel head is wrapped by one person, start to finish. About forty minutes a piece.",
     ctaText: "Talk to us",
-    ctaLink: "https://wa.me/919322140480?text=Hello%2C%20I%27m%20interested%20in%20your%20passementerie%20products"
+    ctaLink: "/inquiry"
   }
 ];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Optimized slide transition function to prevent forced reflows
   const transitionToSlide = useCallback((newSlide: number) => {
@@ -69,9 +71,10 @@ const Hero = () => {
 
   // Auto-advance slides with optimized interval
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(nextSlide, 7000);
     return () => clearInterval(interval);
-  }, [nextSlide]);
+  }, [nextSlide, isPaused]);
 
   return (
     <section className="relative h-[90vh] lg:h-screen overflow-hidden" style={{ minHeight: '90vh' }}>
@@ -114,12 +117,16 @@ const Hero = () => {
             <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto">
               {currentSlideData.subtitle}
             </p>
-            <a
-              href={currentSlideData.ctaLink}
-              className="inline-block py-3 px-8 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300 text-lg hover:scale-105 transform"
+            <Link
+              to={currentSlideData.ctaLink}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onFocus={() => setIsPaused(true)}
+              onBlur={() => setIsPaused(false)}
+              className="relative z-20 inline-block py-3 px-8 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300 text-lg hover:scale-105 transform"
             >
               {currentSlideData.ctaText}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
