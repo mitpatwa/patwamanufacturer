@@ -207,27 +207,13 @@ const Index = () => {
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Collections",
-                "item": "https://patwamanufacturer.lovable.app/#collections"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "About",
-                "item": "https://patwamanufacturer.lovable.app/about"
-              }
-            ]
+            "@type": "WebSite",
+            "@id": "https://patwamanufacturer.lovable.app/#website",
+            "url": "https://patwamanufacturer.lovable.app/",
+            "name": "Patwa Manufacturer",
+            "description": "Passementerie made in India: tassels, fringes, braids, cords and tie-backs, in stock or made to order.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://patwamanufacturer.lovable.app/#organization" }
           }`}
         </script>
       </Helmet>
