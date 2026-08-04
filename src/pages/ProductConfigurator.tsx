@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import { ArrowLeft, Save, Share2, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -102,6 +104,7 @@ Website: patwamanufacturer.lovable.app
           }`}
         </script>
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "Product Configurator", path: "/configurator" }])} />
 
       <div className="min-h-screen bg-background">
         {/* Top Bar */}

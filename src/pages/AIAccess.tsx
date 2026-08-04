@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Bot, Database, FileJson, Code, CheckCircle } from 'lucide-react';
@@ -28,6 +30,7 @@ const AIAccess = () => {
           }`}
         </script>
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "AI Access", path: "/ai-access" }])} />
       
       <Header />
       

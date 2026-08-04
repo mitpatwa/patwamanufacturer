@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
@@ -108,6 +110,7 @@ const PassementerieManufacturer = () => {
           }`}
         </script>
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "Passementerie Manufacturer", path: "/passementerie-manufacturer" }])} />
       
       <Header />
       

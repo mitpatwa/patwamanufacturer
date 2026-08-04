@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Clock, Mail, Phone } from 'lucide-react';
@@ -159,6 +161,7 @@ const TermsOfService = () => {
         <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, website terms, service terms" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/terms-of-service" />
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "Terms of Service", path: "/terms-of-service" }])} />
       
       <Header />
       

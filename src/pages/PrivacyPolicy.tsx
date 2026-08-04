@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Shield, Lock, Eye, Database, Mail, Phone, Calendar, FileText } from 'lucide-react';
@@ -200,6 +202,7 @@ const PrivacyPolicy = () => {
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR compliance, data security, privacy rights" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/privacy-policy" />
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy-policy" }])} />
       
       <Header />
       

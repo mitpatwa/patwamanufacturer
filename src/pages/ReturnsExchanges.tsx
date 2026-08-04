@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { RotateCcw, Package, Clock, CheckCircle, AlertTriangle, Truck, Shield, Mail, Phone, FileText, Download } from 'lucide-react';
@@ -144,6 +146,7 @@ const ReturnsExchanges = () => {
         <meta name="keywords" content="returns policy, exchanges, passementerie returns, decorative trimmings returns, quality guarantee, return shipping" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/returns-exchanges" />
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "Returns & Exchanges", path: "/returns-exchanges" }])} />
       
       <Header />
       
