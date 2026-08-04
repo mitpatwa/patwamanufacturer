@@ -38,6 +38,7 @@ const Index = () => {
           {`{
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://patwamanufacturer.lovable.app/#organization",
             "name": "Patwa Manufacturer",
             "alternateName": ["Patwa Passementerie", "Patwa Trims & Tassels"],
             "url": "https://patwamanufacturer.lovable.app",
