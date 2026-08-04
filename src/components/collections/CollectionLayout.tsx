@@ -1,6 +1,8 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import StructuredData from "@/components/StructuredData";
+import { breadcrumbSchema } from "@/lib/structured-data";
 
 interface CollectionLayoutProps {
   title: string;
@@ -9,8 +11,16 @@ interface CollectionLayoutProps {
 }
 
 const CollectionLayout = ({ title, description, children }: CollectionLayoutProps) => {
+  const { pathname } = useLocation();
+
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData
+        schema={breadcrumbSchema([
+          { name: "Collections", path: "/#collections" },
+          { name: title, path: pathname },
+        ])}
+      />
       <div className="container-custom py-32">
         <Link 
           to="/" 
