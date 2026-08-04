@@ -38,6 +38,7 @@ const Index = () => {
           {`{
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://patwamanufacturer.lovable.app/#organization",
             "name": "Patwa Manufacturer",
             "alternateName": ["Patwa Passementerie", "Patwa Trims & Tassels"],
             "url": "https://patwamanufacturer.lovable.app",
@@ -204,32 +205,7 @@ const Index = () => {
             ]
           }`}
         </script>
-        <script type="application/ld+json">
-          {`{
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Collections",
-                "item": "https://patwamanufacturer.lovable.app/#collections"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "About",
-                "item": "https://patwamanufacturer.lovable.app/about"
-              }
-            ]
-          }`}
-        </script>
+        {/* WebSite node lives in index.html so non-JS crawlers see it too. */}
       </Helmet>
       <Header />
       <main role="main" className="relative z-10">

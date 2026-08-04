@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '@/components/StructuredData';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InquiryForm from "../components/InquiryForm";
@@ -15,6 +17,7 @@ const Inquiry = () => {
         <meta property="og:description" content="Tell us about your trim project and we'll quote it, usually within a day or two." />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
+      <StructuredData schema={breadcrumbSchema([{ name: "Get a Quote", path: "/inquiry" }])} />
       <Header />
       <main role="main" className="pt-28 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
