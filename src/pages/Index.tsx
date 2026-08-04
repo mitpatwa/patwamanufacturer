@@ -205,18 +205,7 @@ const Index = () => {
             ]
           }`}
         </script>
-        <script type="application/ld+json">
-          {`{
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": "https://patwamanufacturer.lovable.app/#website",
-            "url": "https://patwamanufacturer.lovable.app/",
-            "name": "Patwa Manufacturer",
-            "description": "Passementerie made in India: tassels, fringes, braids, cords and tie-backs, in stock or made to order.",
-            "inLanguage": "en",
-            "publisher": { "@id": "https://patwamanufacturer.lovable.app/#organization" }
-          }`}
-        </script>
+        {/* WebSite node lives in index.html so non-JS crawlers see it too. */}
       </Helmet>
       <Header />
       <main role="main" className="relative z-10">
