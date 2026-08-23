@@ -173,7 +173,7 @@ const FindDesigner = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Find a Designer - Verified Interior Design Professionals | Patwa Manufacturer</title>
+        <title>Find an Interior Designer | Patwa Manufacturer</title>
         <meta name="description" content="Connect with verified interior designers and architects who specialize in passementerie and decorative trimmings. Find the perfect design professional for your project." />
         <meta name="keywords" content="find interior designer, verified designers, passementerie specialists, interior design professionals, design directory, custom trimmings designers, hire interior designer, find architect, design professional network" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/find-designer" />

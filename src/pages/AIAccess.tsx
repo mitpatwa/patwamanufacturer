@@ -10,7 +10,7 @@ const AIAccess = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>AI Access & Machine-Readable Product Catalog | Patwa Manufacturer</title>
+        <title>AI Access & Machine-Readable Catalog | Patwa</title>
         <meta name="description" content="AI-accessible product catalog and machine-readable data for Patwa Manufacturer's luxury passementerie products. Structured data for AI agents, chatbots, and automated systems." />
         <meta name="keywords" content="AI access, machine-readable catalog, structured data, API, product catalog, AI agents, chatbot integration" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/ai-access" />

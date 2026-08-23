@@ -9,8 +9,8 @@ const CustomServices = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Custom Passementerie Services - Bespoke Trims & Tassels | Patwa Manufacturer</title>
-        <meta name="description" content="Custom passementerie and bespoke trim services. We create made-to-order tassels, fringes, braids, and decorative trims for luxury interior design projects worldwide." />
+        <title>Custom Trims & Tassels, Made to Order | Patwa</title>
+        <meta name="description" content="Made-to-order tassels, fringes, braids and decorative trims for interior projects. Send us your colours and sizes and we make them in our workshop." />
         <meta name="keywords" content="custom passementerie, bespoke trims, made-to-order tassels, custom decorative trims, bespoke interior accessories, luxury custom textiles, custom fringe manufacturer, bespoke tassel design, color matching service" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/custom-services" />
         
@@ -139,8 +139,9 @@ const CustomServices = () => {
                   Restore and recreate historical trimmings for heritage properties and antique furniture with authentic techniques.
                 </p>
                 <a href="#selector" className="inline-flex items-center text-primary hover:underline">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  Learn more about restoration work <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
+
               </div>
             </div>
           </div>
