@@ -81,7 +81,7 @@ const PassementerieManufacturer = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Manufacturer of Passementerie, Custom Tassels, Fringes, Braids & Decorative Trimmings | Patwa Manufacturer</title>
+        <title>Passementerie Manufacturer in India | Patwa</title>
         <meta name="description" content="Leading manufacturer of passementerie, custom tassels, fringes, braids & decorative trimmings in India. Premium handcrafted quality for interior designers worldwide. Custom orders available." />
         <meta name="keywords" content="manufacturer of passementerie, custom tassels manufacturer, fringes manufacturer, braids manufacturer, decorative trimmings manufacturer, passementerie supplier, custom tassels supplier, luxury passementerie, handcrafted tassels, decorative fringes, textile braids, curtain trimmings, interior design accessories, passementerie India, tassels India, fringes India, braids India" />
         <link rel="canonical" href="https://patwamanufacturer.lovable.app/passementerie-manufacturer" />
