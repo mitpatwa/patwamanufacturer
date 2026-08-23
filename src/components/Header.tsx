@@ -105,7 +105,7 @@ const Header = () => {
 
           <Sheet>
             <SheetTrigger asChild>
-              <button className="lg:hidden p-2 text-foreground">
+              <button className="lg:hidden p-2 text-foreground" aria-label="Open menu">
                 <Menu className="h-6 w-6" />
               </button>
             </SheetTrigger>

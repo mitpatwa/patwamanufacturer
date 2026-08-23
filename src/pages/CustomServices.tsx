@@ -139,8 +139,9 @@ const CustomServices = () => {
                   Restore and recreate historical trimmings for heritage properties and antique furniture with authentic techniques.
                 </p>
                 <a href="#selector" className="inline-flex items-center text-primary hover:underline">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  Learn more about restoration work <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
+
               </div>
             </div>
           </div>

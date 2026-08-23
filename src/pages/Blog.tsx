@@ -241,8 +241,9 @@ const Blog = () => {
                         ))}
                       </div>
                       <div className="text-primary hover:text-primary/80 font-medium flex items-center gap-2">
-                        Read More
+                        Read the full article<span className="sr-only">: {post.title}</span>
                         <ArrowRight className="h-4 w-4" />
+
                       </div>
                     </CardContent>
                   </Card>
