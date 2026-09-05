@@ -3206,6 +3206,159 @@ Mastering passementerie terminology serves practical purposes beyond mere academ
     seoTitle: 'Ultimate Passementerie Glossary: 100+ Essential Trim Terms',
     seoDescription: 'Comprehensive passementerie glossary with 100+ terms every designer should know. From aiguillette to zephyr braid, master the language of decorative trims.',
     seoKeywords: ['passementerie glossary', 'trim terminology', 'decorative trim terms', 'textile vocabulary', 'passementerie definitions']
+  },
+  {
+    id: '31',
+    slug: 'how-to-choose-trim-for-curtains',
+    title: 'How to Choose Trim for Curtains That Hang Well',
+    excerpt: 'The best curtain trim is not simply the prettiest one. Here is how to match width, weight, texture, and placement so the finished window feels considered.',
+    content: `
+# How to Choose Trim for Curtains That Hang Well
+
+Curtain trim has a practical job as well as a decorative one. It can give a leading edge more definition, help a border hold its line, and add enough visual weight to make a plain panel feel finished. The trick is choosing a trim that belongs to the fabric rather than asking it to do all the talking.
+
+## Start with the curtain fabric
+
+Hold the fabric in your hand before looking at colour. A light linen or cotton voile needs a trim with a light hand. Narrow braid, small cord, and a restrained fringe will sit neatly without pulling the curtain out of shape. A heavy velvet or lined silk can take a fuller bullion fringe, a substantial gimp, or a long tassel trim.
+
+If the fabric has a strong pattern, a quiet trim usually works best. Pick up one colour from the cloth and let the texture provide the interest. With a plain fabric, you have more room to use a patterned braid or a fringe with movement.
+
+## Check the scale from the room
+
+Trim is easy to judge too closely. A one-inch braid can look generous on a worktable and disappear once it is installed on a wide window. Measure the distance from the curtain to the main viewing position, then look at the trim from there.
+
+As a starting point, narrow braids suit small windows and delicate panels. Medium braids and cords work well on most residential curtains. Longer fringe belongs on full-height panels, deep valances, and rooms where the trim can be seen from several metres away.
+
+## Decide where the trim should go
+
+A leading-edge trim draws the eye vertically and makes a pair of curtains feel more tailored. A bottom border gives the hem a clear finish and works particularly well when the curtain is full length. A trim along the top or on a valance creates a stronger horizontal line, so it needs to relate to the width of the window.
+
+You do not have to use the same trim in every position. A narrow cord at the leading edge and a wider border at the hem can feel more natural than one heavy trim repeated everywhere. Use a small sample to test the junctions before committing.
+
+## Order a sample and look at it in daylight
+
+Screens flatten texture and make colour matching harder than it needs to be. A sample lets you see how the thread catches daylight, whether the fringe sits straight, and whether the scale feels right beside the fabric.
+
+Pin the sample to the curtain or tape it to a paper mock-up at the intended position. Check it in the morning, afternoon, and evening. Warm artificial light can make gold look yellow and cool blue-grey trims look sharper than they will in daylight.
+
+## A simple final check
+
+Before you approve the trim, ask four questions: does its weight suit the cloth, can you see its pattern from the room, will the installation line stay straight, and does it support the rest of the room rather than compete with it? If the answer is yes to all four, the trim is probably doing its job.
+
+At Patwa, we can prepare samples for a specific curtain fabric, colour direction, and application. It is much easier to make a good decision when the actual materials are in front of you.
+    `,
+    author: 'Patwa Studio',
+    date: '2026-09-05',
+    readTime: '7 min read',
+    category: 'Design Guide',
+    tags: ['curtain trim', 'window treatments', 'decorative braid', 'interior design'],
+    image: '/images/gallery/saisons-02.jpg',
+    featured: false,
+    seoTitle: 'How to Choose Trim for Curtains That Hang Well',
+    seoDescription: 'Learn how to choose curtain trim by fabric weight, scale, placement, texture, and colour before you order samples or begin installation.',
+    seoKeywords: ['curtain trim', 'how to choose curtain trim', 'window treatment trim', 'decorative curtain braid'],
+  },
+  {
+    id: '32',
+    slug: 'what-makes-a-good-tassel',
+    title: 'What Makes a Good Tassel? Proportion, Weight, and Finish',
+    excerpt: 'A useful guide to the details that make a tassel feel balanced: the head, skirt, cord, thread, and the relationship between the piece and the furniture around it.',
+    content: `
+# What Makes a Good Tassel? Proportion, Weight, and Finish
+
+A tassel looks simple until you start comparing two of them side by side. Small differences in the head, the fullness of the skirt, the twist of the cord, and the way the threads are finished change the whole impression. A well-made tassel feels balanced in the hand and in the room.
+
+## The head sets the character
+
+The head is the shaped part above the hanging threads. It may be wrapped in thread, covered in fabric, or finished with a more pronounced mould. A small rounded head feels quiet and useful for cushions, lamps, and smaller furniture. A fuller or more detailed head can hold its own on a curtain tie-back or the corner of a large upholstered piece.
+
+Look at the transition between the head and the skirt. The neck should feel secure, not pinched, and the decorative wrapping should be even. This is one of the places where a rushed finish becomes visible quickly.
+
+## Fullness matters more than length
+
+Long threads do not automatically make a better tassel. If the skirt is too thin, a long tassel can look underdressed and lose its shape. If it is too full for the scale of the furniture, it can feel heavy and fussy.
+
+For a cushion or small chair, a compact skirt usually gives the cleanest result. A larger tie-back can take more fullness because it has a bigger visual job and will often be seen against a broad expanse of fabric. Compare the tassel with the furniture, not only with the sample card.
+
+## Choose the cord for the way it will be used
+
+The cord needs to support the tassel and suit the movement of the finished piece. A soft twist gives a relaxed, traditional feel. A firmer braid holds a cleaner line and works well when the tie-back is meant to sit in a particular shape.
+
+Think about the hanging point too. A tassel that will be handled regularly needs a secure loop and a cord that will not flatten after a few uses. For a fixed decorative application, the visual relationship may matter more than flexibility.
+
+## Thread and colour change in the light
+
+Silk-like rayon can catch the light with a bright, fluid sheen. Cotton and linen bring a quieter, more matte surface. Metallic threads add a glint, but they should have a reason to be there. A small metallic accent can connect a tassel to a lamp, mirror, or piece of hardware; too much can make the detail look separate from the room.
+
+When matching colour, compare the trim with the actual upholstery or curtain fabric. A tassel that looks identical on a screen may read warmer or cooler beside the finished textile. A close tonal match is often more forgiving than a near miss.
+
+## Finish is the final test
+
+The skirt should hang cleanly, the cut edge should be even, and the cord should join the head without loose threads. Turn the tassel over and inspect the attachment point. The back is not usually on show, but it tells you how carefully the piece was made.
+
+Order one sample first when the tassel is for a larger project. Live with it beside the fabric, then adjust the length, colour, or fullness while there is still time to do so.
+    `,
+    author: 'Patwa Studio',
+    date: '2026-09-05',
+    readTime: '6 min read',
+    category: 'Product Guide',
+    tags: ['tassels', 'tie-backs', 'trim quality', 'textile details'],
+    image: '/images/gallery/sophie-01.jpg',
+    featured: false,
+    seoTitle: 'What Makes a Good Tassel? Proportion and Finish',
+    seoDescription: 'Learn what to look for in a quality tassel, from head and skirt proportions to cord construction, thread choice, colour, and finish.',
+    seoKeywords: ['quality tassels', 'tassel guide', 'curtain tie-back tassels', 'decorative tassel construction'],
+  },
+  {
+    id: '33',
+    slug: 'from-sample-to-finished-room',
+    title: 'From Sample to Finished Room: A Practical Trim Buying Guide',
+    excerpt: 'A straightforward way to move from an initial idea to the right trim order, with fewer surprises between the sample table and the finished room.',
+    content: `
+# From Sample to Finished Room: A Practical Trim Buying Guide
+
+Most trim decisions begin with a small piece of fabric and a general idea. The finished room is much larger, the light is different, and the trim may be seen from across the space. A few simple checks at the beginning can keep the process calm and prevent expensive substitutions later.
+
+## Gather the materials that already exist
+
+Start with the curtain, upholstery, wallpaper, paint card, hardware, and any nearby metal or wood finishes. Put them together in one place. This makes it easier to see whether the trim belongs to the room as a whole, rather than matching only one fabric.
+
+Include photographs of the room if the project is being specified away from the site. A trim that works beautifully on a close-up board may need more presence when the furniture is large or the ceiling is high.
+
+## Describe the job clearly
+
+When asking for a trim recommendation, include the application, the approximate quantity, the fabric it will sit beside, the desired width or length, and the conditions it will live in. A window treatment, an upholstered chair, and a decorative box may all need different construction even if they share a colour.
+
+It is also useful to say what you do not want. Perhaps the trim should not be shiny, the fringe should not move too much, or the finished edge needs to be quiet enough for a patterned fabric. Clear exclusions save time.
+
+## Test the sample where it will be used
+
+Lay the sample against the actual fabric, then look at it from the distance of the finished room. If possible, attach it temporarily at the correct edge. Check the way the trim bends around a corner, meets a seam, or sits near a hem.
+
+Photograph the test in both daylight and evening light. Keep the original sample with the notes so that the colour, width, and construction can be checked again when the order is placed.
+
+## Confirm the practical details
+
+Before ordering, confirm the finished width, the repeat if there is one, the available colourway, the selling unit, the lead time, and the expected amount of waste. Ask how much extra is sensible for corners, joins, pattern matching, and installation errors.
+
+For upholstery, discuss whether the trim will be sewn, glued, or applied over a tack line. For curtains, confirm where the trim will be placed and whether the workroom needs a continuous length. These details affect how much material you actually need.
+
+## Leave room for the human part
+
+Hand-finished trims can have small variations in thread, tension, or colour. That is part of their character, but it is worth discussing before production when a project needs a very uniform run. A good maker will tell you what to expect and what can be controlled.
+
+The best buying process is a conversation, not a catalogue exercise. Send the fabric, explain the room, ask for a sample, and make the final decision with the materials together. That small amount of preparation usually leads to a trim that feels as though it was made for the project.
+    `,
+    author: 'Patwa Studio',
+    date: '2026-09-05',
+    readTime: '8 min read',
+    category: 'Business',
+    tags: ['trim sourcing', 'design process', 'samples', 'custom manufacturing'],
+    image: '/images/gallery/tiverton-01.jpg',
+    featured: false,
+    seoTitle: 'From Sample to Finished Room: Trim Buying Guide',
+    seoDescription: 'Use this practical trim buying guide to gather materials, request the right sample, confirm quantities, and avoid surprises during installation.',
+    seoKeywords: ['buying decorative trim', 'trim samples', 'custom passementerie', 'interior design sourcing'],
   }
 ];
 
