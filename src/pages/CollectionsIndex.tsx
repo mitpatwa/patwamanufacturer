@@ -35,6 +35,7 @@ const CollectionsIndex = () => (
       <meta name="twitter:title" content="All Collections | Patwa Manufacturer" />
       <meta name="twitter:description" content="Browse every collection: tassels, fringes, braids, cords, tie-backs, embellishments, and finished pieces." />
     </Helmet>
+    <Header />
     <CollectionLayout
       title="All Collections"
       description="Twelve collections, one workshop in Mumbai. Every piece below is made by hand and can be matched to your fabric or ordered as a sample first."
@@ -55,7 +56,6 @@ const CollectionsIndex = () => (
       </div>
     </CollectionLayout>
     <Footer />
-    <Header />
   </>
 );
 

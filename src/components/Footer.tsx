@@ -14,14 +14,13 @@ const Footer = () => {
     collections: [
       { name: "Tassels", href: "/collections/tassels" },
       { name: "Fringes", href: "/collections/fringes" },
-      { name: "Cords & Braids", href: "/collections/cords-braids" },
+      { name: "Cords & Braids", href: "/collections/cords" },
       { name: "Embellishments", href: "/collections/embellishments" },
-      { name: "Custom Creations", href: "/collections/custom-creations" },
+      { name: "Custom Creations", href: "/custom-services" },
     ],
     company: [
       { name: "About Us", href: "/about" },
       { name: "Craftsmanship", href: "/craftsmanship" },
-      { name: "Workshop", href: "/workshop" },
       { name: "Sustainability", href: "/sustainability" },
     ],
     services: [
