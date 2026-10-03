@@ -5,7 +5,7 @@ import ProductGrid from "@/components/collections/ProductGrid";
 import { allProducts } from "@/data/products";
 
 const EmbelishmentsCollection = () => {
-  const embelishmentsProducts = allProducts.filter(
+  const embellishmentsProducts = allProducts.filter(
 
     (product) => product.category === "Trim"
   );
@@ -39,7 +39,7 @@ const EmbelishmentsCollection = () => {
         title="Luxury Embellishments Collection"
         description="Beaded accents, metallic detail, hand-stitched rosettes and medallions. Small batch work — most pieces are stitched one at a time. Tell us the project and we will suggest what fits."
       >
-        <ProductGrid products={embelishmentsProducts} />
+        <ProductGrid products={embellishmentsProducts} />
       </CollectionLayout>
     </>
   );

@@ -5,6 +5,7 @@
 ## Pages
 
 - [Home](/): Overview of Patwa Manufacturer's luxury passementerie offering.
+- [All Collections](/collections): Index of every trim collection.
 - [About](/about): 30+ year heritage, artisans, and manufacturing facility.
 - [Passementerie Manufacturer](/passementerie-manufacturer): Manufacturing capabilities and services.
 - [Custom Services](/custom-services): Bespoke design and custom manufacturing.
