@@ -2,7 +2,7 @@
 // Organization and WebSite are declared once with stable @id values; page-level
 // schemas reference those ids instead of repeating the whole node.
 
-export const SITE_URL = "https://patwamanufacturer.lovable.app";
+export const SITE_URL = "https://patwamanufacturer.com";
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;

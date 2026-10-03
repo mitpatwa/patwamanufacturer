@@ -43,7 +43,7 @@ const collections = [
     image: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.webp",
     fallback: "/lovable-uploads/aac96efb-8b36-4b12-95d5-f75359a54ab5.png",
     description: "Beaded accents, metallic detail, hand-stitched rosettes.",
-    link: "/collections/embelishments"
+    link: "/collections/embellishments"
   },
   {
     id: 6,

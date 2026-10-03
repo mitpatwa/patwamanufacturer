@@ -35,14 +35,14 @@ const SEO = () => {
         <title>SEO Analysis & Optimization | Patwa Manufacturer - Interior Décor Manufacturers India</title>
         <meta name="description" content="Comprehensive SEO analysis and optimization tools for Patwa Manufacturer. Track keyword rankings, page performance, and implement SEO best practices for better search visibility." />
         <meta name="keywords" content="SEO analysis, keyword optimization, search engine optimization, SEO tools, website performance, keyword rankings, SEO monitoring, Patwa Manufacturer SEO" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/seo" />
+        <link rel="canonical" href="https://patwamanufacturer.com/seo" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "SEO Analysis & Optimization",
             "description": "Comprehensive SEO analysis and optimization tools for Patwa Manufacturer",
-            "url": "https://patwamanufacturer.lovable.app/seo",
+            "url": "https://patwamanufacturer.com/seo",
             "mainEntity": {
               "@type": "SoftwareApplication",
               "name": "SEO Analysis Tools",

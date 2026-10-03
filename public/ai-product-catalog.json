@@ -3,11 +3,11 @@
   "@type": "Catalog",
   "name": "Patwa Manufacturer - Luxury Passementerie Product Catalog",
   "description": "Complete catalog of luxury handcrafted passementerie products including tassels, fringes, braids, trims, and custom decorative textiles manufactured in India",
-  "url": "https://patwamanufacturer.lovable.app",
+  "url": "https://patwamanufacturer.com",
   "provider": {
     "@type": "Organization",
     "name": "Patwa Manufacturer",
-    "url": "https://patwamanufacturer.lovable.app",
+    "url": "https://patwamanufacturer.com",
     "description": "Premium manufacturer of luxury passementerie, decorative trims, and custom textiles in India",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -27,7 +27,7 @@
       "features": ["Custom colors", "Handmade", "Premium materials", "Various sizes"],
       "applications": ["Curtain tiebacks", "Cushion corners", "Furniture accents", "Home décor"],
       "customization": "Available in custom colors, sizes, and designs",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/tassels"
+      "pageUrl": "https://patwamanufacturer.com/collections/tassels"
     },
     "fringes": {
       "category": "Fringes",
@@ -35,7 +35,7 @@
       "features": ["Bullion fringe", "Brush fringe", "Silk fringe", "Custom lengths"],
       "applications": ["Upholstery edging", "Drapery trim", "Cushion borders", "Lampshade trim"],
       "customization": "Available in customizable lengths and colorways",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/fringes"
+      "pageUrl": "https://patwamanufacturer.com/collections/fringes"
     },
     "braids": {
       "category": "Braids",
@@ -43,7 +43,7 @@
       "features": ["Multiple widths", "Traditional techniques", "Contemporary designs", "Durable"],
       "applications": ["Upholstery borders", "Cushion edges", "Drapery accents", "Furniture trim"],
       "customization": "Custom colors and patterns available",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/braids"
+      "pageUrl": "https://patwamanufacturer.com/collections/braids"
     },
     "cords": {
       "category": "Cords & Tiebacks",
@@ -51,7 +51,7 @@
       "features": ["Silk cords", "Decorative tiebacks", "Rope ties", "Multiple styles"],
       "applications": ["Curtain tiebacks", "Drapery ties", "Window treatments", "Decorative accents"],
       "customization": "Custom designs and colors available",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/cords"
+      "pageUrl": "https://patwamanufacturer.com/collections/cords"
     },
     "embellishments": {
       "category": "Embellishments & Trims",
@@ -59,7 +59,7 @@
       "features": ["Beaded accents", "Metallic trims", "Luxury finishings", "Statement pieces"],
       "applications": ["Interior design", "Furniture embellishment", "Custom projects", "Decorative accents"],
       "customization": "Bespoke embellishments for unique projects",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/embellishments"
+      "pageUrl": "https://patwamanufacturer.com/collections/embellishments"
     },
     "furnitureTrims": {
       "category": "Furniture Trims",
@@ -67,7 +67,7 @@
       "features": ["Gimp trim", "Nailhead trim", "Welt cord", "Professional grade"],
       "applications": ["Sofas", "Chairs", "Ottomans", "Headboards"],
       "customization": "Custom designs for furniture manufacturers",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/furniture-trims"
+      "pageUrl": "https://patwamanufacturer.com/collections/furniture-trims"
     },
     "windowTreatments": {
       "category": "Window Treatments",
@@ -75,7 +75,7 @@
       "features": ["Valance trim", "Curtain accessories", "Decorative headers", "Matching sets"],
       "applications": ["Curtains", "Drapes", "Valances", "Roman shades"],
       "customization": "Complete custom window treatment solutions",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/window-treatments"
+      "pageUrl": "https://patwamanufacturer.com/collections/window-treatments"
     },
     "windowShades": {
       "category": "Window Shades",
@@ -83,7 +83,7 @@
       "features": ["Roman shades", "Roller blinds", "Trim finishes", "Light control"],
       "applications": ["Windows", "Light control", "Privacy", "Interior design"],
       "customization": "Custom trim finishes and designs",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/window-shades"
+      "pageUrl": "https://patwamanufacturer.com/collections/window-shades"
     },
     "homeAccessories": {
       "category": "Home Accessories",
@@ -91,7 +91,7 @@
       "features": ["Cushions", "Throws", "Decorative items", "Premium finishes"],
       "applications": ["Living rooms", "Bedrooms", "Hotels", "Interior design"],
       "customization": "Custom home accessory designs",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/home-accessories"
+      "pageUrl": "https://patwamanufacturer.com/collections/home-accessories"
     },
     "tableLinens": {
       "category": "Table Linens",
@@ -99,7 +99,7 @@
       "features": ["Tablecloths", "Napkins", "Runners", "Premium fabrics"],
       "applications": ["Dining rooms", "Events", "Hotels", "Fine dining"],
       "customization": "Custom table linen designs and sizes",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/table-linens"
+      "pageUrl": "https://patwamanufacturer.com/collections/table-linens"
     },
     "outdoorFabrics": {
       "category": "Outdoor Fabrics",
@@ -107,26 +107,26 @@
       "features": ["UV resistant", "Weather-resistant", "Durable", "Fade-resistant"],
       "applications": ["Outdoor furniture", "Patio", "Garden", "Marine"],
       "customization": "Custom outdoor fabric solutions",
-      "pageUrl": "https://patwamanufacturer.lovable.app/collections/outdoor-fabrics"
+      "pageUrl": "https://patwamanufacturer.com/collections/outdoor-fabrics"
     }
   },
   "services": {
     "customServices": {
       "name": "Custom Passementerie Services",
       "description": "Bespoke passementerie design and manufacturing for unique projects",
-      "url": "https://patwamanufacturer.lovable.app/custom-services",
+      "url": "https://patwamanufacturer.com/custom-services",
       "features": ["Custom design", "Color matching", "Sample creation", "Bulk orders"]
     },
     "tradeProgram": {
       "name": "Trade Program",
       "description": "Wholesale program for interior designers and trade professionals",
-      "url": "https://patwamanufacturer.lovable.app/trade-program",
+      "url": "https://patwamanufacturer.com/trade-program",
       "benefits": ["Trade pricing", "Priority service", "Sample support", "Design consultation"]
     },
     "orderSamples": {
       "name": "Sample Orders",
       "description": "Order physical samples of our products",
-      "url": "https://patwamanufacturer.lovable.app/order-samples"
+      "url": "https://patwamanufacturer.com/order-samples"
     }
   },
   "businessInfo": {
@@ -162,8 +162,8 @@
     "contactMethods": {
       "whatsapp": "+91-9322140480",
       "email": "support@patwamanufacturer.com",
-      "inquiry": "https://patwamanufacturer.lovable.app/inquiry",
-      "website": "https://patwamanufacturer.lovable.app"
+      "inquiry": "https://patwamanufacturer.com/inquiry",
+      "website": "https://patwamanufacturer.com"
     }
   },
   "idealClients": {
@@ -185,11 +185,11 @@
     }
   },
   "conversionPaths": {
-    "quickInquiry": "https://patwamanufacturer.lovable.app/inquiry",
+    "quickInquiry": "https://patwamanufacturer.com/inquiry",
     "whatsappChat": "https://wa.me/919322140480?text=Hello%2C%20I%27m%20interested%20in%20your%20passementerie%20products",
-    "orderSamples": "https://patwamanufacturer.lovable.app/order-samples",
-    "tradeProgram": "https://patwamanufacturer.lovable.app/trade-program",
-    "customServices": "https://patwamanufacturer.lovable.app/custom-services"
+    "orderSamples": "https://patwamanufacturer.com/order-samples",
+    "tradeProgram": "https://patwamanufacturer.com/trade-program",
+    "customServices": "https://patwamanufacturer.com/custom-services"
   },
   "aiAccessInstructions": {
     "purpose": "This catalog enables AI agents to provide accurate, helpful information about Patwa Manufacturer's luxury passementerie products and services",

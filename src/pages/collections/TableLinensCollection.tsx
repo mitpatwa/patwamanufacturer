@@ -14,11 +14,11 @@ const TableLinensCollection = () => {
         <title>Luxury Table Linens Collection | Patwa Manufacturer</title>
         <meta name="description" content="Runners and tablecloths with fringe stitched at the edge. Cotton, linen, or linen-blend bases." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/table-linens" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/table-linens" />
         <meta property="og:title" content="Luxury Table Linens | Patwa Manufacturer" />
         <meta property="og:description" content="Tablecloths and runners with artisanal fringe details for elegant dining." />
         <meta name="keywords" content="luxury table linens, decorative tablecloths, table runners, fringe tablecloths, handcrafted table linens, dining accessories, premium table textiles, custom table linens, designer textile embellishments" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/table-linens" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/table-linens" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Luxury Table Linens | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const TableLinensCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Table Linens Collection",
             "description": "Exquisite table linens with decorative fringe details for sophisticated dining experiences",
-            "url": "https://patwamanufacturer.lovable.app/collections/table-linens",
+            "url": "https://patwamanufacturer.com/collections/table-linens",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${tableLinensProducts.length},

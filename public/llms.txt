@@ -5,6 +5,7 @@
 ## Pages
 
 - [Home](/): Overview of Patwa Manufacturer's luxury passementerie offering.
+- [All Collections](/collections): Index of every trim collection.
 - [About](/about): 30+ year heritage, artisans, and manufacturing facility.
 - [Passementerie Manufacturer](/passementerie-manufacturer): Manufacturing capabilities and services.
 - [Custom Services](/custom-services): Bespoke design and custom manufacturing.
@@ -24,7 +25,7 @@
 - [Braids](/collections/braids): Decorative braids and gimp trim.
 - [Cords](/collections/cords): Silk cords and rope ties.
 - [Tie-backs](/collections/tie-backs): Curtain tiebacks and holders.
-- [Embellishments](/collections/embelishments): Beaded accents and metallic trims.
+- [Embellishments](/collections/embellishments): Beaded accents and metallic trims.
 - [Window Treatments](/collections/window-treatments): Custom curtains and drapes.
 - [Window Shades](/collections/window-shades): Roman shades with trim finishes.
 - [Furniture Trims](/collections/furniture-trims): Sofa fringes and chair borders.

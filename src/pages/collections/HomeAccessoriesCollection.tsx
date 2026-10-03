@@ -14,11 +14,11 @@ const HomeAccessoriesCollection = () => {
         <title>Decorative Home Accessories | Patwa Manufacturer</title>
         <meta name="description" content="Cushions, throws and lampshade trim. Small runs, mostly one-off, finished by hand." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/home-accessories" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/home-accessories" />
         <meta property="og:title" content="Decorative Home Accessories | Patwa Manufacturer" />
         <meta property="og:description" content="Pillows and accent pieces finished with handcrafted passementerie." />
         <meta name="keywords" content="decorative home accessories, handcrafted accessories, passementerie details, decorative pillows, accent pieces, luxury home décor, artisan home accessories, custom home embellishments, premium trimmings for upholstery" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/home-accessories" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/home-accessories" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Decorative Home Accessories | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const HomeAccessoriesCollection = () => {
             "@type": "CollectionPage",
             "name": "Decorative Home Accessories Collection",
             "description": "Curated decorative accessories with handcrafted passementerie details for sophisticated living spaces",
-            "url": "https://patwamanufacturer.lovable.app/collections/home-accessories",
+            "url": "https://patwamanufacturer.com/collections/home-accessories",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${homeAccessoriesProducts.length},

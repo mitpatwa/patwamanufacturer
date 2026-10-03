@@ -13,11 +13,11 @@ const About = () => {
         <title>About Patwa Manufacturer | Passementerie Since 1990</title>
         <meta name="description" content="Luxury passementerie maker since 1990. 50+ artisans crafting custom tassels, fringes & trims, exported to 30+ countries." />
         <meta name="keywords" content="about Patwa Manufacturer, passementerie manufacturer India, tassel manufacturer heritage, luxury trim factory, handcrafted passementerie, decorative trim manufacturer, artisan tassel maker, ISO certified trim manufacturer, export passementerie manufacturer, wholesale tassel supplier, passementerie manufacturing facility" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/about" />
+        <link rel="canonical" href="https://patwamanufacturer.com/about" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/about" />
+        <meta property="og:url" content="https://patwamanufacturer.com/about" />
         <meta property="og:title" content="About Patwa Manufacturer - Passementerie Manufacturing Excellence" />
         <meta property="og:description" content="30+ years manufacturing luxury passementerie. 50+ artisans. Export to 30+ countries." />
         
@@ -27,7 +27,7 @@ const About = () => {
             "@type": "AboutPage",
             "name": "About Patwa Manufacturer",
             "description": "Heritage craftsmanship meets modern innovation in luxury passementerie manufacturing since 1990",
-            "url": "https://patwamanufacturer.lovable.app/about",
+            "url": "https://patwamanufacturer.com/about",
             "mainEntity": {
               "@type": "Organization",
               "name": "Patwa Manufacturer",
@@ -56,13 +56,13 @@ const About = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
+                "item": "https://patwamanufacturer.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "About",
-                "item": "https://patwamanufacturer.lovable.app/about"
+                "item": "https://patwamanufacturer.com/about"
               }
             ]
           }`}

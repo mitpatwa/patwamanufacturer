@@ -144,7 +144,7 @@ const ReturnsExchanges = () => {
         <title>Returns & Exchanges - Easy Return Policy | Patwa Manufacturer</title>
         <meta name="description" content="Learn about our flexible return and exchange policy. 30-day returns, easy exchanges, and quality guarantee on all passementerie and decorative trimmings." />
         <meta name="keywords" content="returns policy, exchanges, passementerie returns, decorative trimmings returns, quality guarantee, return shipping" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/returns-exchanges" />
+        <link rel="canonical" href="https://patwamanufacturer.com/returns-exchanges" />
       </Helmet>
       <StructuredData schema={breadcrumbSchema([{ name: "Returns & Exchanges", path: "/returns-exchanges" }])} />
       

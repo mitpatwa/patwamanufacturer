@@ -38,10 +38,10 @@ const BlogCategory = () => {
       <Helmet>
         <title>{`${categoryInfo.name} — ${categoryPosts.length} Articles | Patwa Manufacturer`}</title>
         <meta name="description" content={categoryInfo.description.slice(0, 155)} />
-        <link rel="canonical" href={`https://patwamanufacturer.lovable.app/blog/category/${categoryInfo.slug}`} />
+        <link rel="canonical" href={`https://patwamanufacturer.com/blog/category/${categoryInfo.slug}`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
-        <meta property="og:url" content={`https://patwamanufacturer.lovable.app/blog/category/${categoryInfo.slug}`} />
+        <meta property="og:url" content={`https://patwamanufacturer.com/blog/category/${categoryInfo.slug}`} />
         <meta property="og:title" content={`${categoryInfo.name} — Passementerie Articles`} />
         <meta property="og:description" content={categoryInfo.description.slice(0, 155)} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -53,14 +53,14 @@ const BlogCategory = () => {
             '@type': 'CollectionPage',
             name: `${categoryInfo.name} Articles`,
             description: categoryInfo.description,
-            url: `https://patwamanufacturer.lovable.app/blog/category/${categoryInfo.slug}`,
+            url: `https://patwamanufacturer.com/blog/category/${categoryInfo.slug}`,
             mainEntity: {
               '@type': 'ItemList',
               numberOfItems: categoryPosts.length,
               itemListElement: categoryPosts.slice(0, 10).map((p, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
-                url: `https://patwamanufacturer.lovable.app/blog/${p.slug}`,
+                url: `https://patwamanufacturer.com/blog/${p.slug}`,
                 name: p.title,
               })),
             },
@@ -71,9 +71,9 @@ const BlogCategory = () => {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://patwamanufacturer.lovable.app/' },
-              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://patwamanufacturer.lovable.app/blog' },
-              { '@type': 'ListItem', position: 3, name: categoryInfo.name, item: `https://patwamanufacturer.lovable.app/blog/category/${categoryInfo.slug}` },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://patwamanufacturer.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://patwamanufacturer.com/blog' },
+              { '@type': 'ListItem', position: 3, name: categoryInfo.name, item: `https://patwamanufacturer.com/blog/category/${categoryInfo.slug}` },
             ],
           })}
         </script>

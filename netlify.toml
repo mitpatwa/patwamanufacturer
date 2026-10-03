@@ -1,0 +1,15 @@
+# Netlify build configuration for the Patwa Manufacturer SPA
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: serve index.html for every route so direct navigation
+# and refreshes on /about, /blog/..., etc. never 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Preserve existing asset caching rules
+[build.environment]
+  NODE_VERSION = "20"

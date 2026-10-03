@@ -74,7 +74,7 @@ CUSTOMIZATION
 CONTACT INFORMATION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Patwa Manufacturer
-Website: https://patwamanufacturer.lovable.app
+Website: https://patwamanufacturer.com
 WhatsApp: +91 93221 40480
 Email: info@patwamanufacturer.com
 

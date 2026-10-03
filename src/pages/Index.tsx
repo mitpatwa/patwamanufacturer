@@ -18,31 +18,31 @@ const Index = () => {
         <title>Patwa Manufacturer | Luxury Passementerie & Tassels India</title>
         <meta name="description" content="Direct manufacturer of luxury passementerie, tassels, fringes, braids & decorative trims. Wholesale, custom orders, worldwide export." />
         <meta name="keywords" content="passementerie manufacturer, tassel manufacturer India, fringe manufacturer, braid manufacturer, decorative trim manufacturer, curtain tassel supplier, wholesale passementerie, custom tassel manufacturer, upholstery trim manufacturer, bulk tassel supplier, passementerie factory India, decorative trimmings manufacturer, curtain accessories manufacturer, luxury trim manufacturer, handcrafted tassel manufacturer, custom fringe manufacturer, wholesale decorative trims, passementerie supplier India, tassel factory, trim manufacturer exporter" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/" />
+        <link rel="canonical" href="https://patwamanufacturer.com/" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/" />
+        <meta property="og:url" content="https://patwamanufacturer.com/" />
         <meta property="og:title" content="Patwa Manufacturer - Leading Passementerie & Tassel Manufacturer India" />
         <meta property="og:description" content="Direct manufacturer of luxury passementerie, custom tassels, fringes & decorative trims. Wholesale & custom orders. Export worldwide." />
-        <meta property="og:image" content="https://patwamanufacturer.lovable.app/lovable-uploads/hero-1-new.png" />
+        <meta property="og:image" content="https://patwamanufacturer.com/lovable-uploads/hero-1-new.png" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/" />
+        <meta name="twitter:url" content="https://patwamanufacturer.com/" />
         <meta name="twitter:title" content="Patwa Manufacturer - Passementerie & Tassel Manufacturer India" />
         <meta name="twitter:description" content="Direct manufacturer of luxury passementerie, custom tassels, fringes & decorative trims." />
-        <meta name="twitter:image" content="https://patwamanufacturer.lovable.app/lovable-uploads/hero-1-new.png" />
+        <meta name="twitter:image" content="https://patwamanufacturer.com/lovable-uploads/hero-1-new.png" />
         
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://patwamanufacturer.lovable.app/#organization",
+            "@id": "https://patwamanufacturer.com/#organization",
             "name": "Patwa Manufacturer",
             "alternateName": ["Patwa Passementerie", "Patwa Trims & Tassels"],
-            "url": "https://patwamanufacturer.lovable.app",
-            "logo": "https://patwamanufacturer.lovable.app/images/patwa-logo.png",
+            "url": "https://patwamanufacturer.com",
+            "logo": "https://patwamanufacturer.com/images/patwa-logo.png",
             "description": "Leading manufacturer of luxury passementerie, custom tassels, fringes, braids & decorative trimmings in India. Direct factory supplier with custom manufacturing capabilities.",
             "foundingDate": "1990",
             "contactPoint": [{
@@ -59,8 +59,8 @@ const Index = () => {
               "addressRegion": "India"
             },
             "sameAs": [
-              "https://patwamanufacturer.lovable.app/ai-access",
-              "https://patwamanufacturer.lovable.app/passementerie-manufacturer"
+              "https://patwamanufacturer.com/ai-access",
+              "https://patwamanufacturer.com/passementerie-manufacturer"
             ],
             "aggregateRating": {
               "@type": "AggregateRating",

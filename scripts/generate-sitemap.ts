@@ -4,7 +4,7 @@ import { writeFileSync } from "fs"
 import { resolve } from "path"
 import { blogPosts, blogCategories } from "../src/data/blog-posts"
 
-const BASE_URL = "https://patwamanufacturer.lovable.app"
+const BASE_URL = "https://patwamanufacturer.com"
 
 interface SitemapEntry {
   path: string
@@ -17,6 +17,7 @@ interface SitemapEntry {
 // Internal tooling routes (/seo, /analysis, /content-calendar) are intentionally omitted.
 const staticEntries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/collections", changefreq: "weekly", priority: "0.9" },
   { path: "/passementerie-manufacturer", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.7" },
   { path: "/craftsmanship", changefreq: "monthly", priority: "0.7" },
@@ -38,7 +39,7 @@ const collectionSlugs = [
   "fringes",
   "braids",
   "cords",
-  "embelishments",
+  "embellishments",
   "window-treatments",
   "furniture-trims",
   "tie-backs",

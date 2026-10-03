@@ -14,11 +14,11 @@ const WindowTreatmentsCollection = () => {
         <title>Luxury Window Treatments Collection | Patwa Manufacturer</title>
         <meta name="description" content="Curtains and drapery in your fabric, finished with our own braid, fringe or tie-backs." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/window-treatments" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/window-treatments" />
         <meta property="og:title" content="Luxury Window Treatments | Patwa Manufacturer" />
         <meta property="og:description" content="Custom curtains and drapes finished with handcrafted passementerie." />
         <meta name="keywords" content="luxury window treatments, custom curtains, decorative drapes, window accessories, passementerie curtains, interior décor manufacturers India, custom window drapery, luxury curtain accessories" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/window-treatments" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/window-treatments" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Luxury Window Treatments | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const WindowTreatmentsCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Window Treatments Collection",
             "description": "Custom curtains, drapes, and window accessories with signature passementerie details",
-            "url": "https://patwamanufacturer.lovable.app/collections/window-treatments",
+            "url": "https://patwamanufacturer.com/collections/window-treatments",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${windowTreatmentProducts.length},

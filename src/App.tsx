@@ -16,6 +16,7 @@ const About = lazy(() => import("./pages/About"));
 const PassementerieManufacturer = lazy(() => import("./pages/PassementerieManufacturer"));
 
 const NotFound = lazy(() => import("./pages/NotFound"));
+const CollectionsIndex = lazy(() => import("./pages/CollectionsIndex"));
 const TasselsCollection = lazy(() => import("./pages/collections/TasselsCollection"));
 const FringesCollection = lazy(() => import("./pages/collections/FringesCollection"));
 const BraidsCollection = lazy(() => import("./pages/collections/BraidsCollection"));
@@ -85,11 +86,12 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/passementerie-manufacturer" element={<PassementerieManufacturer />} />
               
+              <Route path="/collections" element={<CollectionsIndex />} />
               <Route path="/collections/tassels" element={<TasselsCollection />} />
               <Route path="/collections/fringes" element={<FringesCollection />} />
               <Route path="/collections/braids" element={<BraidsCollection />} />
               <Route path="/collections/cords" element={<CordsCollection />} />
-              <Route path="/collections/embelishments" element={<EmbelishmentsCollection />} />
+              <Route path="/collections/embellishments" element={<EmbelishmentsCollection />} />
               <Route path="/collections/window-treatments" element={<WindowTreatmentsCollection />} />
               <Route path="/collections/furniture-trims" element={<FurnitureTrimsCollection />} />
               <Route path="/collections/tie-backs" element={<TieBacksCollection />} />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -176,17 +177,17 @@ const FindDesigner = () => {
         <title>Find an Interior Designer | Patwa Manufacturer</title>
         <meta name="description" content="Connect with verified interior designers and architects who specialize in passementerie and decorative trimmings. Find the perfect design professional for your project." />
         <meta name="keywords" content="find interior designer, verified designers, passementerie specialists, interior design professionals, design directory, custom trimmings designers, hire interior designer, find architect, design professional network" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/find-designer" />
+        <link rel="canonical" href="https://patwamanufacturer.com/find-designer" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/find-designer" />
+        <meta property="og:url" content="https://patwamanufacturer.com/find-designer" />
         <meta property="og:title" content="Find Verified Interior Design Professionals" />
         <meta property="og:description" content="Connect with verified designers specializing in passementerie and luxury trimmings." />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/find-designer" />
+        <meta name="twitter:url" content="https://patwamanufacturer.com/find-designer" />
         <meta name="twitter:title" content="Find Verified Interior Design Professionals" />
         <meta name="twitter:description" content="Connect with verified designers specializing in passementerie." />
         
@@ -196,7 +197,7 @@ const FindDesigner = () => {
             "@type": "WebPage",
             "name": "Find a Designer",
             "description": "Directory of verified interior designers and architects specializing in passementerie and decorative trimmings",
-            "url": "https://patwamanufacturer.lovable.app/find-designer",
+            "url": "https://patwamanufacturer.com/find-designer",
             "mainEntity": {
               "@type": "ItemList",
               "name": "Verified Design Professionals",
@@ -221,13 +222,13 @@ const FindDesigner = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
+                "item": "https://patwamanufacturer.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Find a Designer",
-                "item": "https://patwamanufacturer.lovable.app/find-designer"
+                "item": "https://patwamanufacturer.com/find-designer"
               }
             ]
           }`}
@@ -436,18 +437,18 @@ const FindDesigner = () => {
               custom manufacturing, and priority support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/trade-program"
+              <Link
+                to="/trade-program"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Join Trade Program
-              </a>
-              <a
-                href="/support"
+              </Link>
+              <Link
+                to="/support"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Contact Support
-              </a>
+              </Link>
             </div>
           </div>
         </div>
