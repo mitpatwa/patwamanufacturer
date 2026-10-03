@@ -56,7 +56,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
         loading={loading}
         decoding="async"
-        fetchpriority={fetchPriority}
+        {...{ fetchpriority: fetchPriority } as any}
         sizes={sizes}
         width={width}
         height={height}

@@ -94,7 +94,7 @@ const Hero = () => {
                 alt={`${slide.title} - Premium passementerie and luxury decorative trimmings by Patwa Manufacturer`}
                 className="absolute inset-0 w-full h-full object-cover"
                 loading={index === 0 ? "eager" : "lazy"}
-                fetchpriority={index === 0 ? "high" : "low"}
+                {...{ fetchpriority: index === 0 ? "high" : "low" } as any}
                 width={1920}
                 height={1080}
               />
