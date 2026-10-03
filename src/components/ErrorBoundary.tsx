@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -70,15 +71,18 @@ class ErrorBoundary extends Component<Props, State> {
                 <span>Try Again</span>
               </motion.button>
 
-              <motion.a
-                href="/"
-                className="magnetic-button w-full py-3 px-6 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors flex items-center justify-center space-x-2"
+              <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Home className="h-4 w-4" />
-                <span>Go Home</span>
-              </motion.a>
+                <Link
+                  to="/"
+                  className="magnetic-button w-full py-3 px-6 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors flex items-center justify-center space-x-2"
+                >
+                  <Home className="h-4 w-4" />
+                  <span>Go Home</span>
+                </Link>
+              </motion.div>
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
