@@ -11,7 +11,7 @@ const Inquiry = () => {
       <Helmet>
         <title>Get a Quote | Patwa Manufacturer</title>
         <meta name="description" content="Tell us about your trim project and we'll quote it. Custom tassels, fringes, braids and cords made to order in India." />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/inquiry" />
+        <link rel="canonical" href="https://patwamanufacturer.com/inquiry" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Get a Quote | Patwa Manufacturer" />
         <meta property="og:description" content="Tell us about your trim project and we'll quote it, usually within a day or two." />

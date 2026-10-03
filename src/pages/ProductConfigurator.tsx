@@ -68,7 +68,7 @@ Quantity: ${config.quantity} units
 Generated: ${new Date().toLocaleDateString()}
 
 Contact: +91 93221 40480
-Website: patwamanufacturer.lovable.app
+Website: patwamanufacturer.com
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 `;
     const blob = new Blob([specContent], { type: 'text/plain' });
@@ -89,17 +89,17 @@ Website: patwamanufacturer.lovable.app
         <title>Custom Passementerie Configurator | Design Bespoke Trims Online | Patwa Manufacturer</title>
         <meta name="description" content="Interactive passementerie configurator to design custom tassels, fringes, braids, and trims. Live preview, instant pricing, spec sheet download, and save/share options." />
         <meta name="keywords" content="passementerie configurator, custom trim builder, design custom tassels, bespoke passementerie tool, interactive trim designer, custom trim configurator" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/configurator" />
+        <link rel="canonical" href="https://patwamanufacturer.com/configurator" />
         <meta property="og:title" content="Custom Passementerie Configurator | Patwa Manufacturer" />
         <meta property="og:description" content="Design your bespoke passementerie online with live preview and instant pricing." />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/configurator" />
+        <meta property="og:url" content="https://patwamanufacturer.com/configurator" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "Passementerie Product Configurator",
             "description": "Interactive design tool for custom passementerie",
-            "url": "https://patwamanufacturer.lovable.app/configurator",
+            "url": "https://patwamanufacturer.com/configurator",
             "applicationCategory": "DesignApplication"
           }`}
         </script>

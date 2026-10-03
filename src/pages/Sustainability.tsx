@@ -12,10 +12,10 @@ const Sustainability = () => (
       <title>Sustainable Passementerie Manufacturing | Patwa Manufacturer</title>
       <meta name="description" content="Eco-friendly passementerie crafted with ethical materials, low-waste production, and fair-trade artisans." />
       <meta name="keywords" content="sustainable textiles, eco-friendly trims, ethical manufacturing, sustainable passementerie, green production, waste reduction, fair trade textiles, sustainable craftsmanship" />
-      <link rel="canonical" href="https://patwamanufacturer.lovable.app/sustainability" />
+      <link rel="canonical" href="https://patwamanufacturer.com/sustainability" />
       <meta property="og:title" content="Sustainability & Ethical Manufacturing | Patwa Manufacturer" />
       <meta property="og:description" content="Discover our commitment to sustainable passementerie manufacturing with eco-friendly materials and ethical production practices." />
-      <meta property="og:url" content="https://patwamanufacturer.lovable.app/sustainability" />
+      <meta property="og:url" content="https://patwamanufacturer.com/sustainability" />
       <meta property="og:type" content="website" />
       <script type="application/ld+json">
         {`{
@@ -23,13 +23,13 @@ const Sustainability = () => (
           "@type": "WebPage",
           "name": "Sustainability - Patwa Manufacturer",
           "description": "Our commitment to sustainable and ethical passementerie manufacturing",
-          "url": "https://patwamanufacturer.lovable.app/sustainability",
+          "url": "https://patwamanufacturer.com/sustainability",
           "publisher": {
             "@type": "Organization",
             "name": "Patwa Manufacturer",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://patwamanufacturer.lovable.app/images/patwa-logo.png"
+              "url": "https://patwamanufacturer.com/images/patwa-logo.png"
             }
           }
         }`}

@@ -14,11 +14,11 @@ const TieBacksCollection = () => {
         <title>Luxury Tie-backs & Holders Collection | Patwa Manufacturer</title>
         <meta name="description" content="Tassel tie-backs, corded holdbacks, brass hooks. Made to your curtain weight and colour." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/tie-backs" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/tie-backs" />
         <meta property="og:title" content="Luxury Tie-backs & Holders | Patwa Manufacturer" />
         <meta property="og:description" content="Handcrafted curtain tiebacks and decorative holders for luxury drapery." />
         <meta name="keywords" content="curtain tie-backs, decorative holders, luxury tiebacks, custom curtain holders, drapery accessories, window treatment tiebacks, handcrafted tiebacks, luxury curtain tiebacks supplier, artisan curtain accessories" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/tie-backs" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/tie-backs" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Luxury Tie-backs & Holders | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const TieBacksCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Tie-backs & Holders Collection",
             "description": "Sophisticated curtain tie-backs and decorative holders with premium materials and intricate details",
-            "url": "https://patwamanufacturer.lovable.app/collections/tie-backs",
+            "url": "https://patwamanufacturer.com/collections/tie-backs",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${tieBacksProducts.length},

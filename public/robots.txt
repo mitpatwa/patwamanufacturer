@@ -51,4 +51,4 @@ User-agent: Diffbot
 Allow: /
 
 # Sitemap
-Sitemap: https://patwamanufacturer.lovable.app/sitemap.xml
+Sitemap: https://patwamanufacturer.com/sitemap.xml

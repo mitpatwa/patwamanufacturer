@@ -14,11 +14,11 @@ const CordsCollection = () => {
         <title>Luxury Cords & Tiebacks Collection | Patwa Manufacturer</title>
         <meta name="description" content="Twist cord, lip cord and decorative rope. Twisted on wooden bobbins, two strands at a time." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/cords" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/cords" />
         <meta property="og:title" content="Luxury Cords & Tiebacks Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Silk cords and decorative tiebacks for luxury curtains and drapery." />
         <meta name="keywords" content="luxury cords, curtain tiebacks, decorative tiebacks, silk cords, rope tiebacks, drapery ties, window treatment accessories, custom tiebacks, luxury curtain tiebacks supplier, decorative cords and piping" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/cords" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/cords" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Luxury Cords & Tiebacks Collection | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const CordsCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Cords & Tiebacks Collection",
             "description": "Premium cords and tiebacks featuring silk, rope, and decorative varieties for window treatments",
-            "url": "https://patwamanufacturer.lovable.app/collections/cords",
+            "url": "https://patwamanufacturer.com/collections/cords",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${cordsProducts.length},

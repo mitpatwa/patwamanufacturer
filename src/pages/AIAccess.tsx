@@ -13,7 +13,7 @@ const AIAccess = () => {
         <title>AI Access & Machine-Readable Catalog | Patwa</title>
         <meta name="description" content="AI-accessible product catalog and machine-readable data for Patwa Manufacturer's luxury passementerie products. Structured data for AI agents, chatbots, and automated systems." />
         <meta name="keywords" content="AI access, machine-readable catalog, structured data, API, product catalog, AI agents, chatbot integration" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/ai-access" />
+        <link rel="canonical" href="https://patwamanufacturer.com/ai-access" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">
           {`{
@@ -21,7 +21,7 @@ const AIAccess = () => {
             "@type": "WebPage",
             "name": "AI Access & Product Catalog",
             "description": "Machine-readable product catalog for AI agents and automated systems",
-            "url": "https://patwamanufacturer.lovable.app/ai-access",
+            "url": "https://patwamanufacturer.com/ai-access",
             "mainEntity": {
               "@type": "DataCatalog",
               "name": "Patwa Manufacturer Product Catalog",
@@ -135,7 +135,7 @@ const AIAccess = () => {
                 <div className="bg-background/50 rounded-lg p-6 font-mono text-sm overflow-x-auto">
                   <div className="text-muted-foreground mb-2">// Example: Fetch product catalog</div>
                   <code className="text-foreground">
-                    fetch('https://patwamanufacturer.lovable.app/ai-product-catalog.json')<br/>
+                    fetch('https://patwamanufacturer.com/ai-product-catalog.json')<br/>
                     &nbsp;&nbsp;.then(res =&gt; res.json())<br/>
                     &nbsp;&nbsp;.then(data =&gt; console.log(data.products));
                   </code>

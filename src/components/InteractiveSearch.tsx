@@ -17,7 +17,7 @@ const searchIndex = [
   { title: "Fringes", url: "/collections/fringes", category: "fringes", tags: ["fringe", "trims", "curtain"] },
   { title: "Braids", url: "/collections/braids", category: "braids", tags: ["braid", "border", "decorative"] },
   { title: "Cords", url: "/collections/cords", category: "cords", tags: ["cord", "rope", "tie"] },
-  { title: "Embellishments", url: "/collections/embelishments", category: "embellishments", tags: ["embellishment", "metallic", "lace"] },
+  { title: "Embellishments", url: "/collections/embellishments", category: "embellishments", tags: ["embellishment", "metallic", "lace"] },
   { title: "Custom Services", url: "/custom-services", category: "services", tags: ["custom", "made to order", "manufacturing"] },
   { title: "Find a Designer", url: "/find-designer", category: "designers", tags: ["designer", "architect"] },
   { title: "Trade Program", url: "/trade-program", category: "trade", tags: ["trade", "pricing", "account"] },

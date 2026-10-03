@@ -14,11 +14,11 @@ const WindowShadesCollection = () => {
         <title>Custom Window Shades & Roman Shades | Patwa Manufacturer</title>
         <meta name="description" content="Roman shades and roller blinds finished with our own braid, fringe or beaded trim." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/window-shades" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/window-shades" />
         <meta property="og:title" content="Window Shades & Roman Shades | Patwa Manufacturer" />
         <meta property="og:description" content="Roman shades and roller blinds finished with handcrafted passementerie trim." />
         <meta name="keywords" content="custom window shades, Roman shades, luxury window treatments, decorative trim, roller blinds, window shade trim, passementerie window shades" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/window-shades" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/window-shades" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Window Shades & Roman Shades | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const WindowShadesCollection = () => {
             "@type": "CollectionPage",
             "name": "Custom Window Shades Collection",
             "description": "Premium window shades featuring custom trim finishes for elegant light control and design",
-            "url": "https://patwamanufacturer.lovable.app/collections/window-shades",
+            "url": "https://patwamanufacturer.com/collections/window-shades",
             "provider": {
               "@type": "Organization",
               "name": "Patwa Manufacturer"

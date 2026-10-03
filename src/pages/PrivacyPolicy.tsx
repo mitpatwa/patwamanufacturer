@@ -200,7 +200,7 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy - Data Protection & Privacy Rights | Patwa Manufacturer</title>
         <meta name="description" content="Learn how Patwa Manufacturer protects your personal information. Our comprehensive privacy policy covers data collection, usage, security, and your rights." />
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR compliance, data security, privacy rights" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/privacy-policy" />
+        <link rel="canonical" href="https://patwamanufacturer.com/privacy-policy" />
       </Helmet>
       <StructuredData schema={breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy-policy" }])} />
       

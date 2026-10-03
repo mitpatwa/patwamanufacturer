@@ -15,9 +15,9 @@ const BraidsCollection = () => {
         <title>Luxury Braids Collection | Patwa Manufacturer</title>
         <meta name="description" content="Flat braid, gimp and scroll patterns for upholstery, cushions and drapery. Made to your fabric." />
         <meta name="keywords" content="decorative braids, upholstery trim, gimp braid, cushion edging, luxury braids, handcrafted trim, passementerie braids, custom braids" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/braids" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/braids" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/braids" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/braids" />
         <meta property="og:title" content="Luxury Braids Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Decorative braids and gimp trim handcrafted for upholstery, cushions, and drapery." />
         <meta property="og:site_name" content="Patwa Manufacturer" />
@@ -30,7 +30,7 @@ const BraidsCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Braids Collection",
             "description": "Handcrafted decorative braids for upholstery borders, cushion edges, and drapery accents",
-            "url": "https://patwamanufacturer.lovable.app/collections/braids",
+            "url": "https://patwamanufacturer.com/collections/braids",
             "provider": {
               "@type": "Organization",
               "name": "Patwa Manufacturer"

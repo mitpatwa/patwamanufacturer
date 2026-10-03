@@ -45,11 +45,11 @@ const Blog = () => {
         <title>Blog - Interior Design Trimmings & Passementerie Insights | Patwa Manufacturer</title>
         <meta name="description" content="Expert insights on interior design trimmings, passementerie trends, and decorative textiles. Learn from industry professionals and discover the latest in tassels, fringes, and braids." />
         <meta name="keywords" content="interior design blog, trimmings blog, passementerie insights, decorative textiles blog, tassel guides, curtain tiebacks, lace trends, upholstery cords, decorative trim guide, luxury fringe tips" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/blog" />
+        <link rel="canonical" href="https://patwamanufacturer.com/blog" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/blog" />
+        <meta property="og:url" content="https://patwamanufacturer.com/blog" />
         <meta property="og:title" content="Passementerie Blog - Design Insights & Trends | Patwa Manufacturer" />
         <meta property="og:description" content="Expert insights on interior design trimmings, passementerie trends, and decorative textiles." />
         
@@ -64,13 +64,13 @@ const Blog = () => {
             "@type": "Blog",
             "name": "Patwa Manufacturer Blog",
             "description": "Expert insights on interior design trimmings, passementerie trends, and decorative textiles",
-            "url": "https://patwamanufacturer.lovable.app/blog",
+            "url": "https://patwamanufacturer.com/blog",
             "publisher": {
               "@type": "Organization",
               "name": "Patwa Manufacturer",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://patwamanufacturer.lovable.app/images/patwa-logo.png"
+                "url": "https://patwamanufacturer.com/images/patwa-logo.png"
               }
             },
             "blogPost": ${JSON.stringify(blogPosts.slice(0, 5).map(post => ({
@@ -82,7 +82,7 @@ const Blog = () => {
                 "@type": "Person",
                 "name": post.author
               },
-              "url": "https://patwamanufacturer.lovable.app/blog/" + post.slug
+              "url": "https://patwamanufacturer.com/blog/" + post.slug
             })))}
           }`}
         </script>
@@ -95,13 +95,13 @@ const Blog = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
+                "item": "https://patwamanufacturer.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Blog",
-                "item": "https://patwamanufacturer.lovable.app/blog"
+                "item": "https://patwamanufacturer.com/blog"
               }
             ]
           }`}

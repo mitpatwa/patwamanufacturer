@@ -14,11 +14,11 @@ const FurnitureTrimsCollection = () => {
         <title>Decorative Furniture Trims | Patwa Manufacturer</title>
         <meta name="description" content="Sofa skirts, chair borders, welt cord. Made to your fabric in roughly two to three weeks." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/furniture-trims" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/furniture-trims" />
         <meta property="og:title" content="Decorative Furniture Trims | Patwa Manufacturer" />
         <meta property="og:description" content="Sofa fringes and chair borders for upholstered furniture." />
         <meta name="keywords" content="furniture trims, upholstery trims, decorative furniture borders, sofa fringes, chair trims, furniture embellishments, upholstery details, handcrafted furniture trims, premium trimmings for upholstery, custom lace and trimmings for interiors" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/furniture-trims" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/furniture-trims" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Decorative Furniture Trims | Patwa Manufacturer" />
@@ -29,7 +29,7 @@ const FurnitureTrimsCollection = () => {
             "@type": "CollectionPage",
             "name": "Decorative Furniture Trims Collection",
             "description": "Stunning decorative trims and upholstery details for furniture finishing",
-            "url": "https://patwamanufacturer.lovable.app/collections/furniture-trims",
+            "url": "https://patwamanufacturer.com/collections/furniture-trims",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${furnitureTrimsProducts.length},

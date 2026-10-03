@@ -12,17 +12,17 @@ const CustomServices = () => {
         <title>Custom Trims & Tassels, Made to Order | Patwa</title>
         <meta name="description" content="Made-to-order tassels, fringes, braids and decorative trims for interior projects. Send us your colours and sizes and we make them in our workshop." />
         <meta name="keywords" content="custom passementerie, bespoke trims, made-to-order tassels, custom decorative trims, bespoke interior accessories, luxury custom textiles, custom fringe manufacturer, bespoke tassel design, color matching service" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/custom-services" />
+        <link rel="canonical" href="https://patwamanufacturer.com/custom-services" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/custom-services" />
+        <meta property="og:url" content="https://patwamanufacturer.com/custom-services" />
         <meta property="og:title" content="Custom Passementerie Services - Bespoke Trims & Tassels" />
         <meta property="og:description" content="Made-to-order passementerie with custom design, color matching, and restoration services." />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/custom-services" />
+        <meta name="twitter:url" content="https://patwamanufacturer.com/custom-services" />
         <meta name="twitter:title" content="Custom Passementerie Services" />
         <meta name="twitter:description" content="Made-to-order passementerie with custom design, color matching, and restoration." />
         
@@ -32,7 +32,7 @@ const CustomServices = () => {
             "@type": "Service",
             "name": "Custom Passementerie Services",
             "description": "Bespoke trimmings created to exact specifications including custom design, color matching, and historical restoration",
-            "url": "https://patwamanufacturer.lovable.app/custom-services",
+            "url": "https://patwamanufacturer.com/custom-services",
             "provider": {
               "@type": "Organization",
               "name": "Patwa Manufacturer"
@@ -80,13 +80,13 @@ const CustomServices = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
+                "item": "https://patwamanufacturer.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Custom Services",
-                "item": "https://patwamanufacturer.lovable.app/custom-services"
+                "item": "https://patwamanufacturer.com/custom-services"
               }
             ]
           }`}

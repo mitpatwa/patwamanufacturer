@@ -4,7 +4,7 @@ import { writeFileSync } from "fs"
 import { resolve } from "path"
 import { blogPosts, blogCategories } from "../src/data/blog-posts"
 
-const BASE_URL = "https://patwamanufacturer.lovable.app"
+const BASE_URL = "https://patwamanufacturer.com"
 
 interface SitemapEntry {
   path: string

@@ -164,17 +164,17 @@ const Support = () => {
         <title>Support - Get Help with Your Passementerie Needs | Patwa Manufacturer</title>
         <meta name="description" content="Get expert support for your passementerie and decorative trimmings needs. Contact our team via phone, email, WhatsApp, or visit our showroom for personalized assistance." />
         <meta name="keywords" content="passementerie support, decorative trimmings help, custom manufacturing support, trade program assistance, design consultation, customer service, technical support, product inquiries" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/support" />
+        <link rel="canonical" href="https://patwamanufacturer.com/support" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/support" />
+        <meta property="og:url" content="https://patwamanufacturer.com/support" />
         <meta property="og:title" content="Expert Support for Passementerie & Decorative Trimmings" />
         <meta property="og:description" content="24/7 support via phone, email, WhatsApp. Expert guidance for all your passementerie needs." />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://patwamanufacturer.lovable.app/support" />
+        <meta name="twitter:url" content="https://patwamanufacturer.com/support" />
         <meta name="twitter:title" content="Expert Support for Passementerie" />
         <meta name="twitter:description" content="24/7 support via phone, email, WhatsApp." />
         
@@ -184,7 +184,7 @@ const Support = () => {
             "@type": "ContactPage",
             "name": "Support & Contact",
             "description": "Expert support for passementerie and decorative trimmings needs",
-            "url": "https://patwamanufacturer.lovable.app/support",
+            "url": "https://patwamanufacturer.com/support",
             "mainEntity": {
               "@type": "Organization",
               "name": "Patwa Manufacturer",
@@ -247,13 +247,13 @@ const Support = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://patwamanufacturer.lovable.app/"
+                "item": "https://patwamanufacturer.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Support",
-                "item": "https://patwamanufacturer.lovable.app/support"
+                "item": "https://patwamanufacturer.com/support"
               }
             ]
           }`}

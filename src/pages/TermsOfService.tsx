@@ -159,7 +159,7 @@ const TermsOfService = () => {
         <title>Terms of Service - Legal Terms & Conditions | Patwa Manufacturer</title>
         <meta name="description" content="Read our terms of service and legal conditions for using Patwa Manufacturer's website and services. Understand your rights and responsibilities." />
         <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, website terms, service terms" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/terms-of-service" />
+        <link rel="canonical" href="https://patwamanufacturer.com/terms-of-service" />
       </Helmet>
       <StructuredData schema={breadcrumbSchema([{ name: "Terms of Service", path: "/terms-of-service" }])} />
       

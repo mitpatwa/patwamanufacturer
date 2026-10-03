@@ -17,9 +17,9 @@ const TasselsCollection = () => {
         <title>Luxury Tassels Collection | Patwa Manufacturer</title>
         <meta name="description" content="Over 400 tassel designs in silk, cotton and metallic. Made to order in custom colours from 50 pieces." />
         <meta name="keywords" content="tassel trim manufacturer, custom luxury tassels, handcrafted tassels, passementerie tassels, silk tassels, crystal tassels, curtain tassels, decorative tassels, luxury curtain tiebacks supplier, artisan curtain accessories" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/tassels" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/tassels" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/tassels" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/tassels" />
         <meta property="og:title" content="Luxury Tassels Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Handcrafted silk, crystal, and metallic tassels for curtains, upholstery, and luxury interiors." />
         <meta property="og:site_name" content="Patwa Manufacturer" />
@@ -32,7 +32,7 @@ const TasselsCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Tassels Collection",
             "description": "Premium handcrafted tassels collection featuring silk, crystal, and metallic designs",
-            "url": "https://patwamanufacturer.lovable.app/collections/tassels",
+            "url": "https://patwamanufacturer.com/collections/tassels",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": ${tasselsProducts.length},

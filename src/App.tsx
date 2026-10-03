@@ -89,7 +89,7 @@ const App = () => {
               <Route path="/collections/fringes" element={<FringesCollection />} />
               <Route path="/collections/braids" element={<BraidsCollection />} />
               <Route path="/collections/cords" element={<CordsCollection />} />
-              <Route path="/collections/embelishments" element={<EmbelishmentsCollection />} />
+              <Route path="/collections/embellishments" element={<EmbelishmentsCollection />} />
               <Route path="/collections/window-treatments" element={<WindowTreatmentsCollection />} />
               <Route path="/collections/furniture-trims" element={<FurnitureTrimsCollection />} />
               <Route path="/collections/tie-backs" element={<TieBacksCollection />} />

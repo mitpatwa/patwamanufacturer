@@ -35,7 +35,7 @@ const BlogPost = () => {
     .filter(p => p.id !== post.id && (p.category === post.category || p.tags.some(tag => post.tags.includes(tag))))
     .slice(0, 3);
 
-  const shareUrl = `https://patwamanufacturer.lovable.app/blog/${post.slug}`;
+  const shareUrl = `https://patwamanufacturer.com/blog/${post.slug}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -49,7 +49,7 @@ const BlogPost = () => {
         {/* Open Graph */}
         <meta property="og:title" content={post.seoTitle} />
         <meta property="og:description" content={post.seoDescription} />
-        <meta property="og:image" content={`https://patwamanufacturer.lovable.app${post.image}`} />
+        <meta property="og:image" content={`https://patwamanufacturer.com${post.image}`} />
         <meta property="og:url" content={shareUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
@@ -64,7 +64,7 @@ const BlogPost = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.seoTitle} />
         <meta name="twitter:description" content={post.seoDescription} />
-        <meta name="twitter:image" content={`https://patwamanufacturer.lovable.app${post.image}`} />
+        <meta name="twitter:image" content={`https://patwamanufacturer.com${post.image}`} />
         <meta name="twitter:image:alt" content={post.title} />
 
         
@@ -74,7 +74,7 @@ const BlogPost = () => {
             "@type": "BlogPosting",
             "headline": "${post.title}",
             "description": "${post.excerpt}",
-            "image": "https://patwamanufacturer.lovable.app${post.image}",
+            "image": "https://patwamanufacturer.com${post.image}",
             "datePublished": "${post.date}",
             "dateModified": "${post.date}",
             "inLanguage": "en",
@@ -87,7 +87,7 @@ const BlogPost = () => {
               "name": "Patwa Manufacturer",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://patwamanufacturer.lovable.app/images/patwa-logo.png"
+                "url": "https://patwamanufacturer.com/images/patwa-logo.png"
               }
             }
           }`}
@@ -97,13 +97,13 @@ const BlogPost = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://patwamanufacturer.lovable.app/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://patwamanufacturer.lovable.app/blog" },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://patwamanufacturer.com/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://patwamanufacturer.com/blog" },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: post.category,
-                item: `https://patwamanufacturer.lovable.app/blog/category/${post.category.toLowerCase().replace(/\s+/g, '-')}`,
+                item: `https://patwamanufacturer.com/blog/category/${post.category.toLowerCase().replace(/\s+/g, '-')}`,
               },
               { "@type": "ListItem", position: 4, name: post.title, item: shareUrl },
             ],

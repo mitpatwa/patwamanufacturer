@@ -16,10 +16,10 @@ const EmbelishmentsCollection = () => {
         <title>Luxury Embellishments Collection | Patwa Manufacturer</title>
         <meta name="description" content="Beaded accents, metallic detail, hand-stitched rosettes. For cushions, lampshades, headboards." />
         <meta name="keywords" content="luxury embellishments, decorative trims, beaded accents, metallic trims, passementerie embellishments, custom trim work, interior design accessories" />
-        <link rel="canonical" href="https://patwamanufacturer.lovable.app/collections/embelishments" />
+        <link rel="canonical" href="https://patwamanufacturer.com/collections/embellishments" />
         <meta property="og:title" content="Luxury Embellishments Collection | Patwa Manufacturer" />
         <meta property="og:description" content="Beaded accents and metallic trims that finish any luxury interior project." />
-        <meta property="og:url" content="https://patwamanufacturer.lovable.app/collections/embelishments" />
+        <meta property="og:url" content="https://patwamanufacturer.com/collections/embellishments" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Patwa Manufacturer" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -31,7 +31,7 @@ const EmbelishmentsCollection = () => {
             "@type": "CollectionPage",
             "name": "Luxury Embellishments & Decorative Trims",
             "description": "Beaded accents, metallic trims, and luxury finishings for interior projects",
-            "url": "https://patwamanufacturer.lovable.app/collections/embelishments"
+            "url": "https://patwamanufacturer.com/collections/embellishments"
           }`}
         </script>
       </Helmet>
