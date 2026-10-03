@@ -16,6 +16,7 @@ const About = lazy(() => import("./pages/About"));
 const PassementerieManufacturer = lazy(() => import("./pages/PassementerieManufacturer"));
 
 const NotFound = lazy(() => import("./pages/NotFound"));
+const CollectionsIndex = lazy(() => import("./pages/CollectionsIndex"));
 const TasselsCollection = lazy(() => import("./pages/collections/TasselsCollection"));
 const FringesCollection = lazy(() => import("./pages/collections/FringesCollection"));
 const BraidsCollection = lazy(() => import("./pages/collections/BraidsCollection"));
