@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://patwamanufacturer.com/collections</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://patwamanufacturer.com/passementerie-manufacturer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -96,7 +101,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://patwamanufacturer.com/collections/embelishments</loc>
+    <loc>https://patwamanufacturer.com/collections/embellishments</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
