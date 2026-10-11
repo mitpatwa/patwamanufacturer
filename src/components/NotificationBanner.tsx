@@ -65,10 +65,10 @@ const NotificationBanner = ({
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        className={`fixed top-0 left-0 right-0 z-50 p-4 ${getBackgroundColor()} border-b shadow-sm`}
+        exit={{ opacity: 0, y: 50 }}
+        className={`fixed bottom-0 left-0 right-0 z-50 p-4 ${getBackgroundColor()} border-t shadow-sm`}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between">
