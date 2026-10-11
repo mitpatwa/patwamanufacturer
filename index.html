@@ -57,7 +57,6 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "INR",
-            "priceValidUntil": "2025-12-31",
             "availability": "https://schema.org/InStock",
             "shippingDetails": {
               "@type": "OfferShippingDetails",
@@ -140,7 +139,6 @@
   <meta property="og:image:alt" content="Luxury tassels, fringes and decorative trimmings by Patwa Manufacturer">
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@lovable_dev" />
   <meta name="twitter:image"
     content="https://patwamanufacturer.com/lovable-uploads/hero-1-trimmings.png?v=2025-09-29-1">
 
@@ -274,20 +272,6 @@
   <script type="module" src="/src/main.tsx" defer></script>
   
 
-  <!-- Service Worker Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
-  </script>
 </body>
 
 </html>

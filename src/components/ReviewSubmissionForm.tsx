@@ -5,6 +5,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { useToast } from './ui/use-toast';
+import { submitNetlifyForm } from '@/lib/netlify-forms';
 
 interface ReviewFormData {
   name: string;
@@ -27,7 +28,7 @@ const ReviewSubmissionForm = () => {
     productPurchased: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (formData.rating === 0) {
@@ -39,8 +40,16 @@ const ReviewSubmissionForm = () => {
       return;
     }
 
-    // In production, this would send to your backend/Supabase
-    console.log('Review submitted:', formData);
+    try {
+      await submitNetlifyForm('review', { ...formData });
+    } catch {
+      toast({
+        title: "Submission Failed",
+        description: "We couldn't send your review. Please try again, or email support@patwamanufacturer.com.",
+        variant: "destructive"
+      });
+      return;
+    }
     
     toast({
       title: "Thank You!",

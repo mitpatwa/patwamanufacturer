@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { submitNetlifyForm } from '@/lib/netlify-forms';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -26,10 +27,14 @@ const TradeProgram = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Trade Program Application:', formData);
+    try {
+      await submitNetlifyForm('trade-program', formData);
+    } catch {
+      alert("We couldn't send your application. Please try again, or email support@patwamanufacturer.com.");
+      return;
+    }
     alert('Thank you for your application! We will review it and contact you within 2-3 business days.');
     setIsApplicationOpen(false);
   };

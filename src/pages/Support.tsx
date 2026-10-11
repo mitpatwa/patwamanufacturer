@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { submitNetlifyForm } from '@/lib/netlify-forms';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -23,9 +24,14 @@ const Support = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Support Request:', formData);
+    try {
+      await submitNetlifyForm('support', formData);
+    } catch {
+      alert("We couldn't send your message. Please try again, or email support@patwamanufacturer.com.");
+      return;
+    }
     alert('Thank you for your message! We will respond within 24 hours.');
     setFormData({
       name: '',
