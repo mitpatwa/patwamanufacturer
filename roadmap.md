@@ -1,0 +1,3 @@
+- [ ] Compare the uploaded audit with current form submission flows and fix verified gaps.
+- [ ] Check the audit's smaller technical and SEO notes; implement only safe, applicable fixes.
+- [ ] Verify the resulting changes and report anything requiring Netlify or database access.
