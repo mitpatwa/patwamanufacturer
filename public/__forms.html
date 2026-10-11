@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Static form definitions so Netlify detects the React forms at deploy time. Not linked from the site. -->
+<html>
+  <head><meta name="robots" content="noindex" /></head>
+  <body>
+    <form name="support" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="support" />
+      <input name="name" /><input name="email" /><input name="phone" /><input name="subject" />
+      <input name="category" /><textarea name="message"></textarea><input name="priority" />
+      <input name="bot-field" />
+    </form>
+    <form name="trade-program" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="trade-program" />
+      <input name="businessName" /><input name="contactName" /><input name="email" /><input name="phone" />
+      <input name="businessType" /><input name="website" /><input name="yearsInBusiness" />
+      <input name="annualVolume" /><textarea name="specialties"></textarea><textarea name="references"></textarea>
+      <input name="bot-field" />
+    </form>
+    <form name="order-samples" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="order-samples" />
+      <input name="name" /><input name="email" /><input name="phone" /><input name="company" />
+      <input name="address" /><input name="city" /><input name="state" /><input name="zipCode" />
+      <input name="country" /><input name="projectType" /><input name="timeline" /><textarea name="notes"></textarea>
+      <textarea name="samples"></textarea>
+      <input name="bot-field" />
+    </form>
+    <form name="returns-exchanges" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="returns-exchanges" />
+      <input name="orderNumber" /><input name="name" /><input name="email" /><input name="phone" />
+      <input name="reason" /><textarea name="description"></textarea><input name="returnType" />
+      <input name="bot-field" />
+    </form>
+    <form name="review" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="review" />
+      <input name="name" /><input name="email" /><input name="rating" /><input name="title" />
+      <textarea name="review"></textarea><input name="productPurchased" />
+      <input name="bot-field" />
+    </form>
+    <form name="newsletter" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="newsletter" />
+      <input name="email" />
+      <input name="bot-field" />
+    </form>
+    <form name="inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="inquiry" />
+      <input name="name" /><input name="email" /><input name="phone" /><input name="company" />
+      <input name="location" /><input name="projectType" /><textarea name="description"></textarea>
+      <input name="timeline" /><input name="quantity" /><textarea name="specialRequirements"></textarea>
+      <input name="referralSource" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>

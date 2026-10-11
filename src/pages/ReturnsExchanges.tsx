@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { submitNetlifyForm } from '@/lib/netlify-forms';
 import { Helmet } from 'react-helmet-async';
 import StructuredData from '@/components/StructuredData';
 import { breadcrumbSchema } from '@/lib/structured-data';
@@ -25,10 +26,15 @@ const ReturnsExchanges = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Return/Exchange Request:', formData);
-    alert('Thank you for your request! We will process it and send you a return label within 24 hours.');
+    try {
+      await submitNetlifyForm('returns-exchanges', formData);
+      alert('Thank you for your request! We will process it and send you a return label within 24 hours.');
+      setFormData({ orderNumber: '', name: '', email: '', phone: '', reason: '', description: '', returnType: 'return' });
+    } catch {
+      alert("We couldn't send your request. Please try again, or email support@patwamanufacturer.com.");
+    }
   };
 
   const returnReasons = [

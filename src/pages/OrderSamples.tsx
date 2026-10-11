@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { submitNetlifyForm } from '@/lib/netlify-forms';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -86,7 +87,7 @@ const OrderSamples = () => {
     }
   ];
 
-  const addToCart = (product: any) => {
+  const addToCart = (product: (typeof sampleProducts)[number]) => {
     const existingItem = cart.find(item => item.id === product.id);
     if (existingItem) {
       setCart(cart.map(item => 
@@ -122,9 +123,17 @@ const OrderSamples = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Sample Order:', { cart, formData });
+    try {
+      await submitNetlifyForm('order-samples', {
+        ...formData,
+        samples: cart.map(item => `${item.name} (${item.category}) x${item.quantity}`).join('\n'),
+      });
+    } catch {
+      alert("We couldn't send your sample request. Please try again, or email support@patwamanufacturer.com.");
+      return;
+    }
     alert('Thank you for your sample request! We will process it and ship within 2-3 business days.');
     setCart([]);
     setFormData({

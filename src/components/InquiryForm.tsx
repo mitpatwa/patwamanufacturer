@@ -6,6 +6,7 @@ import { z } from "zod";
 import { Check, Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { submitNetlifyForm } from "@/lib/netlify-forms";
 
 import {
   Form,
@@ -108,6 +109,10 @@ const InquiryForm = () => {
     setIsSubmitting(true);
     
     try {
+      // Record the inquiry with Netlify Forms first so it is never lost if the email isn't sent.
+      const { termsAccepted: _termsAccepted, ...inquiry } = values;
+      await submitNetlifyForm('inquiry', inquiry);
+
       // Create mailto link with form data
       const subject = encodeURIComponent(`Custom Passementerie Inquiry - ${values.projectType}`);
       const body = encodeURIComponent(`
@@ -169,7 +174,7 @@ ${values.name}
       
       toast({
         title: "Inquiry Submitted Successfully!",
-        description: "Your email client should open now. Please send the email to complete your request.",
+        description: "We have received your inquiry. Your email client will also open so you can attach any reference files.",
       });
       
       // Set submitted state and reset form

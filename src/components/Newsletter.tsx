@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Check, Sparkles } from "lucide-react";
+import { submitNetlifyForm } from "@/lib/netlify-forms";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -12,11 +13,15 @@ const Newsletter = () => {
     e.preventDefault();
     if (email && !isLoading) {
       setIsLoading(true);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log("Submitting email:", email);
+
+      try {
+        await submitNetlifyForm("newsletter", { email });
+      } catch {
+        setIsLoading(false);
+        alert("We couldn't sign you up right now. Please try again.");
+        return;
+      }
+
       setSubmitted(true);
       setEmail("");
       setIsLoading(false);
