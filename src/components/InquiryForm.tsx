@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -48,6 +48,7 @@ const formSchema = z.object({
 });
 
 const InquiryForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fileUploads, setFileUploads] = useState<File[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -111,7 +112,7 @@ const InquiryForm = () => {
     try {
       // Record the inquiry with Netlify Forms first so it is never lost if the email isn't sent.
       const { termsAccepted: _termsAccepted, ...inquiry } = values;
-      await submitNetlifyForm('inquiry', inquiry);
+      await submitNetlifyForm('inquiry', inquiry, formRef.current ?? undefined);
 
       // Create mailto link with form data
       const subject = encodeURIComponent(`Custom Passementerie Inquiry - ${values.projectType}`);
@@ -232,7 +233,7 @@ ${values.name}
       </div>
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="space-y-6">
             <h2 className="font-serif text-2xl font-medium">Personal Information</h2>
             

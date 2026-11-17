@@ -28,7 +28,7 @@ const ReviewSubmissionForm = () => {
     productPurchased: ''
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (formData.rating === 0) {
@@ -41,7 +41,7 @@ const ReviewSubmissionForm = () => {
     }
 
     try {
-      await submitNetlifyForm('review', { ...formData });
+      await submitNetlifyForm('review', { ...formData }, e.currentTarget);
     } catch {
       toast({
         title: "Submission Failed",

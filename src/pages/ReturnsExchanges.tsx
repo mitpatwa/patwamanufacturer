@@ -26,10 +26,10 @@ const ReturnsExchanges = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await submitNetlifyForm('returns-exchanges', formData);
+      await submitNetlifyForm('returns-exchanges', formData, e.currentTarget);
       alert('Thank you for your request! We will process it and send you a return label within 24 hours.');
       setFormData({ orderNumber: '', name: '', email: '', phone: '', reason: '', description: '', returnType: 'return' });
     } catch {

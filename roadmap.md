@@ -1,3 +1,5 @@
-- [ ] Compare the uploaded audit with current form submission flows and fix verified gaps.
-- [ ] Check the audit's smaller technical and SEO notes; implement only safe, applicable fixes.
-- [ ] Verify the resulting changes and report anything requiring Netlify or database access.
+- [x] Confirm all seven forms submit to Netlify and pass their honeypot values through the submission helper.
+- [x] Remove unverified ratings and placeholder review markup from homepage structured data.
+- [x] Verify service-worker registration, expired offer dates, and template social handles; no current issues found.
+- [ ] Apply the inquiry-table privacy migration after the project database is connected to an available migration tool.
+- [ ] Resolve remaining lint errors (9 errors currently reported, including `any` types in performance/image code).

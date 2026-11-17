@@ -27,10 +27,10 @@ const TradeProgram = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await submitNetlifyForm('trade-program', formData);
+      await submitNetlifyForm('trade-program', formData, e.currentTarget);
     } catch {
       alert("We couldn't send your application. Please try again, or email support@patwamanufacturer.com.");
       return;

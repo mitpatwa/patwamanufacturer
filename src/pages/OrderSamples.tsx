@@ -123,13 +123,13 @@ const OrderSamples = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await submitNetlifyForm('order-samples', {
         ...formData,
         samples: cart.map(item => `${item.name} (${item.category}) x${item.quantity}`).join('\n'),
-      });
+      }, e.currentTarget);
     } catch {
       alert("We couldn't send your sample request. Please try again, or email support@patwamanufacturer.com.");
       return;

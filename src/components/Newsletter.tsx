@@ -9,13 +9,13 @@ const Newsletter = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email && !isLoading) {
       setIsLoading(true);
 
       try {
-        await submitNetlifyForm("newsletter", { email });
+        await submitNetlifyForm("newsletter", { email }, e.currentTarget);
       } catch {
         setIsLoading(false);
         alert("We couldn't sign you up right now. Please try again.");

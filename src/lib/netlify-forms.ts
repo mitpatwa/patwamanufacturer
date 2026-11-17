@@ -2,12 +2,15 @@
 // declared in public/__forms.html so Netlify registers it at deploy time.
 export async function submitNetlifyForm(
   formName: string,
-  data: Record<string, string | number | boolean | null | undefined>
+  data: Record<string, string | number | boolean | null | undefined>,
+  form?: HTMLFormElement
 ): Promise<void> {
   const body = new URLSearchParams({ 'form-name': formName });
   for (const [key, value] of Object.entries(data)) {
     if (value !== null && value !== undefined) body.append(key, String(value));
   }
+  const honeypot = form?.elements.namedItem('bot-field');
+  body.set('bot-field', honeypot instanceof HTMLInputElement ? honeypot.value : '');
 
   const response = await fetch('/__forms.html', {
     method: 'POST',

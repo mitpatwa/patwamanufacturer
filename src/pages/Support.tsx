@@ -24,10 +24,10 @@ const Support = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await submitNetlifyForm('support', formData);
+      await submitNetlifyForm('support', formData, e.currentTarget);
     } catch {
       alert("We couldn't send your message. Please try again, or email support@patwamanufacturer.com.");
       return;

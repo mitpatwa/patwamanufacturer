@@ -1,4 +1,20 @@
 // Performance monitoring utilities
+type AnalyticsEvent = (command: 'event', name: string, parameters: Record<string, string | number>) => void;
+
+const getAnalyticsEvent = (): AnalyticsEvent | undefined => {
+  if (typeof window === 'undefined') return undefined;
+  return (window as Window & { gtag?: AnalyticsEvent }).gtag;
+};
+
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
@@ -30,9 +46,10 @@ export class PerformanceMonitor {
 
   // Report metrics to analytics
   reportMetrics(): void {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    const gtag = getAnalyticsEvent();
+    if (gtag) {
       this.metrics.forEach((value, key) => {
-        (window as any).gtag('event', 'performance_metric', {
+        gtag('event', 'performance_metric', {
           metric_name: key,
           metric_value: Math.round(value),
           custom_parameter: 'performance_monitoring'
@@ -56,8 +73,9 @@ export const measureWebVitals = () => {
         const lcp = lastEntry.startTime;
         console.log('LCP:', lcp);
         
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'web_vitals', {
+        const gtag = getAnalyticsEvent();
+        if (gtag) {
+          gtag('event', 'web_vitals', {
             metric_name: 'LCP',
             metric_value: Math.round(lcp),
             metric_rating: lcp < 2500 ? 'good' : lcp < 4000 ? 'needs_improvement' : 'poor'
@@ -72,11 +90,12 @@ export const measureWebVitals = () => {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        const fid = (entry as any).processingStart - entry.startTime;
+        const fid = (entry as FirstInputEntry).processingStart - entry.startTime;
         console.log('FID:', fid);
         
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'web_vitals', {
+        const gtag = getAnalyticsEvent();
+        if (gtag) {
+          gtag('event', 'web_vitals', {
             metric_name: 'FID',
             metric_value: Math.round(fid),
             metric_rating: fid < 100 ? 'good' : fid < 300 ? 'needs_improvement' : 'poor'
@@ -92,15 +111,17 @@ export const measureWebVitals = () => {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        const layoutShift = entry as LayoutShiftEntry;
+        if (!layoutShift.hadRecentInput) {
+          clsValue += layoutShift.value;
         }
       });
       
       console.log('CLS:', clsValue);
       
-      if ('gtag' in window) {
-        (window as any).gtag('event', 'web_vitals', {
+      const gtag = getAnalyticsEvent();
+      if (gtag) {
+        gtag('event', 'web_vitals', {
           metric_name: 'CLS',
           metric_value: Math.round(clsValue * 1000) / 1000,
           metric_rating: clsValue < 0.1 ? 'good' : clsValue < 0.25 ? 'needs_improvement' : 'poor'

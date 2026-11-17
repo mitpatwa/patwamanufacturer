@@ -62,13 +62,6 @@ const Index = () => {
               "https://patwamanufacturer.com/ai-access",
               "https://patwamanufacturer.com/passementerie-manufacturer"
             ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
             "numberOfEmployees": {
               "@type": "QuantitativeValue",
               "value": "50"
