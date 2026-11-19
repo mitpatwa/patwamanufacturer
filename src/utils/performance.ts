@@ -1,11 +1,4 @@
 // Performance monitoring utilities
-type AnalyticsEvent = (command: 'event', name: string, parameters: Record<string, string | number>) => void;
-
-const getAnalyticsEvent = (): AnalyticsEvent | undefined => {
-  if (typeof window === 'undefined') return undefined;
-  return (window as Window & { gtag?: AnalyticsEvent }).gtag;
-};
-
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
 }
@@ -46,7 +39,7 @@ export class PerformanceMonitor {
 
   // Report metrics to analytics
   reportMetrics(): void {
-    const gtag = getAnalyticsEvent();
+    const gtag = typeof window !== 'undefined' ? window.gtag : undefined;
     if (gtag) {
       this.metrics.forEach((value, key) => {
         gtag('event', 'performance_metric', {
@@ -73,7 +66,7 @@ export const measureWebVitals = () => {
         const lcp = lastEntry.startTime;
         console.log('LCP:', lcp);
         
-        const gtag = getAnalyticsEvent();
+        const gtag = window.gtag;
         if (gtag) {
           gtag('event', 'web_vitals', {
             metric_name: 'LCP',
@@ -93,7 +86,7 @@ export const measureWebVitals = () => {
         const fid = (entry as FirstInputEntry).processingStart - entry.startTime;
         console.log('FID:', fid);
         
-        const gtag = getAnalyticsEvent();
+        const gtag = window.gtag;
         if (gtag) {
           gtag('event', 'web_vitals', {
             metric_name: 'FID',
@@ -119,7 +112,7 @@ export const measureWebVitals = () => {
       
       console.log('CLS:', clsValue);
       
-      const gtag = getAnalyticsEvent();
+      const gtag = window.gtag;
       if (gtag) {
         gtag('event', 'web_vitals', {
           metric_name: 'CLS',

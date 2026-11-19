@@ -339,6 +339,7 @@ const TradeProgram = () => {
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">

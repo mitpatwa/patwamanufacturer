@@ -356,6 +356,7 @@ const OrderSamples = () => {
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-8">
+              <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
               {/* Personal Information */}
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>

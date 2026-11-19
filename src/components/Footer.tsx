@@ -1,6 +1,8 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { submitNetlifyForm } from "@/lib/netlify-forms";
 
 type FooterNavItem = {
   name: string;
@@ -9,6 +11,26 @@ type FooterNavItem = {
 };
 
 const Footer = () => {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const [newsletterLoading, setNewsletterLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!newsletterEmail || newsletterLoading) return;
+
+    setNewsletterLoading(true);
+    try {
+      await submitNetlifyForm("newsletter", { email: newsletterEmail }, e.currentTarget);
+      setNewsletterEmail("");
+      setNewsletterSubmitted(true);
+    } catch {
+      alert("We couldn't sign you up right now. Please try again.");
+    } finally {
+      setNewsletterLoading(false);
+    }
+  };
+
   // Footer navigation items grouped by category
   const footerNavigation: Record<string, FooterNavItem[]> = {
     collections: [
@@ -177,17 +199,23 @@ const Footer = () => {
               ))}
             </div>
             <div className="newsletter-signup">
-              <form className="flex">
+              <form className="flex" onSubmit={handleNewsletterSubmit}>
+                <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <input 
                   type="email" 
                   placeholder="Enter your email" 
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  required
+                  disabled={newsletterLoading}
                   className="px-4 py-2 border border-sand-300 bg-sand-100 focus:outline-none focus:ring-1 focus:ring-primary"
                 />
                 <button 
                   type="submit" 
+                  disabled={newsletterLoading}
                   className="bg-primary text-primary-foreground px-4 py-2 hover:bg-accent transition-colors duration-200"
                 >
-                  Subscribe
+                  {newsletterLoading ? "Sending…" : newsletterSubmitted ? "Subscribed" : "Subscribe"}
                 </button>
               </form>
             </div>

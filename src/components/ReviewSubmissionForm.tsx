@@ -75,6 +75,7 @@ const ReviewSubmissionForm = () => {
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
+        <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name">Your Name *</Label>

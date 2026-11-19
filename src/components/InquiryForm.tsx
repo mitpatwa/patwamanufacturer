@@ -234,6 +234,7 @@ ${values.name}
       
       <Form {...form}>
         <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <div className="space-y-6">
             <h2 className="font-serif text-2xl font-medium">Personal Information</h2>
             

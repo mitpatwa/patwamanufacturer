@@ -65,6 +65,7 @@ const Newsletter = () => {
           </p>
           
           <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+            <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <div className="relative">
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 p-2 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
