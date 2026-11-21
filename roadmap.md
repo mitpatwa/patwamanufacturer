@@ -1,6 +1,7 @@
-- [x] Confirm all seven forms submit to Netlify and pass their honeypot values through the submission helper.
+- [x] Confirm the seven site forms are wired to Netlify and pass honeypot values through the submission helper.
 - [x] Remove unverified ratings and placeholder review markup from homepage structured data.
 - [x] Verify service-worker registration, expired offer dates, and template social handles; no current issues found.
 - [x] Clear the current lint errors in analytics and image-priority code.
-- [ ] Apply the inquiry-table privacy fix in the hosted database; this project has no connected database migration tool.
-- [ ] Verify the newsletter submission with a mocked Netlify response and commit the code changes.
+- [x] Verify homepage and footer newsletter submissions with mocked Netlify responses.
+- [ ] Add the uploaded original logo to the header and favicon, then verify desktop and mobile; waiting for the logo file.
+- [ ] Restrict public reads of inquiry records in the hosted database; no database migration tool is connected to this project.
