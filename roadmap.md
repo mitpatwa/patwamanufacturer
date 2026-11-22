@@ -3,5 +3,5 @@
 - [x] Verify service-worker registration, expired offer dates, and template social handles; no current issues found.
 - [x] Clear the current lint errors in analytics and image-priority code.
 - [x] Verify homepage and footer newsletter submissions with mocked Netlify responses.
-- [ ] Add the uploaded original logo to the header and favicon, then verify desktop and mobile; waiting for the logo file.
+- [x] Add the uploaded original logo to the header and favicon, then verify desktop and mobile.
 - [ ] Restrict public reads of inquiry records in the hosted database; no database migration tool is connected to this project.

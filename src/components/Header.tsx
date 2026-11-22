@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoAsset from "@/assets/patwa-manufacturer-logo.jpg.asset.json";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import InteractiveSearch from "./InteractiveSearch";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -51,10 +52,12 @@ const Header = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          <Link to="/" className="inline-block">
-            <span className="text-xl md:text-2xl font-serif font-medium tracking-wider text-foreground hover:opacity-80 transition-opacity">
-              PATWA MANUFACTURER
-            </span>
+          <Link to="/" className="inline-flex shrink-0 items-center hover:opacity-80 transition-opacity">
+            <img
+              src={logoAsset.url}
+              alt="Patwa Manufacturer, Design for Designer logo"
+              className="h-12 w-[54px] object-contain md:h-14 md:w-[62px]"
+            />
           </Link>
 
           <nav className="hidden lg:block">
