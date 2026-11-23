@@ -60,7 +60,7 @@ const Header = () => {
             />
           </Link>
 
-          <nav className="hidden lg:block">
+          <nav className="hidden min-[900px]:block">
             <ul className="flex items-center space-x-6">
               {navItems.map((item) => (
                 <li key={item.name} className="group relative">
@@ -108,7 +108,7 @@ const Header = () => {
 
           <Sheet>
             <SheetTrigger asChild>
-              <button className="lg:hidden p-2 text-foreground" aria-label="Open menu">
+              <button className="min-[900px]:hidden p-2 text-foreground" aria-label="Open menu">
                 <Menu className="h-6 w-6" />
               </button>
             </SheetTrigger>

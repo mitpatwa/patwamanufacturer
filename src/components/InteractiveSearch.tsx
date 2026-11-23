@@ -107,7 +107,7 @@ const InteractiveSearch = () => {
       {/* Search Trigger Button */}
       <motion.button
         onClick={toggleSearch}
-        className="p-2 rounded-full hover:bg-white/10 transition-colors text-white"
+        className="p-2 rounded-full hover:bg-accent transition-colors text-foreground"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open search"
