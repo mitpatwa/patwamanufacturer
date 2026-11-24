@@ -52,12 +52,15 @@ const Header = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          <Link to="/" className="inline-flex shrink-0 items-center hover:opacity-80 transition-opacity">
+          <Link to="/" className="inline-flex shrink-0 items-center gap-2.5 hover:opacity-80 transition-opacity">
             <img
               src={logoAsset.url}
               alt="Patwa Manufacturer, Design for Designer logo"
               className="h-12 w-[54px] object-contain md:h-14 md:w-[62px]"
             />
+            <span className="font-serif text-sm font-semibold leading-tight text-foreground sm:text-base">
+              Patwa Manufacturer
+            </span>
           </Link>
 
           <nav className="hidden min-[900px]:block">
