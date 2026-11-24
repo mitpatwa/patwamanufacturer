@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 type Lang = {
   code: string;
@@ -41,28 +42,34 @@ const LanguageSwitcher: React.FC = () => {
 
   return (
     <div className="relative">
-      <button
+      <Button
+        type="button"
+        variant="outline"
         aria-label="Language selector"
+        aria-expanded={open}
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-3 py-2 rounded-md bg-white/90 text-gray-800 hover:bg-white shadow-sm border border-gray-200 transition-colors"
+        className="h-10 gap-2 border-gold-200 bg-background px-3 text-foreground shadow-sm hover:bg-gold-50"
       >
         <span className="text-base" aria-hidden>{current.flag}</span>
         <span className="hidden sm:inline text-sm font-medium">{current.name}</span>
         <ChevronDown className="h-4 w-4" />
-      </button>
+      </Button>
       {open && (
-        <div className="absolute right-0 mt-2 w-60 bg-white rounded-xl shadow-lg border border-gray-200 z-50">
+        <div className="absolute right-0 z-50 mt-2 w-60 rounded-sm border border-gold-200 bg-background shadow-lg">
           <ul className="py-1">
             {languages.map((l) => (
               <li key={l.code}>
-                <button
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="default"
                   onClick={() => choose(l)}
-                  className={`w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-gray-50 ${current.code===l.code?'bg-gray-50':''}`}
+                  className={`h-auto w-full justify-start rounded-none px-4 py-2.5 text-left ${current.code === l.code ? 'bg-gold-50 text-foreground' : 'text-foreground hover:bg-gold-50'}`}
                 >
                   <span className="text-base" aria-hidden>{l.flag}</span>
-                  <span className="text-[15px] text-gray-800">{l.name}</span>
-                </button>
-                <div className="h-px bg-gray-200 mx-3" />
+                  <span className="text-[15px]">{l.name}</span>
+                </Button>
+                <div className="mx-3 h-px bg-border" />
               </li>
             ))}
           </ul>
