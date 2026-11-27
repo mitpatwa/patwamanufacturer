@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoAsset from "@/assets/patwa-manufacturer-logo.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -9,6 +9,12 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname: currentPath } = useLocation();
+  const pathname = currentPath.replace(/\/+$/, "") || "/";
+
+  const isRouteActive = (link: string) => pathname === link || pathname.startsWith(`${link}/`);
+  const isNavItemActive = (item: { link: string; items?: Array<{ link: string }> }) =>
+    isRouteActive(item.link) || Boolean(item.items?.some((subItem) => isRouteActive(subItem.link)));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +59,8 @@ const Header = () => {
           <Link
             to="/"
             aria-label="Patwa Manufacturer home"
-            className="inline-flex shrink-0 items-center gap-3 transition-opacity hover:opacity-80"
+            aria-current={pathname === "/" ? "page" : undefined}
+            className="inline-flex shrink-0 items-center gap-3 rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
           >
             <img
               src={logoAsset.url}
@@ -74,14 +81,17 @@ const Header = () => {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-2 text-sm font-medium text-foreground/85 transition-colors duration-200 hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center rounded-sm px-2.5 py-2 text-sm font-medium text-foreground/85 transition-colors duration-200 hover:bg-gold-50 hover:text-gold-800 active:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
                     >
                       {item.name}
                     </a>
                   ) : (
                     <Link
                       to={item.link}
-                      className="py-2 text-sm font-medium text-foreground/85 transition-colors duration-200 hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
+                      aria-current={isNavItemActive(item) ? "page" : undefined}
+                      className={`inline-flex items-center rounded-sm px-2.5 py-2 text-sm transition-colors duration-200 hover:bg-gold-50 hover:text-gold-800 active:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 ${
+                        isNavItemActive(item) ? "bg-gold-100 font-semibold text-gold-900" : "font-medium text-foreground/85"
+                      }`}
                     >
                       {item.name}
                     </Link>
@@ -94,7 +104,10 @@ const Header = () => {
                           <li key={subItem.name}>
                             <Link
                               to={subItem.link}
-                              className="block px-5 py-2 text-sm text-foreground transition-colors hover:bg-gold-50 hover:text-gold-800 focus-visible:bg-gold-50 focus-visible:outline-none"
+                              aria-current={isRouteActive(subItem.link) ? "page" : undefined}
+                              className={`block rounded-sm px-5 py-2 text-sm transition-colors hover:bg-gold-50 hover:text-gold-800 active:bg-gold-100 focus-visible:bg-gold-50 focus-visible:outline-none ${
+                                isRouteActive(subItem.link) ? "bg-gold-50 font-semibold text-gold-900" : "text-foreground"
+                              }`}
                             >
                               {subItem.name}
                             </Link>
@@ -136,14 +149,19 @@ const Header = () => {
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block text-lg font-medium text-foreground transition-colors hover:text-gold-700"
+                          className="block rounded-sm border-l-2 border-transparent px-3 py-2 text-lg font-medium text-foreground transition-colors hover:bg-gold-50 hover:text-gold-800 active:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
                         >
                           {item.name}
                         </a>
                       ) : (
                         <Link
                           to={item.link}
-                          className="block text-lg font-medium text-foreground transition-colors hover:text-gold-700"
+                          aria-current={isNavItemActive(item) ? "page" : undefined}
+                          className={`block rounded-sm border-l-2 px-3 py-2 text-lg transition-colors hover:bg-gold-50 hover:text-gold-800 active:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 ${
+                            isNavItemActive(item)
+                              ? "border-gold-600 bg-gold-50 font-semibold text-gold-900"
+                              : "border-transparent font-medium text-foreground"
+                          }`}
                         >
                           {item.name}
                         </Link>
@@ -154,7 +172,12 @@ const Header = () => {
                             <li key={subItem.name}>
                               <Link
                                 to={subItem.link}
-                                className="block text-base text-muted-foreground transition-colors hover:text-gold-700"
+                                aria-current={isRouteActive(subItem.link) ? "page" : undefined}
+                                className={`block rounded-sm border-l-2 px-3 py-1.5 text-base transition-colors hover:bg-gold-50 hover:text-gold-800 active:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 ${
+                                  isRouteActive(subItem.link)
+                                    ? "border-gold-600 bg-gold-50 font-semibold text-gold-900"
+                                    : "border-transparent text-muted-foreground"
+                                }`}
                               >
                                 {subItem.name}
                               </Link>
